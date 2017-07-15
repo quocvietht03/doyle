@@ -23,4 +23,3 @@ if (class_exists('Woocommerce')) {
     require_once get_template_directory() . '/woocommerce/wc-template-functions.php';
     require_once get_template_directory() . '/woocommerce/wc-template-hooks.php';
 }
-die('hi!');
