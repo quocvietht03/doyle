@@ -1,3 +1,4 @@
+*.log
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
@@ -15,4 +16,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+<<<<<<< HEAD
 style.css
+=======
+>>>>>>> parent of a9a8bf5... 'update'
