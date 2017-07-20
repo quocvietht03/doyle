@@ -43,7 +43,7 @@
 					width: 16px;
 					height: 16px;
 					font-size: 10px;
-					line-height: 16px;
+					line-height: 18px;
 					letter-spacing: 0;
 					text-align: center;
 					color: #ffffff;
@@ -589,6 +589,17 @@
 /* Header 1 */
 .bt-header-v1 {
 	.bt-header-desktop{
+		.bt-top{
+			.bt-icon-box{
+				.icon,.text{
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.icon{
+					margin-right: 5px;
+				}
+			}
+		}
 		.bt-bottom {
 			ul.menu > li.current_page_item > a, ul.menu > li.current-menu-item > a{
 				color: @h1-menu-first-level-color-active;
@@ -623,6 +634,73 @@
 /* Header 2 */
 .bt-header-v2 {
 	.bt-header-desktop{
+		.bt-top{
+			.bt-icon-box{
+				.icon,.text{
+					display: inline-block;
+					vertical-align: middle;
+				}
+				.icon{
+					margin-right: 5px;
+				}
+			}
+			.bt-links li{
+				display: inline-block;
+				&:after{
+					content: "|";
+					color: #dcdcdf;
+					margin: 0 15px;
+				}
+				&:last-child{
+					&:after{
+						display: none;
+					}
+				}
+			}
+		}
+		.bt-middle{
+			.widget{
+				display: inline-block;
+				text-align: left;
+				margin-right: 25px;
+				padding-right: 25px;
+				border-right: 1px solid #dcdcdf;
+				&:last-child{
+					margin-right: 0;
+					padding-right: 0;
+					border-right: none;
+				}
+				.bt-icon-box{
+					.icon,.text{
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.icon{
+						margin-right: 10px;
+					}
+				}
+				.social-wrap a{
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					font-size: 12px;
+					line-height: 25px;
+					text-align: center;
+					color: #ffffff;
+					background: @secondary-color;
+					margin-right: 3px;
+					&:last-child{
+						margin-right: 0;
+					}
+					&:hover{
+						background: darken(@secondary-color, 10);
+					}
+				}
+			}
+			.bt-left{
+				
+			}
+		}
 		.bt-bottom{
 			ul.menu > li.current_page_item > a, ul.menu > li.current-menu-item > a{
 				color: @h2-menu-first-level-color-active;

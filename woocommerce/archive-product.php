@@ -4,68 +4,132 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
- * will need to copy the new files to your theme to maintain compatibility. We try to do this.
- * as little as possible, but it does happen. When this occurs the version of the template file will.
- * be bumped and the readme will list any important changes.
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @see 	    http://docs.woothemes.com/document/template-structure/
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
+ 
+global $doyle_options;
+$sidebar_width = (int) isset($doyle_options['sidebar_width']) ?  $doyle_options['sidebar_width']: 3;
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+$sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'full';
+
+$sidebar_class = 'col-md-'.$sidebar_width;
+if($sidebar_position == 'left' || $sidebar_position == 'right'){
+		$content_width = 12 - $sidebar_width;
+		$content_class = 'col-md-'.$content_width;
+	
+}elseif($sidebar_position == 'left_right'){
+	$content_width = 12 - 2*$sidebar_width;
+	$content_class = 'col-md-'.$content_width;
+}else{
+	$content_class = 'col-md-12';
 }
+?>
 
-get_header( 'shop' ); ?>
+<?php get_header( 'shop' ); ?>
+<?php doyle_titlebar(); ?>
+	
+	<div class="bt-main-content">
+		<div class="container">
+			<div class="row">
+				<!-- Start Left Sidebar -->
+				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
+					<div class="bt-sidebar bt-left-sidebar <?php echo esc_attr($sidebar_class); ?>">
+						<?php echo get_sidebar('left'); ?>
+					</div>
+				<?php } ?>
+				<!-- End Left Sidebar -->
+				<!-- Start Content -->
+				<div class="bt-content <?php echo esc_attr($content_class); ?>">
+					<?php if ( have_posts() ) : ?>
+						<div class="top-bar">
+							<div class="sort">
+								<div class="inner">
+									<?php do_action( 'woocommerce_catalog_ordering' ); ?>
+								</div>
+							</div>
+							<div class="result">
+								<div class="inner">
+									<?php do_action( 'woocommerce_result_count' ); ?>
+								</div>
+							</div>
+						</div>
+						<div class="row products">
+							<?php
+								$item_wrap_class = array();
+								if(isset($_GET['layout'])){
+									$layout = $_GET['layout'];
+								}else{
+									$layout = 'grid3col';
+								}
+								$item_wrap_class[] = $layout;
+								
+								if($layout == 'grid3col'){
+									$item_wrap_class[] = 'col-md-4';
+								}elseif($layout == 'grid2col'){
+									$item_wrap_class[] = 'col-md-6';
+								}else{
+									$item_wrap_class[] = 'col-md-12';
+								}
+							?>
+							
+							
+							<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php require('title-bar-shop.php'); ?>
+								<div class="<?php echo esc_attr(implode(' ', $item_wrap_class)); ?>" style="margin-bottom: 30px;">
+						
+									<?php
+										if($layout == 'list'){
+											wc_get_template_part( 'content', 'product-list' );
+										}else{
+											wc_get_template_part( 'content', 'product' );
+										}
+									?>
+								
+								</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0 col-lg-9 col-lg-offset-0 archive-product">
-				<?php if ( have_posts() ) : ?>
-					<div class="bt-action-bar clearfix">
+							<?php endwhile; ?>
+
+						</div>
+
 						<?php
 							/**
-							 * woocommerce_before_shop_loop hook.
+							 * woocommerce_after_shop_loop hook.
 							 *
-							 * @hooked woocommerce_result_count - 20
-							 * @hooked woocommerce_catalog_ordering - 30
+							 * @hooked woocommerce_pagination - 10
 							 */
-							do_action( 'woocommerce_before_shop_loop' );
+							do_action( 'woocommerce_after_shop_loop' );
 						?>
+
+					<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+
+						<?php
+							/**
+							 * woocommerce_no_products_found hook.
+							 *
+							 * @hooked wc_no_products_found - 10
+							 */
+							do_action( 'woocommerce_no_products_found' );
+						?>
+
+					<?php endif; ?>
+				</div>
+				<!-- End Content -->
+				<!-- Start Right Sidebar -->
+				<?php if($sidebar_position == 'right' || $sidebar_position == 'left_right'){ ?>
+					<div class="bt-sidebar bt-right-sidebar <?php echo esc_attr($sidebar_class); ?>">
+						<?php echo get_sidebar('right'); ?>
 					</div>
-
-					<div class="row">
-
-						<?php while ( have_posts() ) : the_post(); ?>
-
-							<?php wc_get_template_part( 'content', 'product' ); ?>
-
-						<?php endwhile; // end of the loop. ?>
-
-					</div>
-
-					<?php
-						/**
-						 * woocommerce_after_shop_loop hook.
-						 *
-						 * @hooked woocommerce_pagination - 10
-						 */
-						do_action( 'woocommerce_after_shop_loop' );
-					?>
-
-				<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-					<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-				<?php endif; ?>
-			</div>
-			<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 sidebar-right">
-				<?php if (is_active_sidebar('consulta-shop-right-sidebar')) dynamic_sidebar('consulta-shop-right-sidebar'); ?>
+				<?php } ?>
+				<!-- End Right Sidebar -->
 			</div>
 		</div>
 	</div>

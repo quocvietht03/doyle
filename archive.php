@@ -19,7 +19,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 
 doyle_titlebar();
 ?>
-	<div class="bt-main-content bt-blog-list">
+	<div class="bt-main-content">
 		<div class="container">
 			<div class="row">
 				<!-- Start Left Sidebar -->

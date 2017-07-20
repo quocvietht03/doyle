@@ -1,95 +1,292 @@
-<!-- Start Header -->
 <?php 
 	global $doyle_options;
-	$class_header = 'bt-header-v3';
-	if(isset($doyle_options['fixed_main_menu_v3']) && $doyle_options['fixed_main_menu_v3']) {
-		$class_header .= ' bt-header-fixed';
+	$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	
+	$container_class = (isset($doyle_options['h1_fullwidth'])&&$doyle_options['h1_fullwidth'])?'fullwidth':'container';
+	if(isset($page_options['header_fullwidth'])&&$page_options['header_fullwidth']){ $container_class = 'container'; }
+	
+	$header_top = (isset($doyle_options['h1_header_top'])&&$doyle_options['h1_header_top'])?$doyle_options['h1_header_top']:'';
+	if(isset($page_options['header_top'])&&$page_options['header_top']){ $header_top = ''; }
+	
+	$header_class = 'bt-header bt-header-v1';
+	
+	if(isset($doyle_options['h1_header_bottom_absolute'])&&$doyle_options['h1_header_bottom_absolute']){
+		$header_class .= ' bt-absolute';
 	}
-	$disable_stick_menu = get_post_meta(get_the_ID(),'doyle_disable_stick_menu',true);
-	if($disable_stick_menu != 'on') {
-		if(isset($doyle_options['stick_main_menu_v3']) && $doyle_options['stick_main_menu_v3']) {
-			$class_header .= ' bt-header-stick';
-		}
+	
+	$header_stick = (isset($doyle_options['h1_header_stick'])&&$doyle_options['h1_header_stick'])?$doyle_options['h1_header_stick']:'';
+	if(isset($page_options['header_stick'])&&$page_options['header_stick']){ $header_stick = ''; }
+	if($header_stick){
+		$header_class .= ' bt-stick';
 	}
+	
 ?>
-<header>
-	<div id="doyle_header" class="<?php echo esc_attr($class_header); ?>"><!-- bt-header-stick/bt-header-fixed -->
-		<!-- Start Header Top -->
-		<div class="bt-header-top">
-			<div class="container">
-				<div class="row">
-					<?php if (is_active_sidebar("doyle-header-top-v3-left")) { ?>
-						<div class="bearsicon_tx bears-p1">
-							<?php 
-								dynamic_sidebar("doyle-header-top-v3-left");
+<header id="bt_header" class="<?php echo esc_attr($header_class); ?>">
+	<div class="bt-header-desktop">
+		<?php if($header_top){ ?>
+			<div class="bt-subheader bt-top">
+				<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
+					<div class="bt-subheader-cell bt-left">
+						<div class="bt-content text-left">
+							<?php
+								if(isset($doyle_options['h1_header_top_left'])&&$doyle_options['h1_header_top_left']){
+									foreach($doyle_options['h1_header_top_left'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
 							?>
 						</div>
-					<?php } ?> 
-					
-					<div class="bt-col-logo bears-p2">
-						<div class="bt-logo">
-							<a href="<?php echo esc_url(home_url()); ?>">
-								<?php doyle_logo(); ?>
-							</a>
-						</div>
-						<div id="bt-hamburger" class="bt-hamburger visible-xs visible-sm"><span></span></div>
 					</div>
-
-					<?php if (is_active_sidebar("doyle-header-top-v3-right")) { ?>
-						<div class="bearsicon_tx bears-p3">
-							<?php 
-								dynamic_sidebar("doyle-header-top-v3-right");
+					<div class="bt-subheader-cell bt-center">
+						<div class="bt-content text-center">
+							<?php
+								if(isset($doyle_options['h1_header_top_center'])&&$doyle_options['h1_header_top_center']){
+									foreach($doyle_options['h1_header_top_center'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
 							?>
 						</div>
-					<?php } ?>
+					</div>
+					<div class="bt-subheader-cell bt-right">
+						<div class="bt-content text-right">
+							<?php
+								if(isset($doyle_options['h1_header_top_right'])&&$doyle_options['h1_header_top_right']){
+									foreach($doyle_options['h1_header_top_right'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
+							?>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End Header Top -->
-		<!-- Start Header Menu -->
-		<div class="bt-header-menu">
-			<div class="container bt-header-relative-style">
-				<div class="row">
-					<div class="bt-header-clear-relative-style col-md-10 bt-col-menu <?php if (is_active_sidebar("doyle-menu-right-sidebar-2")) echo esc_attr('has-menu-right-sidebar'); ?>">
+		<?php } ?>
+		
+		<!--div class="bt-subheader bt-middle">
+			<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
+				<div class="bt-subheader-cell bt-left">
+					<div class="bt-content text-left">Top Left</div>
+				</div>
+				<div class="bt-subheader-cell bt-center">
+					<div class="bt-content text-center">Top Center</div>
+				</div>
+				<div class="bt-subheader-cell bt-right">
+					<div class="bt-content text-right">Top right</div>
+				</div>
+			</div>
+		</div-->
+		
+		<div class="bt-subheader bt-bottom">
+			<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
+				<div class="bt-subheader-cell bt-left">
+					<div class="bt-content text-left">
 						<?php
-							$attr = array(
-								'container_class' => 'bt-menu-list hidden-xs hidden-sm ',
-								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							);
-							/* Select menu dynamic */
-							$menu_slug = get_post_meta(get_the_ID(),'doyle_menu',true);
-							if($menu_slug != '' && $menu_slug != 'global') {
-								$attr['menu'] = $menu_slug;
+							$logo = isset($doyle_options['h1_logo']['url'])?$doyle_options['h1_logo']['url']:'';
+							if(isset($page_options['header_logo']['url'])&&$page_options['header_logo']['url']){
+								$logo = $page_options['header_logo']['url'];
 							}
-							/* Select menu position */
-							$menu_class = get_post_meta(get_the_ID(),'doyle_menu_positon',true);
-							$attr['menu_class'] = 'text-right';
-							if($menu_class != '' && $menu_class != 'global') {
-								$attr['menu_class'] = $menu_class;
+							
+							$logo_height = (isset($doyle_options['h1_logo_height'])&&$doyle_options['h1_logo_height'])?$doyle_options['h1_logo_height']:'40';
+							if(isset($page_options['header_logo_height'])&&$page_options['header_logo_height']){
+								$logo_height = $page_options['header_logo_height'];
 							}
-							/* Select theme location */
-							$menu_locations = get_nav_menu_locations();
-							if (!empty($menu_locations['main_navigation'])) {
-								$attr['theme_location'] = 'main_navigation';
+							
+							doyle_logo($logo, $logo_height); 
+							
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='left') {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
 							}
-							wp_nav_menu( $attr );
 						?>
 					</div>
-					<?php if (is_active_sidebar("doyle-header-top-request-right")){ ?>
-						<div class="col-md-2 button-request">
-							<div class="free-bt">
-							<?php dynamic_sidebar("doyle-header-top-request-right"); ?>
-							</div>
-						</div>
-					<?php } ?>
+				</div>
+				<div class="bt-subheader-cell bt-center">
+					<div class="bt-content text-center">
+						<?php
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='center') {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+							}
+						?>
+					</div>
+				</div>
+				<div class="bt-subheader-cell bt-right">
+					<div class="bt-content text-right">
+						<?php
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='right'||!isset($doyle_options['h1_menu_align'])) {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+							}
+							
+							if(isset($doyle_options['h1_menu_content_right'])&&$doyle_options['h1_menu_content_right']&&isset($doyle_options['h1_menu_content_right_element'])&&$doyle_options['h1_menu_content_right_element']){
+								echo '<div class="bt-menu-content-right">';
+									foreach($doyle_options['h1_menu_content_right_element'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								echo '</div>';
+							}
+							
+							if(isset($doyle_options['h1_menu_canvas'])&&$doyle_options['h1_menu_canvas']){
+								echo '<a href="#" class="bt-menu-canvas-toggle"><i class="fa fa-bars"></i></a>';
+							}
+						?>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Header Menu -->
+
+	</div>
+	
+	<div class="bt-header-stick">
+		
+		<div class="bt-subheader">
+			<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
+				<div class="bt-subheader-cell bt-left">
+					<div class="bt-content text-left">
+						<?php
+							$logo_stick = isset($doyle_options['h1_logo_stick']['url'])?$doyle_options['h1_logo_stick']['url']:'';
+							if(isset($page_options['header_logo_stick']['url'])&&$page_options['header_logo_stick']['url']){
+								$logo_stick = $page_options['header_logo_stick']['url'];
+							}
+							
+							$logo_stick_height = isset($doyle_options['h1_logo_stick_height'])?$doyle_options['h1_logo_stick_height']:'30';
+							if(isset($page_options['header_logo_stick_height'])&&$page_options['header_logo_stick_height']){
+								$logo_stick_height = $page_options['header_logo_stick_height'];
+							}
+							
+							doyle_logo($logo_stick, $logo_stick_height); 
+							
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='left') {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+							}
+						?>
+					</div>
+				</div>
+				<div class="bt-subheader-cell bt-center">
+					<div class="bt-content text-center">
+						<?php
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='center') {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+							}
+						?>
+					</div>
+				</div>
+				<div class="bt-subheader-cell bt-right">
+					<div class="bt-content text-right">
+						<?php
+							if(isset($doyle_options['h1_menu_align'])&&$doyle_options['h1_menu_align']=='right') {
+								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+							}
+							
+							if(isset($doyle_options['h1_menu_content_right'])&&$doyle_options['h1_menu_content_right']&&isset($doyle_options['h1_menu_content_right_element'])&&$doyle_options['h1_menu_content_right_element']){
+								echo '<div class="bt-menu-content-right">';
+									foreach($doyle_options['h1_menu_content_right_element'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								echo '</div>';
+							}
+							
+							if(isset($doyle_options['h1_menu_canvas'])&&$doyle_options['h1_menu_canvas']){
+								echo '<a href="#" class="bt-menu-canvas-toggle"><i class="fa fa-bars"></i></a>';
+							}
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="bt-header-mobile">
+		<?php
+			$mobile_header_top = (isset($doyle_options['h1_mobile_header_top'])&&$doyle_options['h1_mobile_header_top'])?$doyle_options['h1_mobile_header_top']:'';
+			if(isset($page_options['mobile_header_top'])&&$page_options['mobile_header_top']){ $mobile_header_top = ''; }
+			
+			if($mobile_header_top){ 
+		?>
+			<div class="bt-subheader bt-top">
+				<div class="bt-subheader-inner container">
+					<div class="bt-subheader-cell bt-left">
+						<div class="bt-content text-left">
+							<?php
+								if(isset($doyle_options['h1_header_top_left'])&&$doyle_options['h1_header_top_left']){
+									foreach($doyle_options['h1_header_top_left'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
+							?>
+						</div>
+					</div>
+					<div class="bt-subheader-cell bt-center">
+						<div class="bt-content text-center">
+							<?php
+								if(isset($doyle_options['h1_header_top_center'])&&$doyle_options['h1_header_top_center']){
+									foreach($doyle_options['h1_header_top_center'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
+							?>
+						</div>
+					</div>
+					<div class="bt-subheader-cell bt-right">
+						<div class="bt-content text-right">
+							<?php
+								if(isset($doyle_options['h1_header_top_right'])&&$doyle_options['h1_header_top_right']){
+									foreach($doyle_options['h1_header_top_right'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								}
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+		
+		<div class="bt-subheader bt-bottom">
+			<div class="bt-subheader-inner container">
+				<div class="bt-subheader-cell bt-left">
+					<div class="bt-content text-left">
+						<?php
+							$logo_mobile = isset($doyle_options['h1_logo_mobile']['url'])?$doyle_options['h1_logo_mobile']['url']:'';
+							if(isset($page_options['logo_mobile']['url'])&&$page_options['logo_mobile']['url']){
+								$logo_mobile = $page_options['logo_mobile']['url'];
+							}
+							
+							$logo_mobile_height = isset($doyle_options['h1_logo_mobile_height'])?$doyle_options['h1_logo_mobile_height']:'30';
+							if(isset($page_options['logo_mobile_height'])&&$page_options['logo_mobile_height']){
+								$logo_mobile_height = $page_options['logo_mobile_height'];
+							}
+							
+							doyle_logo($logo_mobile, $logo_mobile_height); 
+						?>
+					</div>
+				</div>
+				<div class="bt-subheader-cell bt-right">
+					<div class="bt-content text-right">
+						<?php
+							if(isset($doyle_options['h1_menu_content_right'])&&$doyle_options['h1_menu_content_right']&&isset($doyle_options['h1_menu_content_right_element'])&&$doyle_options['h1_menu_content_right_element']){
+								echo '<div class="bt-menu-content-right">';
+									foreach($doyle_options['h1_menu_content_right_element'] as $sidebar_id){
+										dynamic_sidebar( $sidebar_id );
+									}
+								echo '</div>';
+							}
+							
+							if(isset($doyle_options['h1_menu_canvas'])&&$doyle_options['h1_menu_canvas']){
+								echo '<a href="#" class="bt-menu-canvas-toggle"><i class="fa fa-bars"></i></a>';
+							}
+						?>
+						<div class="bt-menu-toggle">
+							<div class="bt-menu-toggle-content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="bt-menu-mobile-wrap">
+			<div class="container">
+				<?php doyle_nav_menu('mobile_navigation', 'bt-menu-mobile'); ?>
+			</div>
+		</div>
 	</div>
 </header>
-<div class="bt-menu-canvas-overlay"></div>
-<div class="bt-menu-canvas">
-	<?php dynamic_sidebar("doyle-menu-canvas-sidebar"); ?>
-</div>
-<!-- End Header -->

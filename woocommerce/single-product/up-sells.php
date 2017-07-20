@@ -1,8 +1,8 @@
 <?php
 /**
- * Related Products
+ * Single Product Up-Sells
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/related.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/up-sells.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -16,25 +16,25 @@
  * @version     3.0.0
  */
 
-if ( $related_products ) : ?>
+if ( $upsells ) : ?>
 
-	<section class="related">
+	<section class="up-sells upsells">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
 
 		<div class="row products">
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+			<?php foreach ( $upsells as $upsell ) : ?>
 			
 				<div class="col-md-3" style="margin-bottom: 30px;">
+				
+					<?php
+						$post_object = get_post( $upsell->get_id() );
 
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+						setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object );
-
-					wc_get_template_part( 'content', 'product' ); 
-				?>
+						wc_get_template_part( 'content', 'product' ); 
+					?>
 				
 				</div>
 

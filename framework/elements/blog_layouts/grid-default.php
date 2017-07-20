@@ -2,7 +2,6 @@
 	$format = get_post_format() ? get_post_format() : 'standard';
 	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'post_options'):array();
 	
-	
 ?>
 <div class="bt-item">
 	<div class="bt-media <?php echo esc_attr($format); ?>">

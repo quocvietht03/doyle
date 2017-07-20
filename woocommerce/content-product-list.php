@@ -32,13 +32,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			do_action('woocommerce_template_loop_product_thumbnail');
 			do_action('woocommerce_template_loop_product_link_close');
 		?>
-		<div class="overlay">
-			<div class="inner">
-				<?php
-					do_action('woocommerce_template_loop_add_to_cart');
-				?>
-			</div>
-		</div>
 	</div>
 	<div class="content">
 		<?php
@@ -47,6 +40,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			do_action('woocommerce_template_loop_product_link_close');
 			do_action('woocommerce_template_loop_price');
 			do_action('woocommerce_template_loop_rating');
+			do_action('woocommerce_template_single_excerpt');
+			do_action('woocommerce_template_loop_add_to_cart');
 		?>
 	</div>
 </article>

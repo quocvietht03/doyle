@@ -6,9 +6,6 @@
 <article <?php post_class(); ?>>
 	<div class="bt-post-item">
 		<h3 class="bt-title"><?php the_title(); ?></h3>
-		<?php
-			$link = get_post_meta(get_the_ID(), 'doyle_post_link', true);
-		?>
 		<div class="bt-media <?php echo esc_attr($format); ?>">
 			<?php
 				if($url){

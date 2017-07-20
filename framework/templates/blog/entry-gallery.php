@@ -1,48 +1,47 @@
 <?php
-global $doyle_options;
-$readmore_text = (int) isset($doyle_options['doyle_blog_post_readmore_text']) ? $doyle_options['doyle_blog_post_readmore_text'] : 'VIEW DETAIL';
+	$format = get_post_format() ? get_post_format() : 'standard';
+	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'post_options'):array();
 ?>
 <article <?php post_class(); ?>>
 	<div class="bt-post-item">
-		<h3 class="bt-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<div class="bt-media <?php echo get_post_format(); ?>">
+		<h3 class="bt-title"><?php the_title(); ?></h3>
+		<div class="bt-media <?php echo esc_attr($format); ?>">
 			<?php
-				$media_output = '';
-				$attachment_ids = array();
-				$gallery = get_post_meta(get_the_ID(), 'doyle_post_gallery', true);
-				if(!empty($gallery)) {
-					$attachment_ids = explode(',', $gallery);
+				$gallery_images = isset($post_options['gallery_images'])?$post_options['gallery_images']:array();
+				if(!empty($gallery_images)){
 					$date = time() . '_' . uniqid(true);
-					$media_output .= '<div id="carousel-generic'.esc_attr( $date ).'" class="carousel slide" data-ride="carousel">
-										<div class="carousel-inner">';
-					foreach($attachment_ids as $key => $attachment_id) {
-						$cl_active = ($key == 0) ? 'active' : '';
-						$attachment_image = wp_get_attachment_image_src($attachment_id, 'full', false);
-						if($attachment_image[0]){
-							$media_output .= '<div class="item bt-gallery '.esc_attr($cl_active).'">
-												<img src="'.esc_url($attachment_image[0]).'" alt="" />
-											</div>';
-						}
-					}
-					$media_output .= '</div>
-										<a class="left carousel-control" href="#carousel-generic'.esc_attr( $date ).'" role="button" data-slide="prev">
-											<i class="fa fa-long-arrow-left"></i>
-										</a>
-										<a class="right carousel-control" href="#carousel-generic'.esc_attr( $date ).'" role="button" data-slide="next">
-											<i class="fa fa-long-arrow-right"></i>
-										</a>
-									</div>';
+					?>
+						<div id="<?php echo esc_attr( 'carousel-generic'.$date ) ?>" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+							<?php
+								foreach($gallery_images as $key => $gallery_image){
+									$cl_active = ($key == 0) ? 'active' : '';
+									echo '<img class="item bt-gallery '.$cl_active.'" src="'.esc_url($gallery_image['url']).'" alt="Thumbnail"/>';
+								}
+							?>
+						  </div>
+							<a class="left carousel-control" href="<?php echo esc_attr( '#carousel-generic'.$date ) ?>" role="button" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a class="right carousel-control" href="<?php echo esc_attr( '#carousel-generic'.$date ) ?>" role="button" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					<?php
+				}else{
+					if (has_post_thumbnail()) the_post_thumbnail('full');
 				}
-				echo $media_output;
 			?>
 		</div>
 		<ul class="bt-meta">
-			<li class="bt-author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 35 ); echo __('by ', 'doyle').get_the_author(); ?></li>
-			<li class="bt-public"><?php echo '<i class="fa fa-clock-o"></i> '.get_the_date('M d, Y'); ?></li>
-			<li><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="fa fa-comments-o"></i> 0', '<i class="fa fa-comments-o"></i> 1', '<i class="fa fa-comments-o"></i> %' ); ?></a></li>
-			<li><?php the_terms( get_the_ID(), 'category', 'Category: ', ', ' ); ?></li>
+			<li class="bt-author"><?php echo '<span>'.esc_html__('By: ', 'doyle').'</span>'.get_the_author(); ?></li>
+			<li class="bt-public"><?php echo '<span>'.esc_html__('Date: ', 'doyle').'</span>'.get_the_date('M d, Y'); ?></li>
+			<li><?php comments_number( '<span>Comment: </span> 0', '<span>Comment: </span> 1', '<span>Comments: </span> %' ); ?></li>
+			<li><?php the_terms( get_the_ID(), 'category', '<span>Category: </span>', ', ' ); ?></li>
 		</ul>
-		<div class="bt-excerpt"><?php the_excerpt(); ?></div>
-		<a class="bt-readmore" href="<?php the_permalink(); ?>"><?php echo $readmore_text; ?></a>
+		<div class="bt-excerpt">
+			<?php the_excerpt(); ?>
+		</div>
+		<a class="bt-readmore" href="<?php the_permalink(); ?>">Read More</a>
 	</div>
 </article>

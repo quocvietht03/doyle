@@ -1,31 +1,42 @@
 <?php
-global $doyle_options;
-$readmore_text = (int) isset($doyle_options['doyle_blog_post_readmore_text']) ? $doyle_options['doyle_blog_post_readmore_text'] : 'VIEW DETAIL';
+	$format = get_post_format() ? get_post_format() : 'standard';
+	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'post_options'):array();
+	$audio_type = isset($post_options['audio_type']['type'])?$post_options['audio_type']['type']:'';
 ?>
 <article <?php post_class(); ?>>
 	<div class="bt-post-item">
-		<h3 class="bt-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<div class="bt-media <?php echo get_post_format(); ?>">
+		<h3 class="bt-title"><?php the_title(); ?></h3>
+		<div class="bt-media <?php echo esc_attr($format); ?>">
 			<?php
-				$media_output = '';
-				$audio_source_from = get_post_meta(get_the_ID(), 'doyle_audio_type', true);
-				if($audio_source_from == 'soundcloud') {
-					$media_output = get_post_meta(get_the_ID(), 'doyle_post_audio_iframe', true);
+				if($audio_type == 'html5') {
+					$audio_format = isset($post_options['audio_type']['html5']['format'])?$post_options['audio_type']['html5']['format']:'';
+					$audio_src = isset($post_options['audio_type']['html5']['src'])?$post_options['audio_type']['html5']['src']:'';
+					if($audio_src){
+						echo '<audio controls>
+								<source src="'.esc_url($audio_src).'" type="'.esc_attr($audio_format).'">
+							</audio>';
+					}else{
+						if(has_post_thumbnail()) the_post_thumbnail('full');
+					}
 				} else {
-					$audio_type = get_post_meta(get_the_ID(), 'doyle_post_audio_type', true);
-					$audio_url = get_post_meta(get_the_ID(), 'doyle_post_audio_url', true);
-					if($audio_url) echo do_shortcode('[audio '.$audio_type.'="'.$audio_url.'"][/audio]');
-				} 
-				echo $media_output;
+					$audio_embed = isset($post_options['audio_type']['embed']['iframe'])?$post_options['audio_type']['embed']['iframe']:'';
+					if($audio_embed){
+						echo '<div class="bt-soundcluond">'.$audio_embed.'</div>';
+					}else{
+						if(has_post_thumbnail()) the_post_thumbnail('full');
+					}
+				}
 			?>
 		</div>
 		<ul class="bt-meta">
-			<li class="bt-author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 35 ); echo __('by ', 'doyle').get_the_author(); ?></li>
-			<li class="bt-public"><?php echo '<i class="fa fa-clock-o"></i> '.get_the_date('M d, Y'); ?></li>
-			<li><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="fa fa-comments-o"></i> 0', '<i class="fa fa-comments-o"></i> 1', '<i class="fa fa-comments-o"></i> %' ); ?></a></li>
-			<li><?php the_terms( get_the_ID(), 'category', 'Category: ', ', ' ); ?></li>
+			<li class="bt-author"><?php echo '<span>'.esc_html__('By: ', 'doyle').'</span>'.get_the_author(); ?></li>
+			<li class="bt-public"><?php echo '<span>'.esc_html__('Date: ', 'doyle').'</span>'.get_the_date('M d, Y'); ?></li>
+			<li><?php comments_number( '<span>Comment: </span> 0', '<span>Comment: </span> 1', '<span>Comments: </span> %' ); ?></li>
+			<li><?php the_terms( get_the_ID(), 'category', '<span>Category: </span>', ', ' ); ?></li>
 		</ul>
-		<div class="bt-excerpt"><?php the_excerpt(); ?></div>
-		<a class="bt-readmore" href="<?php the_permalink(); ?>"><?php echo $readmore_text; ?></a>
+		<div class="bt-excerpt">
+			<?php the_excerpt(); ?>
+		</div>
+		<a class="bt-readmore" href="<?php the_permalink(); ?>">Read More</a>
 	</div>
 </article>

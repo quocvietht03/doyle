@@ -44,7 +44,7 @@ Redux::setSection( $opt_name, array(
 
 Redux::setSection( $opt_name, array(
 	'title'            => __( 'Header Style 01', 'redux-framework-demo' ),
-	'id'               => 'bt_layout1',
+	'id'               => 'bt_header_style1',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
@@ -671,7 +671,7 @@ Redux::setSection( $opt_name, array(
 
 Redux::setSection( $opt_name, array(
 	'title'            => __( 'Header Style 02', 'redux-framework-demo' ),
-	'id'               => 'bt_layout2',
+	'id'               => 'bt_header_style2',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
@@ -978,6 +978,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
+			'text-transform'   => true,
 			'color'   => false,
 			'default'  => array(
 				'font-size'   => '14px',
@@ -1216,6 +1217,7 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
+			'text-transform'   => true,
 			'color'   => false,
 			'default'  => array(
 				'font-size'   => '14px',

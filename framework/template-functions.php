@@ -54,6 +54,9 @@ if ( ! function_exists( 'doyle_setup' ) ) {
 		
 		/* Add support for portfolio. */
 		add_post_type_support( 'fw-portfolio', array('excerpt') );
+		
+		/* Add support woocommerce */
+		add_theme_support( 'woocommerce' );
 	}
 }
 add_action( 'after_setup_theme', 'doyle_setup' );
@@ -290,8 +293,10 @@ if ( ! function_exists( 'doyle_titlebar' ) ) {
 /* Footer */
 function doyle_Footer() {
     global $doyle_options;
+	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	
     $footer_layout =isset($doyle_options["footer_layout"]) ? $doyle_options["footer_layout"] : '1';
-	$doyle_footer = get_post_meta(get_the_ID(), 'doyle_footer', true)?get_post_meta(get_the_ID(), 'doyle_footer', true):'global';
+	$doyle_footer = isset($post_options['footer_layout'])?$post_options['footer_layout']:'global';
 	$footer_layout = $doyle_footer=='global'?$footer_layout:$doyle_footer;
     switch ($footer_layout) {
         case '1':
@@ -346,8 +351,10 @@ if (!function_exists('doyle_page_title')) {
             }elseif (is_archive()) {
 				if (is_category()){
                     single_cat_title();
-                }elseif(is_tax('fw-portfolio')||is_tax('fw-team')){
+                }elseif(get_post_type() == 'fw-portfolio'||get_post_type() == 'team'){
                     single_term_title();
+                }elseif(is_shop()){
+                    esc_html_e('Shop', 'doyle');
                 }elseif (is_tag()){
                     single_tag_title();
                 }elseif (is_author()){
