@@ -31,6 +31,22 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 	$h2_menu_sub_level_color_active = (isset($doyle_options['h2_menu_sub_level_color']['active'])&&$doyle_options['h2_menu_sub_level_color']['active'])?$doyle_options['h2_menu_sub_level_color']['active']: '#00abc9';
 	$h2_menu_first_level_color_stick_active = (isset($doyle_options['h2_menu_first_level_color_stick']['active'])&&$doyle_options['h2_menu_first_level_color_stick']['active'])?$doyle_options['h2_menu_first_level_color_stick']['active']: '#00abc9';
 	
+	$h2_mobile_toggle_button_default = (isset($doyle_options['h2_mobile_toggle_button']['regular'])&&$doyle_options['h2_mobile_toggle_button']['regular'])?$doyle_options['h2_mobile_toggle_button']['regular']: '#333333';
+	$h2_mobile_toggle_button_hover = (isset($doyle_options['h2_mobile_toggle_button']['hover'])&&$doyle_options['h2_mobile_toggle_button']['hover'])?$doyle_options['h2_mobile_toggle_button']['hover']: '#00abc9';
+	
+	$h2_menu_mobile_first_level_color_active = (isset($doyle_options['h2_menu_mobile_first_level_color']['active'])&&$doyle_options['h2_menu_mobile_first_level_color']['active'])?$doyle_options['h2_menu_mobile_first_level_color']['active']: '#00abc9';
+	$h2_menu_mobile_sub_level_color_active = (isset($doyle_options['h2_menu_mobile_sub_level_color']['active'])&&$doyle_options['h2_menu_mobile_sub_level_color']['active'])?$doyle_options['h2_menu_mobile_sub_level_color']['active']: '#00abc9';
+	
+	$h3_menu_first_level_color_active = (isset($doyle_options['h3_menu_first_level_color']['active'])&&$doyle_options['h3_menu_first_level_color']['active'])?$doyle_options['h3_menu_first_level_color']['active']: '#00abc9';
+	$h3_menu_sub_level_color_active = (isset($doyle_options['h3_menu_sub_level_color']['active'])&&$doyle_options['h3_menu_sub_level_color']['active'])?$doyle_options['h3_menu_sub_level_color']['active']: '#00abc9';
+	$h3_menu_first_level_color_stick_active = (isset($doyle_options['h3_menu_first_level_color_stick']['active'])&&$doyle_options['h3_menu_first_level_color_stick']['active'])?$doyle_options['h3_menu_first_level_color_stick']['active']: '#00abc9';
+
+	$h3_mobile_toggle_button_default = (isset($doyle_options['h3_mobile_toggle_button']['regular'])&&$doyle_options['h3_mobile_toggle_button']['regular'])?$doyle_options['h3_mobile_toggle_button']['regular']: '#333333';
+	$h3_mobile_toggle_button_hover = (isset($doyle_options['h3_mobile_toggle_button']['hover'])&&$doyle_options['h3_mobile_toggle_button']['hover'])?$doyle_options['h3_mobile_toggle_button']['hover']: '#00abc9';
+
+	$h3_menu_mobile_first_level_color_active = (isset($doyle_options['h3_menu_mobile_first_level_color']['active'])&&$doyle_options['h3_menu_mobile_first_level_color']['active'])?$doyle_options['h3_menu_mobile_first_level_color']['active']: '#00abc9';
+	$h3_menu_mobile_sub_level_color_active = (isset($doyle_options['h3_menu_mobile_sub_level_color']['active'])&&$doyle_options['h3_menu_mobile_sub_level_color']['active'])?$doyle_options['h3_menu_mobile_sub_level_color']['active']: '#00abc9';	
+	
     $variables = array(
 		"site-width" => $site_width,
 		"mobile-width" => $mobile_width,
@@ -51,6 +67,22 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 		"h2-menu-first-level-color-active" => $h2_menu_first_level_color_active,
 		"h2-menu-sub-level-color-active" => $h2_menu_sub_level_color_active,
 		"h2-menu-first-level-color-stick-active" => $h2_menu_first_level_color_stick_active,
+		
+		"h2-mobile-toggle-button-default" => $h2_mobile_toggle_button_default,
+		"h2-mobile-toggle-button-hover" => $h2_mobile_toggle_button_hover,
+		
+		"h2-menu-mobile-first-level-color-active" => $h2_menu_mobile_first_level_color_active,
+		"h2-menu-mobile-sub-level-color-active" => $h2_menu_mobile_sub_level_color_active,
+		
+		"h3-menu-first-level-color-active" => $h3_menu_first_level_color_active,
+		"h3-menu-sub-level-color-active" => $h3_menu_sub_level_color_active,
+		"h3-menu-first-level-color-stick-active" => $h3_menu_first_level_color_stick_active,
+		
+		"h3-mobile-toggle-button-default" => $h3_mobile_toggle_button_default,
+		"h3-mobile-toggle-button-hover" => $h3_mobile_toggle_button_hover,
+		
+		"h3-menu-mobile-first-level-color-active" => $h3_menu_mobile_first_level_color_active,
+		"h3-menu-mobile-sub-level-color-active" => $h3_menu_mobile_sub_level_color_active,
 		
     );
 	

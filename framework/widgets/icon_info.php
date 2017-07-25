@@ -43,8 +43,6 @@ class doyle_Icon_Info_Widget extends WP_Widget {
     }
 
     function form($instance) {
-        $font_icon = array();
-        $meta_info = array();
         $font_icon = isset($instance['font_icon']) ? esc_attr($instance['font_icon']) : '';
         $meta_info = isset($instance['meta_info']) ? esc_attr($instance['meta_info']) : '';
         $cl_class = isset($instance['cl_class']) ? esc_attr($instance['cl_class']) : '';

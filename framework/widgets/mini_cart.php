@@ -34,7 +34,7 @@ class doyle_Widget_Mini_Cart extends WC_Widget {
 		
 				.'<a class="bt-toggle-btn" title="'.esc_attr($instance['title']).'" href="#"><i class="fa fa-shopping-cart"></i><span class="cart_total" ></span></a>'
 				
-				.'<div class="bt-cart-content"><h6>'.__('MY SHOPPING CART', 'doyle').'</h6><div class="widget_shopping_cart_content"></div></div>'
+				.'<div class="bt-cart-content"><h3 class="bt-title">'.__('My Shopping Cart', 'doyle').'</h3><div class="widget_shopping_cart_content"></div></div>'
 				
 			.'</div>';
 		

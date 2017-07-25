@@ -212,24 +212,33 @@
 			
 		}
 		BearsthemesOpenNewsletterSidebar();
+		
 		/* Open the hide mini search */
-		function BearsthemesOpenMiniSearchSidebar() {
+		function DoyleOpenMiniSearchSidebar() {
 			$('.bt-mini-search > a').on('click', function(e) {
 				e.preventDefault();
+				if($('.bt-mini-cart .bt-cart-content, .bt-mini-cart > a').hasClass('active')){
+					$('.bt-mini-cart .bt-cart-content, .bt-mini-cart > a').removeClass('active');
+				}
 				$(this).toggleClass('active');
 				$('.bt-mini-search .bt-search-form').toggleClass('active');
 			});
 		}
-		BearsthemesOpenMiniSearchSidebar();
+		DoyleOpenMiniSearchSidebar();
+		
 		/* Open the hide mini cart */
-		function BearsthemesOpenMiniCartSidebar() {
+		function DoyleOpenMiniCartSidebar() {
 			$('.bt-mini-cart > a').on('click', function(e) {
 				e.preventDefault();
+				if($('.bt-mini-search .bt-search-form, .bt-mini-search > a').hasClass('active')){
+					$('.bt-mini-search .bt-search-form, .bt-mini-search > a').removeClass('active');
+				}
 				$(this).toggleClass('active');
 				$('.bt-mini-cart .bt-cart-content').toggleClass('active');
 			});
 		}
-		BearsthemesOpenMiniCartSidebar();
+		DoyleOpenMiniCartSidebar();
+		
 		/* Open the hide menu canvas */
 		function BearsthemesOpenMenuSidebar() {
 			$('.bt-menu-sidebar > a').on('click', function() {

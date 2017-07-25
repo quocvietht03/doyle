@@ -7,6 +7,7 @@ require_once 'news_slider.php';
 require_once 'recent_work.php';
 require_once 'recent_review.php';
 require_once 'icon_info.php';
+require_once 'mini_account.php';
 require_once 'mini_search.php';
 if (class_exists('Woocommerce')) {
 	require_once 'mini_cart.php';
