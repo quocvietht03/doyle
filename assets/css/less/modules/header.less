@@ -119,25 +119,8 @@
 							clear: both;
 						}
 						.remove{
+							.bt-remove-style;
 							float: right;
-							font-size: 0;
-							font-weight: 400;
-							line-height: 18px;
-							text-align: center;
-							color: @secondary-color;
-							width: 18px;
-							height: 18px;
-							-webkit-border-radius: 50%;
-							border-radius: 50%;
-							&:after{
-								content: "\f1f8";
-								font-family: FontAwesome;
-								font-size: 14px;
-							}
-							&:hover{
-								background: transparent;
-								color: darken(@secondary-color, 10);
-							}
 						}
 						img{
 							float: left;
@@ -154,6 +137,7 @@
 				}
 				.total{
 					font-size: 13px;
+					font-weight: 600;
 					line-height: 24px;
 					text-transform: uppercase;
 					color: #171721;
@@ -161,8 +145,8 @@
 					margin-bottom: 30px;
 					padding: 5px 10px;
 					.amount{
-						font-size: 15px;
-						color: #686876;
+						font-size: 14px;
+						color: @secondary-color;
 					}
 				}
 				.buttons{
@@ -170,6 +154,7 @@
 					.button{
 						display: inline-block;
 						font-size: 13px;
+						font-weight: 600;
 						line-height: 24px;
 						text-transform: uppercase;
 						color: #ffffff;

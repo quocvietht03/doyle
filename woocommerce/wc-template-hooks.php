@@ -2,8 +2,9 @@
 // Return the number of products you wanna show per page.
 add_filter( 'loop_shop_per_page', 'doyle_loop_shop_per_page', 20 );
 function doyle_loop_shop_per_page( $cols ) {
-  $cols = 9;
-  return $cols;
+	global $doyle_options;
+	$cols = (int) isset($doyle_options['shop_product_per_page']) ? $doyle_options['shop_product_per_page']: 10;
+	return $cols;
 }
 
 /**

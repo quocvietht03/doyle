@@ -1,6 +1,4 @@
-<?php if ( ! defined( 'FW' ) ) {
-	die( 'Forbidden' );
-}
+<?php if ( ! defined( 'FW' ) ) die( 'Forbidden' );
 
 $options = array(
 	'team_options' => array(

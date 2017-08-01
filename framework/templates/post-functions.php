@@ -1,17 +1,4 @@
 <?php
-/* Custom excerpt */
-function doyle_custom_excerpt($limit, $more) {
-    $excerpt = explode(' ', get_the_excerpt(), $limit);
-    if (count($excerpt) >= $limit) {
-        array_pop($excerpt);
-        $excerpt = implode(" ", $excerpt) . $more;
-    } else {
-        $excerpt = implode(" ", $excerpt);
-    }
-    $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
-    return $excerpt;
-}
-
 /* Count post view. */
 function doyle_set_count_view(){
     $post_id = get_the_ID();
@@ -39,66 +26,6 @@ function doyle_get_count_view() {
 
     $views = $views ? $views : 0 ;
     return $views;
-}
-
-/* Post gallery */
-if (!function_exists('doyle_grab_ids_from_gallery')) {
-
-    function doyle_grab_ids_from_gallery() {
-        global $post;
-        $gallery = doyle_get_shortcode_from_content('gallery');
-        $object = new stdClass();
-        $object->columns = '3';
-        $object->link = 'post';
-        $object->ids = array();
-        if ($gallery) {
-            $object = doyle_extra_shortcode('gallery', $gallery, $object);
-        }
-        return $object;
-    }
-
-}
-/* Extra shortcode */
-if (!function_exists('doyle_extra_shortcode')) {
-    function doyle_extra_shortcode($name, $shortcode, $object) {
-        if ($shortcode && is_object($object)) {
-            $attrs = str_replace(array('[', ']', '"', $name), null, $shortcode);
-            $attrs = explode(' ', $attrs);
-            if (is_array($attrs)) {
-                foreach ($attrs as $attr) {
-                    $_attr = explode('=', $attr);
-                    if (count($_attr) == 2) {
-                        if ($_attr[0] == 'ids') {
-                            $object->$_attr[0] = explode(',', $_attr[1]);
-                        } else {
-                            $object->$_attr[0] = $_attr[1];
-                        }
-                    }
-                }
-            }
-        }
-        return $object;
-    }
-}
-/* Get Shortcode Content */
-if (!function_exists('doyle_get_shortcode_from_content')) {
-
-    function doyle_get_shortcode_from_content($param) {
-        global $post;
-        $pattern = get_shortcode_regex();
-        $content = $post->post_content;
-        if (preg_match_all('/' . $pattern . '/s', $content, $matches) && array_key_exists(2, $matches) && in_array($param, $matches[2])) {
-            $key = array_search($param, $matches[2]);
-            return $matches[0][$key];
-        }
-    }
-
-}
-/* Remove Shortcode */
-if (!function_exists('doyle_remove_shortcode_gallery')) {
-	function doyle_remove_shortcode_gallery() {
-		return null;
-	}
 }
 
 /*Author*/

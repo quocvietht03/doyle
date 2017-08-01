@@ -1,6 +1,4 @@
-<?php if ( ! defined( 'FW' ) ) {
-	die( 'Forbidden' );
-}
+<?php if ( ! defined( 'FW' ) ) die( 'Forbidden' );
 
 $options = array(
 	'post_options' => array(
@@ -11,11 +9,62 @@ $options = array(
 				'title' => __('General', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
-					'titlebar_bg' => array(
-						'label' => __( 'Title Bar Background', 'doyle' ),
-						'desc'  => __( 'Upload image for title bar background.', 'doyle' ),
-						'type'  => 'upload'
+					'social-title' =>  array( 
+						'type' => 'text',
+						'value' => 'Share',
+						'label' => __('Social Title', '{domain}'),
+						'desc'  => __('Please, enter social title of post.', '{domain}'),
 					),
+					'social' => array(
+						'type'  => 'addable-popup',
+						'value' => array(
+							array(
+								'title' => 'Facebook',
+								'icon' => 'fa fa-facebook',
+								'link' => '#'
+							),
+							array(
+								'title' => 'Twitter',
+								'icon' => 'fa fa-twitter',
+								'link' => '#'
+							),
+							array(
+								'title' => 'Google Plus',
+								'icon' => 'fa fa-google-plus',
+								'link' => '#'
+							),
+							array(
+								'title' => 'Instagram',
+								'icon' => 'fa fa-instagram',
+								'link' => '#'
+							)
+						),
+						'label' => __('Social', '{domain}'),
+						'desc'  => __('Please configs social of post', '{domain}'),
+						'popup-options' => array(
+							'title' => array( 
+								'type' => 'text',
+								'value' => '',
+								'label' => __('Title', '{domain}'),
+								'desc'  => __('Please, enter title of social item.', '{domain}'),
+							),
+							'icon' => array( 
+								'type' => 'text',
+								'value' => '',
+								'label' => __('Icon', '{domain}'),
+								'desc'  => __('Please, enter icon of social item.', '{domain}'),
+							),
+							'link' => array( 
+								'type' => 'text',
+								'value' => '',
+								'label' => __('Url(Link)', '{domain}'),
+								'desc'  => __('Please, enter link of social item.', '{domain}'),
+							)
+						),
+						'template' => '{{- title }}',
+						'add-button-text' => __('Add', '{domain}'),
+						'sortable' => true,
+					)
 				),
 			),
 			'post_gallery' => array(

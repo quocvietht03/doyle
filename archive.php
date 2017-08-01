@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <?php
 global $doyle_options;
-$sidebar_width = (int) isset($doyle_options['sidebar_width']) ?  $doyle_options['sidebar_width']: 3;
+$fullwidth = isset($doyle_options['blog_fullwidth'])&&$doyle_options['blog_fullwidth'] ? 'fullwidth': 'container';
+$sidebar_width = (int) isset($doyle_options['blog_sidebar_width']) ?  $doyle_options['blog_sidebar_width']: 3;
 
 $sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'right';
 
@@ -20,7 +21,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 doyle_titlebar();
 ?>
 	<div class="bt-main-content">
-		<div class="container">
+		<div class="<?php echo esc_attr($fullwidth); ?>">
 			<div class="row">
 				<!-- Start Left Sidebar -->
 				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>

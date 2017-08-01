@@ -14,12 +14,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#888888',
+				'color'       => '#686876',
 				'font-size'   => '14px',
 				'font-family' => 'Lato',
 				'font-weight' => '400',
-				'line-height' => '26px',
-				'letter-spacing' => '1px'
+				'line-height' => '24px',
+				'letter-spacing' => '0'
 			),
 			'output'    => array('body')
 		),

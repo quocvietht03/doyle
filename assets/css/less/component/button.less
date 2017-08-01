@@ -11,7 +11,7 @@
 
 .bt-pagination {
 	text-align: center;
-	margin-top: 30px;
+	margin: 30px 0;
 	> .page-numbers {
 		display: inline-block;
 		width: 32px;
@@ -27,25 +27,15 @@
 		-webkit-border-radius: 50%;
 		border-radius: 50%;
 		&.dots {
-			position: relative;
-			color: transparent;
-			border-color: transparent;
+			font-size: 24px;
+			line-height: 24px;
+			color: #686876;
+			background: transparent;
+			border: none;
 			&:hover {
-				color: transparent;
-			}
-			&:before {
-				content: ".........";
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				font-size: 16px;
-				line-height: 1;
-				color: #323249;
-				-webkit-transform: translateX(-50%);
-				-moz-transform: translateX(-50%);
-				-o-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
-				transform: translateX(-50%);
+				color: #686876;
+				background: transparent;
+				border: none;
 			}
 		}
 		&.prev, &.next {

@@ -17,7 +17,10 @@
  */
  
 global $doyle_options;
-$sidebar_width = (int) isset($doyle_options['sidebar_width']) ?  $doyle_options['sidebar_width']: 3;
+$fullwidth = isset($doyle_options['shop_fullwidth'])&&$doyle_options['shop_fullwidth'] ? 'fullwidth': 'container';
+$sidebar_width = (int) isset($doyle_options['shop_sidebar_width']) ? $doyle_options['shop_sidebar_width']: 3;
+$shop_top_bar = isset($doyle_options['shop_top_bar']) ? $doyle_options['shop_top_bar']: false;
+$shop_product_per_row = (int) isset($doyle_options['shop_product_per_row']) ? $doyle_options['shop_product_per_row']: 3;
 
 $sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'full';
 
@@ -38,7 +41,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 <?php doyle_titlebar(); ?>
 	
 	<div class="bt-main-content">
-		<div class="container">
+		<div class="<?php echo esc_attr($fullwidth); ?>">
 			<div class="row">
 				<!-- Start Left Sidebar -->
 				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
@@ -50,18 +53,20 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 				<!-- Start Content -->
 				<div class="bt-content <?php echo esc_attr($content_class); ?>">
 					<?php if ( have_posts() ) : ?>
-						<div class="top-bar">
-							<div class="sort">
-								<div class="inner">
-									<?php do_action( 'woocommerce_catalog_ordering' ); ?>
+						<?php if($shop_top_bar){ ?>
+							<div class="top-bar">
+								<div class="sort">
+									<div class="inner">
+										<?php do_action( 'woocommerce_catalog_ordering' ); ?>
+									</div>
+								</div>
+								<div class="result">
+									<div class="inner">
+										<?php do_action( 'woocommerce_result_count' ); ?>
+									</div>
 								</div>
 							</div>
-							<div class="result">
-								<div class="inner">
-									<?php do_action( 'woocommerce_result_count' ); ?>
-								</div>
-							</div>
-						</div>
+						<?php } ?>
 						<div class="row products">
 							<?php
 								$item_wrap_class = array();
@@ -73,7 +78,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 								$item_wrap_class[] = $layout;
 								
 								if($layout == 'grid3col'){
-									$item_wrap_class[] = 'col-md-4';
+									$item_wrap_class[] = 'col-md-'.(12/$shop_product_per_row);
 								}elseif($layout == 'grid2col'){
 									$item_wrap_class[] = 'col-md-6';
 								}else{

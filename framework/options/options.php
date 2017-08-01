@@ -280,12 +280,14 @@
 	require_once get_template_directory().'/framework/options/color.php';
 	require_once get_template_directory().'/framework/options/typography.php';
 	require_once get_template_directory().'/framework/options/fonticon.php';
+	require_once get_template_directory().'/framework/options/button.php';
 	require_once get_template_directory().'/framework/options/header.php';
 	require_once get_template_directory().'/framework/options/titlebar.php';
 	require_once get_template_directory().'/framework/options/footer.php';
+	require_once get_template_directory().'/framework/options/page.php';
 	require_once get_template_directory().'/framework/options/blog.php';
 	require_once get_template_directory().'/framework/options/portfolio.php';
-	require_once get_template_directory().'/framework/options/button.php';
+	require_once get_template_directory().'/framework/options/shop.php';
 	require_once get_template_directory().'/framework/options/customcssjs.php';
 	
     // -> START Basic Fields

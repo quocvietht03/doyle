@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <?php
 global $doyle_options;
-$fullwidth = isset($doyle_options['blog_fullwidth'])&&$doyle_options['blog_fullwidth'] ? 'fullwidth': 'container';
-$sidebar_width = (int) isset($doyle_options['blog_sidebar_width']) ?  $doyle_options['blog_sidebar_width']: 3;
+$fullwidth = isset($doyle_options['portfolio_fullwidth'])&&$doyle_options['portfolio_fullwidth'] ? 'fullwidth': 'container';
+$sidebar_width = (int) isset($doyle_options['portfolio_sidebar_width']) ?  $doyle_options['portfolio_sidebar_width']: 3;
 
 $sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'right';
 
@@ -20,7 +20,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 
 doyle_titlebar();
 ?>
-	<div class="bt-main-content bt-blog-list">
+	<div class="bt-main-content">
 		<div class="<?php echo esc_attr($fullwidth); ?>">
 			<div class="row">
 				<!-- Start Left Sidebar -->
@@ -35,7 +35,7 @@ doyle_titlebar();
 					<?php
 					if( have_posts() ) {
 						while ( have_posts() ) : the_post();
-							get_template_part( 'framework/templates/blog/entry', get_post_format());
+							get_template_part( 'framework/templates/portfolio/entry');
 						endwhile;
 						
 						doyle_paging_nav();

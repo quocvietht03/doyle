@@ -1,3 +1,8 @@
+#redux-header .rAds{
+	display: none !important;
+	opacity: 0;
+	z-index: -9;
+}
 /* Theme options */
 #customize-controls .description{
 	display: block;

@@ -23,12 +23,48 @@ Redux::setSection( $opt_name, array(
 			'default'  => '1'
 		),
 		array(
+			'id'       => 'titlebar_fullwidth',
+			'type'     => 'switch',
+			'title'    => __( 'Full Width (100%)', 'redux-framework-demo' ),
+			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'redux-framework-demo' ),
+			'default'  => false
+		),
+		array(
+			'id'       => 'titlebar_fullwidth_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'top'      => false,
+			'bottom'   => false,
+			'title'    => __( 'Full Width Space', 'redux-framework-demo' ),
+			'subtitle' => __( 'Control the left/right padding the content area display.', 'redux-framework-demo' ),
+			'default'  => array(
+				'padding-left'    => '15px',
+				'padding-right' => '15px'
+			),
+			'required' 		=> array('titlebar_fullwidth' , '=', '1'),
+			'output'    => array('.bt-titlebar .bt-subheader-inner')
+		),
+		array(
+			'id'       => 'titlebar_align',
+			'type'     => 'button_set',
+			'title'    => __( 'Title Bar Align', 'redux-framework-demo' ),
+			'subtitle' => __( 'Control align of the title bar.', 'redux-framework-demo' ),
+			'options'  => array(
+				'text-left' => 'Left',
+				'text-center' => 'Center',
+				'text-right' => 'Right'
+			),
+			'default'  => 'text-center',
+			'required' 		=> array('titlebar_layout' , '=', '1')
+		),
+		array(
 			'id'       => 'titlebar_bg',
 			'type'     => 'background',
 			'title'    => __( 'Title Bar Background', 'redux-framework-demo' ),
 			'subtitle' => __( 'Control the background of the title bar.', 'redux-framework-demo' ),
 			'default'  => array(
-				'background-color' => '#252525',
+				'background-color' => '#171721',
 			),
 			'output'    => array('.bt-titlebar'),
 		),
@@ -86,13 +122,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Page Title Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography page title.', 'redux-framework-demo' ),
-			'font-family'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
+			'text-transform'   => true,
 			'default'  => array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '24px',
+				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '30px',
 				'letter-spacing' => '1.6px'
@@ -216,13 +253,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Breadcrumb Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography breadcrumb.', 'redux-framework-demo' ),
-			'font-family'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
+			'text-transform'   => true,
 			'default'  => array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '14px',
+				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '24px',
 				'letter-spacing' => '1px'

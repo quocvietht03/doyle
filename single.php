@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 <?php
 global $doyle_options;
-$sidebar_width = (int) isset($doyle_options['sidebar_width']) ?  $doyle_options['sidebar_width']: 3;
+$fullwidth = isset($doyle_options['post_fullwidth'])&&$doyle_options['post_fullwidth'] ? 'fullwidth': 'container';
+$sidebar_width = (int) isset($doyle_options['post_sidebar_width']) ?  $doyle_options['post_sidebar_width']: 3;
+$post_navigation = isset($doyle_options['single_post_navigation']) ? $doyle_options['single_post_navigation']: true;
+$author = isset($doyle_options['single_author']) ? $doyle_options['single_author']: true;
+$comment = isset($doyle_options['single_comment']) ? $doyle_options['single_comment']: true;
 
 $sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'right';
 
@@ -20,7 +24,7 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 doyle_titlebar();
 ?>
 	<div class="bt-main-content">
-		<div class="container">
+		<div class="<?php echo esc_attr($fullwidth); ?>">
 			<div class="row">
 				<!-- Start Left Sidebar -->
 				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
@@ -35,11 +39,14 @@ doyle_titlebar();
 					while ( have_posts() ) : the_post();
 						get_template_part( 'framework/templates/blog/single/entry', get_post_format());
 						
-						doyle_post_nav();
-						echo doyle_author_render();
+						if($post_navigation) doyle_post_nav();
+						
+						if($author) echo doyle_author_render();
 						
 						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) comments_template();
+						if($comment){
+							if ( comments_open() || get_comments_number() ) comments_template();
+						}
 					endwhile;
 					?>
 				</div>

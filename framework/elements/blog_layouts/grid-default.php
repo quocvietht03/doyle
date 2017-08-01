@@ -85,7 +85,7 @@
 			<li><?php echo __('on ', 'doyle').'<strong>'.get_the_date('M d, Y').'</strong>'; ?></li>
 		</ul>
 		<?php
-			echo '<div class="bt-excerpt">'.doyle_custom_excerpt($excerpt_limit, $excerpt_more).'</div>';
+			echo '<div class="bt-excerpt">'.wp_trim_words(get_the_excerpt(), $excerpt_limit, $excerpt_more).'</div>';
 			if(!empty($readmore_text)) echo '<a class="bt-readmore" href="'.get_the_permalink().'">'.$readmore_text.'</a>';
 		?>
 	</div>

@@ -421,76 +421,52 @@ if (!function_exists('doyle_page_breadcrumb')) {
 			echo '<span class="current">' . get_the_time('F'). ' '. get_the_time('Y') . '</span>';
 
 		} elseif ( is_single() && !is_attachment() ) {
-		if ( get_post_type() != 'post' ) {
-			if(get_post_type() == 'portfolio'){
-				$terms = get_the_terms(get_the_ID(), 'portfolio_category', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'portfolio_category', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
+			if ( get_post_type() != 'post' ) {
+				if(get_post_type() == 'fw-portfolio'){
+					$terms = get_the_terms(get_the_ID(), 'fw-portfolio-category', '' , '' );
+					if($terms) {
+						the_terms(get_the_ID(), 'fw-portfolio-category', '' , ', ' );
+						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
+					}else{
+						echo '<span class="current">' . get_the_title() . '</span>';
+					}
+				}elseif(get_post_type() == 'team'){
+					$terms = get_the_terms(get_the_ID(), 'team_category', '' , '' );
+					if($terms) {
+						the_terms(get_the_ID(), 'team_category', '' , ', ' );
+						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
+					}else{
+						echo '<span class="current">' . get_the_title() . '</span>';
+					}
+				}elseif(get_post_type() == 'testimonial'){
+					$terms = get_the_terms(get_the_ID(), 'testimonial_category', '' , '' );
+					if($terms) {
+						the_terms(get_the_ID(), 'testimonial_category', '' , ', ' );
+						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
+					}else{
+						echo '<span class="current">' . get_the_title() . '</span>';
+					}
+				}elseif(get_post_type() == 'product'){
+					$terms = get_the_terms(get_the_ID(), 'product_cat', '' , '' );
+					if($terms) {
+						the_terms(get_the_ID(), 'product_cat', '' , ', ' );
+						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
+					}else{
+						echo '<span class="current">' . get_the_title() . '</span>';
+					}
 				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}elseif(get_post_type() == 'recipe'){
-				$terms = get_the_terms(get_the_ID(), 'recipe_category', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'recipe_category', '' , ', ' );
+					$post_type = get_post_type_object(get_post_type());
+					$slug = $post_type->rewrite;
+					echo '<a href="' . home_url('/') . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
 					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
 				}
-			}elseif(get_post_type() == 'produce'){
-				$terms = get_the_terms(get_the_ID(), 'produce_category', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'produce_category', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}elseif(get_post_type() == 'team'){
-				$terms = get_the_terms(get_the_ID(), 'team_category', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'team_category', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}elseif(get_post_type() == 'testimonial'){
-				$terms = get_the_terms(get_the_ID(), 'testimonial_category', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'testimonial_category', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}elseif(get_post_type() == 'myclients'){
-				$terms = get_the_terms(get_the_ID(), 'clientscategory', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'clientscategory', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}elseif(get_post_type() == 'product'){
-				$terms = get_the_terms(get_the_ID(), 'product_cat', '' , '' );
-				if($terms) {
-					the_terms(get_the_ID(), 'product_cat', '' , ', ' );
-					echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-				}else{
-					echo '<span class="current">' . get_the_title() . '</span>';
-				}
-			}else{
-				$post_type = get_post_type_object(get_post_type());
-				$slug = $post_type->rewrite;
-				echo '<a href="' . home_url('/') . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
-				echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
-			}
 
-		} else {
-			$cat = get_the_category(); $cat = $cat[0];
-			$cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-			echo ''.$cats;
-			echo '<span class="current">' . get_the_title() . '</span>';
-		}
+			} else {
+				$cat = get_the_category(); $cat = $cat[0];
+				$cats = get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+				echo ''.$cats;
+				echo '<span class="current">' . get_the_title() . '</span>';
+			}
 
 		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
 			$post_type = get_post_type_object(get_post_type());
@@ -649,35 +625,6 @@ if(!function_exists('doyle_add_extra_code_wp_footer')) {
 	}
 	add_action( 'wp_footer', 'doyle_add_extra_code_wp_footer' );
 }
-
-/* This code filters the Categories archive widget to include the post count inside the link */
-function doyle_cat_count_span($links) {
-	$links = str_replace('</a> (', ' <span>', $links);
-	$links = str_replace('(', '', $links);
-	$links = str_replace(')', '</span></a>', $links);
-	return $links;
-}
-add_filter('wp_list_categories', 'doyle_cat_count_span');
-
-/* This code filters the Archive widget to include the post count inside the link */
-function doyle_archive_count_span($links) {
-	$links = str_replace('(', '<span class="count">', $links);
-	$links = str_replace(')', '</span></a>', $links);
-	return $links;
-}
-add_filter('get_archives_link', 'doyle_archive_count_span');
-
-/* This code filters the Tag Cloud widget to include the post count inside the link */
-function doyle_tag_cloud_count( $return ) {
-	$tags = explode('</a>', $return);
-	foreach( $tags as $tag ) {
-		$tagn[] = '<span>'.$tag.'</a>';
-	}
-	$return = implode('</span>', $tagn);
-	return $return;
-}
-add_filter ( 'wp_tag_cloud', 'doyle_tag_cloud_count' );
-
 // Custom get sidebar function
 if(!function_exists('doyle_get_sidebars')) {
 	function doyle_get_sidebars() {

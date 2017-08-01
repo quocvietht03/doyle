@@ -143,23 +143,6 @@ Redux::setSection( $opt_name, array(
 			'required' 		=> array('site_loading' , '=', '1'),
 			'output'    => array('#site_loading')
 		),
-		array(
-			'id'       => 'page_comment',
-			'type'     => 'switch',
-			'title'    => __( 'Enable Page Comment', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable page comment.', 'redux-framework-demo' ),
-			'default'  => false,
-		),
-		array(
-			'id'            => 'sidebar_width',
-			'type'          => 'slider',
-			'title'         => __( 'Sidebar Width', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'redux-framework-demo' ),
-			'default'       => 3,
-			'min'           => 1,
-			'step'          => 1,
-			'max'           => 5,
-			'display_value' => 'text'
-		),
+		
 	)
 ) );

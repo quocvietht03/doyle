@@ -2,9 +2,8 @@ body {
 	input,textarea,select {
 		.easing-animation;
 		outline: none;
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 24px;
-		letter-spacing: 0.05em;
 		color: #454545;
 		background-color: transparent;
 		border: 1px solid #ececec;
@@ -31,20 +30,13 @@ body {
 		border:0;
 	}
 	input[type="submit"] {
-		.input-submit;
-		
-		font-size: 13px;
-		letter-spacing: 0.04em;
-		background-color: @main-color;
+		font-size: 14px;
+		background-color: @secondary-color;
 		color: #ffffff;
 		&:hover, &:focus, &:active {
-			background-color: #313131;
+			background-color: darken(@secondary-color, 10);
 			color:#ffffff;
 		}
-	}
-
-	select {
-		height: 45px;
 	}
 
 	textarea {
