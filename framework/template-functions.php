@@ -140,6 +140,12 @@ if (!function_exists('doyle_enqueue_scripts')) {
 			wp_enqueue_script( 'doyle-smoothScroll', get_template_directory_uri().'/assets/js/SmoothScroll.js', array('jquery'), '', true);
 		}
 		
+		/* Site Loading */
+		if(isset($doyle_options['site_loading'])&&$doyle_options['site_loading']){
+			wp_enqueue_style( 'doyle-loading', get_template_directory_uri().'/assets/vendors/loading/style.css', false );
+			wp_enqueue_script( 'doyle-loading', get_template_directory_uri().'/assets/vendors/loading/loading.js', array('jquery'), '', true  );
+		}
+		
 		/* OWl Carousel */
 		wp_register_script('doyle-owl-carousel', get_template_directory_uri().'/assets/vendors/owl-carousel/owl.carousel.min.js', array('jquery'), '', true);
 		wp_register_style('doyle-owl-carousel', get_template_directory_uri(). '/assets/vendors/owl-carousel/assets/owl.carousel.min.css',array(),'');
@@ -155,7 +161,6 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		wp_enqueue_style( 'doyle-style', get_template_directory_uri().'/style.css',  array(), '', false );
 		wp_enqueue_script( 'doyle-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '', true);
-		wp_enqueue_script( 'doyle-main-ajax', get_template_directory_uri().'/assets/js/main-ajax.js', array('jquery'), '', true);
 		
 		/* Load extra font */
 		$custom_style = '';
@@ -424,7 +429,7 @@ if (!function_exists('doyle_page_breadcrumb')) {
 			if ( get_post_type() != 'post' ) {
 				if(get_post_type() == 'fw-portfolio'){
 					$terms = get_the_terms(get_the_ID(), 'fw-portfolio-category', '' , '' );
-					if($terms) {
+					if(!empty($terms) && !is_wp_error($terms)) {
 						the_terms(get_the_ID(), 'fw-portfolio-category', '' , ', ' );
 						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
 					}else{
@@ -432,7 +437,7 @@ if (!function_exists('doyle_page_breadcrumb')) {
 					}
 				}elseif(get_post_type() == 'team'){
 					$terms = get_the_terms(get_the_ID(), 'team_category', '' , '' );
-					if($terms) {
+					if(!empty($terms) && !is_wp_error($terms)) {
 						the_terms(get_the_ID(), 'team_category', '' , ', ' );
 						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
 					}else{
@@ -440,7 +445,7 @@ if (!function_exists('doyle_page_breadcrumb')) {
 					}
 				}elseif(get_post_type() == 'testimonial'){
 					$terms = get_the_terms(get_the_ID(), 'testimonial_category', '' , '' );
-					if($terms) {
+					if(!empty($terms) && !is_wp_error($terms)) {
 						the_terms(get_the_ID(), 'testimonial_category', '' , ', ' );
 						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
 					}else{
@@ -448,7 +453,7 @@ if (!function_exists('doyle_page_breadcrumb')) {
 					}
 				}elseif(get_post_type() == 'product'){
 					$terms = get_the_terms(get_the_ID(), 'product_cat', '' , '' );
-					if($terms) {
+					if(!empty($terms) && !is_wp_error($terms)) {
 						the_terms(get_the_ID(), 'product_cat', '' , ', ' );
 						echo ' ' . $delimiter . ' ' . '<span class="current">' . get_the_title() . '</span>';
 					}else{
@@ -584,8 +589,6 @@ if(!function_exists('doyle_add_content_before_header_func')) {
 		$site_loading = (isset($doyle_options['site_loading'])&&$doyle_options['site_loading'])?$doyle_options['site_loading']: false;
 		$site_loading_spinner = (isset($doyle_options['site_loading_spinner'])&&$doyle_options['site_loading_spinner'])?$doyle_options['site_loading_spinner']: 'spinner0';
 		if($site_loading){
-			wp_enqueue_style( 'doyle-loading', get_template_directory_uri().'/assets/vendors/loading/style.css', false );
-			wp_enqueue_script( 'doyle-loading', get_template_directory_uri().'/assets/vendors/loading/loading.js', array('jquery'), '', true  );
 			echo '<div id="site_loading">
 					<div class="loader '.esc_attr($site_loading_spinner).'">
 						<div class="dot1"></div>

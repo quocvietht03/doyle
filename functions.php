@@ -1,6 +1,5 @@
 <?php
-/* Ajax functions */
-require_once get_template_directory().'/framework/ajax-functions.php';
+global $doyle_options;
 
 /* Template functions */
 require_once get_template_directory().'/framework/template-functions.php';

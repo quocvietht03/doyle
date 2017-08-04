@@ -1,9 +1,9 @@
 <?php
 function doyle_autoCompileLess($inputFile, $outputFile) {
-    require_once( ABSPATH.'/wp-admin/includes/file.php' );	
+    require_once ABSPATH.'/wp-admin/includes/file.php';	
 	WP_Filesystem();
 	if(!class_exists('lessc')){
-		require_once ( get_template_directory().'/framework/inc/lessc.inc.php' );
+		require_once get_template_directory().'/framework/inc/lessc.inc.php';
 	}
 	global $wp_filesystem, $doyle_options;
     $less = new lessc();

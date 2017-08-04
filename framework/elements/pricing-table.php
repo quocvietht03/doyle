@@ -191,7 +191,7 @@ class WPBakeryShortCode_bt_pricing_table extends WPBakeryShortCode {
 		ob_start();
 		?>
 		<div class="<?php echo esc_attr(implode(' ', $css_class)); ?>" <?php echo esc_attr(implode(' ', $wrapper_attributes)); ?>>
-			<?php include 'pricing_table_layouts/'.$layout.'.php'; ?>
+			<?php require get_template_directory().'/framework/elements/pricing_table_layouts/'.$layout.'.php'; ?>
 		</div>
 		<?php
 		return ob_get_clean();

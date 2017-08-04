@@ -139,7 +139,7 @@ Redux::setSection( $opt_name, array(
 			'background-size' => false,
 			'preview' => false,
 			'default'  => array(
-				'background-color' => '#252525',
+				'background-color' => '#00c282',
 			),
 			'required' 		=> array('h1_header_top' , '=', '1'),
 			'output'    => array('.bt-header-v1 .bt-header-desktop .bt-top, .bt-header-v1 .bt-header-mobile .bt-top'),
@@ -149,17 +149,15 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Header Top Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography header top.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
 			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#EAEAEA',
+				'color'       => '#eaeaea',
 				'font-size'   => '13px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h1_header_top' , '=', '1'),
 			'output'    => array('.bt-header-v1 .bt-header-desktop .bt-top')
@@ -171,8 +169,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the link color of header top.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#FAFAFA',
-				'hover'   => '#00ABC9',
+				'regular' => '#fafafa',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h1_header_top' , '=', '1'),
 			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-top a')
@@ -278,7 +276,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '60px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -288,9 +286,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -308,9 +306,12 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
-			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
+			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a, 
+								.bt-header-v1 .bt-header-stick .bt-menu-desktop ul.menu li ul.sub-menu > li > a,
+								.bt-header-v1 .bt-header-desktop .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col a,
+								.bt-header-v1 .bt-header-stick .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > a')
 		),
 		array(
 			'id'       => 'h1_menu_sub_level_color',
@@ -318,9 +319,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v1 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
 		),
@@ -371,8 +372,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h1_menu_canvas' , '=', '1'),
 			'output'    => array('.bt-header-v1 .bt-menu-canvas-toggle')
@@ -494,7 +495,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '50px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h1_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v1 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -505,9 +506,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color Stick', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'required' 		=> array('h1_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v1 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -549,8 +550,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 		),
 		array(
@@ -619,7 +620,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v1 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li > a')
 		),
@@ -629,9 +630,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v1 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li > a')
 		),
@@ -649,7 +650,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v1 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -659,9 +660,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v1 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -776,9 +777,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Header Top Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography header top.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -786,7 +784,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#EAEAEA',
 				'font-size'   => '13px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h2_header_top' , '=', '1'),
 			'output'    => array('.bt-header-v2 .bt-header-desktop .bt-top')
@@ -799,7 +797,7 @@ Redux::setSection( $opt_name, array(
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FAFAFA',
-				'hover'   => '#00ABC9',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h2_header_top' , '=', '1'),
 			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-top a')
@@ -879,17 +877,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Header Middle Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography header middle.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#454545',
+				'color'       => '#686876',
 				'font-size'   => '13px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-header-v2 .bt-header-desktop .bt-middle')
 		),
@@ -900,8 +895,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the link color of header middle.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#454545',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-middle a')
 		),
@@ -985,7 +980,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '60px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -995,9 +990,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -1015,9 +1010,12 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
-			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
+			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a, 
+								.bt-header-v2 .bt-header-stick .bt-menu-desktop ul.menu li ul.sub-menu > li > a,
+								.bt-header-v2 .bt-header-desktop .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col a,
+								.bt-header-v2 .bt-header-stick .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > a')
 		),
 		array(
 			'id'       => 'h2_menu_sub_level_color',
@@ -1025,9 +1023,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v2 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
 		),
@@ -1079,8 +1077,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h2_menu_canvas' , '=', '1'),
 			'output'    => array('.bt-header-v2 .bt-menu-canvas-toggle')
@@ -1224,7 +1222,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '50px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h2_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v2 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -1235,9 +1233,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color Stick', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'required' 		=> array('h2_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v2 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -1294,8 +1292,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 		),
 		array(
@@ -1349,7 +1347,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v2 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile > ul.menu > li > a')
 		),
@@ -1359,9 +1357,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v2 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile > ul.menu > li > a')
 		),
@@ -1379,7 +1377,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v2 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -1389,9 +1387,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v2 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -1506,9 +1504,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Header Top Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography header top.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1516,7 +1511,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#EAEAEA',
 				'font-size'   => '13px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h3_header_top' , '=', '1'),
 			'output'    => array('.bt-header-v3 .bt-header-desktop .bt-top')
@@ -1529,7 +1524,7 @@ Redux::setSection( $opt_name, array(
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FAFAFA',
-				'hover'   => '#00ABC9',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h3_header_top' , '=', '1'),
 			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-top a')
@@ -1609,17 +1604,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Header Middle Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography header middle.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#454545',
+				'color'       => '#686876',
 				'font-size'   => '13px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-header-v3 .bt-header-desktop .bt-middle')
 		),
@@ -1630,8 +1622,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the link color of header middle.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#454545',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-middle a')
 		),
@@ -1715,7 +1707,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '60px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -1725,9 +1717,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-bottom ul.menu > li > a')
 		),
@@ -1745,9 +1737,12 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
-			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
+			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a, 
+								.bt-header-v3 .bt-header-stick .bt-menu-desktop ul.menu li ul.sub-menu > li > a,
+								.bt-header-v3 .bt-header-desktop .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col a,
+								.bt-header-v3 .bt-header-stick .bt-menu-desktop > ul.menu > li.menu-item-has-mega-menu .mega-menu .mega-menu-row .mega-menu-col > a')
 		),
 		array(
 			'id'       => 'h3_menu_sub_level_color',
@@ -1755,9 +1750,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v3 .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li > a')
 		),
@@ -1809,8 +1804,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color button toggle menu canvas.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('h3_menu_canvas' , '=', '1'),
 			'output'    => array('.bt-header-v3 .bt-menu-canvas-toggle')
@@ -1954,7 +1949,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '50px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('h3_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v3 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -1965,9 +1960,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu First Level Color Stick', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'required' 		=> array('h3_header_stick' , '=', '1'),
 			'output'   => array('.bt-header-v3 .bt-header-stick .bt-menu-desktop ul.menu > li > a')
@@ -2024,8 +2019,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 		),
 		array(
@@ -2079,7 +2074,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile > ul.menu > li > a')
 		),
@@ -2089,9 +2084,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile First Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile first level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile > ul.menu > li > a')
 		),
@@ -2109,7 +2104,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'   => array('.bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -2119,9 +2114,9 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Menu Mobile Sub Level Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Controls the color menu mobile sub level.', 'redux-framework-demo' ),
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
-				'active'  => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
 			),
 			'output'   => array('.bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
@@ -2156,7 +2151,7 @@ Redux::setSection( $opt_name, array(
 			'background-size' => false,
 			'preview' => false,
 			'default'  => array(
-				'background-color' => '#00ABC9',
+				'background-color' => '#0a6edd',
 			),
 			'output'    => array('#bt_menu_canvas'),
 		),

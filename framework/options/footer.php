@@ -222,9 +222,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Top Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer top.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -232,7 +229,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#DCDCDC',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v1 .bt-footer-top')
@@ -245,7 +242,7 @@ Redux::setSection( $opt_name, array(
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
-				'hover'   => '#00ABC9',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 			'output'   => array('.bt-footer-v1 .bt-footer-top a')
@@ -255,9 +252,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Top Widget Titile Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer top widget title.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -265,7 +259,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '18px',
 				'line-height' => '24px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v1 .bt-footer-top .wg-title')
@@ -371,9 +365,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Bottom Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer bottom.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -381,7 +372,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#DCDCDC',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-footer-v1 .bt-footer-bottom')
 		),
@@ -393,7 +384,7 @@ Redux::setSection( $opt_name, array(
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
-				'hover'   => '#00ABC9',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('.bt-footer-v1 .bt-footer-bottom a')
 		),
@@ -558,7 +549,7 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Footer Top Background', 'redux-framework-demo' ),
 			'subtitle' => __( 'Control the background of the footer top.', 'redux-framework-demo' ),
 			'default'  => array(
-				'background-color' => '#252525',
+				'background-color' => '#ffffff',
 			),
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v2 .bt-footer-top'),
@@ -597,17 +588,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Top Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer top.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#DCDCDC',
+				'color'       => '#686876',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v2 .bt-footer-top')
@@ -619,8 +607,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the link color of footer top.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#FFFFFF',
-				'hover'   => '#00ABC9',
+				'regular' => '#686876',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 			'output'   => array('.bt-footer-v2 .bt-footer-top a')
@@ -630,17 +618,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Top Widget Titile Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer top widget title.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#FFFFFF',
+				'color'       => '#171721',
 				'font-size'   => '18px',
 				'line-height' => '24px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v2 .bt-footer-top .wg-title')
@@ -722,7 +707,7 @@ Redux::setSection( $opt_name, array(
 			'background-size' => false,
 			'preview' => false,
 			'default'  => array(
-				'background-color' => '#121212',
+				'background-color' => '#f9f9f9',
 			),
 			'output'    => array('.bt-footer-v2 .bt-footer-bottom'),
 		),
@@ -746,17 +731,14 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Footer Bottom Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography footer bottom.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#DCDCDC',
+				'color'       => '#686876',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-footer-v2 .bt-footer-bottom')
 		),
@@ -767,8 +749,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the link color of footer bottom.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#FFFFFF',
-				'hover'   => '#00ABC9',
+				'regular' => '#686876',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('.bt-footer-v2 .bt-footer-bottom a')
 		),

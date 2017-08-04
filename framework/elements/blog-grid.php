@@ -108,7 +108,7 @@ class WPBakeryShortCode_bt_blog_grid extends WPBakeryShortCode {
 				<div class="row">
 					<?php while ( $wp_query->have_posts() ) { $wp_query->the_post(); ?>
 						<div <?php echo implode(' ', $item_attributes); ?>>
-							<?php include 'blog_layouts/grid-'.$layout.'.php'; ?>
+							<?php require get_template_directory().'/framework/elements/blog_layouts/grid-'.$layout.'.php'; ?>
 						</div>
 					<?php } ?>
 				</div>

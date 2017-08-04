@@ -135,14 +135,14 @@ class WPBakeryShortCode_bt_team_carousel extends WPBakeryShortCode {
 					<?php
 						if($rows == 1){
 							while ( $wp_query->have_posts() ) { $wp_query->the_post();
-								include 'team_layouts/'.$layout.'.php';
+								require get_template_directory().'/framework/elements/team_layouts/'.$layout.'.php';
 							}
 						}else{
 							$post_count = $wp_query->post_count;
 							$count = 0;
 							while ( $wp_query->have_posts() ) { $wp_query->the_post();
 								if($count == 0 || $count%$rows == 0) echo '<div class="bt-items">';
-									include 'team_layouts/'.$layout.'.php';
+									require get_template_directory().'/framework/elements/team_layouts/'.$layout.'.php';
 									$count++;
 								if($count == $post_count || $count%$rows == 0) echo '</div>';
 							}

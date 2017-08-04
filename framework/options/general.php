@@ -138,7 +138,7 @@ Redux::setSection( $opt_name, array(
 			'title'    => __( 'Site Loading Background', 'redux-framework-demo' ),
 			'subtitle' => __( 'Control the background of site loading.', 'redux-framework-demo' ),
 			'default'  => array(
-				'background-color' => '#00ABC9',
+				'background-color' => '#0a6edd',
 			),
 			'required' 		=> array('site_loading' , '=', '1'),
 			'output'    => array('#site_loading')

@@ -110,7 +110,7 @@ class WPBakeryShortCode_bt_team_grid extends WPBakeryShortCode {
 				<div class="row">
 					<?php while ( $wp_query->have_posts() ) { $wp_query->the_post(); ?>
 						<div <?php echo implode(' ', $item_attributes); ?>>
-							<?php include 'team_layouts/'.$layout.'.php'; ?>
+							<?php require get_template_directory().'/framework/elements/team_layouts/'.$layout.'.php'; ?>
 						</div>
 					<?php } ?>
 				</div>

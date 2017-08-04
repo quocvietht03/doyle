@@ -32,12 +32,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '36px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '42px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h1, .bt-font-size-1')
 		),
@@ -65,12 +65,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '30px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '36px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h2, .bt-font-size-2')
 		),
@@ -98,12 +98,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '24px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h3, .bt-font-size-3')
 		),
@@ -131,12 +131,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '18px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '24px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h4, .bt-font-size-4')
 		),
@@ -164,12 +164,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '14px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '16px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h5, .bt-font-size-5')
 		),
@@ -197,12 +197,12 @@ Redux::setSection( $opt_name, array(
 			'letter-spacing'   => true,
 			'text-align'   => false,
 			'default'  => array(
-				'color'       => '#333333',
+				'color'       => '#171721',
 				'font-size'   => '12px',
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '14px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('h6, .bt-font-size-6')
 		),
@@ -234,13 +234,9 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Extra Font 1', 'redux-framework-demo' ),
 			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
-			'subsets'   	=> false,
-			'font-style'   	=> false,
-			'font-weight'   => false,
-			'font-size'   	=> false,
-			'line-height'   => false,
-			'color'   		=> false,
-			'text-align'   	=> false
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
 		),
 		array(
 			'id'=>'extra_element_1',
@@ -254,13 +250,9 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Extra Font 2', 'redux-framework-demo' ),
 			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
-			'subsets'   	=> false,
-			'font-style'   	=> false,
-			'font-weight'   => false,
-			'font-size'   	=> false,
-			'line-height'   => false,
-			'color'   		=> false,
-			'text-align'   	=> false
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
 		),
 		array(
 			'id'=>'extra_element_2',
@@ -274,13 +266,9 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Extra Font 3', 'redux-framework-demo' ),
 			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
-			'subsets'   	=> false,
-			'font-style'   	=> false,
-			'font-weight'   => false,
-			'font-size'   	=> false,
-			'line-height'   => false,
-			'color'   		=> false,
-			'text-align'   	=> false
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
 		),
 		array(
 			'id'=>'extra_element_3',

@@ -10,7 +10,7 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'color',
 			'title'    => __( 'Main Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Control the main highlight color throughout the theme. Class apply: bt-main-color', 'redux-framework-demo' ),
-			'default'  => '#00ABC9',
+			'default'  => '#0a6edd',
 			'output'   => array('.bt-main-color')
 		),
 		array(
@@ -18,7 +18,7 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'color',
 			'title'    => __( 'Secondary Color', 'redux-framework-demo' ),
 			'subtitle' => __( 'Control the secondary highlight color throughout the theme. Class apply: bt-secondary-color', 'redux-framework-demo' ),
-			'default'  => '#CA28FC',
+			'default'  => '#00c282',
 			'output'   => array('.bt-secondary-color')
 		),
 		array(
@@ -28,8 +28,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color of all text links.', 'redux-framework-demo' ),
 			'active'    => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('a, .bt-link-color')
 		),

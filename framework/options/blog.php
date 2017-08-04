@@ -90,8 +90,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color post title.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('post_title' , '=', '1'),
 			'output'   => array('.category .bt-post-item .bt-title a, .tag .bt-post-item .bt-title a, .search .bt-post-item .bt-title a')
@@ -177,8 +177,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color post meta.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('post_meta' , '=', '1'),
 			'output'   => array('.category .bt-post-item .bt-meta > li a, .tag .bt-post-item .bt-meta > li a, .search .bt-post-item .bt-meta > li a')
@@ -239,7 +239,6 @@ Redux::setSection( $opt_name, array(
 			'default'  => 'M d, Y',
 			'required' 		=> array('post_meta_date' , '=', '1'),
 		),
-		
 		array(
 			'id'       => 'post_meta_comment',
 			'type'     => 'switch',
@@ -372,6 +371,7 @@ Redux::setSection( $opt_name, array(
 		
 	)
 ) );
+
 Redux::setSection( $opt_name, array(
 	'title'            => __( 'Single Post', 'redux-framework-demo' ),
 	'id'               => 'bt_post',
@@ -605,8 +605,8 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( 'Controls the color post meta.', 'redux-framework-demo' ),
 			'active'   => false,
 			'default'  => array(
-				'regular' => '#333333',
-				'hover'   => '#00ABC9',
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
 			),
 			'required' 		=> array('single_post_meta' , '=', '1'),
 			'output'   => array('.single-post .bt-post-item .bt-meta > li a')

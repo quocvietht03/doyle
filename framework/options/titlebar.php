@@ -132,7 +132,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '700',
 				'line-height' => '30px',
-				'letter-spacing' => '1.6px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-titlebar .bt-page-title h2')
 		),
@@ -181,9 +181,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Page Title Before Content Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography page title before content.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -191,7 +188,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_page_title_before' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-page-title .bt-before')
@@ -226,9 +223,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Page Title After Content Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography page title after content.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -236,7 +230,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_page_title_before' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-page-title .bt-after')
@@ -263,7 +257,7 @@ Redux::setSection( $opt_name, array(
 				'font-family' => 'Lato',
 				'font-weight' => '400',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-path')
 		),
@@ -275,7 +269,7 @@ Redux::setSection( $opt_name, array(
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
-				'hover'   => '#00ABC9',
+				'hover'   => '#0a6edd',
 			),
 			'output'   => array('.bt-titlebar .bt-breadcrumb .bt-path a')
 		),
@@ -356,9 +350,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Breadcrumb Before Content Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography breadcrumb before content.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -366,7 +357,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_breadcrumb_before' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-before')
@@ -401,9 +392,6 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'typography',
 			'title'    => __( 'Breadcrumb After Content Font', 'redux-framework-demo' ),
 			'subtitle' => __( 'These settings control the typography breadcrumb after content.', 'redux-framework-demo' ),
-			'font-family'   => false,
-			'font-weight'   => false,
-			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -411,7 +399,7 @@ Redux::setSection( $opt_name, array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '14px',
 				'line-height' => '24px',
-				'letter-spacing' => '1px'
+				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_breadcrumb_before' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-after')

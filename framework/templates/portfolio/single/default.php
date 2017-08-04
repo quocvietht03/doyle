@@ -48,7 +48,7 @@ if(!empty($social)){
 						</div>
 					<?php
 				}else{
-					echo '<div class="bt-thumbnail">'.get_the_post_thumbnail().'</div>';
+					echo '<div class="bt-thumbnail">'.get_the_post_thumbnail('full').'</div>';
 				}
 			?>
 		</div>

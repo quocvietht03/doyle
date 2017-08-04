@@ -3,7 +3,7 @@
  * Taxonomy checkbox list field
  */
 function doyle_taxonomy_settings_field($settings, $value) {
-    $dependency = vc_generate_dependencies_attributes($settings);
+    $dependency = function_exists('vc_generate_dependencies_attributes') ? vc_generate_dependencies_attributes($settings) : '';
     $terms_fields = array();
     $value_arr = $value;
 
