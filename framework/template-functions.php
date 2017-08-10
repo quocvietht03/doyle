@@ -218,7 +218,7 @@ if (!function_exists('doyle_enqueue_scripts')) {
 /* Add Stylesheet And Script Backend */
 if (!function_exists('doyle_enqueue_admin_scripts')) {
 	function doyle_enqueue_admin_scripts(){
-		wp_enqueue_style( 'style_admin', get_template_directory_uri().'/assets/css/style_admin.css', array() false );
+		wp_enqueue_style( 'style_admin', get_template_directory_uri().'/assets/css/style_admin.css', array(), false );
 		wp_enqueue_script( 'script_admin', get_template_directory_uri().'/assets/js/script_admin.js', array('jquery'), '', true  );
 	}
 	add_action( 'admin_enqueue_scripts', 'doyle_enqueue_admin_scripts');
