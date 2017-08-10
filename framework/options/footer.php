@@ -32,6 +32,19 @@ Redux::setSection( $opt_name, array(
 	'subsection'       => true,
 	'fields'           => array(
 		array(
+			'id'       => 'footer_layout_1',
+			'type'     => 'image_select',
+			'title'    => __( 'Layout Selected', 'redux-framework-demo' ),
+			'subtitle' => __( 'This is the options you can change for footer style 01', 'redux-framework-demo' ),
+			'options'  => array(
+				'1' => array(
+					'alt' => 'Footer layout 1',
+					'img' => get_template_directory_uri() . '/assets/images/footers/footer-v1.jpg'
+				)
+			),
+			'default'  => '1'
+		),
+		array(
 			'id'       => 'f1_footer_margin_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
@@ -397,6 +410,19 @@ Redux::setSection( $opt_name, array(
 	'id'               => 'bt_footer_style2',
 	'subsection'       => true,
 	'fields'           => array(
+		array(
+			'id'       => 'footer_layout_2',
+			'type'     => 'image_select',
+			'title'    => __( 'Layout Selected', 'redux-framework-demo' ),
+			'subtitle' => __( 'This is the options you can change for footer style 02', 'redux-framework-demo' ),
+			'options'  => array(
+				'1' => array(
+					'alt' => 'Footer layout 2',
+					'img' => get_template_directory_uri() . '/assets/images/footers/footer-v2.jpg'
+				)
+			),
+			'default'  => '1'
+		),
 		array(
 			'id'       => 'f2_footer_margin_space',
 			'type'     => 'spacing',

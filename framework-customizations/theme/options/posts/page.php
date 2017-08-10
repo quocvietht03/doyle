@@ -53,9 +53,7 @@ $options = array(
 							'default' => __('Default', '{domain}'),
 							'1' => __('Header 1', '{domain}'),
 							'2' => __('Header 2', '{domain}'),
-							'3' => __('Header 3', '{domain}'),
-							'4' => __('Header 4', '{domain}'),
-							'5' => __('Header 5', '{domain}')
+							'3' => __('Header 3', '{domain}')
 						)
 					),
 					'header_fullwidth' => array(

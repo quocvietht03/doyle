@@ -26,7 +26,7 @@ if ( $related_products ) : ?>
 
 			<?php foreach ( $related_products as $related_product ) : ?>
 			
-				<div class="col-md-3" style="margin-bottom: 30px;">
+				<div class="col-sm-6 col-md-3" style="margin-bottom: 30px;">
 
 				<?php
 				 	$post_object = get_post( $related_product->get_id() );

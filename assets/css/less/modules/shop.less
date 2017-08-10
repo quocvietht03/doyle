@@ -268,6 +268,11 @@
 		&:hover{
 			
 		}
+		@media(max-width: @screen-sm - 1){
+			.thumb, .content{
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -494,7 +499,68 @@
 				}
 			}
 		}
-		.widget_products {
+		.widget_product_search{
+			.woocommerce-product-search {
+				position: relative;
+				&:before{
+					content: "\f002";
+					font-family: FontAwesome;
+					font-size: 14px;
+					position: absolute;
+					top: 8px;
+					right: 15px;
+				}
+				label{
+					display: block;
+				}
+				.screen-reader-text {
+					display: none;
+				}
+				.search-field {
+					font-size: 14px;
+					font-weight: 400;
+					color: #686876;
+					width: 100%;
+					margin: 0;
+					padding: 8px 55px 8px 15px;
+					border: 1px solid #ececec;
+					&:hover, &:focus {
+						border-color: #dedede;
+					}
+				}
+				input[type="submit"] {
+					position: absolute;
+					top: 1px;
+					right: 1px;
+					width: 40px;
+					height: 40px;
+					margin: 0;
+					padding: 0;
+					opacity: 0;
+					z-index: 9;
+				}
+			}
+		}
+		.widget_product_tag_cloud{
+			.tagcloud {
+				a {
+					display: inline-block;
+					font-size: 12px !important;
+					font-weight: 400;
+					line-height: 24px;
+					text-transform: uppercase;
+					color: #686876;
+					margin: 0 2px 5px 0;
+					padding: 5px 15px;
+					border: 1px solid #ececec;
+					&:hover, &:focus {
+						color: #ffffff;
+						background: @secondary-color;
+					}
+				}
+			}
+		}
+		.widget_products, .widget_top_rated_products {
 			.wg-title {
 				margin-bottom: 20px;
 			}
@@ -517,6 +583,13 @@
 						}
 						&:hover {
 							color: @main-color;
+						}
+					}
+					.star-rating{
+						float: right;
+						margin-top: 3px;
+						span{
+							color: @secondary-color;
 						}
 					}
 					del{
@@ -933,6 +1006,14 @@
 							line-height: 23px;
 							min-width: 150px;
 							padding: 8px 15px;
+							@media(max-width: 360px){
+								&[name="coupon_code"]{
+									min-width: auto;
+								}
+								&[name="apply_coupon"]{
+									padding: 8px 5px;
+								}
+							}
 						}
 						.button{
 							font-size: 13px;
@@ -945,6 +1026,11 @@
 							border-radius: 0;
 							&:hover{
 								background: darken(@secondary-color, 10);
+							}
+							@media(max-width: 360px){
+								&[name="apply_coupon"]{
+									padding: 8px 10px;
+								}
 							}
 						}
 					}

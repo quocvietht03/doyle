@@ -58,9 +58,9 @@ $options = array(
 			'color' => array(
 				'bg_color' => array(
 					'label' => __( 'Background Color', 'doyle' ),
-					'desc'  => __( 'Choose background color for container mega menu (default: #F8F8F8)', 'doyle' ),
+					'desc'  => __( 'Choose background color for container mega menu (default: #f1f4fb)', 'doyle' ),
 					'type'  => 'color-picker',
-					'value' => '#F8F8F8',
+					'value' => '#f1f4fb',
 				),
 			),
 			'image' => array(

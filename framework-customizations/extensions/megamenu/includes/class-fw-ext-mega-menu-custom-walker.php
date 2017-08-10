@@ -170,10 +170,10 @@ class FW_Ext_Mega_Menu_Custom_Walker extends Walker_Nav_Menu
 		
 		if ($item_type = fw_ext_mega_menu_get_db_item_option($id, 'type')) {
 		    $extra_options = fw_ext_mega_menu_get_db_item_option($id, $item_type);
-		    // echo '<pre>'; print_r($extra_options); echo '</pre>';
+		     //echo '<pre>'; print_r($extra_options); echo '</pre>';
 			
 			if(isset($extra_options['menu_mega_type']['type'])&&$extra_options['menu_mega_type']['type'] == 'fullwidth'){
-				$class_arr[] = ['menu_mega_type']['type'];
+				$class_arr[] = $extra_options['menu_mega_type']['type'];
 			}else{
 				if(isset($extra_options['menu_mega_type']['customize']['menu_mega_container_width'])&&$extra_options['menu_mega_type']['customize']['menu_mega_container_width']){
 					$style_arr[] = 'width: '.$extra_options['menu_mega_type']['customize']['menu_mega_container_width'];
@@ -187,7 +187,7 @@ class FW_Ext_Mega_Menu_Custom_Walker extends Walker_Nav_Menu
 				$style_arr[] = 'background: ' . $extra_options['menu_mega_container_bg']['color']['bg_color'];
 			}else{
 				if(isset($extra_options['menu_mega_container_bg']['image']['bg_image']['url'])&&$extra_options['menu_mega_container_bg']['image']['bg_image']['url']){
-					$style_arr[] = 'background: #f8f8f8 url('. $extra_options['menu_mega_container_bg']['image']['bg_image']['url'] .')';
+					$style_arr[] = 'background: #f1f4fb url('. $extra_options['menu_mega_container_bg']['image']['bg_image']['url'] .')';
 				}
 				if(isset($extra_options['menu_mega_container_bg']['image']['bg_image_repeat'])&&$extra_options['menu_mega_container_bg']['image']['bg_image_repeat']){
 					$style_arr[] = 'background-repeat: '. $extra_options['menu_mega_container_bg']['image']['bg_image_repeat'];

@@ -78,9 +78,9 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 								$item_wrap_class[] = $layout;
 								
 								if($layout == 'grid3col'){
-									$item_wrap_class[] = 'col-md-'.(12/$shop_product_per_row);
+									$item_wrap_class[] = 'col-sm-6 col-md-'.(12/$shop_product_per_row);
 								}elseif($layout == 'grid2col'){
-									$item_wrap_class[] = 'col-md-6';
+									$item_wrap_class[] = 'col-sm-6 col-md-6';
 								}else{
 									$item_wrap_class[] = 'col-md-12';
 								}
