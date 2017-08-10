@@ -19,7 +19,8 @@ if (function_exists("vc_add_param")){
 }
 
 /* Shortcodes */
-foreach (glob(get_template_directory().'/framework/elements/*.php') as $filepath)
-{
-	include $filepath;
+if(class_exists("WPBakeryShortCode")){
+	foreach (glob(get_template_directory().'/framework/elements/*.php') as $filepath){
+		include $filepath;
+	}
 }
