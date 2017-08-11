@@ -1,15 +1,15 @@
 <?php
 // Footer
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer', 'redux-framework-demo' ),
+	'title'            => __( 'Footer', 'doyle' ),
 	'id'               => 'bt_footer',
 	'icon'             => 'el el-website',
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout',
 			'type'     => 'image_select',
-			'title'    => __( 'Footer Layout', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select a footer layout default. Foreach pages, you can change the layout by page option', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Layout', 'doyle' ),
+			'subtitle' => __( 'Select a footer layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 1',
@@ -27,15 +27,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer Style 01', 'redux-framework-demo' ),
+	'title'            => __( 'Footer Style 01', 'doyle' ),
 	'id'               => 'bt_footer_style1',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout_1',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'redux-framework-demo' ),
-			'subtitle' => __( 'This is the options you can change for footer style 01', 'redux-framework-demo' ),
+			'title'    => __( 'Layout Selected', 'doyle' ),
+			'subtitle' => __( 'This is the options you can change for footer style 01', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 1',
@@ -52,8 +52,8 @@ Redux::setSection( $opt_name, array(
 			'right'    => false,
 			'bottom'   => false,
 			'left'     => false,
-			'title'    => __( 'Footer Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top margin the footer.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Space', 'doyle' ),
+			'subtitle' => __( 'Control the top margin the footer.', 'doyle' ),
 			'default'  => array(
 				'margin-top' => '60px'
 			),
@@ -64,21 +64,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f1_footer_top_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Top Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change for footer top.', 'redux-framework-demo' )
+			'title' => __( 'Footer Top Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change for footer top.', 'doyle' )
 		),
 		array(
 			'id'       => 'f1_footer_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Top', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'            => 'f1_footer_top_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Top Columns', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the columns number of the footer top.', 'redux-framework-demo' ),
+			'title'         => __( 'Footer Top Columns', 'doyle' ),
+			'subtitle'      => __( 'Controls the columns number of the footer top.', 'doyle' ),
 			'default'       => 4,
 			'min'           => 1,
 			'step'          => 1,
@@ -90,8 +90,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_top_col_1',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 1', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 1.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 1', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 1.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array('f1_footer_top' , '=', '1'),
@@ -100,8 +100,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_top_col_2',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 2', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 2', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -113,8 +113,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_top_col_3',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 3', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 3', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -126,8 +126,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_top_col_4',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 4', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 4.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 4', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 4.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -138,16 +138,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top Columns Class', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer top columns class.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Top Columns Class', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer top columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 		),
 		array(
 			'id'       => 'f1_footer_top_col_1_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 1 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 1', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 1 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 1', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f1_footer_top' , '=', '1'),
@@ -157,8 +157,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_col_2_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 2 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 2', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 2 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 2', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f1_footer_top' , '=', '1'),
@@ -169,8 +169,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_col_3_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 3 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 3', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 3 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 3', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f1_footer_top' , '=', '1'),
@@ -181,8 +181,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_col_4_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 4 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 4', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 4 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 4', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f1_footer_top' , '=', '1'),
@@ -193,8 +193,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Top Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the footer top.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#252525',
 			),
@@ -204,8 +204,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_overlay',
 			'type'     => 'color_rgba',
-			'title'    => __( 'Footer Top Overlay Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the overlay color of the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Overlay Color', 'doyle' ),
+			'subtitle' => __( 'Control the overlay color of the footer top.', 'doyle' ),
 			'default'  => array(
 				'color' => '',
 				'alpha' => '1'
@@ -221,8 +221,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Footer Top Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
 				'padding-bottom' => '30px'
@@ -233,8 +233,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -250,8 +250,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Top Link Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the link color of footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Link Color', 'doyle' ),
+			'subtitle' => __( 'Controls the link color of footer top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
@@ -263,8 +263,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_widget_titile_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Widget Titile Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer top widget title.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Widget Titile Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer top widget title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -282,14 +282,14 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f1_footer_bottom_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Bottom Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change for footer bottom.', 'redux-framework-demo' )
+			'title' => __( 'Footer Bottom Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change for footer bottom.', 'doyle' )
 		),
 		array(
 			'id'            => 'f1_footer_bottom_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Bottom Columns', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'redux-framework-demo' ),
+			'title'         => __( 'Footer Bottom Columns', 'doyle' ),
+			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'doyle' ),
 			'default'       => 2,
 			'min'           => 1,
 			'step'          => 1,
@@ -300,8 +300,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_bottom_col_1',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Bottom Content Column 1', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer bottom column 1.', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Content Column 1', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer bottom column 1.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => ''
 		),
@@ -309,8 +309,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f1_footer_bottom_col_2',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Bottom Content Column 2', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer bottom column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Content Column 2', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer bottom column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array('f1_footer_bottom_columns' , '>', '1')
@@ -318,24 +318,24 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Bottom Columns Class', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Bottom Columns Class', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('footer_layout' , '=', '1')
 		),
 		array(
 			'id'       => 'f1_footer_bottom_col_1_class',
 			'type'     => 'text',
-			'title'    => __('Footer Bottom Column 1 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 1', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Column 1 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 1', 'doyle'),
 			'default'  => 'col-md-6',
 			'required' 		=> array('f1_footer_bottom_columns_class' , '=', '1')
 		),
 		array(
 			'id'       => 'f1_footer_bottom_col_2_class',
 			'type'     => 'text',
-			'title'    => __('Footer Bottom Column 2 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 2', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Column 2 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 2', 'doyle'),
 			'default'  => 'col-md-6',
 			'required' 		=> array(
 				array('f1_footer_bottom_columns_class' , '=', '1'),
@@ -345,8 +345,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Bottom Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the footer bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -365,8 +365,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Footer Bottom Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-bottom' => '10px'
@@ -376,8 +376,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Bottom Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer bottom.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -392,8 +392,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Bottom Link Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the link color of footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Link Color', 'doyle' ),
+			'subtitle' => __( 'Controls the link color of footer bottom.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
@@ -406,15 +406,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer Style 02', 'redux-framework-demo' ),
+	'title'            => __( 'Footer Style 02', 'doyle' ),
 	'id'               => 'bt_footer_style2',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout_2',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'redux-framework-demo' ),
-			'subtitle' => __( 'This is the options you can change for footer style 02', 'redux-framework-demo' ),
+			'title'    => __( 'Layout Selected', 'doyle' ),
+			'subtitle' => __( 'This is the options you can change for footer style 02', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 2',
@@ -431,8 +431,8 @@ Redux::setSection( $opt_name, array(
 			'right'    => false,
 			'bottom'   => false,
 			'left'     => false,
-			'title'    => __( 'Footer Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top margin the footer.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Space', 'doyle' ),
+			'subtitle' => __( 'Control the top margin the footer.', 'doyle' ),
 			'default'  => array(
 				'margin-top' => '60px'
 			),
@@ -443,21 +443,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f2_footer_top_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Top Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change for footer top.', 'redux-framework-demo' )
+			'title' => __( 'Footer Top Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change for footer top.', 'doyle' )
 		),
 		array(
 			'id'       => 'f2_footer_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Top', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'            => 'f2_footer_top_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Top Columns', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the columns number of the footer top.', 'redux-framework-demo' ),
+			'title'         => __( 'Footer Top Columns', 'doyle' ),
+			'subtitle'      => __( 'Controls the columns number of the footer top.', 'doyle' ),
 			'default'       => 4,
 			'min'           => 1,
 			'step'          => 1,
@@ -469,8 +469,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_top_col_1',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 1', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 1.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 1', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 1.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array('f2_footer_top' , '=', '1'),
@@ -479,8 +479,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_top_col_2',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 2', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 2', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -492,8 +492,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_top_col_3',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 3', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 3', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -505,8 +505,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_top_col_4',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Top Content Column 4', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer top column 4.', 'redux-framework-demo'),
+			'title'    => __('Footer Top Content Column 4', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer top column 4.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array(
@@ -517,16 +517,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top Columns Class', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer top columns class.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Top Columns Class', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer top columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 		),
 		array(
 			'id'       => 'f2_footer_top_col_1_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 1 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 1', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 1 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 1', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f2_footer_top' , '=', '1'),
@@ -536,8 +536,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_col_2_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 2 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 2', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 2 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 2', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f2_footer_top' , '=', '1'),
@@ -548,8 +548,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_col_3_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 3 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 3', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 3 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 3', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f2_footer_top' , '=', '1'),
@@ -560,8 +560,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_col_4_class',
 			'type'     => 'text',
-			'title'    => __('Footer Top Column 4 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 4', 'redux-framework-demo'),
+			'title'    => __('Footer Top Column 4 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer top column 4', 'doyle'),
 			'default'  => 'col-sm-6 col-md-3',
 			'required' 		=> array(
 				array('f2_footer_top' , '=', '1'),
@@ -572,8 +572,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Top Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the footer top.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#ffffff',
 			),
@@ -583,8 +583,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_overlay',
 			'type'     => 'color_rgba',
-			'title'    => __( 'Footer Top Overlay Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the overlay color of the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Overlay Color', 'doyle' ),
+			'subtitle' => __( 'Control the overlay color of the footer top.', 'doyle' ),
 			'default'  => array(
 				'color' => '',
 				'alpha' => '1'
@@ -600,8 +600,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Footer Top Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
 				'padding-bottom' => '30px'
@@ -612,8 +612,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -629,8 +629,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Top Link Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the link color of footer top.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Link Color', 'doyle' ),
+			'subtitle' => __( 'Controls the link color of footer top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#686876',
@@ -642,8 +642,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_widget_titile_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Widget Titile Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer top widget title.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Top Widget Titile Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer top widget title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -661,14 +661,14 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f2_footer_bottom_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Bottom Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change for footer bottom.', 'redux-framework-demo' )
+			'title' => __( 'Footer Bottom Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change for footer bottom.', 'doyle' )
 		),
 		array(
 			'id'            => 'f2_footer_bottom_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Bottom Columns', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'redux-framework-demo' ),
+			'title'         => __( 'Footer Bottom Columns', 'doyle' ),
+			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'doyle' ),
 			'default'       => 2,
 			'min'           => 1,
 			'step'          => 1,
@@ -679,8 +679,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_bottom_col_1',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Bottom Content Column 1', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer bottom column 1.', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Content Column 1', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer bottom column 1.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => ''
 		),
@@ -688,8 +688,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'f2_footer_bottom_col_2',
 			'type'     => 'select',
 			'multi'    => true,
-			'title'    => __('Footer Bottom Content Column 2', 'redux-framework-demo'), 
-			'subtitle' => __('Controls the content that displays in the footer bottom column 2.', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Content Column 2', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in the footer bottom column 2.', 'doyle'),
 			'options'  => doyle_get_sidebars(),
 			'default'  => '',
 			'required' 		=> array('f2_footer_bottom_columns' , '>', '1')
@@ -697,24 +697,24 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Bottom Columns Class', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Footer Bottom Columns Class', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('footer_layout' , '=', '1')
 		),
 		array(
 			'id'       => 'f2_footer_bottom_col_1_class',
 			'type'     => 'text',
-			'title'    => __('Footer Bottom Column 1 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 1', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Column 1 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 1', 'doyle'),
 			'default'  => 'col-md-6',
 			'required' 		=> array('f2_footer_bottom_columns_class' , '=', '1')
 		),
 		array(
 			'id'       => 'f2_footer_bottom_col_2_class',
 			'type'     => 'text',
-			'title'    => __('Footer Bottom Column 2 Class', 'redux-framework-demo'),
-			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 2', 'redux-framework-demo'),
+			'title'    => __('Footer Bottom Column 2 Class', 'doyle'),
+			'subtitle' => __('Controls the column width with bootstrap class and extra class of footer bottom column 2', 'doyle'),
 			'default'  => 'col-md-6',
 			'required' 		=> array(
 				array('f2_footer_bottom_columns_class' , '=', '1'),
@@ -724,8 +724,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Bottom Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the footer bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -744,8 +744,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Footer Bottom Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-bottom' => '10px'
@@ -755,8 +755,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Bottom Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography footer bottom.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -771,8 +771,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Bottom Link Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the link color of footer bottom.', 'redux-framework-demo' ),
+			'title'    => __( 'Footer Bottom Link Color', 'doyle' ),
+			'subtitle' => __( 'Controls the link color of footer bottom.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#686876',

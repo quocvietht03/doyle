@@ -1,26 +1,33 @@
 <?php
 // General
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'General', 'redux-framework-demo' ),
+	'title'            => __( 'General', 'doyle' ),
 	'id'               => 'bt_general',
 	'icon'             => 'el el-adjust-alt',
 	'fields'           => array(
 		array(
+			'id'       => 'less_design',
+			'type'     => 'switch',
+			'title'    => __( 'Enable Less Design', 'doyle' ),
+			'subtitle' => __( 'Enable less design to generate css over time...', 'doyle' ),
+			'default'  => true,
+		),
+		array(
 			'id'       => 'site_layout',
 			'type'     => 'button_set',
-			'title'    => __('Site Layout', 'redux-framework-demo'),
-			'subtitle' => __('Control the site layout.', 'redux-framework-demo'),
+			'title'    => __('Site Layout', 'doyle'),
+			'subtitle' => __('Control the site layout.', 'doyle'),
 			'options' => array(
-				'wide' => __('Wide', 'redux-framework-demo'), 
-				'boxed' => __('Boxed', 'redux-framework-demo'),
+				'wide' => __('Wide', 'doyle'), 
+				'boxed' => __('Boxed', 'doyle'),
 			 ), 
 			'default' => 'wide'
 		),
 		array(
 			'id'            => 'site_width',
 			'type'          => 'slider',
-			'title'         => __( 'Site Width', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Control the overall site width.', 'redux-framework-demo' ),
+			'title'         => __( 'Site Width', 'doyle' ),
+			'subtitle'      => __( 'Control the overall site width.', 'doyle' ),
 			'default'       => 1200,
 			'min'           => 1200,
 			'step'          => 1,
@@ -31,8 +38,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'boxed_bg',
 			'type'     => 'background',
-			'title'    => __( 'Boxed Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background color of the boxed.', 'redux-framework-demo' ),
+			'title'    => __( 'Boxed Background', 'doyle' ),
+			'subtitle' => __( 'Control the background color of the boxed.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -52,8 +59,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'         => false,
 			'left'          => false,
-			'title'    => __( 'Boxed Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the space top and bottom of boxed.', 'redux-framework-demo' ),
+			'title'    => __( 'Boxed Space', 'doyle' ),
+			'subtitle' => __( 'Control the space top and bottom of boxed.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '10px',
 				'margin-bottom' => '10px'
@@ -64,8 +71,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'body_bg',
 			'type'     => 'background',
-			'title'    => __( 'Body Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the body.', 'redux-framework-demo' ),
+			'title'    => __( 'Body Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the body.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#F8F8F8',
 			),
@@ -74,8 +81,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'mobile_width',
 			'type'          => 'slider',
-			'title'         => __( 'Mobile Width', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the width to enable mobile.', 'redux-framework-demo' ),
+			'title'         => __( 'Mobile Width', 'doyle' ),
+			'subtitle'      => __( 'Controls the width to enable mobile.', 'doyle' ),
 			'default'       => 991,
 			'min'           => 540,
 			'step'          => 1,
@@ -85,26 +92,26 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'smooth_scroll',
 			'type'     => 'switch',
-			'title'    => __( 'Smoth Scroll', 'redux-framework-demo' ),
-			'subtitle' => __( 'Use smoth scroll.', 'redux-framework-demo' ),
+			'title'    => __( 'Smoth Scroll', 'doyle' ),
+			'subtitle' => __( 'Use smoth scroll.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'       => 'back_to_top',
 			'type'     => 'switch',
-			'title'    => __( 'Back To Top', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control button back to top.', 'redux-framework-demo' ),
+			'title'    => __( 'Back To Top', 'doyle' ),
+			'subtitle' => __( 'Control button back to top.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'       => 'back_to_top_style',
 			'type'     => 'select',
-			'title'    => __( 'Back To Top Style', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select style button back to top.', 'redux-framework-demo' ),
+			'title'    => __( 'Back To Top Style', 'doyle' ),
+			'subtitle' => __( 'Select style button back to top.', 'doyle' ),
 			'options'  => array(
-				'square' => __( 'Square', 'redux-framework-demo' ),
-				'rounded' => __( 'Rounded', 'redux-framework-demo' ),
-				'circle' => __( 'Circle', 'redux-framework-demo' )
+				'square' => __( 'Square', 'doyle' ),
+				'rounded' => __( 'Rounded', 'doyle' ),
+				'circle' => __( 'Circle', 'doyle' )
 			),
 			'default'  => 'square',
 			'required' 		=> array('back_to_top' , '=', '1')
@@ -112,22 +119,22 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'site_loading',
 			'type'     => 'switch',
-			'title'    => __( 'Site Loading', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control animation before site load complete.', 'redux-framework-demo' ),
+			'title'    => __( 'Site Loading', 'doyle' ),
+			'subtitle' => __( 'Control animation before site load complete.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'       => 'site_loading_spinner',
 			'type'     => 'select',
-			'title'    => __( 'Spinner Style', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select style spinner.', 'redux-framework-demo' ),
+			'title'    => __( 'Spinner Style', 'doyle' ),
+			'subtitle' => __( 'Select style spinner.', 'doyle' ),
 			'options'  => array(
-				'spinner0' => __( 'Default', 'redux-framework-demo' ),
-				'spinner1' => __( 'Style 1', 'redux-framework-demo' ),
-				'spinner2' => __( 'Style 2', 'redux-framework-demo' ),
-				'spinner3' => __( 'Style 3', 'redux-framework-demo' ),
-				'spinner4' => __( 'Style 4', 'redux-framework-demo' ),
-				'spinner5' => __( 'Style 5', 'redux-framework-demo' )
+				'spinner0' => __( 'Default', 'doyle' ),
+				'spinner1' => __( 'Style 1', 'doyle' ),
+				'spinner2' => __( 'Style 2', 'doyle' ),
+				'spinner3' => __( 'Style 3', 'doyle' ),
+				'spinner4' => __( 'Style 4', 'doyle' ),
+				'spinner5' => __( 'Style 5', 'doyle' )
 			),
 			'default'  => 'spinner0',
 			'required' 		=> array('site_loading' , '=', '1')
@@ -135,8 +142,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'site_loading_bg',
 			'type'     => 'background',
-			'title'    => __( 'Site Loading Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of site loading.', 'redux-framework-demo' ),
+			'title'    => __( 'Site Loading Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of site loading.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#0a6edd',
 			),

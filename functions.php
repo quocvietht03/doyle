@@ -1,13 +1,11 @@
 <?php
-global $doyle_options;
-
 /* Template functions */
 require_once get_template_directory().'/framework/template-functions.php';
 
 /* Less compile functions */
 require_once get_template_directory().'/framework/inc/less-compile.php';
 
-/* Template Functions */
+/* Post Functions */
 require_once get_template_directory().'/framework/templates/post-functions.php';
 
 /* Function framework */

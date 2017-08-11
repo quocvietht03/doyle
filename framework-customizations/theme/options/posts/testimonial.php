@@ -6,14 +6,14 @@ $options = array(
 		'label' => false,
 		'inner-options' => array(
 			'testimonial-meta' => array(
-				'title' => __('Meta Fields', 'fw'),
+				'title' => __('Meta Fields', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
 					'position' => array(
 						'type'  => 'text',
 						'value' => 'Ceo/Founder',
-						'label' => __('Position', '{domain}'),
-						'desc'  => __('Please, enter position of testimonial.', '{domain}'),
+						'label' => __('Position', 'doyle'),
+						'desc'  => __('Please, enter position of testimonial.', 'doyle'),
 					),
 					
 				),

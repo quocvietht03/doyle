@@ -1,15 +1,15 @@
 <?php
 // Title Bar
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Title Bar', 'redux-framework-demo' ),
+	'title'            => __( 'Title Bar', 'doyle' ),
 	'id'               => 'bt_titlebar',
 	'icon'             => 'el el-map-marker',
 	'fields'           => array(
 		array(
 			'id'       => 'titlebar_layout',
 			'type'     => 'image_select',
-			'title'    => __( 'Title Bar Layout', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select a title bar layout default. Foreach pages, you can change the layout by page option', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Layout', 'doyle' ),
+			'subtitle' => __( 'Select a title bar layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Title Bar layout 1',
@@ -25,8 +25,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -36,8 +36,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Full Width Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the left/right padding the content area display.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width Space', 'doyle' ),
+			'subtitle' => __( 'Control the left/right padding the content area display.', 'doyle' ),
 			'default'  => array(
 				'padding-left'    => '15px',
 				'padding-right' => '15px'
@@ -48,8 +48,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_align',
 			'type'     => 'button_set',
-			'title'    => __( 'Title Bar Align', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control align of the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Align', 'doyle' ),
+			'subtitle' => __( 'Control align of the title bar.', 'doyle' ),
 			'options'  => array(
 				'text-left' => 'Left',
 				'text-center' => 'Center',
@@ -61,8 +61,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Title Bar Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the title bar.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#171721',
 			),
@@ -71,8 +71,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_overlay',
 			'type'     => 'color_rgba',
-			'title'    => __( 'Title Bar Overlay Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the overlay color of the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Overlay Color', 'doyle' ),
+			'subtitle' => __( 'Control the overlay color of the title bar.', 'doyle' ),
 			'default'  => array(
 				'color' => '',
 				'alpha' => '1'
@@ -87,8 +87,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Title Bar Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the title bar.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '45px',
 				'padding-bottom' => '45px'
@@ -103,8 +103,8 @@ Redux::setSection( $opt_name, array(
 			'top'	   => false,
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Title Bar Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the title bar.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '90px'
 			),
@@ -113,15 +113,15 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Page Title', 'redux-framework-demo' ),
+	'title'            => __( 'Page Title', 'doyle' ),
 	'id'               => 'bt_titlebar_pagetitle',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'titlebar_page_title_font',
 			'type'     => 'typography',
-			'title'    => __( 'Page Title Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography page title.', 'redux-framework-demo' ),
+			'title'    => __( 'Page Title Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography page title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -143,8 +143,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Page Title Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the page title.', 'redux-framework-demo' ),
+			'title'    => __( 'Page Title Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the page title.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '5px',
 				'padding-bottom' => '5px'
@@ -154,15 +154,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_page_title_before',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Page Title Before', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable page title before content.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Page Title Before', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable page title before content.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'=>'titlebar_page_title_before_content',
 			'type' => 'textarea',
-			'title' => __('Page Title Before Content', 'redux-framework-demo'), 
-			'subtitle' => __('Please enter custom text before page title(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title' => __('Page Title Before Content', 'doyle'), 
+			'subtitle' => __('Please enter custom text before page title(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'validate' => 'html_custom',
 			'default' => '',
 			'allowed_html' => array(
@@ -179,8 +179,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_page_title_before_content_font',
 			'type'     => 'typography',
-			'title'    => __( 'Page Title Before Content Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography page title before content.', 'redux-framework-demo' ),
+			'title'    => __( 'Page Title Before Content Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography page title before content.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -196,15 +196,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_page_title_after',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Page Title After', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable page title after content.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Page Title After', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable page title after content.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'=>'titlebar_page_title_after_content',
 			'type' => 'textarea',
-			'title' => __('Page Title After Content', 'redux-framework-demo'), 
-			'subtitle' => __('Please enter custom text after page title(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title' => __('Page Title After Content', 'doyle'), 
+			'subtitle' => __('Please enter custom text after page title(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'validate' => 'html_custom',
 			'default' => '',
 			'allowed_html' => array(
@@ -221,8 +221,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_page_title_after_content_font',
 			'type'     => 'typography',
-			'title'    => __( 'Page Title After Content Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography page title after content.', 'redux-framework-demo' ),
+			'title'    => __( 'Page Title After Content Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography page title after content.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -238,15 +238,15 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Breacrumb', 'redux-framework-demo' ),
+	'title'            => __( 'Breacrumb', 'doyle' ),
 	'id'               => 'bt_titlebar_breadcrumb',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'titlebar_breadcrumb_font',
 			'type'     => 'typography',
-			'title'    => __( 'Breadcrumb Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography breadcrumb.', 'redux-framework-demo' ),
+			'title'    => __( 'Breadcrumb Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography breadcrumb.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -264,8 +264,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Breadcrumb Link Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the link color of breadcrumb.', 'redux-framework-demo' ),
+			'title'    => __( 'Breadcrumb Link Color', 'doyle' ),
+			'subtitle' => __( 'Controls the link color of breadcrumb.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
@@ -276,8 +276,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_home_text',
 			'type'     => 'text',
-			'title'    => __('Breadcrumb Home Text', 'redux-framework-demo'),
-			'subtitle' => __('Controls the home text of breadcrumb(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title'    => __('Breadcrumb Home Text', 'doyle'),
+			'subtitle' => __('Controls the home text of breadcrumb(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'allowed_html' => array(
 				'span' => array(
 					'class' => array(),
@@ -292,8 +292,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_delimiter',
 			'type'     => 'text',
-			'title'    => __('Breadcrumb Delimiter', 'redux-framework-demo'),
-			'subtitle' => __('Controls the delimiter of breadcrumb(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title'    => __('Breadcrumb Delimiter', 'doyle'),
+			'subtitle' => __('Controls the delimiter of breadcrumb(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'allowed_html' => array(
 				'span' => array(
 					'class' => array(),
@@ -312,8 +312,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Breadcrumb Padding Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom padding the breadcrumb.', 'redux-framework-demo' ),
+			'title'    => __( 'Breadcrumb Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom padding the breadcrumb.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '5px',
 				'padding-bottom' => '5px'
@@ -323,15 +323,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_before',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Breacrumb Before', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable breadcrumb before content.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Breacrumb Before', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable breadcrumb before content.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'=>'titlebar_breadcrumb_before_content',
 			'type' => 'textarea',
-			'title' => __('Breadcrumb Before Content', 'redux-framework-demo'), 
-			'subtitle' => __('Please enter custom text before breadcrumb(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title' => __('Breadcrumb Before Content', 'doyle'), 
+			'subtitle' => __('Please enter custom text before breadcrumb(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'validate' => 'html_custom',
 			'default' => '',
 			'allowed_html' => array(
@@ -348,8 +348,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_before_content_font',
 			'type'     => 'typography',
-			'title'    => __( 'Breadcrumb Before Content Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography breadcrumb before content.', 'redux-framework-demo' ),
+			'title'    => __( 'Breadcrumb Before Content Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography breadcrumb before content.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -365,15 +365,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_after',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Breadcrumb After', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to enable breadcrumb after content.', 'redux-framework-demo' ),
+			'title'    => __( 'Enable Breadcrumb After', 'doyle' ),
+			'subtitle' => __( 'Turn on to enable breadcrumb after content.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'=>'titlebar_breadcrumb_after_content',
 			'type' => 'textarea',
-			'title' => __('Breadcrumb After Content', 'redux-framework-demo'), 
-			'subtitle' => __('Please enter custom text after breadcrumb(Alow some html tags: br, em, strong, span)', 'redux-framework-demo'),
+			'title' => __('Breadcrumb After Content', 'doyle'), 
+			'subtitle' => __('Please enter custom text after breadcrumb(Alow some html tags: br, em, strong, span)', 'doyle'),
 			'validate' => 'html_custom',
 			'default' => '',
 			'allowed_html' => array(
@@ -390,8 +390,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'titlebar_breadcrumb_after_content_font',
 			'type'     => 'typography',
-			'title'    => __( 'Breadcrumb After Content Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography breadcrumb after content.', 'redux-framework-demo' ),
+			'title'    => __( 'Breadcrumb After Content Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography breadcrumb after content.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,

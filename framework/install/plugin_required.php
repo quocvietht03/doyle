@@ -71,6 +71,11 @@ function my_theme_register_required_plugins() {
 			'required'  => true,
 		),
 		array(
+			'name'      => 'Custom Post Type UI',
+			'slug'      => 'custom-post-type-ui',
+			'required'  => true,
+		),
+		array(
 			'name'         => 'Visual Composer',
 			'slug'         => 'js_composer',
 			'source'       => $root.'visual-composer.zip',
@@ -81,6 +86,32 @@ function my_theme_register_required_plugins() {
 			'slug'         => 'revslider',
 			'source'       => $root.'revslider.zip',
 			'required'     => true,
+		),
+		array(
+			'name'         => 'Essential Grid',
+			'slug'         => 'essential-grid',
+			'source'       => $root.'essential-grid.zip',
+			'required'     => false,
+		),
+		array(
+			'name'      => 'Contact Form 7',
+			'slug'      => 'contact-form-7',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Instagram Feed',
+			'slug'      => 'instagram-feed',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Newsletter',
+			'slug'      => 'newsletter',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Woocommerce',
+			'slug'      => 'woocommerce',
+			'required'  => false,
 		),
 		
 	);

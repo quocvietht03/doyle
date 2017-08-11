@@ -1,7 +1,4 @@
-<?php if ( ! defined( 'ABSPATH' ) ) {
-	die( 'Forbidden' );
-}
-
+<?php
 $manifest = array();
 
 $manifest['id']                  = 'doyle';
@@ -48,8 +45,8 @@ $manifest['supported_extensions'] = array(
 	'portfolio'    => array(),
 	'backups'      => array(),
 	'megamenu'     => array(),
-	'social'       => array(),
-	'breadcrumbs'  => array(),
+	//'social'       => array(),
+	//'breadcrumbs'  => array(),
 	// 'page-builder' => array(),
 	// 'seo'          => array(),
 	// 'forms'        => array(),

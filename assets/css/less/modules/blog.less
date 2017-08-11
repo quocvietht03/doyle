@@ -3,6 +3,7 @@
 	.bt-title {
 		font-size: 28px;
 		line-height: 40px;
+		margin-top: 0;
 		margin-bottom: 30px;
 	}
 	.bt-media {
@@ -130,7 +131,7 @@
 	}
 }
 
-.archive, .search{
+.blog, .archive, .search{
 	.bt-post-item {
 		.bt-archive-item-style1;
 		margin-bottom: 30px;
@@ -269,10 +270,10 @@
 			padding: 15px 40px;
 		}
 		.gallery {
-			margin: 0 -15px 30px;
+			margin: 0 -15px;
 			.gallery-item {
 				display: inline-block;
-				margin: 0;
+				margin: 0 0 30px;
 				padding: 0 15px;
 				.gallery-icon img {
 					width: 100%;
@@ -870,17 +871,13 @@
 					height: auto;
 				}
 				select {
-					font-size: 14px;
-					font-style: italic;
-					font-weight: 400;
-					letter-spacing: 0.04em;
-					color: #141414;
-					border: 2px solid #ececec;
+					padding: 8px 15px;
+					border: 1px solid #ececec;
 					&:hover, &:focus {
 						border-color: #dedede;
 					}
 					option {
-						max-width: 285px;
+						max-width: 230px;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;

@@ -1,15 +1,15 @@
 <?php
 // Blog
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Archive Blog', 'redux-framework-demo' ),
+	'title'            => __( 'Archive Blog', 'doyle' ),
 	'id'               => 'bt_blog',
 	'icon'             => 'el el-file-edit',
 	'fields'           => array(
 		array(
 			'id'       => 'blog_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -19,8 +19,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Full Width Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the left/right padding the content area display.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width Space', 'doyle' ),
+			'subtitle' => __( 'Control the left/right padding the content area display.', 'doyle' ),
 			'default'  => array(
 				'padding-left'    => '15px',
 				'padding-right' => '15px'
@@ -31,8 +31,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'blog_sidebar_width',
 			'type'          => 'slider',
-			'title'         => __( 'Sidebar Width', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'redux-framework-demo' ),
+			'title'         => __( 'Sidebar Width', 'doyle' ),
+			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'doyle' ),
 			'default'       => 3,
 			'min'           => 1,
 			'step'          => 1,
@@ -42,8 +42,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'blog_titlebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Title Bar Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the title bar.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#171721',
 			),
@@ -53,21 +53,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'blog_post_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Post Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change the post on the blog page or archive pages.', 'redux-framework-demo' )
+			'title' => __( 'Post Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change the post on the blog page or archive pages.', 'doyle' )
 		),
 		array(
 			'id'       => 'post_title',
 			'type'     => 'switch',
-			'title'    => __( 'Post Title', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to display the post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title', 'doyle' ),
+			'subtitle' => __( 'Turn on to display the post title.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'post_title_font',
 			'type'     => 'typography',
-			'title'    => __( 'Post Title Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography post title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -86,8 +86,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_title_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Post Title Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the color post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title Color', 'doyle' ),
+			'subtitle' => __( 'Controls the color post title.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -104,8 +104,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Title Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post title.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -115,15 +115,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_featured',
 			'type'     => 'switch',
-			'title'    => __( 'Featured Image / Video', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the image / video.', 'redux-framework-demo' ),
+			'title'    => __( 'Featured Image / Video', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the image / video.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'post_image_size',
 			'type'     => 'text',
-			'title'    => __( 'Image Size', 'redux-framework-demo' ),
-			'subtitle' => __( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'redux-framework-demo' ),
+			'title'    => __( 'Image Size', 'doyle' ),
+			'subtitle' => __( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'doyle' ),
 			'default'  => 'full',
 			'required' 		=> array('post_featured' , '=', '1')
 		),
@@ -135,8 +135,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Featured Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post featured.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Featured Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post featured.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -146,15 +146,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_meta',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'post_meta_font',
 			'type'     => 'typography',
-			'title'    => __( 'Post Meta Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography post meta.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -173,8 +173,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_meta_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Post Meta Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the color post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Color', 'doyle' ),
+			'subtitle' => __( 'Controls the color post meta.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -191,8 +191,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Meta Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post meta.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -202,103 +202,103 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_meta_author',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Author', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field author.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Author', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field author.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_author_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Author Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field author. Leave empty to use "By:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Author Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field author. Leave empty to use "By:" label.', 'doyle' ),
 			'default'  => 'By:',
 			'required' 		=> array('post_meta_author' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_date',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Date', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field author.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field author.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_date_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Date Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field date. Leave empty to use "Date:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field date. Leave empty to use "Date:" label.', 'doyle' ),
 			'default'  => 'Date:',
 			'required' 		=> array('post_meta_date' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_date_format',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Date Format', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the date format that displays in the post. http://codex.wordpress.org/Formatting_Date_and_Time', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date Format', 'doyle' ),
+			'subtitle' => __( 'Controls the date format that displays in the post. http://codex.wordpress.org/Formatting_Date_and_Time', 'doyle' ),
 			'default'  => 'M d, Y',
 			'required' 		=> array('post_meta_date' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_comment',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Comment', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field comment.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comment', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field comment.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_comment_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Comment Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comment:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comment Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comment:" label.', 'doyle' ),
 			'default'  => 'Comment:',
 			'required' 		=> array('post_meta_comment' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_comments_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Comments Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comments:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comments Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comments:" label.', 'doyle' ),
 			'default'  => 'Comments:',
 			'required' 		=> array('post_meta_comment' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_category',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Category', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field category.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Category', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field category.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_meta_category_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Category Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field category. Leave empty to use "Category:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Category Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field category. Leave empty to use "Category:" label.', 'doyle' ),
 			'default'  => 'Category:',
 			'required' 		=> array('post_meta_category' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_excerpt',
 			'type'     => 'switch',
-			'title'    => __( 'Post Excerpt', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the excerpt.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Excerpt', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the excerpt.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'post_excerpt_length',
 			'type'     => 'text',
-			'title'    => __( 'Post Excerpt Length', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter excerpt length number. Leave empty to use "55" for excerpt lenght.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Excerpt Length', 'doyle' ),
+			'subtitle' => __( 'Please, Enter excerpt length number. Leave empty to use "55" for excerpt lenght.', 'doyle' ),
 			'default'  => '55',
 			'required' 		=> array('post_excerpt' , '=', '1'),
 		),
 		array(
 			'id'       => 'post_excerpt_more',
 			'type'     => 'text',
-			'title'    => __( 'Post Excerpt More', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter excerpt more. Leave empty to use "[...]" for excerpt more.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Excerpt More', 'doyle' ),
+			'subtitle' => __( 'Please, Enter excerpt more. Leave empty to use "[...]" for excerpt more.', 'doyle' ),
 			'default'  => '[...]',
 			'required' 		=> array('post_excerpt' , '=', '1'),
 		),
@@ -310,8 +310,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Excerpt Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post excerpt.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Excerpt Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post excerpt.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '15px'
 			),
@@ -321,15 +321,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_readmore',
 			'type'     => 'switch',
-			'title'    => __( 'Read More button', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the read more button.', 'redux-framework-demo' ),
+			'title'    => __( 'Read More button', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the read more button.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'post_readmore_font',
 			'type'     => 'typography',
-			'title'    => __( 'Post Read More Button Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography post read more button.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Read More Button Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography post read more button.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -348,8 +348,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_readmore_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Category Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the label read more button. Leave empty to use "Read More" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Category Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the label read more button. Leave empty to use "Read More" label.', 'doyle' ),
 			'default'  => 'Read More',
 			'required' 		=> array('post_readmore' , '=', '1'),
 		),
@@ -361,8 +361,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -373,15 +373,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Single Post', 'redux-framework-demo' ),
+	'title'            => __( 'Single Post', 'doyle' ),
 	'id'               => 'bt_post',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'post_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -391,8 +391,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Full Width Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the left/right padding the content area display.', 'redux-framework-demo' ),
+			'title'    => __( 'Full Width Space', 'doyle' ),
+			'subtitle' => __( 'Control the left/right padding the content area display.', 'doyle' ),
 			'default'  => array(
 				'padding-left'    => '15px',
 				'padding-right' => '15px'
@@ -403,8 +403,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'post_sidebar_width',
 			'type'          => 'slider',
-			'title'         => __( 'Sidebar Width', 'redux-framework-demo' ),
-			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'redux-framework-demo' ),
+			'title'         => __( 'Sidebar Width', 'doyle' ),
+			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'doyle' ),
 			'default'       => 3,
 			'min'           => 1,
 			'step'          => 1,
@@ -414,8 +414,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'post_titlebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Title Bar Background', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the background of the title bar.', 'redux-framework-demo' ),
+			'title'    => __( 'Title Bar Background', 'doyle' ),
+			'subtitle' => __( 'Control the background of the title bar.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#171721',
 			),
@@ -424,8 +424,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_navigation',
 			'type'     => 'switch',
-			'title'    => __( 'Post Navigation', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the post navigation.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Navigation', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the post navigation.', 'doyle' ),
 			'default'  => true
 		),
 		array(
@@ -436,8 +436,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Navigation Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post navigation.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Navigation Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post navigation.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '60px'
 			),
@@ -447,8 +447,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_author',
 			'type'     => 'switch',
-			'title'    => __( 'Author', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the author.', 'redux-framework-demo' ),
+			'title'    => __( 'Author', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the author.', 'doyle' ),
 			'default'  => true
 		),
 		array(
@@ -459,8 +459,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Author Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the author.', 'redux-framework-demo' ),
+			'title'    => __( 'Author Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the author.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '60px'
 			),
@@ -470,8 +470,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_comment',
 			'type'     => 'switch',
-			'title'    => __( 'Comment', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the comment.', 'redux-framework-demo' ),
+			'title'    => __( 'Comment', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the comment.', 'doyle' ),
 			'default'  => true
 		),
 		array(
@@ -482,8 +482,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Comment Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the comment.', 'redux-framework-demo' ),
+			'title'    => __( 'Comment Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the comment.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -494,21 +494,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'single_post_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Post Settings', 'redux-framework-demo' ),
-			'desc'  => __( 'This is the options you can change the post on the blog page or archive pages.', 'redux-framework-demo' )
+			'title' => __( 'Post Settings', 'doyle' ),
+			'desc'  => __( 'This is the options you can change the post on the blog page or archive pages.', 'doyle' )
 		),
 		array(
 			'id'       => 'single_post_title',
 			'type'     => 'switch',
-			'title'    => __( 'Post Title', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to display the post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title', 'doyle' ),
+			'subtitle' => __( 'Turn on to display the post title.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'single_post_title_font',
 			'type'     => 'typography',
-			'title'    => __( 'Post Title Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography post title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -532,8 +532,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Title Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post title.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Title Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post title.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -543,15 +543,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_featured',
 			'type'     => 'switch',
-			'title'    => __( 'Featured Image / Video', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the image / video.', 'redux-framework-demo' ),
+			'title'    => __( 'Featured Image / Video', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the image / video.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'single_post_image_size',
 			'type'     => 'text',
-			'title'    => __( 'Image Size', 'redux-framework-demo' ),
-			'subtitle' => __( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'redux-framework-demo' ),
+			'title'    => __( 'Image Size', 'doyle' ),
+			'subtitle' => __( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'doyle' ),
 			'default'  => 'full',
 			'required' 		=> array('single_post_featured' , '=', '1')
 		),
@@ -563,8 +563,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Featured Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post featured.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Featured Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post featured.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -574,15 +574,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_meta',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'single_post_meta_font',
 			'type'     => 'typography',
-			'title'    => __( 'Post Meta Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography post meta.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -601,8 +601,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_meta_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Post Meta Color', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the color post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Color', 'doyle' ),
+			'subtitle' => __( 'Controls the color post meta.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -619,8 +619,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Meta Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post meta.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post meta.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -630,40 +630,40 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_meta_author',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Author', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field author.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Author', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field author.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('single_post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_author_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Author Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field author. Leave empty to use "By:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Author Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field author. Leave empty to use "By:" label.', 'doyle' ),
 			'default'  => 'By:',
 			'required' 		=> array('single_post_meta_author' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_date',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Date', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field author.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field author.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('single_post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_date_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Date Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field date. Leave empty to use "Date:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field date. Leave empty to use "Date:" label.', 'doyle' ),
 			'default'  => 'Date:',
 			'required' 		=> array('single_post_meta_date' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_date_format',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Date Format', 'redux-framework-demo' ),
-			'subtitle' => __( 'Controls the date format that displays in the post. http://codex.wordpress.org/Formatting_Date_and_Time', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Date Format', 'doyle' ),
+			'subtitle' => __( 'Controls the date format that displays in the post. http://codex.wordpress.org/Formatting_Date_and_Time', 'doyle' ),
 			'default'  => 'M d, Y',
 			'required' 		=> array('single_post_meta_date' , '=', '1'),
 		),
@@ -671,48 +671,48 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_meta_comment',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Comment', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field comment.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comment', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field comment.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('single_post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_comment_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Comment Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comment:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comment Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comment:" label.', 'doyle' ),
 			'default'  => 'Comment:',
 			'required' 		=> array('single_post_meta_comment' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_comments_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Comments Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comments:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Comments Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field comment. Leave empty to use "Comments:" label.', 'doyle' ),
 			'default'  => 'Comments:',
 			'required' 		=> array('single_post_meta_comment' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_category',
 			'type'     => 'switch',
-			'title'    => __( 'Post Meta Field Category', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the meta field category.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Category', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the meta field category.', 'doyle' ),
 			'default'  => true,
 			'required' 		=> array('single_post_meta' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_meta_category_label',
 			'type'     => 'text',
-			'title'    => __( 'Post Meta Field Category Label', 'redux-framework-demo' ),
-			'subtitle' => __( 'Please, Enter label of the meta field category. Leave empty to use "Category:" label.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Meta Field Category Label', 'doyle' ),
+			'subtitle' => __( 'Please, Enter label of the meta field category. Leave empty to use "Category:" label.', 'doyle' ),
 			'default'  => 'Category:',
 			'required' 		=> array('single_post_meta_category' , '=', '1'),
 		),
 		array(
 			'id'       => 'single_post_content',
 			'type'     => 'switch',
-			'title'    => __( 'Post Content', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the content.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Content', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the content.', 'doyle' ),
 			'default'  => true
 		),
 		array(
@@ -723,8 +723,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Content Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post excerpt.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Content Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post excerpt.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -734,15 +734,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'single_post_tag',
 			'type'     => 'switch',
-			'title'    => __( 'Post Tags', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the tags.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Tags', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the tags.', 'doyle' ),
 			'default'  => true
 		),
 		array(
 			'id'       => 'single_post_share',
 			'type'     => 'switch',
-			'title'    => __( 'Post Shares', 'redux-framework-demo' ),
-			'subtitle' => __( 'Turn on to show the share.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Shares', 'doyle' ),
+			'subtitle' => __( 'Turn on to show the share.', 'doyle' ),
 			'default'  => true
 		),
 		array(
@@ -753,8 +753,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Post Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the bottom margin the post.', 'redux-framework-demo' ),
+			'title'    => __( 'Post Space', 'doyle' ),
+			'subtitle' => __( 'Control the bottom margin the post.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),

@@ -74,8 +74,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => false,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'Theme Options', 'redux-framework-demo' ),
-        'page_title'           => __( 'Theme Options', 'redux-framework-demo' ),
+        'menu_title'           => __( 'Theme Options', 'doyle' ),
+        'page_title'           => __( 'Theme Options', 'doyle' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -175,19 +175,19 @@
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-docs',
         'href'  => '#',
-        'title' => __( 'Documentation', 'redux-framework-demo' ),
+        'title' => __( 'Documentation', 'doyle' ),
     );
 
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-support',
         'href'  => '#',
-        'title' => __( 'Support', 'redux-framework-demo' ),
+        'title' => __( 'Support', 'doyle' ),
     );
 
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-extensions',
         'href'  => '#',
-        'title' => __( 'Extensions', 'redux-framework-demo' ),
+        'title' => __( 'Extensions', 'doyle' ),
     );
 
     // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
@@ -220,13 +220,13 @@
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'redux-framework-demo' ), $v );
+        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'doyle' ), $v );
     } else {
-        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'redux-framework-demo' );
+        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'doyle' );
     }
 
     // Add content after the form.
-    $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'redux-framework-demo' );
+    $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'doyle' );
 
     Redux::setArgs( $opt_name, $args );
 
@@ -242,19 +242,19 @@
     $tabs = array(
         array(
             'id'      => 'redux-help-tab-1',
-            'title'   => __( 'Theme Information 1', 'redux-framework-demo' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo' )
+            'title'   => __( 'Theme Information 1', 'doyle' ),
+            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'doyle' )
         ),
         array(
             'id'      => 'redux-help-tab-2',
-            'title'   => __( 'Theme Information 2', 'redux-framework-demo' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo' )
+            'title'   => __( 'Theme Information 2', 'doyle' ),
+            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'doyle' )
         )
     );
     Redux::setHelpTab( $opt_name, $tabs );
 
     // Set the help sidebar
-    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework-demo' );
+    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'doyle' );
     Redux::setHelpSidebar( $opt_name, $content );
 
 
@@ -294,7 +294,7 @@
     if ( file_exists( dirname( __FILE__ ) . '/../README.md' ) ) {
         $section = array(
             'icon'   => 'el el-list-alt',
-            'title'  => __( 'Documentation', 'redux-framework-demo' ),
+            'title'  => __( 'Documentation', 'doyle' ),
             'fields' => array(
                 array(
                     'id'       => '17',
@@ -409,8 +409,8 @@
         function dynamic_section( $sections ) {
             //$sections = array();
             $sections[] = array(
-                'title'  => __( 'Section via hook', 'redux-framework-demo' ),
-                'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'redux-framework-demo' ),
+                'title'  => __( 'Section via hook', 'doyle' ),
+                'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'doyle' ),
                 'icon'   => 'el el-paper-clip',
                 // Leave this as a blank section, no options just some intro text set above.
                 'fields' => array()

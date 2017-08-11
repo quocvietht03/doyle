@@ -1,8 +1,4 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	die( '-1' );
-}
-
 class WPBakeryShortCode_bt_testimonial_carousel extends WPBakeryShortCode {
 	
 	protected function content( $atts, $content = null ) {

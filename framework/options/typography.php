@@ -1,15 +1,15 @@
 <?php
 // Typography
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Typography', 'redux-framework-demo' ),
+	'title'            => __( 'Typography', 'doyle' ),
 	'id'               => 'bt_typography',
 	'icon'             => 'el el-fontsize',
 	'fields'           => array(
 		array(
 			'id'       => 'body_font',
 			'type'     => 'typography',
-			'title'    => __( 'Body Font', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography body.', 'redux-framework-demo' ),
+			'title'    => __( 'Body Font', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography body.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -26,8 +26,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_font',
 			'type'     => 'typography',
-			'title'    => __( 'H1 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H1.', 'redux-framework-demo' ),
+			'title'    => __( 'H1 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H1.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -48,8 +48,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H1 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H1.', 'redux-framework-demo' ),
+			'title'    => __( 'H1 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H1.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -59,8 +59,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_font',
 			'type'     => 'typography',
-			'title'    => __( 'H2 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H2.', 'redux-framework-demo' ),
+			'title'    => __( 'H2 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H2.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -81,8 +81,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H2 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H2.', 'redux-framework-demo' ),
+			'title'    => __( 'H2 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H2.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -92,8 +92,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_font',
 			'type'     => 'typography',
-			'title'    => __( 'H3 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H3.', 'redux-framework-demo' ),
+			'title'    => __( 'H3 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H3.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -114,8 +114,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H3 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H3.', 'redux-framework-demo' ),
+			'title'    => __( 'H3 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H3.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -125,8 +125,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h4_font',
 			'type'     => 'typography',
-			'title'    => __( 'H4 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H4.', 'redux-framework-demo' ),
+			'title'    => __( 'H4 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H4.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -147,8 +147,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H4 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H4.', 'redux-framework-demo' ),
+			'title'    => __( 'H4 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H4.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -158,8 +158,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h5_font',
 			'type'     => 'typography',
-			'title'    => __( 'H5 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H5.', 'redux-framework-demo' ),
+			'title'    => __( 'H5 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H5.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -180,8 +180,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H5 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H5.', 'redux-framework-demo' ),
+			'title'    => __( 'H5 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H5.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -191,8 +191,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h6_font',
 			'type'     => 'typography',
-			'title'    => __( 'H6 Typography', 'redux-framework-demo' ),
-			'subtitle' => __( 'These settings control the typography H6.', 'redux-framework-demo' ),
+			'title'    => __( 'H6 Typography', 'doyle' ),
+			'subtitle' => __( 'These settings control the typography H6.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -213,8 +213,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'H6 Space', 'redux-framework-demo' ),
-			'subtitle' => __( 'Control the top/bottom margin the H1.', 'redux-framework-demo' ),
+			'title'    => __( 'H6 Space', 'doyle' ),
+			'subtitle' => __( 'Control the top/bottom margin the H1.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '0',
 				'margin-bottom' => '15px'
@@ -225,15 +225,15 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Extra Font', 'redux-framework-demo' ),
+	'title'            => __( 'Extra Font', 'doyle' ),
 	'id'               => 'bt_extrafont',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'extra_font_1',
 			'type'     => 'typography',
-			'title'    => __( 'Extra Font 1', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
+			'title'    => __( 'Extra Font 1', 'doyle' ),
+			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -241,15 +241,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'=>'extra_element_1',
 			'type' => 'textarea',
-			'title' => __('Elements', 'redux-framework-demo'), 
-			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'redux-framework-demo'),
+			'title' => __('Elements', 'doyle'), 
+			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'doyle'),
 			'default' => ''
 		),
 		array(
 			'id'       => 'extra_font_2',
 			'type'     => 'typography',
-			'title'    => __( 'Extra Font 2', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
+			'title'    => __( 'Extra Font 2', 'doyle' ),
+			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -257,15 +257,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'=>'extra_element_2',
 			'type' => 'textarea',
-			'title' => __('Elements', 'redux-framework-demo'), 
-			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'redux-framework-demo'),
+			'title' => __('Elements', 'doyle'), 
+			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'doyle'),
 			'default' => ''
 		),
 		array(
 			'id'       => 'extra_font_3',
 			'type'     => 'typography',
-			'title'    => __( 'Extra Font 3', 'redux-framework-demo' ),
-			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'redux-framework-demo' ),
+			'title'    => __( 'Extra Font 3', 'doyle' ),
+			'subtitle' => __( 'Select a font to use throughout Typography settings.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -273,8 +273,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'=>'extra_element_3',
 			'type' => 'textarea',
-			'title' => __('Elements', 'redux-framework-demo'), 
-			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'redux-framework-demo'),
+			'title' => __('Elements', 'doyle'), 
+			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'doyle'),
 			'default' => ''
 		),
 	)

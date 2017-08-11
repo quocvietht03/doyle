@@ -20,7 +20,7 @@ if ( $related_products ) : ?>
 
 	<section class="related">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'Related products', 'doyle' ); ?></h2>
 
 		<div class="row products">
 

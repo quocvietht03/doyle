@@ -246,7 +246,7 @@
 							margin-right: 5px;
 						}
 					}
-					&.menu-item-has-children{
+					&.menu-item-has-children, &.page_item_has_children{
 						position: relative;
 						&:after{
 							content: "\f107";
@@ -313,7 +313,7 @@
 										margin-right: 5px;
 									}
 								}
-								&.menu-item-has-children{
+								&.menu-item-has-children, &.page_item_has_children{
 									position: relative;
 									&:after{
 										content: "\f105";
@@ -901,10 +901,10 @@
 			}
 		}
 		.bt-bottom {
-			ul.menu > li.current_page_item > a, ul.menu > li.current-menu-item > a{
+			ul > li.current_page_item > a, ul.menu > li.current_page_item > a, ul.menu > li.current-menu-item > a{
 				color: @h1-menu-first-level-color-active;
 			}
-			ul.menu li ul.sub-menu > li.current_page_item > a, ul.menu li ul.sub-menu > li.current-menu-item > a{
+			ul li ul.sub-menu > li.current_page_item > a, ul.menu li ul.sub-menu > li.current_page_item > a, ul.menu li ul.sub-menu > li.current-menu-item > a{
 				color: @h1-menu-sub-level-color-active;
 			}
 		}

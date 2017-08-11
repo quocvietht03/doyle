@@ -1,17 +1,12 @@
 <?php
 function doyle_fw_ext_backups_demos($demos) {
     $demos_array = array(
-        'your-demo-id' => array(
-            'title' => __('Demo Title', '{domain}'),
-            'screenshot' => 'https://your-site.com/.../screnshot.png',
-            'preview_link' => 'https://your-site.com/demo/your-demo-id',
-        ),
 		'doyle' => array(
-			'title' => esc_html__('Poseidon', 'doyle'),
+			'title' => esc_html__('Doyle', 'doyle'),
 			'screenshot' => 'http://theme.bearsthemes.com/import_demo/doyle/doyle/screenshot.png',
 			'preview_link' => 'http://theme.bearsthemes.com/wordpress/doyle/',
 		),
-        // ...
+		
     );
 
     $download_url = 'http://theme.bearsthemes.com/import_demo/doyle/';

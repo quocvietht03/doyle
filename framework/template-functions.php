@@ -120,7 +120,8 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		wp_enqueue_script('bootstrap-min', get_template_directory_uri().'/assets/vendors/bootstrap/js/bootstrap.min.js', array('jquery'), '', true);
 		
 		/* Fontawesome */
-		if(isset($doyle_options['font_awesome'])&&$doyle_options['font_awesome']){
+		$font_awesome = isset($doyle_options['font_awesome']) ? $doyle_options['font_awesome'] : true;
+		if($font_awesome){
 			wp_enqueue_style('font-awesome-min', get_template_directory_uri().'/assets/iconfonts/font-awesome/css/font-awesome.min.css', array(), false);
 		}
 		
@@ -252,21 +253,6 @@ function doyle_Header() {
             break;
 		case '3':
             get_template_part('framework/headers/header', 'v3');
-            break;
-		case '4':
-            get_template_part('framework/headers/header', 'v4');
-            break;
-		case '5':
-            get_template_part('framework/headers/header', 'v5');
-            break;
-		case '6':
-            get_template_part('framework/headers/header', 'v6');
-            break;
-		case '7':
-            get_template_part('framework/headers/header', 'v7');
-            break;
-		case 'header-onepage':
-            get_template_part('framework/headers/header', 'onepage');
             break;
 		default :
 			get_template_part('framework/headers/header', 'v1');

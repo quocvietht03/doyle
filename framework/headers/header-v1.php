@@ -63,20 +63,6 @@
 			</div>
 		<?php } ?>
 		
-		<!--div class="bt-subheader bt-middle">
-			<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
-				<div class="bt-subheader-cell bt-left">
-					<div class="bt-content text-left">Top Left</div>
-				</div>
-				<div class="bt-subheader-cell bt-center">
-					<div class="bt-content text-center">Top Center</div>
-				</div>
-				<div class="bt-subheader-cell bt-right">
-					<div class="bt-content text-right">Top right</div>
-				</div>
-			</div>
-		</div-->
-		
 		<div class="bt-subheader bt-bottom">
 			<div class="bt-subheader-inner <?php echo esc_attr($container_class); ?>">
 				<div class="bt-subheader-cell bt-left">

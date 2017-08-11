@@ -14,38 +14,38 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 	$site_width = (isset($doyle_options['site_width'])&&$doyle_options['site_width'])?$doyle_options['site_width'].'px': '1200px';
 	$mobile_width = (isset($doyle_options['mobile_width'])&&$doyle_options['mobile_width'])?$doyle_options['mobile_width'].'px': '991px';
 	
-	$main_color = (isset($doyle_options['main_color'])&&$doyle_options['main_color'])?$doyle_options['main_color']: '#00abc9';
+	$main_color = (isset($doyle_options['main_color'])&&$doyle_options['main_color'])?$doyle_options['main_color']: '#0a6edd';
 	$secondary_color = (isset($doyle_options['secondary_color'])&&$doyle_options['secondary_color'])?$doyle_options['secondary_color']: '#00c282';
 	
-	$h1_menu_first_level_color_active = (isset($doyle_options['h1_menu_first_level_color']['active'])&&$doyle_options['h1_menu_first_level_color']['active'])?$doyle_options['h1_menu_first_level_color']['active']: '#00abc9';
-	$h1_menu_sub_level_color_active = (isset($doyle_options['h1_menu_sub_level_color']['active'])&&$doyle_options['h1_menu_sub_level_color']['active'])?$doyle_options['h1_menu_sub_level_color']['active']: '#00abc9';
-	$h1_menu_first_level_color_stick_active = (isset($doyle_options['h1_menu_first_level_color_stick']['active'])&&$doyle_options['h1_menu_first_level_color_stick']['active'])?$doyle_options['h1_menu_first_level_color_stick']['active']: '#00abc9';
+	$h1_menu_first_level_color_active = (isset($doyle_options['h1_menu_first_level_color']['active'])&&$doyle_options['h1_menu_first_level_color']['active'])?$doyle_options['h1_menu_first_level_color']['active']: '#0a6edd';
+	$h1_menu_sub_level_color_active = (isset($doyle_options['h1_menu_sub_level_color']['active'])&&$doyle_options['h1_menu_sub_level_color']['active'])?$doyle_options['h1_menu_sub_level_color']['active']: '#0a6edd';
+	$h1_menu_first_level_color_stick_active = (isset($doyle_options['h1_menu_first_level_color_stick']['active'])&&$doyle_options['h1_menu_first_level_color_stick']['active'])?$doyle_options['h1_menu_first_level_color_stick']['active']: '#0a6edd';
 	
-	$h1_mobile_toggle_button_default = (isset($doyle_options['h1_mobile_toggle_button']['regular'])&&$doyle_options['h1_mobile_toggle_button']['regular'])?$doyle_options['h1_mobile_toggle_button']['regular']: '#333333';
-	$h1_mobile_toggle_button_hover = (isset($doyle_options['h1_mobile_toggle_button']['hover'])&&$doyle_options['h1_mobile_toggle_button']['hover'])?$doyle_options['h1_mobile_toggle_button']['hover']: '#00abc9';
+	$h1_mobile_toggle_button_default = (isset($doyle_options['h1_mobile_toggle_button']['regular'])&&$doyle_options['h1_mobile_toggle_button']['regular'])?$doyle_options['h1_mobile_toggle_button']['regular']: '#171721';
+	$h1_mobile_toggle_button_hover = (isset($doyle_options['h1_mobile_toggle_button']['hover'])&&$doyle_options['h1_mobile_toggle_button']['hover'])?$doyle_options['h1_mobile_toggle_button']['hover']: '#0a6edd';
 	
-	$h1_menu_mobile_first_level_color_active = (isset($doyle_options['h1_menu_mobile_first_level_color']['active'])&&$doyle_options['h1_menu_mobile_first_level_color']['active'])?$doyle_options['h1_menu_mobile_first_level_color']['active']: '#00abc9';
-	$h1_menu_mobile_sub_level_color_active = (isset($doyle_options['h1_menu_mobile_sub_level_color']['active'])&&$doyle_options['h1_menu_mobile_sub_level_color']['active'])?$doyle_options['h1_menu_mobile_sub_level_color']['active']: '#00abc9';
+	$h1_menu_mobile_first_level_color_active = (isset($doyle_options['h1_menu_mobile_first_level_color']['active'])&&$doyle_options['h1_menu_mobile_first_level_color']['active'])?$doyle_options['h1_menu_mobile_first_level_color']['active']: '#0a6edd';
+	$h1_menu_mobile_sub_level_color_active = (isset($doyle_options['h1_menu_mobile_sub_level_color']['active'])&&$doyle_options['h1_menu_mobile_sub_level_color']['active'])?$doyle_options['h1_menu_mobile_sub_level_color']['active']: '#0a6edd';
 	
-	$h2_menu_first_level_color_active = (isset($doyle_options['h2_menu_first_level_color']['active'])&&$doyle_options['h2_menu_first_level_color']['active'])?$doyle_options['h2_menu_first_level_color']['active']: '#00abc9';
-	$h2_menu_sub_level_color_active = (isset($doyle_options['h2_menu_sub_level_color']['active'])&&$doyle_options['h2_menu_sub_level_color']['active'])?$doyle_options['h2_menu_sub_level_color']['active']: '#00abc9';
-	$h2_menu_first_level_color_stick_active = (isset($doyle_options['h2_menu_first_level_color_stick']['active'])&&$doyle_options['h2_menu_first_level_color_stick']['active'])?$doyle_options['h2_menu_first_level_color_stick']['active']: '#00abc9';
+	$h2_menu_first_level_color_active = (isset($doyle_options['h2_menu_first_level_color']['active'])&&$doyle_options['h2_menu_first_level_color']['active'])?$doyle_options['h2_menu_first_level_color']['active']: '#0a6edd';
+	$h2_menu_sub_level_color_active = (isset($doyle_options['h2_menu_sub_level_color']['active'])&&$doyle_options['h2_menu_sub_level_color']['active'])?$doyle_options['h2_menu_sub_level_color']['active']: '#0a6edd';
+	$h2_menu_first_level_color_stick_active = (isset($doyle_options['h2_menu_first_level_color_stick']['active'])&&$doyle_options['h2_menu_first_level_color_stick']['active'])?$doyle_options['h2_menu_first_level_color_stick']['active']: '#0a6edd';
 	
-	$h2_mobile_toggle_button_default = (isset($doyle_options['h2_mobile_toggle_button']['regular'])&&$doyle_options['h2_mobile_toggle_button']['regular'])?$doyle_options['h2_mobile_toggle_button']['regular']: '#333333';
-	$h2_mobile_toggle_button_hover = (isset($doyle_options['h2_mobile_toggle_button']['hover'])&&$doyle_options['h2_mobile_toggle_button']['hover'])?$doyle_options['h2_mobile_toggle_button']['hover']: '#00abc9';
+	$h2_mobile_toggle_button_default = (isset($doyle_options['h2_mobile_toggle_button']['regular'])&&$doyle_options['h2_mobile_toggle_button']['regular'])?$doyle_options['h2_mobile_toggle_button']['regular']: '#171721';
+	$h2_mobile_toggle_button_hover = (isset($doyle_options['h2_mobile_toggle_button']['hover'])&&$doyle_options['h2_mobile_toggle_button']['hover'])?$doyle_options['h2_mobile_toggle_button']['hover']: '#0a6edd';
 	
-	$h2_menu_mobile_first_level_color_active = (isset($doyle_options['h2_menu_mobile_first_level_color']['active'])&&$doyle_options['h2_menu_mobile_first_level_color']['active'])?$doyle_options['h2_menu_mobile_first_level_color']['active']: '#00abc9';
-	$h2_menu_mobile_sub_level_color_active = (isset($doyle_options['h2_menu_mobile_sub_level_color']['active'])&&$doyle_options['h2_menu_mobile_sub_level_color']['active'])?$doyle_options['h2_menu_mobile_sub_level_color']['active']: '#00abc9';
+	$h2_menu_mobile_first_level_color_active = (isset($doyle_options['h2_menu_mobile_first_level_color']['active'])&&$doyle_options['h2_menu_mobile_first_level_color']['active'])?$doyle_options['h2_menu_mobile_first_level_color']['active']: '#0a6edd';
+	$h2_menu_mobile_sub_level_color_active = (isset($doyle_options['h2_menu_mobile_sub_level_color']['active'])&&$doyle_options['h2_menu_mobile_sub_level_color']['active'])?$doyle_options['h2_menu_mobile_sub_level_color']['active']: '#0a6edd';
 	
-	$h3_menu_first_level_color_active = (isset($doyle_options['h3_menu_first_level_color']['active'])&&$doyle_options['h3_menu_first_level_color']['active'])?$doyle_options['h3_menu_first_level_color']['active']: '#00abc9';
-	$h3_menu_sub_level_color_active = (isset($doyle_options['h3_menu_sub_level_color']['active'])&&$doyle_options['h3_menu_sub_level_color']['active'])?$doyle_options['h3_menu_sub_level_color']['active']: '#00abc9';
-	$h3_menu_first_level_color_stick_active = (isset($doyle_options['h3_menu_first_level_color_stick']['active'])&&$doyle_options['h3_menu_first_level_color_stick']['active'])?$doyle_options['h3_menu_first_level_color_stick']['active']: '#00abc9';
+	$h3_menu_first_level_color_active = (isset($doyle_options['h3_menu_first_level_color']['active'])&&$doyle_options['h3_menu_first_level_color']['active'])?$doyle_options['h3_menu_first_level_color']['active']: '#0a6edd';
+	$h3_menu_sub_level_color_active = (isset($doyle_options['h3_menu_sub_level_color']['active'])&&$doyle_options['h3_menu_sub_level_color']['active'])?$doyle_options['h3_menu_sub_level_color']['active']: '#0a6edd';
+	$h3_menu_first_level_color_stick_active = (isset($doyle_options['h3_menu_first_level_color_stick']['active'])&&$doyle_options['h3_menu_first_level_color_stick']['active'])?$doyle_options['h3_menu_first_level_color_stick']['active']: '#0a6edd';
 
-	$h3_mobile_toggle_button_default = (isset($doyle_options['h3_mobile_toggle_button']['regular'])&&$doyle_options['h3_mobile_toggle_button']['regular'])?$doyle_options['h3_mobile_toggle_button']['regular']: '#333333';
-	$h3_mobile_toggle_button_hover = (isset($doyle_options['h3_mobile_toggle_button']['hover'])&&$doyle_options['h3_mobile_toggle_button']['hover'])?$doyle_options['h3_mobile_toggle_button']['hover']: '#00abc9';
+	$h3_mobile_toggle_button_default = (isset($doyle_options['h3_mobile_toggle_button']['regular'])&&$doyle_options['h3_mobile_toggle_button']['regular'])?$doyle_options['h3_mobile_toggle_button']['regular']: '#171721';
+	$h3_mobile_toggle_button_hover = (isset($doyle_options['h3_mobile_toggle_button']['hover'])&&$doyle_options['h3_mobile_toggle_button']['hover'])?$doyle_options['h3_mobile_toggle_button']['hover']: '#0a6edd';
 
-	$h3_menu_mobile_first_level_color_active = (isset($doyle_options['h3_menu_mobile_first_level_color']['active'])&&$doyle_options['h3_menu_mobile_first_level_color']['active'])?$doyle_options['h3_menu_mobile_first_level_color']['active']: '#00abc9';
-	$h3_menu_mobile_sub_level_color_active = (isset($doyle_options['h3_menu_mobile_sub_level_color']['active'])&&$doyle_options['h3_menu_mobile_sub_level_color']['active'])?$doyle_options['h3_menu_mobile_sub_level_color']['active']: '#00abc9';	
+	$h3_menu_mobile_first_level_color_active = (isset($doyle_options['h3_menu_mobile_first_level_color']['active'])&&$doyle_options['h3_menu_mobile_first_level_color']['active'])?$doyle_options['h3_menu_mobile_first_level_color']['active']: '#0a6edd';
+	$h3_menu_mobile_sub_level_color_active = (isset($doyle_options['h3_menu_mobile_sub_level_color']['active'])&&$doyle_options['h3_menu_mobile_sub_level_color']['active'])?$doyle_options['h3_menu_mobile_sub_level_color']['active']: '#0a6edd';	
 	
     $variables = array(
 		"site-width" => $site_width,
@@ -100,13 +100,17 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
     }
 }
 function doyle_addLessStyle() {
-	try {
-		$inputFile = get_template_directory().'/assets/css/less/style.less';
-		$outputFile = get_template_directory().'/style.css';
-		doyle_autoCompileLess($inputFile, $outputFile);
-    } catch (Exception $e) {
-        echo 'Caught exception: ', $e->getMessage(), "\n";
-    }
+	global $doyle_options;
+	if(isset($doyle_options['less_design'])&&$doyle_options['less_design']){
+		try {
+			$inputFile = get_template_directory().'/assets/css/less/style.less';
+			$outputFile = get_template_directory().'/style.css';
+			doyle_autoCompileLess($inputFile, $outputFile);
+		} catch (Exception $e) {
+			echo 'Caught exception: ', $e->getMessage(), "\n";
+		}
+	}
+	
 }
 add_action('wp_enqueue_scripts', 'doyle_addLessStyle');
 /* End less*/

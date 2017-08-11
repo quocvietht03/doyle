@@ -12,8 +12,8 @@ $options = array(
 					'social-title' =>  array( 
 						'type' => 'text',
 						'value' => 'Share',
-						'label' => __('Social Title', '{domain}'),
-						'desc'  => __('Please, enter social title of post.', '{domain}'),
+						'label' => __('Social Title', 'doyle'),
+						'desc'  => __('Please, enter social title of post.', 'doyle'),
 					),
 					'social' => array(
 						'type'  => 'addable-popup',
@@ -39,30 +39,30 @@ $options = array(
 								'link' => '#'
 							)
 						),
-						'label' => __('Social', '{domain}'),
-						'desc'  => __('Please configs social of post', '{domain}'),
+						'label' => __('Social', 'doyle'),
+						'desc'  => __('Please configs social of post', 'doyle'),
 						'popup-options' => array(
 							'title' => array( 
 								'type' => 'text',
 								'value' => '',
-								'label' => __('Title', '{domain}'),
-								'desc'  => __('Please, enter title of social item.', '{domain}'),
+								'label' => __('Title', 'doyle'),
+								'desc'  => __('Please, enter title of social item.', 'doyle'),
 							),
 							'icon' => array( 
 								'type' => 'text',
 								'value' => '',
-								'label' => __('Icon', '{domain}'),
-								'desc'  => __('Please, enter icon of social item.', '{domain}'),
+								'label' => __('Icon', 'doyle'),
+								'desc'  => __('Please, enter icon of social item.', 'doyle'),
 							),
 							'link' => array( 
 								'type' => 'text',
 								'value' => '',
-								'label' => __('Url(Link)', '{domain}'),
-								'desc'  => __('Please, enter link of social item.', '{domain}'),
+								'label' => __('Url(Link)', 'doyle'),
+								'desc'  => __('Please, enter link of social item.', 'doyle'),
 							)
 						),
 						'template' => '{{- title }}',
-						'add-button-text' => __('Add', '{domain}'),
+						'add-button-text' => __('Add', 'doyle'),
 						'sortable' => true,
 					)
 				),
@@ -124,12 +124,12 @@ $options = array(
 								'format' => array(
 									'type'  => 'short-select',
 									'value' => 'mp3',
-									'label' => __('Format', '{domain}'),
-									'desc'  => __('Choose the audio format.', '{domain}'),
+									'label' => __('Format', 'doyle'),
+									'desc'  => __('Choose the audio format.', 'doyle'),
 									'choices' => array(
-										'audio/mpeg' => __('MP3', '{domain}'),
-										'audio/ogg' => __('Ogg', '{domain}'),
-										'audio/wav' => __('Wav', '{domain}')
+										'audio/mpeg' => __('MP3', 'doyle'),
+										'audio/ogg' => __('Ogg', 'doyle'),
+										'audio/wav' => __('Wav', 'doyle')
 									)
 								),
 								'src' => array(

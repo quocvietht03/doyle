@@ -2,7 +2,7 @@
 function doyle_fw_ext_backups_demos($demos) {
     $demos_array = array(
         'your-demo-id' => array(
-            'title' => __('Demo Title', '{domain}'),
+            'title' => __('Demo Title', 'doyle'),
             'screenshot' => 'https://your-site.com/.../screnshot.png',
             'preview_link' => 'https://your-site.com/demo/your-demo-id',
         ),

@@ -6,7 +6,7 @@ $options = array(
 		'label' => false,
 		'inner-options' => array(
 			'page_general_setting' => array(
-				'title' => __('General', 'fw'),
+				'title' => __('General', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
 					'page_titlebar' => array(
@@ -16,11 +16,11 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					'page_footer_space' => array(
@@ -30,30 +30,30 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					
 				),
 			),
 			'page_header_setting' => array(
-				'title' => __('Header', 'fw'),
+				'title' => __('Header', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
 					'header_layout' => array(
 						'type'  => 'short-select',
 						'value' => 'default',
-						'label' => __('Header Layout', '{domain}'),
-						'desc'  => __('Select a header layout in current page', '{domain}'),
+						'label' => __('Header Layout', 'doyle'),
+						'desc'  => __('Select a header layout in current page', 'doyle'),
 						'choices' => array(
-							'default' => __('Default', '{domain}'),
-							'1' => __('Header 1', '{domain}'),
-							'2' => __('Header 2', '{domain}'),
-							'3' => __('Header 3', '{domain}')
+							'default' => __('Default', 'doyle'),
+							'1' => __('Header 1', 'doyle'),
+							'2' => __('Header 2', 'doyle'),
+							'3' => __('Header 3', 'doyle')
 						)
 					),
 					'header_fullwidth' => array(
@@ -63,11 +63,11 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					'header_top' => array(
@@ -77,11 +77,11 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					'header_logo' => array(
@@ -89,14 +89,14 @@ $options = array(
 						'value' => array(
 							'url' => ''
 						),
-						'label' => __('Logo', '{domain}'),
-						'desc'  => __('Select image to change the logo in current page.', '{domain}'),
+						'label' => __('Logo', 'doyle'),
+						'desc'  => __('Select image to change the logo in current page.', 'doyle'),
 					),
 					'header_logo_height' => array(
 						'type'  => 'short-text',
 						'value' => '',
-						'label' => __('Logo Height', '{domain}'),
-						'desc'  => __('Controls the height of the logo in current page. EX: 50', '{domain}')
+						'label' => __('Logo Height', 'doyle'),
+						'desc'  => __('Controls the height of the logo in current page. EX: 50', 'doyle')
 					),
 					'header_stick' => array(
 						'type' => 'switch',
@@ -105,11 +105,11 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					'header_logo_stick' => array(
@@ -117,14 +117,14 @@ $options = array(
 						'value' => array(
 							'url' => ''
 						),
-						'label' => __('Logo Stick', '{domain}'),
-						'desc'  => __('Select image to change the logo stick in current page.', '{domain}'),
+						'label' => __('Logo Stick', 'doyle'),
+						'desc'  => __('Select image to change the logo stick in current page.', 'doyle'),
 					),
 					'header_logo_stick_height' => array(
 						'type'  => 'short-text',
 						'value' => '',
-						'label' => __('Logo Height', '{domain}'),
-						'desc'  => __('Controls the height of the logo stick in current page. EX: 40', '{domain}')
+						'label' => __('Logo Height', 'doyle'),
+						'desc'  => __('Controls the height of the logo stick in current page. EX: 40', 'doyle')
 					),
 					'mobile_header_top' => array(
 						'type' => 'switch',
@@ -133,11 +133,11 @@ $options = array(
 						'value' => '',
 						'left-choice' => array(
 							'value' => '',
-							'label' => __('Off', '{domain}'),
+							'label' => __('Off', 'doyle'),
 						),
 						'right-choice' => array(
 							'value' => '1',
-							'label' => __('On', '{domain}'),
+							'label' => __('On', 'doyle'),
 						),
 					),
 					'logo_mobile' => array(
@@ -145,48 +145,48 @@ $options = array(
 						'value' => array(
 							'url' => ''
 						),
-						'label' => __('Logo Mobile', '{domain}'),
-						'desc'  => __('Select image to change the logo mobile in current page.', '{domain}'),
+						'label' => __('Logo Mobile', 'doyle'),
+						'desc'  => __('Select image to change the logo mobile in current page.', 'doyle'),
 					),
 					'logo_mobile_height' => array(
 						'type'  => 'short-text',
 						'value' => '',
-						'label' => __('Logo Height', '{domain}'),
-						'desc'  => __('Controls the height of the logo mobile in current page. EX: 30', '{domain}')
+						'label' => __('Logo Height', 'doyle'),
+						'desc'  => __('Controls the height of the logo mobile in current page. EX: 30', 'doyle')
 					),
 					
 				),
 			),
 			'page_titlebar_setting' => array(
-				'title' => __('Title Bar', 'fw'),
+				'title' => __('Title Bar', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
 					'titlebar_layout' => array(
 						'type'  => 'short-select',
 						'value' => 'default',
-						'label' => __('Title Bar Layout', '{domain}'),
-						'desc'  => __('Select a title bar layout in current page', '{domain}'),
+						'label' => __('Title Bar Layout', 'doyle'),
+						'desc'  => __('Select a title bar layout in current page', 'doyle'),
 						'choices' => array(
-							'default' => __('Default', '{domain}'),
-							'1' => __('Title Bar 1', '{domain}'),
-							'2' => __('Title Bar 2', '{domain}')
+							'default' => __('Default', 'doyle'),
+							'1' => __('Title Bar 1', 'doyle'),
+							'2' => __('Title Bar 2', 'doyle')
 						)
 					),
 				),
 			) ,
 			'page_footer_setting' => array(
-				'title' => __('Footer', 'fw'),
+				'title' => __('Footer', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
 					'footer_layout' => array(
 						'type'  => 'short-select',
 						'value' => 'default',
-						'label' => __('Footer Layout', '{domain}'),
-						'desc'  => __('Select a footer layout in current page', '{domain}'),
+						'label' => __('Footer Layout', 'doyle'),
+						'desc'  => __('Select a footer layout in current page', 'doyle'),
 						'choices' => array(
-							'default' => __('Default', '{domain}'),
-							'1' => __('Footer 1', '{domain}'),
-							'2' => __('Footer 2', '{domain}')
+							'default' => __('Default', 'doyle'),
+							'1' => __('Footer 1', 'doyle'),
+							'2' => __('Footer 2', 'doyle')
 						)
 					),
 				),
