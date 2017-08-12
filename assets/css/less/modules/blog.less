@@ -12,6 +12,10 @@
 		img {
 			width: 100%;
 			height: auto;
+			&.wp-post-image{
+				width: auto;
+				max-width: 100%;
+			}
 		}
 		&.gallery{
 			.carousel-control{
@@ -783,7 +787,7 @@
 						top: 0;
 						right: 0;
 					}
-					a{
+					> a{
 						display: inline-block;
 						color: #686876;
 					}
@@ -791,7 +795,7 @@
 						&:after {
 							color: @secondary-color;
 						}
-						a {
+						> a {
 							color: @secondary-color;
 						}
 					}
