@@ -30,4 +30,4 @@ function doyle_taxonomy_settings_field($settings, $value) {
             . '</div>'
             . '</div>';
 }
-vc_add_shortcode_param('bt_taxonomy', 'doyle_taxonomy_settings_field');
+doyle_add_extra_parame('bt_taxonomy', 'doyle_taxonomy_settings_field');

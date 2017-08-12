@@ -9,7 +9,10 @@ if (class_exists("Redux")){
 }
 
 /* Extra field */
-if (function_exists("vc_add_shortcode_param")){
+if (class_exists("WpbakeryShortcodeParams")){
+	function doyle_add_extra_parame( $name, $form_field_callback, $script_url = null ) {
+		return WpbakeryShortcodeParams::addField( $name, $form_field_callback, $script_url );
+	}
 	require_once get_template_directory().'/framework/vc_params/vc_extra_fields.php';
 }
 
