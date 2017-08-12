@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:72:"C:\xampp\htdocs\doyle/wp-content/themes/doyle/assets/css/less/style.less";s:8:"compiled";s:704506:"/*
+a:4:{s:4:"root";s:72:"C:\xampp\htdocs\doyle/wp-content/themes/doyle/assets/css/less/style.less";s:8:"compiled";s:704921:"/*
 Theme Name: Doyle
 Theme URI: http://theme.bearsthemes.com/wordpress/doyle
 Author: bearsthemes
@@ -334,14 +334,14 @@ a {
   -moz-transition:all 0.4s;
   -o-transition:all 0.4s;
   transition:all 0.4s;
-  color:#313131;
+  color:#0a6edd;
 }
 a:hover, a:focus, a:active {
-  color:#0a6edd;
+  color:#0856ac;
   outline:none;
 }
 h1, h2, h3, h4, h5, h6, .bt-font-size-1, .bt-font-size-2, .bt-font-size-3, .bt-font-size-4, .bt-font-size-5, .bt-font-size-6 {
-  color:#282828;
+  color:#171721;
   font-weight:700;
   letter-spacing:0;
   margin-bottom:15px;
@@ -796,6 +796,8 @@ ul li, ol li {
   padding:0;
   margin:0;
 }
+ul li a, ol li a { color:#171721; }
+ul li a:hover, ol li a:hover { color:#0a6edd; }
 ul li > ul, ul li > ol, ol li > ul, ol li > ol { margin:0; }
 ul.bt-disc, ol.bt-disc { list-style-type:disc; }
 ul.bt-circle, ol.bt-circle { list-style-type:circle; }
@@ -7007,6 +7009,7 @@ img.alignright { margin:5px 0 5px 20px; }
 @media (max-width: 992px) {
   .bt-header .bt-header-mobile { opacity:1; }
 }
+.bt-header .bt-header-mobile .logo { margin:10px 0; }
 .bt-header .bt-header-mobile .bt-menu-canvas-toggle { display:inline-block; }
 .bt-header .bt-header-mobile .bt-menu-content-right { display:inline-block; }
 .bt-header .bt-header-mobile .bt-menu-content-right .widget { display:inline-block; }
@@ -10002,6 +10005,10 @@ img.alignright { margin:5px 0 5px 20px; }
   width:100%;
   height:auto;
 }
+.bt-archive-item-style1 .bt-media img.wp-post-image {
+  width:auto;
+  max-width:100%;
+}
 .bt-archive-item-style1 .bt-media.gallery .carousel-control {
   position:absolute;
   top:10px;
@@ -10126,6 +10133,10 @@ img.alignright { margin:5px 0 5px 20px; }
 .blog .bt-post-item .bt-media img, .archive .bt-post-item .bt-media img, .search .bt-post-item .bt-media img {
   width:100%;
   height:auto;
+}
+.blog .bt-post-item .bt-media img.wp-post-image, .archive .bt-post-item .bt-media img.wp-post-image, .search .bt-post-item .bt-media img.wp-post-image {
+  width:auto;
+  max-width:100%;
 }
 .blog .bt-post-item .bt-media.gallery .carousel-control, .archive .bt-post-item .bt-media.gallery .carousel-control, .search .bt-post-item .bt-media.gallery .carousel-control {
   position:absolute;
@@ -11079,7 +11090,7 @@ img.alignright { margin:5px 0 5px 20px; }
   }
   .bt-comment-item .bt-comment .bt-name .bt-time { font-size:12px; }
 }
-.comment-respond .comment-reply-title { margin-bottom:0; }
+.comment-respond .comment-reply-title { margin-bottom:5px; }
 .comment-respond .comment-reply-title span {
   font-size:28px;
   font-weight:700;
@@ -13192,4 +13203,4 @@ body #site_backtop:hover, body #site_backtop:focus {
 @media (max-width: 420px) {
   .bt-error404-wrap .bt-content .bt-actions a { margin:10px; }
 }
-";s:5:"files";a:23:{s:72:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\style.less";i:1501665516;s:76:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\variables.less";i:1498709995;s:73:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\mixins.less";i:1495959648;s:76:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\animation.less";i:1495697997;s:87:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\typography.less";i:1502433083;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\color.less";i:1497603700;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\input.less";i:1501062000;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\icon.less";i:1495175270;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\button.less";i:1501554578;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\util.less";i:1497255967;s:84:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\section.less";i:1502271551;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\unit.less";i:1502425103;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\hover.less";i:1498725205;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\header.less";i:1502425949;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\titlebar.less";i:1501582048;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\footer.less";i:1502249460;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\elements.less";i:1500014218;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\blog.less";i:1502505018;s:84:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\portfolio.less";i:1499759503;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\team.less";i:1501656921;s:86:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\testimonial.less";i:1498530894;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\shop.less";i:1502252000;s:71:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\main.less";i:1502334779;}s:7:"updated";i:1502505611;}
+";s:5:"files";a:23:{s:72:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\style.less";i:1501665516;s:76:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\variables.less";i:1498709995;s:73:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\mixins.less";i:1495959648;s:76:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\animation.less";i:1495697997;s:87:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\typography.less";i:1502510054;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\color.less";i:1497603700;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\input.less";i:1501062000;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\icon.less";i:1495175270;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\button.less";i:1501554578;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\util.less";i:1502510098;s:84:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\section.less";i:1502271551;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\unit.less";i:1502425103;s:82:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\component\hover.less";i:1498725205;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\header.less";i:1502510114;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\titlebar.less";i:1501582048;s:81:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\footer.less";i:1502249460;s:83:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\elements.less";i:1500014218;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\blog.less";i:1502510082;s:84:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\portfolio.less";i:1499759503;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\team.less";i:1501656921;s:86:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\testimonial.less";i:1498530894;s:79:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\modules\shop.less";i:1502252000;s:71:"C:\xampp\htdocs\doyle\wp-content\themes\doyle\assets\css\less\main.less";i:1502334779;}s:7:"updated";i:1502510187;}

@@ -344,7 +344,7 @@ if (!function_exists('doyle_page_title')) {
                     single_cat_title();
                 }elseif(get_post_type() == 'fw-portfolio'||get_post_type() == 'team'){
                     single_term_title();
-                }elseif(is_shop()){
+                }elseif(class_exists('Woocommerce')&&is_shop()){
                     esc_html_e('Shop', 'doyle');
                 }elseif (is_tag()){
                     single_tag_title();

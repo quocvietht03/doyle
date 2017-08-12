@@ -334,14 +334,14 @@ a {
   -moz-transition:all 0.4s;
   -o-transition:all 0.4s;
   transition:all 0.4s;
-  color:#313131;
+  color:#0a6edd;
 }
 a:hover, a:focus, a:active {
-  color:#0a6edd;
+  color:#0856ac;
   outline:none;
 }
 h1, h2, h3, h4, h5, h6, .bt-font-size-1, .bt-font-size-2, .bt-font-size-3, .bt-font-size-4, .bt-font-size-5, .bt-font-size-6 {
-  color:#282828;
+  color:#171721;
   font-weight:700;
   letter-spacing:0;
   margin-bottom:15px;
@@ -796,6 +796,8 @@ ul li, ol li {
   padding:0;
   margin:0;
 }
+ul li a, ol li a { color:#171721; }
+ul li a:hover, ol li a:hover { color:#0a6edd; }
 ul li > ul, ul li > ol, ol li > ul, ol li > ol { margin:0; }
 ul.bt-disc, ol.bt-disc { list-style-type:disc; }
 ul.bt-circle, ol.bt-circle { list-style-type:circle; }
@@ -7007,6 +7009,7 @@ img.alignright { margin:5px 0 5px 20px; }
 @media (max-width: 992px) {
   .bt-header .bt-header-mobile { opacity:1; }
 }
+.bt-header .bt-header-mobile .logo { margin:10px 0; }
 .bt-header .bt-header-mobile .bt-menu-canvas-toggle { display:inline-block; }
 .bt-header .bt-header-mobile .bt-menu-content-right { display:inline-block; }
 .bt-header .bt-header-mobile .bt-menu-content-right .widget { display:inline-block; }
@@ -10002,6 +10005,10 @@ img.alignright { margin:5px 0 5px 20px; }
   width:100%;
   height:auto;
 }
+.bt-archive-item-style1 .bt-media img.wp-post-image {
+  width:auto;
+  max-width:100%;
+}
 .bt-archive-item-style1 .bt-media.gallery .carousel-control {
   position:absolute;
   top:10px;
@@ -10126,6 +10133,10 @@ img.alignright { margin:5px 0 5px 20px; }
 .blog .bt-post-item .bt-media img, .archive .bt-post-item .bt-media img, .search .bt-post-item .bt-media img {
   width:100%;
   height:auto;
+}
+.blog .bt-post-item .bt-media img.wp-post-image, .archive .bt-post-item .bt-media img.wp-post-image, .search .bt-post-item .bt-media img.wp-post-image {
+  width:auto;
+  max-width:100%;
 }
 .blog .bt-post-item .bt-media.gallery .carousel-control, .archive .bt-post-item .bt-media.gallery .carousel-control, .search .bt-post-item .bt-media.gallery .carousel-control {
   position:absolute;
@@ -11079,7 +11090,7 @@ img.alignright { margin:5px 0 5px 20px; }
   }
   .bt-comment-item .bt-comment .bt-name .bt-time { font-size:12px; }
 }
-.comment-respond .comment-reply-title { margin-bottom:0; }
+.comment-respond .comment-reply-title { margin-bottom:5px; }
 .comment-respond .comment-reply-title span {
   font-size:28px;
   font-weight:700;
