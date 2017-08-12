@@ -132,6 +132,15 @@
 }
 
 .blog, .archive, .search{
+	.sticky .bt-post-item .bt-title{
+		&:before{
+			content: "\f08d";
+			font-family: FontAwesome;
+			font-weight: 400;
+			color: @main-color;
+			margin-right: 10px;
+		}
+	}
 	.bt-post-item {
 		.bt-archive-item-style1;
 		margin-bottom: 30px;

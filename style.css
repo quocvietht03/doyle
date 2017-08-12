@@ -10105,6 +10105,13 @@ img.alignright { margin:5px 0 5px 20px; }
   padding:8px 30px;
 }
 .bt-archive-item-style1 .bt-readmore:hover { background:#008f60; }
+.blog .sticky .bt-post-item .bt-title:before, .archive .sticky .bt-post-item .bt-title:before, .search .sticky .bt-post-item .bt-title:before {
+  content:"\f08d";
+  font-family:FontAwesome;
+  font-weight:400;
+  color:#0a6edd;
+  margin-right:10px;
+}
 .blog .bt-post-item, .archive .bt-post-item, .search .bt-post-item { margin-bottom:30px; }
 .blog .bt-post-item .bt-title, .archive .bt-post-item .bt-title, .search .bt-post-item .bt-title {
   font-size:28px;
