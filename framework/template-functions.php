@@ -314,12 +314,13 @@ if (!function_exists('doyle_logo')) {
 
 /* Nav Menu */
 if (!function_exists('doyle_nav_menu')) {
-	function doyle_nav_menu($theme_location = '', $container_class = '') {
-		if (has_nav_menu( $theme_location )) {
+	function doyle_nav_menu($menu_slug = '', $theme_location = '', $container_class = '') {
+		if (has_nav_menu($theme_location) || $menu_slug) {
 			wp_nav_menu(array(
-				'container_class' => $container_class,
-				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'theme_location'  => $theme_location
+				'menu'				=> $menu_slug,
+				'container_class' 	=> $container_class,
+				'items_wrap'      	=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'theme_location'  	=> $theme_location
 			));
 		}else{
 			wp_page_menu(array(

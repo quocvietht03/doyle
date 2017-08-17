@@ -275,7 +275,13 @@
 
 
      */
-	
+	$menu_slug_opt = array();
+	$menus_obj = get_terms( 'nav_menu', array( 'hide_empty' => true ) );
+	$menu_slug_opt['auto'] = 'Auto';
+	foreach ( $menus_obj as $menu_obj ) {
+		$menu_slug_opt[$menu_obj->slug] = $menu_obj->name;
+	}
+
 	require_once get_template_directory().'/framework/options/general.php';
 	require_once get_template_directory().'/framework/options/color.php';
 	require_once get_template_directory().'/framework/options/typography.php';

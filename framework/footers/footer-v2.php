@@ -1,6 +1,13 @@
 <?php
 	global $doyle_options;
+	$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	
+	$container_class = (isset($doyle_options['f2_fullwidth'])&&$doyle_options['f2_fullwidth'])?'fullwidth':'container';
+	if(isset($page_options['footer_fullwidth'])&&$page_options['footer_fullwidth']){ $container_class = 'container'; }
+	
 	$f2_footer_top = (isset($doyle_options['f2_footer_top'])&&$doyle_options['f2_footer_top'])?$doyle_options['f2_footer_top']:'';
+	if(isset($page_options['footer_top'])&&$page_options['footer_top']){ $f2_footer_top = ''; }
+	
 	$f2_footer_top_columns = (isset($doyle_options['f2_footer_top_columns'])&&$doyle_options['f2_footer_top_columns'])?$doyle_options['f2_footer_top_columns']:4;
 	switch ($f2_footer_top_columns) {
         case 4:
@@ -49,7 +56,7 @@
 	<?php if($f2_footer_top){ ?>
 		<div class="bt-footer-top">
 			<div class="bt-overlay"></div>
-			<div class="container">
+			<div class="<?php echo esc_attr($container_class); ?>">
 				<div class="row">
 					<div class="<?php echo esc_attr($f2_footer_top_col_1_class); ?>">
 						<div class="bt-content">
@@ -108,7 +115,7 @@
 	<!-- End Footer Top -->
 	<!-- Start Footer Bottom -->
 	<div class="bt-footer-bottom">
-		<div class="container">
+		<div class="<?php echo esc_attr($container_class); ?>">
 			<div class="row">
 				<div class="<?php echo esc_attr($f2_footer_bottom_col_1_class); ?>">
 					<div class="bt-content">

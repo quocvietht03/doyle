@@ -45,6 +45,13 @@ Redux::setSection( $opt_name, array(
 			'default'  => '1'
 		),
 		array(
+			'id'       => 'f1_fullwidth',
+			'type'     => 'switch',
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'default'  => false
+		),
+		array(
 			'id'       => 'f1_footer_margin_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
@@ -219,13 +226,13 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'right'    => false,
-			'left'     => false,
 			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
 			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
-				'padding-bottom' => '30px'
+				'padding-right'  => '0px',
+				'padding-bottom' => '30px',
+				'padding-left' 	=> '0px'
 			),
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v1 .bt-footer-top')
@@ -363,13 +370,13 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'right'    => false,
-			'left'     => false,
 			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
 			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
-				'padding-bottom' => '10px'
+				'padding-right'  => '0px',
+				'padding-bottom' => '10px',
+				'padding-left' 	=> '0px'
 			),
 			'output'    => array('.bt-footer-v1 .bt-footer-bottom')
 		),
@@ -422,6 +429,13 @@ Redux::setSection( $opt_name, array(
 				)
 			),
 			'default'  => '1'
+		),
+		array(
+			'id'       => 'f2_fullwidth',
+			'type'     => 'switch',
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'default'  => false
 		),
 		array(
 			'id'       => 'f2_footer_margin_space',
@@ -598,13 +612,13 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'right'    => false,
-			'left'     => false,
 			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
 			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
-				'padding-bottom' => '30px'
+				'padding-right'  => '0px',
+				'padding-bottom' => '30px',
+				'padding-left' 	=> '0px'
 			),
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 			'output'    => array('.bt-footer-v2 .bt-footer-top')
@@ -742,13 +756,13 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'right'    => false,
-			'left'     => false,
 			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
 			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
-				'padding-bottom' => '10px'
+				'padding-right'  => '0px',
+				'padding-bottom' => '10px',
+				'padding-left' 	=> '0px'
 			),
 			'output'    => array('.bt-footer-v2 .bt-footer-bottom')
 		),

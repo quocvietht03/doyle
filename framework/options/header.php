@@ -235,6 +235,14 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'h1_menu_assign',
+			'type'     => 'select',
+			'title'    => __( 'Menu Assign', 'doyle' ),
+			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
+		),
+		array(
 			'id'       => 'h1_menu_align',
 			'type'     => 'button_set',
 			'title'    => __( 'Menu Align', 'doyle' ),
@@ -937,6 +945,14 @@ Redux::setSection( $opt_name, array(
 				'padding-left' 		=> '0px'
 			),
 			'output'    => array('.bt-header-v2 .bt-header-desktop .bt-bottom')
+		),
+		array(
+			'id'       => 'h2_menu_assign',
+			'type'     => 'select',
+			'title'    => __( 'Menu Assign', 'doyle' ),
+			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
 		),
 		array(
 			'id'       => 'h2_menu_align',
@@ -1666,6 +1682,14 @@ Redux::setSection( $opt_name, array(
 			'output'    => array('.bt-header-v3 .bt-header-desktop .bt-bottom')
 		),
 		array(
+			'id'       => 'h3_menu_assign',
+			'type'     => 'select',
+			'title'    => __( 'Menu Assign', 'doyle' ),
+			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
+		),
+		array(
 			'id'       => 'h3_menu_align',
 			'type'     => 'button_set',
 			'title'    => __( 'Menu Align', 'doyle' ),
@@ -2124,6 +2148,105 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 
+Redux::setSection( $opt_name, array(
+	'title'            => __( 'Header One Page Style 01', 'doyle' ),
+	'id'               => 'bt_header_onepagev1_style',
+	'subsection'       => true,
+	'fields'           => array(
+		array(
+			'id'       => 'header_layout_onepagev1',
+			'type'     => 'image_select',
+			'title'    => __( 'Layout Selected', 'doyle' ),
+			'subtitle' => __( 'This is the options you can change for header one page style', 'doyle' ),
+			'options'  => array(
+				'1' => array(
+					'alt' => 'Header layout one page',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-onepage-v1.jpg'
+				)
+			),
+			'default'  => '1'
+		),
+		array(
+			'id'       => 'honepage1_fullwidth',
+			'type'     => 'switch',
+			'title'    => __( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'default'  => false
+		),
+		array(
+			'id'       => 'honepage1_bg',
+			'type'     => 'background',
+			'title'    => __( 'Header Background', 'doyle' ),
+			'subtitle' => __( 'Control background color of header.', 'doyle' ),
+			'background-repeat' => false,
+			'background-attachment' => false,
+			'background-position' => false,
+			'background-image' => false,
+			'background-size' => false,
+			'preview' => false,
+			'default'  => array(
+				'background-color' => 'transparent',
+			),
+			'output'    => array('.bt-header-onepagev1 .bt-header-inner'),
+		),
+		array(
+			'id'       => 'honepage1_padding_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'title'    => __( 'Header Padding Space', 'doyle' ),
+			'subtitle' => __( 'Control the padding the header.', 'doyle' ),
+			'default'  => array(
+				'padding-top'    	=> '0px',
+				'padding-right'    	=> '0px',
+				'padding-bottom' 	=> '0px',
+				'padding-left' 		=> '0px'
+			),
+			'output'    => array('.bt-header-onepagev1 .bt-header-inner')
+		),
+		array(
+			'id'       => 'honepage1_logo',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => __( 'Logo', 'doyle' ),
+			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'default'  => array( 
+				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
+			),
+		),
+		array(
+			'id'            => 'honepage1_logo_height',
+			'type'          => 'slider',
+			'title'         => __( 'Logo Height', 'doyle' ),
+			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 50,
+			'min'           => 30,
+			'step'          => 1,
+			'max'           => 150,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'honepage1_menu_assign',
+			'type'     => 'select',
+			'title'    => __( 'Menu Assign', 'doyle' ),
+			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
+		),
+		array(
+			'id'       => 'honepage1_content_right_element',
+			'type'     => 'select',
+			'multi'    => true,
+			'title'    => __('Header Content Right Element', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in content right of header.', 'doyle'),
+			'options'  => doyle_get_sidebars(),
+			'default'  => '',
+		),
+		
+		
+		
+	)
+) );
 Redux::setSection( $opt_name, array(
 	'title'            => __( 'Menu Canvas', 'doyle' ),
 	'id'               => 'bt_menu_canvas',

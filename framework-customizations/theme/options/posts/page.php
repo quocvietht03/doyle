@@ -189,6 +189,34 @@ $options = array(
 							'2' => __('Footer 2', 'doyle')
 						)
 					),
+					'footer_fullwidth' => array(
+						'type' => 'switch',
+						'label' => __('Disable Full Width (100%)', 'doyle'),
+						'desc' => __('Turn on to disable footer full width (100%) in current page.', 'doyle'),
+						'value' => '',
+						'left-choice' => array(
+							'value' => '',
+							'label' => __('Off', 'doyle'),
+						),
+						'right-choice' => array(
+							'value' => '1',
+							'label' => __('On', 'doyle'),
+						),
+					),
+					'footer_top' => array(
+						'type' => 'switch',
+						'label' => __('Disable Footer Top', 'doyle'),
+						'desc' => __('Turn on to disable footer top in current page.', 'doyle'),
+						'value' => '',
+						'left-choice' => array(
+							'value' => '',
+							'label' => __('Off', 'doyle'),
+						),
+						'right-choice' => array(
+							'value' => '1',
+							'label' => __('On', 'doyle'),
+						),
+					),
 				),
 			),
 		),

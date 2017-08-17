@@ -70,6 +70,39 @@
 		}
 		DoyleMenuCanvas();
 		
+		/* Easy Scroll */
+		function DoyleEasingScroll() {
+			var $root = $('html, body');
+			$('.bt-header-onepage .bt-menu-list ul > li > a').on('click', function() {
+				var href = $.attr(this, 'href');
+				$root.animate({
+					scrollTop: $(href).offset().top
+				}, 700, function() {
+					window.location.hash = href;
+				});
+				return false;
+			});
+		}
+		DoyleEasingScroll();
+		
+		/* Active Menu Item Scroll  */
+		function DoyleActiveMenuItemScroll() {
+			var scroll_pos = $(window).scrollTop();
+			var sec_attr = [];
+ 
+			$('.page-template-page-onepagev1 .vc_section').each(function(){
+				sec_attr.push([$(this).attr('id'), $(this).offset().top]);
+			});
+
+			$.each(sec_attr, function( index, value ) {
+				if(scroll_pos >= value[1] && scroll_pos < value[1] + $('#' + value[0]).innerHeight()){
+					$('.bt-header-onepage .bt-menu-list ul > li').removeClass('active');
+					$('.bt-header-onepage .bt-menu-list ul > li > a[href="#' + value[0] +'"]').parent().addClass('active');
+				}
+			});
+		}
+		DoyleActiveMenuItemScroll();
+		
 		/* Masonry */
 		function DoyleMasonry() {
 			if($('.bt-grid-masonry').length > 0) {
@@ -88,6 +121,7 @@
 		
 		$(window).on('scroll', function() {
 			DoyleHeaderStick();
+			DoyleActiveMenuItemScroll();
 			DoyleMasonry();
 		});
 		
@@ -99,23 +133,6 @@
 			}, 500);
 		});
 		
-		//useful var
-		var $window = $(window);
-		var mainMenuHeight = $('#bt-main-menu').height();
-		/* Make easing scroll when click a link in page */
-		function BearsthemesEasingMoving() {
-			var $root = $('html, body');
-			$('.bt-header-onepage .bt-menu-list ul > li > a').on('click', function() {
-				var href = $.attr(this, 'href');
-				$root.animate({
-					scrollTop: ($(href).offset().top - mainMenuHeight)
-				}, 700, function() {
-					window.location.hash = href;
-				});
-				return false;
-			});
-		}
-		BearsthemesEasingMoving();
 		
 		/* Open the hide mini search */
 		function DoyleOpenMiniSearchSidebar() {
@@ -142,6 +159,9 @@
 			});
 		}
 		DoyleOpenMiniCartSidebar();
+		
+		
+		
 		
 		/* Open the hide menu canvas */
 		function BearsthemesOpenMenuSidebar() {

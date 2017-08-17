@@ -14,6 +14,8 @@
 		$header_class .= ' bt-absolute';
 	}
 	
+	$menu_assign = isset($doyle_options['h2_menu_assign'])&&($doyle_options['h2_menu_assign'] != 'auto')?$doyle_options['h2_menu_assign']:'';
+	
 	$header_stick = (isset($doyle_options['h2_header_stick'])&&$doyle_options['h2_header_stick'])?$doyle_options['h2_header_stick']:'';
 	if(isset($page_options['header_stick'])&&$page_options['header_stick']){ $header_stick = ''; }
 	if($header_stick){
@@ -113,7 +115,7 @@
 					<div class="bt-content text-left">
 						<?php
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='left') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 							
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='left'&&isset($doyle_options['h2_menu_after_content_auto'])&&$doyle_options['h2_menu_after_content_auto']){
@@ -136,7 +138,7 @@
 					<div class="bt-content text-center">
 						<?php
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='center') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 							
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='center'&&isset($doyle_options['h2_menu_after_content_auto'])&&$doyle_options['h2_menu_after_content_auto']){
@@ -159,7 +161,7 @@
 					<div class="bt-content text-right">
 						<?php
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='right') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 							
 							if(isset($doyle_options['h2_menu_align'])&&$doyle_options['h2_menu_align']=='right'&&isset($doyle_options['h2_menu_after_content_auto'])&&$doyle_options['h2_menu_after_content_auto'] || !$doyle_options['h2_menu_after_content_auto']){
@@ -203,7 +205,7 @@
 							doyle_logo($logo_stick, $logo_stick_height); 
 							
 							if(isset($doyle_options['h2_menu_align_stick'])&&$doyle_options['h2_menu_align_stick']=='left') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 						?>
 					</div>
@@ -212,7 +214,7 @@
 					<div class="bt-content text-center">
 						<?php
 							if(isset($doyle_options['h2_menu_align_stick'])&&$doyle_options['h2_menu_align_stick']=='center') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 						?>
 					</div>
@@ -221,7 +223,7 @@
 					<div class="bt-content text-right">
 						<?php
 							if(isset($doyle_options['h2_menu_align_stick'])&&$doyle_options['h2_menu_align_stick']=='right') {
-								doyle_nav_menu('main_navigation', 'bt-menu-desktop text-left');
+								doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-desktop text-left');
 							}
 							
 							if(isset($doyle_options['h2_menu_content_right'])&&$doyle_options['h2_menu_content_right']&&isset($doyle_options['h2_menu_content_right_element'])&&$doyle_options['h2_menu_content_right_element']){
@@ -333,7 +335,7 @@
 		
 		<div class="bt-menu-mobile-wrap">
 			<div class="container">
-				<?php doyle_nav_menu('mobile_navigation', 'bt-menu-mobile'); ?>
+				<?php doyle_nav_menu('', 'mobile_navigation', 'bt-menu-mobile'); ?>
 			</div>
 		</div>
 	</div>
