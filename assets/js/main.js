@@ -73,7 +73,7 @@
 		/* Easy Scroll */
 		function DoyleEasingScroll() {
 			var $root = $('html, body');
-			$('.bt-header-onepage .bt-menu-list ul > li > a').on('click', function() {
+			$('.page-template-page-onepage .bt-header .bt-header-desktop .bt-bottom ul.menu > li > a,.page-template-page-onepage .bt-header .bt-header-stick .bt-menu-desktop ul.menu > li > a, .bt-header-onepage .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li > a, .bt-header-onepage .bt-menu-list ul > li > a').on('click', function() {
 				var href = $.attr(this, 'href');
 				$root.animate({
 					scrollTop: $(href).offset().top
@@ -90,14 +90,14 @@
 			var scroll_pos = $(window).scrollTop();
 			var sec_attr = [];
  
-			$('.page-template-page-onepagev1 .vc_section').each(function(){
+			$('.page-template-page-onepage .vc_section, .page-template-page-onepagescroll .vc_section').each(function(){
 				sec_attr.push([$(this).attr('id'), $(this).offset().top]);
 			});
 
 			$.each(sec_attr, function( index, value ) {
 				if(scroll_pos >= value[1] && scroll_pos < value[1] + $('#' + value[0]).innerHeight()){
-					$('.bt-header-onepage .bt-menu-list ul > li').removeClass('active');
-					$('.bt-header-onepage .bt-menu-list ul > li > a[href="#' + value[0] +'"]').parent().addClass('active');
+					$('.page-template-page-onepage .bt-header .bt-header-desktop .bt-bottom ul.menu > li, .page-template-page-onepage .bt-header .bt-header-stick .bt-menu-desktop ul.menu > li, .bt-header-onepage .bt-menu-list ul > li').removeClass('current-menu-item');
+					$('.page-template-page-onepage .bt-header .bt-header-desktop .bt-bottom ul.menu > li > a[href="#' + value[0] +'"], .page-template-page-onepage .bt-header .bt-header-stick .bt-menu-desktop ul.menu > li > a[href="#' + value[0] +'"], .bt-header-onepage .bt-menu-list ul > li > a[href="#' + value[0] +'"]').parent().addClass('current-menu-item');
 				}
 			});
 		}
@@ -116,6 +116,7 @@
 		/* Callback function when resize screen */
 		$(window).on('resize', function() {
 			DoyleShowMenuType();
+			DoyleActiveMenuItemScroll();
 			DoyleMasonry();
 		});
 		

@@ -177,6 +177,7 @@ Text Domain: doyle
 /* Header 1 */
 /* Header 2 */
 /* Header 3 */
+/* Header One Page */
 /* Fancy Box */
 /* Button */
 /* Pricing Table */
@@ -7441,6 +7442,19 @@ img.alignright { margin:5px 0 5px 20px; }
 .bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li.current_page_item > a, .bt-header-v3 .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li.current-menu-item > a { color:#0a6edd; }
 .bt-header-v3 .bt-header-mobile .bt-menu-toggle:before, .bt-header-v3 .bt-header-mobile .bt-menu-toggle:after, .bt-header-v3 .bt-header-mobile .bt-menu-toggle .bt-menu-toggle-content { background:#171721; }
 .bt-header-v3 .bt-header-mobile .bt-menu-toggle:hover:before, .bt-header-v3 .bt-header-mobile .bt-menu-toggle:hover:after, .bt-header-v3 .bt-header-mobile .bt-menu-toggle:hover .bt-menu-toggle-content { background:#0a6edd; }
+.bt-header-onepage .bt-header-desktop .bt-top .bt-icon-box .icon, .bt-header-onepage .bt-header-desktop .bt-top .bt-icon-box .text {
+  display:inline-block;
+  vertical-align:middle;
+}
+.bt-header-onepage .bt-header-desktop .bt-top .bt-icon-box .icon { margin-right:5px; }
+.bt-header-onepage .bt-header-desktop .bt-bottom ul > li.current_page_item > a, .bt-header-onepage .bt-header-desktop .bt-bottom ul.menu > li.current_page_item > a, .bt-header-onepage .bt-header-desktop .bt-bottom ul.menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-desktop .bt-bottom ul li ul.sub-menu > li.current_page_item > a, .bt-header-onepage .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li.current_page_item > a, .bt-header-onepage .bt-header-desktop .bt-bottom ul.menu li ul.sub-menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-stick .bt-menu-desktop ul.menu > li.current_page_item > a, .bt-header-onepage .bt-header-stick .bt-menu-desktop ul.menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-stick .bt-menu-desktop ul.menu li ul.sub-menu > li.current_page_item > a, .bt-header-onepage .bt-header-stick .bt-menu-desktop ul.menu li ul.sub-menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li.current_page_item > a, .bt-header-onepage .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li.current_page_item > a, .bt-header-onepage .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li.current-menu-item > a { color:#0a6edd; }
+.bt-header-onepage .bt-header-mobile .bt-menu-toggle:before, .bt-header-onepage .bt-header-mobile .bt-menu-toggle:after, .bt-header-onepage .bt-header-mobile .bt-menu-toggle .bt-menu-toggle-content { background:#171721; }
+.bt-header-onepage .bt-header-mobile .bt-menu-toggle:hover:before, .bt-header-onepage .bt-header-mobile .bt-menu-toggle:hover:after, .bt-header-onepage .bt-header-mobile .bt-menu-toggle:hover .bt-menu-toggle-content { background:#0a6edd; }
 .bt-header-onepage {
   width:100%;
   z-index:999;
@@ -7725,27 +7739,27 @@ img.alignright { margin:5px 0 5px 20px; }
   -moz-border-radius:24px;
   border-radius:24px;
 }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover { margin:20px 0; }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:after {
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover { margin:20px 0; }
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:after {
   top:10px;
   right:-8px;
   opacity:1;
 }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:after { right:30px; }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active > a, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a {
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover:after { right:30px; }
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item > a, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a {
   font-size:12px;
   line-height:24px;
   background:#0a6edd;
   padding:0 15px;
 }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active > a:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a:before {
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item > a:before, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a:before {
   top:8px;
   right:8px;
   width:5px;
   height:5px;
   border-color:#0a6edd;
 }
-.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.active > a:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a:after {
+.bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li.current-menu-item > a:after, .bt-header-onepagev1 .bt-scroll-menu-wrap .bt-menu-list ul.menu > li:hover > a:after {
   right:0;
   width:24px;
   height:24px;

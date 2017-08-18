@@ -15,6 +15,7 @@
 	}
 	
 	$menu_assign = isset($doyle_options['h3_menu_assign'])&&($doyle_options['h3_menu_assign'] != 'auto')?$doyle_options['h3_menu_assign']:'';
+	if(isset($page_options['header_menu_assign'])&&$page_options['header_menu_assign'] != 'auto'){ $menu_assign = $page_options['header_menu_assign']; }
 	
 	$header_stick = (isset($doyle_options['h3_header_stick'])&&$doyle_options['h3_header_stick'])?$doyle_options['h3_header_stick']:'';
 	if(isset($page_options['header_stick'])&&$page_options['header_stick']){ $header_stick = ''; }
@@ -336,7 +337,7 @@
 		
 		<div class="bt-menu-mobile-wrap">
 			<div class="container">
-				<?php doyle_nav_menu('', 'mobile_navigation', 'bt-menu-mobile'); ?>
+				<?php doyle_nav_menu($menu_assign, 'mobile_navigation', 'bt-menu-mobile'); ?>
 			</div>
 		</div>
 	</div>

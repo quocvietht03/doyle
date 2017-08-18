@@ -254,6 +254,9 @@ function doyle_Header() {
 		case '3':
             get_template_part('framework/headers/header', 'v3');
             break;
+		case 'onepage':
+            get_template_part('framework/headers/header', 'onepage');
+            break;
 		default :
 			get_template_part('framework/headers/header', 'v1');
 			break;

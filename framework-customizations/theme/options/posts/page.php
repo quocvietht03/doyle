@@ -1,5 +1,12 @@
 <?php if ( ! defined( 'FW' ) ) die( 'Forbidden' );
 
+$menu_slug_opt = array();
+$menus_obj = get_terms( 'nav_menu', array( 'hide_empty' => true ) );
+$menu_slug_opt['auto'] = 'Auto';
+foreach ( $menus_obj as $menu_obj ) {
+	$menu_slug_opt[$menu_obj->slug] = $menu_obj->name;
+}
+
 $options = array(
 	'page_options' => array(
 		'type' => 'multi',
@@ -53,7 +60,8 @@ $options = array(
 							'default' => __('Default', 'doyle'),
 							'1' => __('Header 1', 'doyle'),
 							'2' => __('Header 2', 'doyle'),
-							'3' => __('Header 3', 'doyle')
+							'3' => __('Header 3', 'doyle'),
+							'onepage' => __('Header One Page', 'doyle')
 						)
 					),
 					'header_fullwidth' => array(
@@ -97,6 +105,13 @@ $options = array(
 						'value' => '',
 						'label' => __('Logo Height', 'doyle'),
 						'desc'  => __('Controls the height of the logo in current page. EX: 50', 'doyle')
+					),
+					'header_menu_assign' => array(
+						'type'  => 'select',
+						'value' => 'default',
+						'label' => __('Menu Assign', 'doyle'),
+						'desc'  => __('Select a menu assign of header layout in current page', 'doyle'),
+						'choices' => $menu_slug_opt
 					),
 					'header_stick' => array(
 						'type' => 'switch',
