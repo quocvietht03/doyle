@@ -87,7 +87,7 @@
 		
 		/* Active Menu Item Scroll  */
 		function DoyleActiveMenuItemScroll() {
-			var scroll_pos = $(window).scrollTop();
+			var scroll_pos = $(window).scrollTop() + 1;
 			var sec_attr = [];
  
 			$('.page-template-page-onepage .vc_section, .page-template-page-onepagescroll .vc_section').each(function(){
