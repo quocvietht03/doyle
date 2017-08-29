@@ -2149,7 +2149,7 @@ Redux::setSection( $opt_name, array(
 	'subsection'       => true,
 	'fields'           => array(
 		array(
-			'id'       => 'header_layout_1',
+			'id'       => 'header_layout_onepage',
 			'type'     => 'image_select',
 			'title'    => __( 'Layout Selected', 'doyle' ),
 			'subtitle' => __( 'This is the options you can change for header one page.', 'doyle' ),
