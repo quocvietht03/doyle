@@ -108,10 +108,10 @@
 		border-bottom: 1px solid #ececec;
 		> li {
 			position: relative;
-			
 			display: inline-block;
 			font-size: 14px;
 			line-height: 24px;
+			color: #686876;
 			margin-right: 30px;
 			> a {
 				color: #686876;
@@ -167,7 +167,7 @@
 		position: relative;
 		margin-bottom: 30px;
 		img {
-			width: 100%;
+			max-width: 100%;
 			height: auto;
 		}
 		&.gallery{
@@ -255,10 +255,10 @@
 		border-bottom: 1px solid #ececec;
 		> li {
 			position: relative;
-			
 			display: inline-block;
 			font-size: 14px;
 			line-height: 24px;
+			color: #686876;
 			margin-right: 30px;
 			span{
 				font-weight: 600;
@@ -434,6 +434,10 @@
 		@media(max-width: 520px){
 			.bt-prev, .bt-next{
 				width: 100%;
+				text-align: left;
+				a{
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -524,6 +528,7 @@
 			font-size: 16px;
 			font-weight: 600;
 			line-height: 24px;
+			margin-top: 0;
 			margin-bottom: 30px;
 			padding-bottom: 15px;
 			&:after{
@@ -1025,6 +1030,11 @@
 			&:hover, &:focus {
 				color: @main-color;
 			}
+		}
+	}
+	&.pingback{
+		.bt-comment{
+			padding-left: 0;
 		}
 	}
 }

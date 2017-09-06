@@ -12,7 +12,7 @@
 		<ul class="bt-meta">
 			<li class="bt-author"><?php echo '<strong>'.esc_html__('By:', 'doyle').' </strong>'.get_the_author(); ?></li>
 			<li class="bt-public"><?php echo '<strong>'.esc_html__('Date:', 'doyle').' </strong>'.get_the_date(get_option('date_format')); ?></li>
-			<li><?php comments_number( '<strong>'.esc_html__('Comment:', 'doyle').' </strong> 0', '<strong>'.esc_html__('Comment:', 'doyle').' </strong> 1', '<strong>'.esc_html__('Comments:', 'doyle').' </strong> %' ); ?></li>
+			<li><a href="<?php comments_link(); ?>"><?php comments_number( '<strong>'.esc_html__('Comment:', 'doyle').' </strong> 0', '<strong>'.esc_html__('Comment:', 'doyle').' </strong> 1', '<strong>'.esc_html__('Comments:', 'doyle').' </strong> %' ); ?></a></li>
 			<li><?php the_terms( get_the_ID(), 'category', '<strong>'.esc_html__('Category:', 'doyle').' </strong>', ', ' ); ?></li>
 		</ul>
 	

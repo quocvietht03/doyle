@@ -10,183 +10,7 @@ Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header,
 Description: Doyle is a fully configurable and easy to use responsive WordPress Theme  with a lot of great features.
 Text Domain: doyle
 */
-/* SCREEN */
-/* COLOR */
-/* ANIMATION */
-/* TYPOGRAPHY */
-/*
-* Component module
-*/
-/* TYPOGRAPHY */
-/* COLOR */
-/* INPUT */
-/* ICON */
-/* BUTTON */
-/* UTILITIES */
-/* SECTION */
-/* SECTION */
-/* HOVER MASTER */
-/*
-* Module
-*/
-/* HEADER */
-/* TITLEBAR */
-/* FOOTER */
-/* ELEMENTS */
-/* BLOG */
-/* PORTFOLIO */
-/* TEAM */
-/* TESTIMONIAL */
-/* + SHOP */
-/* ANIMATION */
-/* DIV */
-/* Reset */
-/*Gennerator*/
-/*!
- * Hover.css (http://ianlunn.github.io/Hover/)
- * Version: 2.2.0
- * Author: Ian Lunn @IanLunn
- * Author URL: http://ianlunn.co.uk/
- * Github: https://github.com/IanLunn/Hover
 
- * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
- */
-/* 2D TRANSITIONS */
-/* Grow */
-/* Shrink */
-/* Pulse */
-/* Pulse Grow */
-/* Pulse Shrink */
-/* Push */
-/* Pop */
-/* Bounce In */
-/* Bounce Out */
-/* Rotate */
-/* Grow Rotate */
-/* Float */
-/* Sink */
-/* Bob */
-/* Hang */
-/* Skew */
-/* Skew Forward */
-/* Skew Backward */
-/* Wobble Vertical */
-/* Wobble Horizontal */
-/* Wobble To Bottom Right */
-/* Wobble To Top Right */
-/* Wobble Top */
-/* Wobble Bottom */
-/* Wobble Skew */
-/* Buzz */
-/* Buzz Out */
-/* Forward */
-/* Backward */
-/* BACKGROUND TRANSITIONS */
-/* Fade */
-/* Back Pulse */
-/* Sweep To Right */
-/* Sweep To Left */
-/* Sweep To Bottom */
-/* Sweep To Top */
-/* Bounce To Right */
-/* Bounce To Left */
-/* Bounce To Bottom */
-/* Bounce To Top */
-/* Radial Out */
-/* Radial In */
-/* Rectangle In */
-/* Rectangle Out */
-/* Shutter In Horizontal */
-/* Shutter Out Horizontal */
-/* Shutter In Vertical */
-/* Shutter Out Vertical */
-/* BORDER TRANSITIONS */
-/* Border Fade */
-/* Hollow */
-/* Trim */
-/* Ripple Out */
-/* Ripple In */
-/* Outline Out */
-/* Outline In */
-/* Round Corners */
-/* Underline From Left */
-/* Underline From Center */
-/* Underline From Right */
-/* Overline From Left */
-/* Overline From Center */
-/* Overline From Right */
-/* Reveal */
-/* Underline Reveal */
-/* Overline Reveal */
-/* SHADOW/GLOW TRANSITIONS */
-/* Glow */
-/* Shadow */
-/* Grow Shadow */
-/* Box Shadow Outset */
-/* Box Shadow Inset */
-/* Float Shadow */
-/* Shadow Radial */
-/* SPEECH BUBBLES */
-/* Bubble Top */
-/* Bubble Right */
-/* Bubble Bottom */
-/* Bubble Left */
-/* Bubble Float Top */
-/* Bubble Float Right */
-/* Bubble Float Bottom */
-/* Bubble Float Left */
-/* ICONS */
-/* Icon Back */
-/* Icon Forward */
-/* Icon Down */
-/* Icon Down */
-/* Icon Up */
-/* Icon Up */
-/* Icon Spin */
-/* Icon Drop */
-/* Icon Drop */
-/* Icon Fade */
-/* Icon Float Away */
-/* Icon Float Away */
-/* Icon Sink Away */
-/* Icon Sink Away */
-/* Icon Grow */
-/* Icon Shrink */
-/* Icon Pulse */
-/* Icon Pulse Grow */
-/* Icon Pulse Shrink */
-/* Icon Push */
-/* Icon Pop */
-/* Icon Bounce */
-/* Icon Rotate */
-/* Icon Grow Rotate */
-/* Icon Float */
-/* Icon Sink */
-/* Icon Bob */
-/* Icon Hang */
-/* Icon Wobble Horizontal */
-/* Icon Wobble Vertical */
-/* Icon Buzz */
-/* Icon Buzz Out */
-/* CURLS */
-/* Curl Top Left */
-/* Curl Top Right */
-/* Curl Bottom Right */
-/* Curl Bottom Left */
-/*# sourceMappingURL=hover.css.map */
-/* Header 1 */
-/* Header 2 */
-/* Header 3 */
-/* Header One Page */
-/* Fancy Box */
-/* Button */
-/* Pricing Table */
-/* Team */
-/* Testimonial */
-/* Blog */
-/* Client */
-/* Social Media */
-/*Comment Form*/
 .easing-animation {
   -wekbit-transition:all 0.4s;
   -moz-transition:all 0.4s;
@@ -1897,7 +1721,6 @@ body {
   font-family:Lato;
   line-height:2em;
   max-width:100%;
-  position:relative;
 }
 *:focus { outline:0; }
 a:hover, a:focus { text-decoration:none; }
@@ -10423,6 +10246,7 @@ img.alignright { margin:5px 0 5px 20px; }
   display:inline-block;
   font-size:14px;
   line-height:24px;
+  color:#686876;
   margin-right:30px;
 }
 .bt-archive-item-style1 .bt-meta > li > a { color:#686876; }
@@ -10554,6 +10378,7 @@ img.alignright { margin:5px 0 5px 20px; }
   display:inline-block;
   font-size:14px;
   line-height:24px;
+  color:#686876;
   margin-right:30px;
 }
 .blog .bt-post-item .bt-meta > li > a, .archive .bt-post-item .bt-meta > li > a, .search .bt-post-item .bt-meta > li > a { color:#686876; }
@@ -10580,7 +10405,7 @@ img.alignright { margin:5px 0 5px 20px; }
   margin-bottom:30px;
 }
 .bt-single-item-style1 .bt-media img {
-  width:100%;
+  max-width:100%;
   height:auto;
 }
 .bt-single-item-style1 .bt-media.gallery .carousel-control {
@@ -10670,6 +10495,7 @@ img.alignright { margin:5px 0 5px 20px; }
   display:inline-block;
   font-size:14px;
   line-height:24px;
+  color:#686876;
   margin-right:30px;
 }
 .bt-single-item-style1 .bt-meta > li span { font-weight:600; }
@@ -10714,7 +10540,7 @@ img.alignright { margin:5px 0 5px 20px; }
   margin-bottom:30px;
 }
 .single-post .bt-post-item .bt-media img {
-  width:100%;
+  max-width:100%;
   height:auto;
 }
 .single-post .bt-post-item .bt-media.gallery .carousel-control {
@@ -10804,6 +10630,7 @@ img.alignright { margin:5px 0 5px 20px; }
   display:inline-block;
   font-size:14px;
   line-height:24px;
+  color:#686876;
   margin-right:30px;
 }
 .single-post .bt-post-item .bt-meta > li span { font-weight:600; }
@@ -10933,7 +10760,11 @@ img.alignright { margin:5px 0 5px 20px; }
   margin-right:0;
 }
 @media (max-width: 520px) {
-  .single-post .bt-blog-article-nav .bt-prev, .single-post .bt-blog-article-nav .bt-next { width:100%; }
+  .single-post .bt-blog-article-nav .bt-prev, .single-post .bt-blog-article-nav .bt-next {
+    width:100%;
+    text-align:left;
+  }
+  .single-post .bt-blog-article-nav .bt-prev a, .single-post .bt-blog-article-nav .bt-next a { margin-left:0; }
 }
 .single-post .bt-about-author {
   background:#f8f8f8;
@@ -11006,6 +10837,7 @@ img.alignright { margin:5px 0 5px 20px; }
   font-size:16px;
   font-weight:600;
   line-height:24px;
+  margin-top:0;
   margin-bottom:30px;
   padding-bottom:15px;
 }
@@ -11400,6 +11232,7 @@ img.alignright { margin:5px 0 5px 20px; }
   display:inline-block;
 }
 .bt-comment-item .bt-comment .comment-reply-link:hover, .bt-comment-item .bt-comment .comment-reply-link:focus { color:#0a6edd; }
+.bt-comment-item.pingback .bt-comment { padding-left:0; }
 @media (max-width: 767px) {
   .bt-comment-item { padding:10px 0; }
   .bt-comment-item.depth-2, .bt-comment-item.depth-3, .bt-comment-item.depth-4 { padding-left:25px; }

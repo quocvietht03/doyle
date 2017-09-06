@@ -41,7 +41,8 @@ doyle_titlebar();
 						
 						if($post_navigation) doyle_post_nav();
 						
-						if($author) echo doyle_author_render();
+						$author_desc = get_the_author_meta('description');
+						if($author && $author_desc) echo doyle_author_render();
 						
 						// If comments are open or we have at least one comment, load up the comment template.
 						if($comment){
