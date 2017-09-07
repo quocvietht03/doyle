@@ -34,7 +34,7 @@ if ( ! function_exists( 'doyle_author_render' ) ) {
 		ob_start();
 		?>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-			<span class="featured-post"> <?php _e( 'Sticky', 'doyle' ); ?></span>
+			<span class="featured-post"> <?php esc_html_e( 'Sticky', 'doyle' ); ?></span>
 		<?php } ?>
 		<div class="bt-about-author clearfix">
 			<div class="bt-author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 170 ); ?></div>
@@ -70,7 +70,7 @@ function doyle_custom_comment($comment, $args, $depth) {
 			<?php echo '<span class="name">'.get_comment_author( get_comment_ID() ).'</span><span class="bt-time"> / '.get_comment_date().'</span>'; ?>
 		</h5>
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'doyle' ); ?></em>
+			<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'doyle' ); ?></em>
 		<?php endif; ?>
 		<?php comment_text(); ?>
 		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>

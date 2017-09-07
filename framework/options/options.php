@@ -74,8 +74,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => false,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'Theme Options', 'doyle' ),
-        'page_title'           => __( 'Theme Options', 'doyle' ),
+        'menu_title'           => esc_html__( 'Theme Options', 'doyle' ),
+        'page_title'           => esc_html__( 'Theme Options', 'doyle' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -175,41 +175,41 @@
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-docs',
         'href'  => '#',
-        'title' => __( 'Documentation', 'doyle' ),
+        'title' => esc_html__( 'Documentation', 'doyle' ),
     );
 
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-support',
         'href'  => '#',
-        'title' => __( 'Support', 'doyle' ),
+        'title' => esc_html__( 'Support', 'doyle' ),
     );
 
     $args['admin_bar_links'][] = array(
         //'id'    => 'redux-extensions',
         'href'  => '#',
-        'title' => __( 'Extensions', 'doyle' ),
+        'title' => esc_html__( 'Extensions', 'doyle' ),
     );
 
     // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
     $args['share_icons'][] = array(
         'url'   => '#',
-        'title' => 'Visit us on GitHub',
+        'title' => esc_html__('Visit us on GitHub', 'doyle'),
         'icon'  => 'el el-github'
         //'img'   => '', // You can use icon OR img. IMG needs to be a full URL.
     );
     $args['share_icons'][] = array(
         'url'   => '#',
-        'title' => 'Like us on Facebook',
+        'title' => esc_html__('Like us on Facebook', 'doyle'),
         'icon'  => 'el el-facebook'
     );
     $args['share_icons'][] = array(
         'url'   => '#',
-        'title' => 'Follow us on Twitter',
+        'title' => esc_html__('Follow us on Twitter', 'doyle'),
         'icon'  => 'el el-twitter'
     );
     $args['share_icons'][] = array(
         'url'   => '#',
-        'title' => 'Find us on LinkedIn',
+        'title' => esc_html__('Find us on LinkedIn', 'doyle'),
         'icon'  => 'el el-linkedin'
     );
 
@@ -220,13 +220,13 @@
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'doyle' ), $v );
+        $args['intro_text'] = '<p>'.esc_html__('Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable:', 'doyle').' <strong>'.$v.'</strong></p>';
     } else {
-        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'doyle' );
+        $args['intro_text'] = '<p>'.esc_html__('This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'doyle').'</p>';
     }
 
     // Add content after the form.
-    $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'doyle' );
+    $args['footer_text'] = '<p>'.esc_html__('This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'doyle').'</p>';
 
     Redux::setArgs( $opt_name, $args );
 
@@ -242,19 +242,19 @@
     $tabs = array(
         array(
             'id'      => 'redux-help-tab-1',
-            'title'   => __( 'Theme Information 1', 'doyle' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'doyle' )
+            'title'   => esc_html__( 'Theme Information 1', 'doyle' ),
+            'content' => '<p>'.esc_html__( 'This is the tab content, HTML is allowed.', 'doyle' ).'</p>'
         ),
         array(
             'id'      => 'redux-help-tab-2',
-            'title'   => __( 'Theme Information 2', 'doyle' ),
-            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'doyle' )
+            'title'   => esc_html__( 'Theme Information 2', 'doyle' ),
+            'content' => '<p>'.esc_html__( 'This is the tab content, HTML is allowed.', 'doyle' ).'</p>'
         )
     );
     Redux::setHelpTab( $opt_name, $tabs );
 
     // Set the help sidebar
-    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'doyle' );
+    $content = '<p>'.esc_html__( 'This is the sidebar content, HTML is allowed.', 'doyle' ).'</p>';
     Redux::setHelpSidebar( $opt_name, $content );
 
 
@@ -300,7 +300,7 @@
     if ( file_exists( dirname( __FILE__ ) . '/../README.md' ) ) {
         $section = array(
             'icon'   => 'el el-list-alt',
-            'title'  => __( 'Documentation', 'doyle' ),
+            'title'  => esc_html__( 'Documentation', 'doyle' ),
             'fields' => array(
                 array(
                     'id'       => '17',
@@ -415,8 +415,8 @@
         function dynamic_section( $sections ) {
             //$sections = array();
             $sections[] = array(
-                'title'  => __( 'Section via hook', 'doyle' ),
-                'desc'   => __( '<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'doyle' ),
+                'title'  => esc_html__( 'Section via hook', 'doyle' ),
+                'desc'   => '<p class="description">'.esc_html__( 'This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.', 'doyle' ).'</p>',
                 'icon'   => 'el el-paper-clip',
                 // Leave this as a blank section, no options just some intro text set above.
                 'fields' => array()

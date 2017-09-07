@@ -21,7 +21,7 @@ if ( ! is_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
-	<h3><?php _e( 'Payment Methods', 'doyle' ); ?></h3>
+	<h3><?php esc_html_e( 'Payment Methods', 'doyle' ); ?></h3>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
@@ -37,7 +37,7 @@ if ( ! is_ajax() ) {
 	<?php endif; ?>
 	<div class="form-row place-order">
 		<noscript>
-			<?php _e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'doyle' ); ?>
+			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'doyle' ); ?>
 			<br/><input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'doyle' ); ?>" />
 		</noscript>
 

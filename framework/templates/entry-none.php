@@ -1,4 +1,4 @@
 <div class="no-results">
-	<h1 class="page-title"><?php _e( 'Nothing Found', 'doyle' ); ?></h1>
-	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'doyle' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+	<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'doyle' ); ?></h1>
+	<p><?php echo esc_html__('Ready to publish your first post?', 'doyle').' <a href="'.esc_url( admin_url( 'post-new.php' ) ).'">'.esc_html__('Get started here', 'doyle').'</a>.'; ?></p>
 </div>

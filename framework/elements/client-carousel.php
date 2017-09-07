@@ -215,7 +215,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __ ( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -223,7 +223,7 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __ ( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
 		array(
 			'type' => 'param_group',
@@ -335,7 +335,7 @@ vc_map(array(
 			'param_name' => 'smartspeed',
 			'value' => 500,
 			'group' => __('Owl Setting', 'doyle'),
-			'description' => __ ( 'Speed Calculate.', 'doyle' )
+			'description' => __( 'Speed Calculate.', 'doyle' )
 		),
 		array(
 			'type' => 'checkbox',

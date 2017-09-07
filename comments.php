@@ -13,7 +13,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation col-xs-12 col-sm-12 col-md-12 col-lg-12" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'doyle' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'doyle' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'doyle' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'doyle' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
@@ -59,17 +59,17 @@ if ( post_password_required() ) {
 			'id_submit'         => 'submit',
 			'class_submit'      => 'submit',
 			'name_submit'       => 'submit',
-			'title_reply'       => __( '<span class="bt-label-reply">Leave A Comment</span>', 'doyle' ),
-			'title_reply_to'    => __( '<span class="bt-label-reply">Leave A Reply to %s</span>', 'doyle' ),
-			'cancel_reply_link' => __( 'Cancel Reply', 'doyle' ),
-			'label_submit'      => __( 'Send Comment', 'doyle' ),
+			'title_reply'       => '<span class="bt-label-reply">'.esc_html__( 'Leave A Comment', 'doyle' ).'</span>',
+			'title_reply_to'    => '<span class="bt-label-reply">'.esc_html__( 'Leave A Reply to %s', 'doyle' ).'</span>',
+			'cancel_reply_link' => esc_html__( 'Cancel Reply', 'doyle' ),
+			'label_submit'      => esc_html__( 'Send Comment', 'doyle' ),
 			'format'            => 'xhtml',
 
-			'comment_field' =>  '<div class="comment-form-comment"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true" placeholder="'.__('Message','doyle').'">' . '</textarea></div>',
+			'comment_field' =>  '<div class="comment-form-comment"><textarea id="comment" name="comment" cols="60" rows="6" aria-required="true" placeholder="'.esc_attr__('Message','doyle').'">' . '</textarea></div>',
 
-			'must_log_in' => '<div class="must-log-in">' . sprintf(__( 'You must be <a href="%s">logged in</a> to post a comment.', 'doyle' ), wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ) . '</div>',
+			'must_log_in' => '<div class="must-log-in">'.esc_html__('You must be', 'doyle').' <a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ).'">'.esc_html__('logged in', 'doyle').'</a> '.esc_html__('to post a comment.', 'doyle').'</div>',
 
-			'logged_in_as' => '<div class="logged-in-as">' . sprintf(__( 'Logged in as <a class="bt-name" href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'doyle' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</div>',
+			'logged_in_as' => '<div class="logged-in-as">'.esc_html__('Logged in as', 'doyle').' <a class="bt-name" href="'.admin_url( 'profile.php' ).'">'.$user_identity.'</a>. <a href="'.wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'" title="'.esc_attr__('Log out of this account', 'doyle').'">'.esc_html__('Log out?', 'doyle').'</a></div>',
 
 			'comment_notes_before' => '',
 

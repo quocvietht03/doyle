@@ -81,8 +81,8 @@
 	<div class="bt-content">
 		<h3 class="bt-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 		<ul class="bt-meta">
-			<li><?php echo __('By ', 'doyle').'<strong>'.get_the_author().'</strong>'; ?></li>
-			<li><?php echo __('on ', 'doyle').'<strong>'.get_the_date('M d, Y').'</strong>'; ?></li>
+			<li><?php echo esc_html__('By ', 'doyle').'<strong>'.get_the_author().'</strong>'; ?></li>
+			<li><?php echo esc_html__('on ', 'doyle').'<strong>'.get_the_date('M d, Y').'</strong>'; ?></li>
 		</ul>
 		<?php
 			echo '<div class="bt-excerpt">'.wp_trim_words(get_the_excerpt(), $excerpt_limit, $excerpt_more).'</div>';

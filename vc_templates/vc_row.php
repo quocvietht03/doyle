@@ -161,4 +161,4 @@ $output .= '</div>';
 $output .= $after_container;
 $output .= $after_output;
 
-echo $output;
+echo balanceTags($output, false);

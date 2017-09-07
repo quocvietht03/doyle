@@ -26,12 +26,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
-				<th class="product-remove"><?php _e( 'Remove', 'doyle' ); ?></th>
-				<th class="product-thumbnail"><?php _e( 'Image', 'doyle' ); ?></th>
-				<th class="product-name"><?php _e( 'Product', 'doyle' ); ?></th>
-				<th class="product-price"><?php _e( 'Price', 'doyle' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Quantity', 'doyle' ); ?></th>
-				<th class="product-subtotal"><?php _e( 'Total', 'doyle' ); ?></th>
+				<th class="product-remove"><?php esc_html_e( 'Remove', 'doyle' ); ?></th>
+				<th class="product-thumbnail"><?php esc_html_e( 'Image', 'doyle' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'doyle' ); ?></th>
+				<th class="product-price"><?php esc_html_e( 'Price', 'doyle' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'doyle' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Total', 'doyle' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -64,9 +64,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 								if ( ! $product_permalink ) {
-									echo $thumbnail;
+									echo balanceTags($thumbnail, false);
 								} else {
-									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
+									echo '<a href="'.esc_url( $product_permalink ).'">'.$thumbnail.'</a>';
 								}
 							?>
 						</td>
@@ -130,7 +130,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php _e( 'Coupon:', 'doyle' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'doyle' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'doyle' ); ?>" />
+							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'doyle' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'doyle' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'doyle' ); ?>" />
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>

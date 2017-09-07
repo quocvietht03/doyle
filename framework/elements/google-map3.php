@@ -115,7 +115,7 @@ class WPBakeryShortCode_bt_google_map3 extends WPBakeryShortCode {
 		$maps_id = uniqid('maps-');
 		?>
 			<div class="<?php echo esc_attr(implode(' ', $css_class)); ?>" <?php echo esc_attr(implode(' ', $wrapper_attributes)); ?>>
-				<div id="<?php echo $maps_id; ?>" class="maps-render" <?php echo implode(' ', $setting); ?> style="width:<?php echo esc_attr($width); ?>;height: <?php echo esc_attr($height); ?>"></div>
+				<div id="<?php echo esc_attr($maps_id); ?>" class="maps-render" <?php echo implode(' ', $setting); ?> style="width:<?php echo esc_attr($width); ?>;height: <?php echo esc_attr($height); ?>"></div>
 			</div>
 		<?php
 		return ob_get_clean();
@@ -189,7 +189,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __ ( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -197,7 +197,7 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __ ( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
         array(
             "type" => "checkbox",

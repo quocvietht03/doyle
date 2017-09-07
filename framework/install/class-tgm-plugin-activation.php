@@ -2577,18 +2577,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$color = ' color: #ff0000; font-weight: bold;';
 				}
 
-				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Installed version:', 'doyle' ) . '</p>',
-					$color,
-					$installed
-				);
+				$output[] = '<p><span style="min-width: 32px; text-align: right; float: right;'.esc_attr($color).'">'.$installed.'</span>' . __( 'Installed version:', 'doyle' ) . '</p>';
 			}
 
 			if ( ! empty( $item['minimum_version'] ) ) {
-				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . __( 'Minimum required version:', 'doyle' ) . '</p>',
-					$item['minimum_version']
-				);
+				$output[] = '<p><span style="min-width: 32px; text-align: right; float: right;">'.$item['minimum_version'].'</span>' . __( 'Minimum required version:', 'doyle' ) . '</p>';
 			}
 
 			if ( ! empty( $item['available_version'] ) ) {
@@ -2597,11 +2590,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$color = ' color: #71C671; font-weight: bold;';
 				}
 
-				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Available version:', 'doyle' ) . '</p>',
-					$color,
-					$item['available_version']
-				);
+				$output[] = '<p><span style="min-width: 32px; text-align: right; float: right;'.esc_attr($color).'">'.$item['available_version'].'</span>' . __( 'Available version:', 'doyle' ) . '</p>';
 			}
 
 			if ( empty( $output ) ) {

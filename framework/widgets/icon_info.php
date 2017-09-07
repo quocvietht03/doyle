@@ -23,14 +23,14 @@ class doyle_Icon_Info_Widget extends WP_Widget {
         }
 		
         ob_start();
-        echo $before_widget;
+        echo balanceTags($before_widget, false);
         ?>
        <div class="bt-icon-box">
 			<div class="icon"><i class="<?php echo esc_attr($font_icon); ?>"></i></div>
 			<div class="text"><?php echo html_entity_decode($meta_info); ?></div>
 		</div>
         <?php
-        echo $after_widget;
+        echo balanceTags($after_widget, false);
         echo ob_get_clean();
     }
 
@@ -59,7 +59,7 @@ class doyle_Icon_Info_Widget extends WP_Widget {
 		</p>
         <p>
             <label for="<?php echo esc_attr($this->get_field_id('cl_class')); ?>"><?php _e('Extra Class:', 'doyle'); ?></label>
-            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('cl_class')); ?>" name="<?php echo esc_attr($this->get_field_name('cl_class')); ?>" value="<?php echo $cl_class; ?>" />
+            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('cl_class')); ?>" name="<?php echo esc_attr($this->get_field_name('cl_class')); ?>" value="<?php echo esc_attr($cl_class); ?>" />
         </p>
         <?php
     }

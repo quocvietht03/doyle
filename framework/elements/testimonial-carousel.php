@@ -176,7 +176,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __ ( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -184,27 +184,27 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __ ( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
 		array (
 			'type' => 'bt_taxonomy',
 			'taxonomy' => 'testimonial-category',
-			'heading' => __ ( 'Categories', 'doyle' ),
+			'heading' => __( 'Categories', 'doyle' ),
 			'param_name' => 'category',
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __ ( 'Note: By default, all your projects will be displayed. <br>If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
+			'description' => __( 'Note: By default, all your projects will be displayed. <br>If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
 		),
 		array (
 			'type' => 'textfield',
-			'heading' => __ ( 'Count', 'doyle' ),
+			'heading' => __( 'Count', 'doyle' ),
 			'param_name' => 'posts_per_page',
 			'value' => 10,
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __ ( 'The number of posts to display on each page. Set to "-1" for display all posts on the page.', 'doyle' )
+			'description' => __( 'The number of posts to display on each page. Set to "-1" for display all posts on the page.', 'doyle' )
 		),
 		array (
 			'type' => 'dropdown',
-			'heading' => __ ( 'Order by', 'doyle' ),
+			'heading' => __( 'Order by', 'doyle' ),
 			'param_name' => 'orderby',
 			'value' => array (
 					'None' => 'none',
@@ -213,11 +213,11 @@ vc_map(array(
 					'ID' => 'ID'
 			),
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __ ( 'Select order type.', 'doyle' )
+			'description' => __( 'Select order type.', 'doyle' )
 		),
 		array (
 			'type' => 'dropdown',
-			'heading' => __ ( 'Order', 'doyle' ),
+			'heading' => __( 'Order', 'doyle' ),
 			'param_name' => 'order',
 			'value' => Array (
 					'None' => 'none',
@@ -225,7 +225,7 @@ vc_map(array(
 					'DESC' => 'DESC'
 			),
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __ ( 'Select sorting order.', 'doyle' )
+			'description' => __( 'Select sorting order.', 'doyle' )
 		),
 		array(
 			'type' => 'dropdown',
@@ -303,7 +303,7 @@ vc_map(array(
 			'param_name' => 'smartspeed',
 			'value' => 500,
 			'group' => __('Owl Setting', 'doyle'),
-			'description' => __ ( 'Speed Calculate.', 'doyle' )
+			'description' => __( 'Speed Calculate.', 'doyle' )
 		),
 		array(
 			'type' => 'checkbox',
