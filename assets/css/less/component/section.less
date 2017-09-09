@@ -685,6 +685,7 @@
 		background: #ececec;
 		padding: 60px 30px 15px;
 		.bt-icon{
+			.hvr-pulse;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -694,11 +695,10 @@
 			text-align: center;
 			color: #ffffff;
 			background: @secondary-color;
+			margin-top: -35px;
+			margin-left: -35px;
 			-webkit-border-radius: 50%;
 			border-radius: 50%;
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			-ms-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
 		}
 		.bt-title{
 			font-size: 18px;
@@ -707,6 +707,18 @@
 		}
 		.bt-desc{
 			color: @main-color;
+		}
+		&:hover{
+			.bt-icon{
+				-webkit-animation-name: hvr-pulse;
+				animation-name: hvr-pulse;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			}
 		}
 	}
 }
@@ -729,6 +741,7 @@
 		background: #ffffff;
 		padding: 30px 30px 15px;
 		.bt-icon{
+			.hvr-pulse;
 			width: 70px;
 			height: 70px;
 			line-height: 70px;
@@ -746,12 +759,25 @@
 		.bt-desc{
 			color: @main-color;
 		}
+		&:hover{
+			.bt-icon{
+				-webkit-animation-name: hvr-pulse;
+				animation-name: hvr-pulse;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			}
+		}
 	}
 }
 
 .bt-address-section5{
 	.bt-fancy-box-element{
 		.bt-icon{
+			.hvr-pulse;
 			width: 70px;
 			height: 70px;
 			line-height: 70px;
@@ -769,6 +795,18 @@
 		}
 		.bt-desc{
 			color: @secondary-color;
+		}
+		&:hover{
+			.bt-icon{
+				-webkit-animation-name: hvr-pulse;
+				animation-name: hvr-pulse;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			}
 		}
 	}
 }
@@ -953,6 +991,7 @@
 		background: #ffffff;
 		padding: 60px 30px 15px;
 		.bt-icon{
+			.hvr-pulse;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -961,11 +1000,10 @@
 			line-height: 70px;
 			color: #ffffff;
 			background: @secondary-color;
+			margin-top: -35px;
+			margin-left: -35px;
 			-webkit-border-radius: 50%;
 			border-radius: 50%;
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			-ms-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
 		}
 		.bt-title{
 			font-size: 42px;
@@ -974,6 +1012,18 @@
 		}
 		.bt-desc{
 			color: @secondary-color;
+		}
+		&:hover{
+			.bt-icon{
+				-webkit-animation-name: hvr-pulse;
+				animation-name: hvr-pulse;
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			}
 		}
 	}
 	.wpb_single_image{

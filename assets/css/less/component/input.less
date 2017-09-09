@@ -68,8 +68,16 @@ body {
 	}
 	
 	.wpcf7-form{
-		input,textarea,select{
-			max-width: 100%;
+		.wpcf7-form-control-wrap{
+			display: block;
+			margin-bottom: 30px;
+			input,textarea,select{
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+		div.wpcf7-response-output{
+			margin: 0;
 		}
 	}
 }
