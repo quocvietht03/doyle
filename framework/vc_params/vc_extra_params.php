@@ -7,7 +7,7 @@ $attributes = array(
     'param_name' => 'row_container',
     'value' => '',
     'weight' => 1,
-    'description' => __( 'Enable row container.', 'doyle' )
+    'description' => esc_html__( 'Enable row container.', 'doyle' )
 );
 vc_add_param( 'vc_row', $attributes );
 
@@ -17,7 +17,7 @@ $attributes = array(
     'heading' => 'Custom Style',
     'param_name' => 'custom_style',
     'value' => '',
-    'description' => __( 'Enter custom style for heading element', 'doyle' ),
+    'description' => esc_html__( 'Enter custom style for heading element', 'doyle' ),
 	'group' => __('Extra Options', 'doyle')
 );
 vc_add_param( 'vc_custom_heading', $attributes );

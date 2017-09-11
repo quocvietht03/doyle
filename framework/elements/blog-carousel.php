@@ -179,7 +179,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => esc_html__( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -187,27 +187,27 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
 		array (
 			'type' => 'bt_taxonomy',
 			'taxonomy' => 'category',
-			'heading' => __( 'Categories', 'doyle' ),
+			'heading' => esc_html__( 'Categories', 'doyle' ),
 			'param_name' => 'category',
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __( 'Note: By default, all your projects will be displayed. <br>If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
+			'description' => esc_html__( 'Note: By default, all your projects will be displayed. If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
 		),
 		array (
 			'type' => 'textfield',
-			'heading' => __( 'Count', 'doyle' ),
+			'heading' => esc_html__( 'Count', 'doyle' ),
 			'param_name' => 'posts_per_page',
 			'value' => 10,
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __( 'The number of posts to display on each page. Set to "-1" for display all posts on the page.', 'doyle' )
+			'description' => esc_html__( 'The number of posts to display on each page. Set to "-1" for display all posts on the page.', 'doyle' )
 		),
 		array (
 			'type' => 'dropdown',
-			'heading' => __( 'Order by', 'doyle' ),
+			'heading' => esc_html__( 'Order by', 'doyle' ),
 			'param_name' => 'orderby',
 			'value' => array (
 					'None' => 'none',
@@ -216,11 +216,11 @@ vc_map(array(
 					'ID' => 'ID'
 			),
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __( 'Select order type.', 'doyle' )
+			'description' => esc_html__( 'Select order type.', 'doyle' )
 		),
 		array (
 			'type' => 'dropdown',
-			'heading' => __( 'Order', 'doyle' ),
+			'heading' => esc_html__( 'Order', 'doyle' ),
 			'param_name' => 'order',
 			'value' => Array (
 					'None' => 'none',
@@ -228,7 +228,7 @@ vc_map(array(
 					'DESC' => 'DESC'
 			),
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __( 'Select sorting order.', 'doyle' )
+			'description' => esc_html__( 'Select sorting order.', 'doyle' )
 		),
 		array(
 			'type' => 'dropdown',
@@ -306,7 +306,7 @@ vc_map(array(
 			'param_name' => 'smartspeed',
 			'value' => 500,
 			'group' => __('Owl Setting', 'doyle'),
-			'description' => __( 'Speed Calculate.', 'doyle' )
+			'description' => esc_html__( 'Speed Calculate.', 'doyle' )
 		),
 		array(
 			'type' => 'checkbox',
@@ -352,11 +352,11 @@ vc_map(array(
 		),
 		array(
 			'type' => 'textfield',
-			'heading' => __( 'Image size', 'doyle' ),
+			'heading' => esc_html__( 'Image size', 'doyle' ),
 			'param_name' => 'img_size',
 			'value' => 'full',
 			'group' => __('Item Setting', 'doyle'),
-			'description' => __( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'doyle' ),
+			'description' => esc_html__( 'Enter image size. Example: thumbnail, medium, large, full or other sizes defined by current theme. Alternatively enter image size in pixels: 200x100 (Width x Height). Leave empty to use "full" size.', 'doyle' ),
 		),
 		array(
 			'type' => 'textfield',
@@ -451,9 +451,9 @@ vc_map(array(
 		
 		array(
 			'type' => 'css_editor',
-			'heading' => __( 'CSS box', 'doyle' ),
+			'heading' => esc_html__( 'CSS box', 'doyle' ),
 			'param_name' => 'css',
-			'group' => __( 'Design Options', 'doyle' ),
+			'group' => esc_html__( 'Design Options', 'doyle' ),
 		)
 	)
 ));

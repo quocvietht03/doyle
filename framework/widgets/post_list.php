@@ -10,13 +10,13 @@ class doyle_Post_List_Widget extends doyle_Widget {
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'std'   => __( 'Post List', 'doyle' ),
-				'label' => __( 'Title', 'doyle' )
+				'std'   => esc_html__( 'Post List', 'doyle' ),
+				'label' => esc_html__( 'Title', 'doyle' )
 			),
 			'category' => array(
 				'type'   => 'doyle_taxonomy',
 				'std'    => '',
-				'label'  => __( 'Categories', 'doyle' ),
+				'label'  => esc_html__( 'Categories', 'doyle' ),
 			),
 			'posts_per_page' => array(
 				'type'  => 'number',
@@ -24,34 +24,34 @@ class doyle_Post_List_Widget extends doyle_Widget {
 				'min'   => 1,
 				'max'   => '',
 				'std'   => 3,
-				'label' => __( 'Number of posts to show', 'doyle' )
+				'label' => esc_html__( 'Number of posts to show', 'doyle' )
 			),
 			'orderby' => array(
 				'type'  => 'select',
 				'std'   => 'none',
-				'label' => __( 'Order by', 'doyle' ),
+				'label' => esc_html__( 'Order by', 'doyle' ),
 				'options' => array(
-					'none'   => __( 'None', 'doyle' ),
-					'comment_count'  => __( 'Comment Count', 'doyle' ),
-					'title'  => __( 'Title', 'doyle' ),
-					'date'   => __( 'Date', 'doyle' ),
-					'ID'  => __( 'ID', 'doyle' ),
+					'none'   => esc_html__( 'None', 'doyle' ),
+					'comment_count'  => esc_html__( 'Comment Count', 'doyle' ),
+					'title'  => esc_html__( 'Title', 'doyle' ),
+					'date'   => esc_html__( 'Date', 'doyle' ),
+					'ID'  => esc_html__( 'ID', 'doyle' ),
 				)
 			),
 			'order' => array(
 				'type'  => 'select',
 				'std'   => 'none',
-				'label' => __( 'Order', 'doyle' ),
+				'label' => esc_html__( 'Order', 'doyle' ),
 				'options' => array(
-					'none'  => __( 'None', 'doyle' ),
-					'asc'  => __( 'ASC', 'doyle' ),
-					'desc' => __( 'DESC', 'doyle' ),
+					'none'  => esc_html__( 'None', 'doyle' ),
+					'asc'  => esc_html__( 'ASC', 'doyle' ),
+					'desc' => esc_html__( 'DESC', 'doyle' ),
 				)
 			),
 			'el_class'  => array(
 				'type'  => 'text',
 				'std'   => '',
-				'label' => __( 'Extra Class', 'doyle' )
+				'label' => esc_html__( 'Extra Class', 'doyle' )
 			)
 		);
 		add_action('admin_enqueue_scripts', array($this, 'widget_scripts'));

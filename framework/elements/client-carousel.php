@@ -215,7 +215,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => esc_html__( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -223,22 +223,22 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
 		array(
 			'type' => 'param_group',
-			'heading' => __( 'Client Logo', 'doyle' ),
+			'heading' => esc_html__( 'Client Logo', 'doyle' ),
 			'param_name' => 'client_logo',
 			'value' => '',
 			'group' => __('Data Setting', 'doyle'),
-			'description' => __( 'Please, select logo for option - client_logo.', 'doyle' ),
+			'description' => esc_html__( 'Please, select logo for option - client_logo.', 'doyle' ),
 			'params' => array(
 				array(
 					'type' => 'textfield',
 					'heading' => 'Name',
 					'param_name' => 'name',
 					'value' => 'Logo name',
-					'description' => __( 'Enter text used as name of logo.', 'doyle' ),
+					'description' => esc_html__( 'Enter text used as name of logo.', 'doyle' ),
 					'admin_label' => true,
 				),
 				array(
@@ -251,9 +251,9 @@ vc_map(array(
 				),
 				array(
 					'type' => 'vc_link',
-					'heading' => __( 'URL (Link)', 'doyle' ),
+					'heading' => esc_html__( 'URL (Link)', 'doyle' ),
 					'param_name' => 'link',
-					'description' => __( 'Add link of logo in this element.', 'doyle' )
+					'description' => esc_html__( 'Add link of logo in this element.', 'doyle' )
 				),
 			)
 		),
@@ -335,7 +335,7 @@ vc_map(array(
 			'param_name' => 'smartspeed',
 			'value' => 500,
 			'group' => __('Owl Setting', 'doyle'),
-			'description' => __( 'Speed Calculate.', 'doyle' )
+			'description' => esc_html__( 'Speed Calculate.', 'doyle' )
 		),
 		array(
 			'type' => 'checkbox',
@@ -435,9 +435,9 @@ vc_map(array(
 		
 		array(
 			'type' => 'css_editor',
-			'heading' => __( 'CSS box', 'doyle' ),
+			'heading' => esc_html__( 'CSS box', 'doyle' ),
 			'param_name' => 'css',
-			'group' => __( 'Design Options', 'doyle' ),
+			'group' => esc_html__( 'Design Options', 'doyle' ),
 		)
 	)
 ));

@@ -57,21 +57,21 @@ $options = array(
 		'choices' => array(
 			'color' => array(
 				'bg_color' => array(
-					'label' => __( 'Background Color', 'doyle' ),
-					'desc'  => __( 'Choose background color for container mega menu (default: #f1f4fb)', 'doyle' ),
+					'label' => esc_html__( 'Background Color', 'doyle' ),
+					'desc'  => esc_html__( 'Choose background color for container mega menu (default: #f1f4fb)', 'doyle' ),
 					'type'  => 'color-picker',
 					'value' => '#f1f4fb',
 				),
 			),
 			'image' => array(
 				'bg_image' => array(
-					'label' => __( 'Background Image', 'doyle' ),
-					'desc'  => __( 'Choose background image for container mega menu', 'doyle' ),
+					'label' => esc_html__( 'Background Image', 'doyle' ),
+					'desc'  => esc_html__( 'Choose background image for container mega menu', 'doyle' ),
 					'type'  => 'upload',
 				),
 				'bg_image_repeat' => array(
-					'label' => __( 'Background Repeat', 'doyle' ),
-					'desc'  => __( 'Choose background repeat for container mega menu', 'doyle' ),
+					'label' => esc_html__( 'Background Repeat', 'doyle' ),
+					'desc'  => esc_html__( 'Choose background repeat for container mega menu', 'doyle' ),
 					'type' => 'short-select',
 					'value' => 'no-repeat',
 					'choices' => array(
@@ -80,8 +80,8 @@ $options = array(
 					),
 				),
 				'bg_image_size' => array(
-					'label' => __( 'Background Size', 'doyle' ),
-					'desc'  => __( 'Choose background size for container mega menu', 'doyle' ),
+					'label' => esc_html__( 'Background Size', 'doyle' ),
+					'desc'  => esc_html__( 'Choose background size for container mega menu', 'doyle' ),
 					'type' => 'short-select',
 					'value' => 'cover',
 					'choices' => array(
@@ -90,8 +90,8 @@ $options = array(
 					),
 				),
 				'bg_image_position' => array(
-					'label' => __( 'Background Position', 'doyle' ),
-					'desc'  => __( 'Please enter background position for container mega menu (default: center center)', 'doyle' ),
+					'label' => esc_html__( 'Background Position', 'doyle' ),
+					'desc'  => esc_html__( 'Please enter background position for container mega menu (default: center center)', 'doyle' ),
 					'type' => 'short-text',
 					'value' => 'center center',
 				),

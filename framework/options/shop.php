@@ -1,15 +1,15 @@
 <?php
 // Shop
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'shop', 'doyle' ),
+	'title'            => esc_html__( 'shop', 'doyle' ),
 	'id'               => 'bt_shop',
 	'icon'             => 'el el-shopping-cart',
 	'fields'           => array(
 		array(
 			'id'       => 'shop_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -19,8 +19,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Full Width Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right padding the content area display.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right padding the content area display.', 'doyle' ),
 			'default'  => array(
 				'padding-left'    => '15px',
 				'padding-right' => '15px'
@@ -31,8 +31,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'shop_sidebar_width',
 			'type'          => 'slider',
-			'title'         => __( 'Sidebar Width', 'doyle' ),
-			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'doyle' ),
+			'title'         => esc_html__( 'Sidebar Width', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the width of the left/right sidebar.', 'doyle' ),
 			'default'       => 3,
 			'min'           => 1,
 			'step'          => 1,
@@ -42,8 +42,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'shop_top_bar',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Top Bar', 'doyle' ),
-			'subtitle' => __( 'Turn on to show the top bar on the top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Top Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to show the top bar on the top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -54,8 +54,8 @@ Redux::setSection( $opt_name, array(
 			'top'      => false,
 			'right'   => false,
 			'left'   => false,
-			'title'    => __( 'Top Bar Space', 'doyle' ),
-			'subtitle' => __( 'Control the bottom margin the top bar.', 'doyle' ),
+			'title'    => esc_html__( 'Top Bar Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the bottom margin the top bar.', 'doyle' ),
 			'default'  => array(
 				'margin-bottom' => '30px'
 			),
@@ -65,8 +65,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'shop_product_per_page',
 			'type'          => 'slider',
-			'title'         => __( 'Product Per Page', 'doyle' ),
-			'subtitle'      => __( 'Controls the number of product on the page.', 'doyle' ),
+			'title'         => esc_html__( 'Product Per Page', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the number of product on the page.', 'doyle' ),
 			'default'       => 10,
 			'min'           => 1,
 			'step'          => 1,
@@ -76,8 +76,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'shop_product_per_row',
 			'type'          => 'slider',
-			'title'         => __( 'Product Per Row', 'doyle' ),
-			'subtitle'      => __( 'Controls the number of product on the row.', 'doyle' ),
+			'title'         => esc_html__( 'Product Per Row', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the number of product on the row.', 'doyle' ),
 			'default'       => 3,
 			'min'           => 2,
 			'step'          => 1,
@@ -87,8 +87,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'shop_titlebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Title Bar Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the title bar.', 'doyle' ),
+			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the title bar.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#171721',
 			),
@@ -98,15 +98,15 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Single Product', 'doyle' ),
+	'title'            => esc_html__( 'Single Product', 'doyle' ),
 	'id'               => 'bt_product',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'product_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the content area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -116,8 +116,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Full Width Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right padding the content area display.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right padding the content area display.', 'doyle' ),
 			'default'  => array(
 				'padding-left'    => '15px',
 				'padding-right' => '15px'
@@ -128,8 +128,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'product_sidebar_width',
 			'type'          => 'slider',
-			'title'         => __( 'Sidebar Width', 'doyle' ),
-			'subtitle'      => __( 'Controls the width of the left/right sidebar.', 'doyle' ),
+			'title'         => esc_html__( 'Sidebar Width', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the width of the left/right sidebar.', 'doyle' ),
 			'default'       => 3,
 			'min'           => 1,
 			'step'          => 1,
@@ -139,8 +139,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'product_titlebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Title Bar Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the title bar.', 'doyle' ),
+			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the title bar.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#171721',
 			),

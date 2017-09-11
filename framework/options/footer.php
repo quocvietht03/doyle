@@ -1,15 +1,15 @@
 <?php
 // Footer
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer', 'doyle' ),
+	'title'            => esc_html__( 'Footer', 'doyle' ),
 	'id'               => 'bt_footer',
 	'icon'             => 'el el-website',
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout',
 			'type'     => 'image_select',
-			'title'    => __( 'Footer Layout', 'doyle' ),
-			'subtitle' => __( 'Select a footer layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
+			'title'    => esc_html__( 'Footer Layout', 'doyle' ),
+			'subtitle' => esc_html__( 'Select a footer layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 1',
@@ -27,15 +27,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer Style 01', 'doyle' ),
+	'title'            => esc_html__( 'Footer Style 01', 'doyle' ),
 	'id'               => 'bt_footer_style1',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout_1',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for footer style 01', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for footer style 01', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 1',
@@ -47,8 +47,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -59,8 +59,8 @@ Redux::setSection( $opt_name, array(
 			'right'    => false,
 			'bottom'   => false,
 			'left'     => false,
-			'title'    => __( 'Footer Space', 'doyle' ),
-			'subtitle' => __( 'Control the top margin the footer.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top margin the footer.', 'doyle' ),
 			'default'  => array(
 				'margin-top' => '60px'
 			),
@@ -71,21 +71,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f1_footer_top_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Top Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for footer top.', 'doyle' )
+			'title' => esc_html__( 'Footer Top Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for footer top.', 'doyle' )
 		),
 		array(
 			'id'       => 'f1_footer_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'            => 'f1_footer_top_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Top Columns', 'doyle' ),
-			'subtitle'      => __( 'Controls the columns number of the footer top.', 'doyle' ),
+			'title'         => esc_html__( 'Footer Top Columns', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the columns number of the footer top.', 'doyle' ),
 			'default'       => 4,
 			'min'           => 1,
 			'step'          => 1,
@@ -145,8 +145,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top Columns Class', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer top columns class.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Top Columns Class', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer top columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('f1_footer_top' , '=', '1'),
 		),
@@ -200,8 +200,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Top Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the footer top.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#252525',
 			),
@@ -211,8 +211,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_overlay',
 			'type'     => 'color_rgba',
-			'title'    => __( 'Footer Top Overlay Color', 'doyle' ),
-			'subtitle' => __( 'Control the overlay color of the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Overlay Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the overlay color of the footer top.', 'doyle' ),
 			'default'  => array(
 				'color' => '',
 				'alpha' => '1'
@@ -226,8 +226,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
 				'padding-right'  => '0px',
@@ -240,8 +240,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -257,8 +257,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of footer top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
@@ -270,8 +270,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_top_widget_titile_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Widget Titile Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer top widget title.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Widget Titile Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer top widget title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -289,14 +289,14 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f1_footer_bottom_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Bottom Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for footer bottom.', 'doyle' )
+			'title' => esc_html__( 'Footer Bottom Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for footer bottom.', 'doyle' )
 		),
 		array(
 			'id'            => 'f1_footer_bottom_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Bottom Columns', 'doyle' ),
-			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'doyle' ),
+			'title'         => esc_html__( 'Footer Bottom Columns', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the columns number of the footer bottom.', 'doyle' ),
 			'default'       => 2,
 			'min'           => 1,
 			'step'          => 1,
@@ -325,8 +325,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Bottom Columns Class', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Bottom Columns Class', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer bottom columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('footer_layout' , '=', '1')
 		),
@@ -352,8 +352,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the footer bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -370,8 +370,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-right'  => '0px',
@@ -383,8 +383,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Bottom Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer bottom.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -399,8 +399,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f1_footer_bottom_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Bottom Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of footer bottom.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FFFFFF',
@@ -413,15 +413,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Footer Style 02', 'doyle' ),
+	'title'            => esc_html__( 'Footer Style 02', 'doyle' ),
 	'id'               => 'bt_footer_style2',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'footer_layout_2',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for footer style 02', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for footer style 02', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Footer layout 2',
@@ -433,8 +433,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -445,8 +445,8 @@ Redux::setSection( $opt_name, array(
 			'right'    => false,
 			'bottom'   => false,
 			'left'     => false,
-			'title'    => __( 'Footer Space', 'doyle' ),
-			'subtitle' => __( 'Control the top margin the footer.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top margin the footer.', 'doyle' ),
 			'default'  => array(
 				'margin-top' => '60px'
 			),
@@ -457,21 +457,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f2_footer_top_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Top Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for footer top.', 'doyle' )
+			'title' => esc_html__( 'Footer Top Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for footer top.', 'doyle' )
 		),
 		array(
 			'id'       => 'f2_footer_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'            => 'f2_footer_top_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Top Columns', 'doyle' ),
-			'subtitle'      => __( 'Controls the columns number of the footer top.', 'doyle' ),
+			'title'         => esc_html__( 'Footer Top Columns', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the columns number of the footer top.', 'doyle' ),
 			'default'       => 4,
 			'min'           => 1,
 			'step'          => 1,
@@ -531,8 +531,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Top Columns Class', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer top columns class.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Top Columns Class', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer top columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('f2_footer_top' , '=', '1'),
 		),
@@ -586,8 +586,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Top Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the footer top.', 'doyle' ),
 			'default'  => array(
 				'background-color' => '#ffffff',
 			),
@@ -597,8 +597,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_overlay',
 			'type'     => 'color_rgba',
-			'title'    => __( 'Footer Top Overlay Color', 'doyle' ),
-			'subtitle' => __( 'Control the overlay color of the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Overlay Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the overlay color of the footer top.', 'doyle' ),
 			'default'  => array(
 				'color' => '',
 				'alpha' => '1'
@@ -612,8 +612,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Footer Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the footer top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '30px',
 				'padding-right'  => '0px',
@@ -626,8 +626,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -643,8 +643,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of footer top.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of footer top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#686876',
@@ -656,8 +656,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_top_widget_titile_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Top Widget Titile Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer top widget title.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Top Widget Titile Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer top widget title.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -675,14 +675,14 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'f2_footer_bottom_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Footer Bottom Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for footer bottom.', 'doyle' )
+			'title' => esc_html__( 'Footer Bottom Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for footer bottom.', 'doyle' )
 		),
 		array(
 			'id'            => 'f2_footer_bottom_columns',
 			'type'          => 'slider',
-			'title'         => __( 'Footer Bottom Columns', 'doyle' ),
-			'subtitle'      => __( 'Controls the columns number of the footer bottom.', 'doyle' ),
+			'title'         => esc_html__( 'Footer Bottom Columns', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the columns number of the footer bottom.', 'doyle' ),
 			'default'       => 2,
 			'min'           => 1,
 			'step'          => 1,
@@ -711,8 +711,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_columns_class',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Footer Bottom Columns Class', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable footer bottom columns class.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Footer Bottom Columns Class', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer bottom columns class.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('footer_layout' , '=', '1')
 		),
@@ -738,8 +738,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Footer Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control the background of the footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the background of the footer bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -756,8 +756,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Footer Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the footer bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-right'  => '0px',
@@ -769,8 +769,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_font',
 			'type'     => 'typography',
-			'title'    => __( 'Footer Bottom Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography footer bottom.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -785,8 +785,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'f2_footer_bottom_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Footer Bottom Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of footer bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Footer Bottom Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of footer bottom.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#686876',

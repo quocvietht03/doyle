@@ -1,15 +1,15 @@
 <?php
 // Header
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header', 'doyle' ),
+	'title'            => esc_html__( 'Header', 'doyle' ),
 	'id'               => 'bt_header',
 	'icon'             => 'el el-credit-card',
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout',
 			'type'     => 'image_select',
-			'title'    => __( 'Header Layout', 'doyle' ),
-			'subtitle' => __( 'Select a header layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
+			'title'    => esc_html__( 'Header Layout', 'doyle' ),
+			'subtitle' => esc_html__( 'Select a header layout default. Foreach pages, you can change the layout by page option', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout 1',
@@ -35,15 +35,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header Style 01', 'doyle' ),
+	'title'            => esc_html__( 'Header Style 01', 'doyle' ),
 	'id'               => 'bt_header_style1',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout_1',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for header style 01', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header style 01', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout 1',
@@ -55,22 +55,22 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'    => 'h1_header_desktop_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Desktop Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header desktop.', 'doyle' )
+			'title' => esc_html__( 'Header Desktop Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header desktop.', 'doyle' )
 		),
 		array(
 			'id'       => 'h1_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -108,8 +108,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '10px',
 				'padding-right'    	=> '0px',
@@ -122,8 +122,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_header_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Top Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header top.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -139,8 +139,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_header_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header top.', 'doyle' ),
 			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
@@ -157,8 +157,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_header_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#fafafa',
@@ -170,15 +170,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_header_bottom_absolute',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Bottom Absolute', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header bottom absolute.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Bottom Absolute', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header bottom absolute.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h1_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -195,8 +195,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -209,8 +209,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h1_logo',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -218,9 +218,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h1_logo_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
-			'default'       => 50,
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
 			'max'           => 150,
@@ -229,16 +229,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_assign',
 			'type'     => 'select',
-			'title'    => __( 'Menu Assign', 'doyle' ),
-			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
 			'options'  => $menu_slug_opt,
 			'default'  => 'auto'
 		),
 		array(
 			'id'       => 'h1_menu_align',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align', 'doyle' ),
-			'subtitle' => __( 'Control align of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -253,8 +253,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -264,8 +264,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -283,8 +283,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -295,8 +295,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -316,8 +316,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -328,8 +328,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_content_right',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Content Right', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Content Right', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable content right of menu.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
@@ -349,8 +349,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Content Right Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Content Right Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the content right of menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -361,15 +361,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_canvas',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Canvas', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Canvas', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable menu canvas.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h1_menu_canvas_button_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Canvas Button color', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -385,8 +385,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Canvas Button Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu canvas.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -398,21 +398,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h1_header_stick_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Stick Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header stick.', 'doyle' )
+			'title' => esc_html__( 'Header Stick Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header stick.', 'doyle' )
 		),
 		array(
 			'id'       => 'h1_header_stick',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Sticky', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable sticky header.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Sticky', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable sticky header.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h1_header_stick_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Stick Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header stick.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -430,8 +430,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Stick Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header stick.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -445,8 +445,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h1_logo_stick',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Stick', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Logo Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header stick.', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -455,8 +455,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h1_logo_stick_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Stick Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo stick.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Stick Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo stick.', 'doyle' ),
 			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
@@ -471,8 +471,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space Stick', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu stick.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -483,8 +483,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_first_level_font_stick',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography Stick', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -503,8 +503,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_first_level_color_stick',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color Stick', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level of the header stick.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -517,21 +517,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h1_header_mobile_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Mobile Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header mobile.', 'doyle' )
+			'title' => esc_html__( 'Header Mobile Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header mobile.', 'doyle' )
 		),
 		array(
 			'id'       => 'h1_mobile_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top Mobile', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h1_mobile_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -546,8 +546,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_mobile_toggle_button',
 			'type'     => 'link_color',
-			'title'    => __( 'Toggle Menu Button', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -558,8 +558,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h1_logo_mobile',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Mobile', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header mobile', 'doyle' ),
+			'title'    => esc_html__( 'Logo Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header mobile', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -567,8 +567,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h1_logo_mobile_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Mobile Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo mobile.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Mobile Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo mobile.', 'doyle' ),
 			'default'       => 30,
 			'min'           => 20,
 			'step'          => 1,
@@ -582,8 +582,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Header Mobile Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom margin the logo mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom margin the logo mobile.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '10px',
 				'margin-bottom' => '10px'
@@ -593,8 +593,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_mobile_menu_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -609,8 +609,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_mobile_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -628,8 +628,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_mobile_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -640,8 +640,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_mobile_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -658,8 +658,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h1_menu_mobile_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -672,15 +672,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header Style 02', 'doyle' ),
+	'title'            => esc_html__( 'Header Style 02', 'doyle' ),
 	'id'               => 'bt_header_style2',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout_2',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for header style 02', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header style 02', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout 2',
@@ -692,22 +692,22 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'    => 'h2_header_desktop_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Desktop Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header desktop.', 'doyle' )
+			'title' => esc_html__( 'Header Desktop Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header desktop.', 'doyle' )
 		),
 		array(
 			'id'       => 'h2_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -745,8 +745,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '10px',
 				'padding-right'   	=> '0px',
@@ -759,8 +759,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Top Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header top.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -776,8 +776,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -793,8 +793,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FAFAFA',
@@ -816,8 +816,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h2_logo',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -825,9 +825,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h2_logo_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
-			'default'       => 50,
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
 			'max'           => 150,
@@ -847,8 +847,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Middle Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header middle.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '15px',
 				'padding-right'    	=> '0px',
@@ -860,8 +860,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_middle_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Middle Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header middle.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -876,8 +876,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_middle_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Middle Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header middle.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -892,8 +892,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_middle_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Middle Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header middle.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -904,15 +904,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_header_bottom_absolute',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Bottom Absolute', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header bottom absolute.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Bottom Absolute', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header bottom absolute.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h2_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -929,8 +929,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -942,16 +942,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_assign',
 			'type'     => 'select',
-			'title'    => __( 'Menu Assign', 'doyle' ),
-			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
 			'options'  => $menu_slug_opt,
 			'default'  => 'auto'
 		),
 		array(
 			'id'       => 'h2_menu_align',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align', 'doyle' ),
-			'subtitle' => __( 'Control align of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -966,8 +966,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '0px'
@@ -977,8 +977,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -996,8 +996,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1008,8 +1008,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1029,8 +1029,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1042,8 +1042,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_content_right',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Content Right', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Content Right', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable content right of menu.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -1063,8 +1063,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Content Right Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Content Right Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the content right of menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -1075,15 +1075,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_canvas',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Canvas', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Canvas', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable menu canvas.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'       => 'h2_menu_canvas_button_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Canvas Button color', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -1099,8 +1099,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Canvas Button Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu canvas.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -1111,8 +1111,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_after_content_auto',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu After Content Auto', 'doyle' ),
-			'subtitle' => __( 'Turn on to menu content right and menu canvas align after menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu After Content Auto', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to menu content right and menu canvas align after menu.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('header_layout' , '=', '2')
 		),
@@ -1120,21 +1120,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h2_header_stick_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Stick Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header stick.', 'doyle' )
+			'title' => esc_html__( 'Header Stick Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header stick.', 'doyle' )
 		),
 		array(
 			'id'       => 'h2_header_stick',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Sticky', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable sticky header.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Sticky', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable sticky header.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h2_header_stick_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Stick Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header stick.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1152,8 +1152,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Stick Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header stick.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -1167,8 +1167,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h2_logo_stick',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Stick', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Logo Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header stick.', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -1177,8 +1177,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h2_logo_stick_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Stick Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo stick.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Stick Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo stick.', 'doyle' ),
 			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
@@ -1190,8 +1190,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_align_stick',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align Stick', 'doyle' ),
-			'subtitle' => __( 'Control align of menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu stick.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -1207,8 +1207,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space Stick', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu stick.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -1219,8 +1219,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_first_level_font_stick',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography Stick', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1239,8 +1239,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_first_level_color_stick',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color Stick', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level of the header stick.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1253,21 +1253,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h2_header_mobile_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Mobile Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header mobile.', 'doyle' )
+			'title' => esc_html__( 'Header Mobile Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header mobile.', 'doyle' )
 		),
 		array(
 			'id'       => 'h2_mobile_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top Mobile', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h2_mobile_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1286,8 +1286,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Header Mobile Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the header mobile.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-bottom' => '10px'
@@ -1297,8 +1297,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_mobile_toggle_button',
 			'type'     => 'link_color',
-			'title'    => __( 'Toggle Menu Button', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -1309,8 +1309,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h2_logo_mobile',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Mobile', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header mobile', 'doyle' ),
+			'title'    => esc_html__( 'Logo Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header mobile', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -1318,8 +1318,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h2_logo_mobile_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Mobile Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo mobile.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Mobile Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo mobile.', 'doyle' ),
 			'default'       => 30,
 			'min'           => 20,
 			'step'          => 1,
@@ -1329,8 +1329,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_mobile_menu_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1345,8 +1345,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_mobile_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1364,8 +1364,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_mobile_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1376,8 +1376,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_mobile_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1394,8 +1394,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h2_menu_mobile_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1408,15 +1408,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header Style 03', 'doyle' ),
+	'title'            => esc_html__( 'Header Style 03', 'doyle' ),
 	'id'               => 'bt_header_style3',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout_3',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for header style 03', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header style 03', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout 3',
@@ -1428,22 +1428,22 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'    => 'h3_header_desktop_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Desktop Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header desktop.', 'doyle' )
+			'title' => esc_html__( 'Header Desktop Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header desktop.', 'doyle' )
 		),
 		array(
 			'id'       => 'h3_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -1481,8 +1481,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '10px',
 				'padding-right'   	=> '0px',
@@ -1495,8 +1495,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Top Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header top.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1512,8 +1512,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header top.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1529,8 +1529,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#FAFAFA',
@@ -1543,8 +1543,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h3_logo',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -1552,9 +1552,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h3_logo_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
-			'default'       => 50,
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
 			'max'           => 150,
@@ -1583,8 +1583,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Middle Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header middle.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '15px',
 				'padding-right'    	=> '0px',
@@ -1596,8 +1596,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_middle_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Middle Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header middle.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1612,8 +1612,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_middle_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Middle Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header middle.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1628,8 +1628,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_middle_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Middle Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header middle.', 'doyle' ),
+			'title'    => esc_html__( 'Header Middle Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header middle.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -1640,15 +1640,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_header_bottom_absolute',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Bottom Absolute', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header bottom absolute.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Bottom Absolute', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header bottom absolute.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h3_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1665,8 +1665,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -1678,16 +1678,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_assign',
 			'type'     => 'select',
-			'title'    => __( 'Menu Assign', 'doyle' ),
-			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
 			'options'  => $menu_slug_opt,
 			'default'  => 'auto'
 		),
 		array(
 			'id'       => 'h3_menu_align',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align', 'doyle' ),
-			'subtitle' => __( 'Control align of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -1702,8 +1702,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '0px'
@@ -1713,8 +1713,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1732,8 +1732,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1744,8 +1744,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1765,8 +1765,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1778,8 +1778,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_content_right',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Content Right', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Content Right', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable content right of menu.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -1799,8 +1799,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Content Right Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Content Right Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the content right of menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -1811,15 +1811,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_canvas',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Canvas', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Canvas', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable menu canvas.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
 			'id'       => 'h3_menu_canvas_button_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Canvas Button color', 'doyle' ),
-			'subtitle' => __( 'Controls the color button toggle menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color button toggle menu canvas.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -1835,8 +1835,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Canvas Button Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu canvas.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -1847,8 +1847,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_after_content_auto',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu After Content Auto', 'doyle' ),
-			'subtitle' => __( 'Turn on to menu content right and menu canvas align after menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu After Content Auto', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to menu content right and menu canvas align after menu.', 'doyle' ),
 			'default'  => false,
 			'required' 		=> array('header_layout' , '=', '2')
 		),
@@ -1856,21 +1856,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h3_header_stick_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Stick Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header stick.', 'doyle' )
+			'title' => esc_html__( 'Header Stick Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header stick.', 'doyle' )
 		),
 		array(
 			'id'       => 'h3_header_stick',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Sticky', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable sticky header.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Sticky', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable sticky header.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h3_header_stick_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Stick Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header stick.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -1888,8 +1888,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Stick Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header stick.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -1903,8 +1903,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h3_logo_stick',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Stick', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Logo Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header stick.', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -1913,8 +1913,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h3_logo_stick_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Stick Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo stick.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Stick Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo stick.', 'doyle' ),
 			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
@@ -1926,8 +1926,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_align_stick',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align Stick', 'doyle' ),
-			'subtitle' => __( 'Control align of menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu stick.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -1943,8 +1943,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space Stick', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu stick.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -1955,8 +1955,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_first_level_font_stick',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography Stick', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -1975,8 +1975,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_first_level_color_stick',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color Stick', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level of the header stick.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -1989,21 +1989,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'h3_header_mobile_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Mobile Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header mobile.', 'doyle' )
+			'title' => esc_html__( 'Header Mobile Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header mobile.', 'doyle' )
 		),
 		array(
 			'id'       => 'h3_mobile_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top Mobile', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'h3_mobile_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2022,8 +2022,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'padding',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Header Mobile Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom padding the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the header mobile.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    => '10px',
 				'padding-bottom' => '10px'
@@ -2033,8 +2033,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_mobile_toggle_button',
 			'type'     => 'link_color',
-			'title'    => __( 'Toggle Menu Button', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -2045,8 +2045,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'h3_logo_mobile',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Mobile', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header mobile', 'doyle' ),
+			'title'    => esc_html__( 'Logo Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header mobile', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -2054,8 +2054,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'h3_logo_mobile_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Mobile Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo mobile.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Mobile Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo mobile.', 'doyle' ),
 			'default'       => 30,
 			'min'           => 20,
 			'step'          => 1,
@@ -2065,8 +2065,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_mobile_menu_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2081,8 +2081,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_mobile_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2100,8 +2100,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_mobile_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2112,8 +2112,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_mobile_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2130,8 +2130,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'h3_menu_mobile_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2144,15 +2144,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header One Page', 'doyle' ),
+	'title'            => esc_html__( 'Header One Page', 'doyle' ),
 	'id'               => 'bt_header_onepage',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout_onepage',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for header one page.', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header one page.', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout onepage',
@@ -2164,22 +2164,22 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'    => 'honepage_header_desktop_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Desktop Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header desktop.', 'doyle' )
+			'title' => esc_html__( 'Header Desktop Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header desktop.', 'doyle' )
 		),
 		array(
 			'id'       => 'honepage_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.', 'doyle' ),
 			'default'  => false
 		),
 		array(
@@ -2217,8 +2217,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Top Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header top.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '10px',
 				'padding-right'    	=> '0px',
@@ -2231,8 +2231,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_header_top_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Top Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header top.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2248,8 +2248,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_header_top_font',
 			'type'     => 'typography',
-			'title'    => __( 'Header Top Font', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Font', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography header top.', 'doyle' ),
 			'font-style'   => false,
 			'subsets'   => false,
 			'letter-spacing'   => true,
@@ -2266,8 +2266,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_header_top_link_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Header Top Link Color', 'doyle' ),
-			'subtitle' => __( 'Controls the link color of header top.', 'doyle' ),
+			'title'    => esc_html__( 'Header Top Link Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the link color of header top.', 'doyle' ),
 			'active'    => false,
 			'default'  => array(
 				'regular' => '#fafafa',
@@ -2279,15 +2279,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_header_bottom_absolute',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Bottom Absolute', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header bottom absolute.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Bottom Absolute', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header bottom absolute.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'honepage_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Bottom Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header bottom.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2304,8 +2304,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Bottom Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header bottom.', 'doyle' ),
+			'title'    => esc_html__( 'Header Bottom Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header bottom.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -2318,8 +2318,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'honepage_logo',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -2327,9 +2327,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'honepage_logo_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
-			'default'       => 50,
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
 			'max'           => 150,
@@ -2338,16 +2338,16 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_assign',
 			'type'     => 'select',
-			'title'    => __( 'Menu Assign', 'doyle' ),
-			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
 			'options'  => $menu_slug_opt,
 			'default'  => 'auto'
 		),
 		array(
 			'id'       => 'honepage_menu_align',
 			'type'     => 'button_set',
-			'title'    => __( 'Menu Align', 'doyle' ),
-			'subtitle' => __( 'Control align of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Align', 'doyle' ),
+			'subtitle' => esc_html__( 'Control align of menu.', 'doyle' ),
 			'options'  => array(
 				'left' => 'Left',
 				'center' => 'Center',
@@ -2362,8 +2362,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -2373,8 +2373,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2392,8 +2392,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2404,8 +2404,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2425,8 +2425,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2437,8 +2437,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_content_right',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Content Right', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Content Right', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable content right of menu.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
@@ -2458,8 +2458,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Content Right Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the content right of menu.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Content Right Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the content right of menu.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -2470,15 +2470,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_canvas',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Menu Canvas', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Menu Canvas', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable menu canvas.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'honepage_menu_canvas_button_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Canvas Button color', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -2494,8 +2494,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'    => false,
 			'bottom'     => false,
-			'title'    => __( 'Menu Canvas Button Space', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Button Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu canvas.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '15px',
 				'margin-right' => '0'
@@ -2507,21 +2507,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'honepage_header_stick_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Stick Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header stick.', 'doyle' )
+			'title' => esc_html__( 'Header Stick Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header stick.', 'doyle' )
 		),
 		array(
 			'id'       => 'honepage_header_stick',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Sticky', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable sticky header.', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Sticky', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable sticky header.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'honepage_header_stick_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Stick Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header stick.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2539,8 +2539,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Stick Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Header Stick Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header stick.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -2554,8 +2554,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'honepage_logo_stick',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Stick', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Logo Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header stick.', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -2564,8 +2564,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'honepage_logo_stick_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Stick Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo stick.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Stick Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo stick.', 'doyle' ),
 			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
@@ -2580,8 +2580,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'top'      => false,
 			'bottom'   => false,
-			'title'    => __( 'Menu Space Stick', 'doyle' ),
-			'subtitle' => __( 'Control the left/right margin the menu stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Space Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the left/right margin the menu stick.', 'doyle' ),
 			'default'  => array(
 				'margin-left'    => '0px',
 				'margin-right' => '10px'
@@ -2592,8 +2592,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_first_level_font_stick',
 			'type'     => 'typography',
-			'title'    => __( 'Menu First Level Typography Stick', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Typography Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level of the header stick.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2612,8 +2612,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_first_level_color_stick',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu First Level Color Stick', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu first level of the header stick.', 'doyle' ),
+			'title'    => esc_html__( 'Menu First Level Color Stick', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level of the header stick.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2626,21 +2626,21 @@ Redux::setSection( $opt_name, array(
 			'id'    => 'honepage_header_mobile_info',
 			'type'  => 'info',
 			'style' => 'info',
-			'title' => __( 'Header Mobile Settings', 'doyle' ),
-			'desc'  => __( 'This is the options you can change for header mobile.', 'doyle' )
+			'title' => esc_html__( 'Header Mobile Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header mobile.', 'doyle' )
 		),
 		array(
 			'id'       => 'honepage_mobile_header_top',
 			'type'     => 'switch',
-			'title'    => __( 'Enable Header Top Mobile', 'doyle' ),
-			'subtitle' => __( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
+			'title'    => esc_html__( 'Enable Header Top Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable header top.(Please enable and config in header desktop before enable)', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'honepage_mobile_header_bottom_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2655,8 +2655,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_mobile_toggle_button',
 			'type'     => 'link_color',
-			'title'    => __( 'Toggle Menu Button', 'doyle' ),
-			'subtitle' => __( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
 			'active'   => false,
 			'default'  => array(
 				'regular' => '#171721',
@@ -2667,8 +2667,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'honepage_logo_mobile',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo Mobile', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header mobile', 'doyle' ),
+			'title'    => esc_html__( 'Logo Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header mobile', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			)
@@ -2676,8 +2676,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'honepage_logo_mobile_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Mobile Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo mobile.', 'doyle' ),
+			'title'         => esc_html__( 'Logo Mobile Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo mobile.', 'doyle' ),
 			'default'       => 30,
 			'min'           => 20,
 			'step'          => 1,
@@ -2691,8 +2691,8 @@ Redux::setSection( $opt_name, array(
 			'mode'     => 'margin',
 			'right'    => false,
 			'left'     => false,
-			'title'    => __( 'Header Mobile Space', 'doyle' ),
-			'subtitle' => __( 'Control the top/bottom margin the logo mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Header Mobile Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom margin the logo mobile.', 'doyle' ),
 			'default'  => array(
 				'margin-top'    => '10px',
 				'margin-bottom' => '10px'
@@ -2702,8 +2702,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_mobile_menu_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Mobile Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu mobile.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu mobile.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2718,8 +2718,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_mobile_first_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile First Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile first level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-transform'   => true,
@@ -2737,8 +2737,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_mobile_first_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile First Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile first level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile first level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2749,8 +2749,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_mobile_sub_level_font',
 			'type'     => 'typography',
-			'title'    => __( 'Menu Mobile Sub Level Typography', 'doyle' ),
-			'subtitle' => __( 'These settings control the typography menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile sub level.', 'doyle' ),
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
@@ -2767,8 +2767,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage_menu_mobile_sub_level_color',
 			'type'     => 'link_color',
-			'title'    => __( 'Menu Mobile Sub Level Color', 'doyle' ),
-			'subtitle' => __( 'Controls the color menu mobile sub level.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Mobile Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile sub level.', 'doyle' ),
 			'default'  => array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
@@ -2781,15 +2781,15 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Header One Page Scroll', 'doyle' ),
+	'title'            => esc_html__( 'Header One Page Scroll', 'doyle' ),
 	'id'               => 'bt_header_onepage_scroll',
 	'subsection'       => true,
 	'fields'           => array(
 		array(
 			'id'       => 'header_layout_onepagescroll',
 			'type'     => 'image_select',
-			'title'    => __( 'Layout Selected', 'doyle' ),
-			'subtitle' => __( 'This is the options you can change for header one page style', 'doyle' ),
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header one page style', 'doyle' ),
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout one page',
@@ -2801,15 +2801,15 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage1_fullwidth',
 			'type'     => 'switch',
-			'title'    => __( 'Full Width (100%)', 'doyle' ),
-			'subtitle' => __( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
+			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% width according to the window size. Turn off to follow site width.', 'doyle' ),
 			'default'  => false
 		),
 		array(
 			'id'       => 'honepage1_bg',
 			'type'     => 'background',
-			'title'    => __( 'Header Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of header.', 'doyle' ),
+			'title'    => esc_html__( 'Header Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2826,8 +2826,8 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
-			'title'    => __( 'Header Padding Space', 'doyle' ),
-			'subtitle' => __( 'Control the padding the header.', 'doyle' ),
+			'title'    => esc_html__( 'Header Padding Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding the header.', 'doyle' ),
 			'default'  => array(
 				'padding-top'    	=> '0px',
 				'padding-right'    	=> '0px',
@@ -2840,8 +2840,8 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'honepage1_logo',
 			'type'     => 'media',
 			'url'      => true,
-			'title'    => __( 'Logo', 'doyle' ),
-			'subtitle' => __( 'Upload the logo of header', 'doyle' ),
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
 			'default'  => array( 
 				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
 			),
@@ -2849,9 +2849,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'            => 'honepage1_logo_height',
 			'type'          => 'slider',
-			'title'         => __( 'Logo Height', 'doyle' ),
-			'subtitle'      => __( 'Controls the height of the logo.', 'doyle' ),
-			'default'       => 50,
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
 			'min'           => 30,
 			'step'          => 1,
 			'max'           => 150,
@@ -2860,8 +2860,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'honepage1_menu_assign',
 			'type'     => 'select',
-			'title'    => __( 'Menu Assign', 'doyle' ),
-			'subtitle' => __( 'Select menu assing of header.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
 			'options'  => $menu_slug_opt,
 			'default'  => 'auto'
 		),
@@ -2880,7 +2880,7 @@ Redux::setSection( $opt_name, array(
 	)
 ) );
 Redux::setSection( $opt_name, array(
-	'title'            => __( 'Menu Canvas', 'doyle' ),
+	'title'            => esc_html__( 'Menu Canvas', 'doyle' ),
 	'id'               => 'bt_menu_canvas',
 	'subsection'       => true,
 	'fields'           => array(
@@ -2897,8 +2897,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'menu_canvas_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Canvas Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu canvas.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu canvas.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,
@@ -2913,8 +2913,8 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'menu_canvas_sidebar_bg',
 			'type'     => 'background',
-			'title'    => __( 'Menu Canvas Sidebar Background', 'doyle' ),
-			'subtitle' => __( 'Control background color of menu canvas sidebar.', 'doyle' ),
+			'title'    => esc_html__( 'Menu Canvas Sidebar Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu canvas sidebar.', 'doyle' ),
 			'background-repeat' => false,
 			'background-attachment' => false,
 			'background-position' => false,

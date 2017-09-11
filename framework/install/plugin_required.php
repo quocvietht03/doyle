@@ -33,7 +33,7 @@
  */
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+add_action( 'tgmpa_register', 'doyle_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -52,7 +52,7 @@ add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function my_theme_register_required_plugins() {
+function doyle_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -61,55 +61,55 @@ function my_theme_register_required_plugins() {
 	
 	$plugins = array(
 		array(
-			'name'      => 'Redux Framework',
+			'name'      => esc_html__('Redux Framework', 'doyle'),
 			'slug'      => 'redux-framework',
 			'required'  => true,
 		),
 		array(
-			'name'      => 'Unyson',
+			'name'      => esc_html__('Unyson', 'doyle'),
 			'slug'      => 'unyson',
 			'required'  => true,
 		),
 		array(
-			'name'      => 'Custom Post Type UI',
+			'name'      => esc_html__('Custom Post Type UI', 'doyle'),
 			'slug'      => 'custom-post-type-ui',
 			'required'  => true,
 		),
 		array(
-			'name'         => 'Visual Composer',
+			'name'         => esc_html__('Visual Composer', 'doyle'),
 			'slug'         => 'js_composer',
 			'source'       => $root.'visual-composer.zip',
 			'required'     => true,
 		),
 		array(
-			'name'         => 'Slider Revolution',
+			'name'         => esc_html__('Slider Revolution', 'doyle'),
 			'slug'         => 'revslider',
 			'source'       => $root.'revslider.zip',
 			'required'     => true,
 		),
 		array(
-			'name'         => 'Essential Grid',
+			'name'         => esc_html__('Essential Grid', 'doyle'),
 			'slug'         => 'essential-grid',
 			'source'       => $root.'essential-grid.zip',
 			'required'     => false,
 		),
 		array(
-			'name'      => 'Contact Form 7',
+			'name'      => esc_html__('Contact Form 7', 'doyle'),
 			'slug'      => 'contact-form-7',
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Instagram Feed',
+			'name'      => esc_html__('Instagram Feed', 'doyle'),
 			'slug'      => 'instagram-feed',
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Newsletter',
+			'name'      => esc_html__('Newsletter', 'doyle'),
 			'slug'      => 'newsletter',
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Woocommerce',
+			'name'      => esc_html__('Woocommerce', 'doyle'),
 			'slug'      => 'woocommerce',
 			'required'  => false,
 		),
@@ -136,83 +136,7 @@ function my_theme_register_required_plugins() {
 		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
-
-		/*
-		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'theme-slug' ),
-			'menu_title'                      => __( 'Install Plugins', 'theme-slug' ),
-			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'theme-slug' ),
-			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'theme-slug' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'theme-slug' ),
-			'notice_can_install_required'     => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'This theme requires the following plugin: %1$s.',
-				'This theme requires the following plugins: %1$s.',
-				'theme-slug'
-			),
-			'notice_can_install_recommended'  => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'This theme recommends the following plugin: %1$s.',
-				'This theme recommends the following plugins: %1$s.',
-				'theme-slug'
-			),
-			'notice_ask_to_update'            => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
-				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'theme-slug'
-			),
-			'notice_ask_to_update_maybe'      => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'There is an update available for: %1$s.',
-				'There are updates available for the following plugins: %1$s.',
-				'theme-slug'
-			),
-			'notice_can_activate_required'    => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following required plugin is currently inactive: %1$s.',
-				'The following required plugins are currently inactive: %1$s.',
-				'theme-slug'
-			),
-			'notice_can_activate_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). * /
-				'The following recommended plugin is currently inactive: %1$s.',
-				'The following recommended plugins are currently inactive: %1$s.',
-				'theme-slug'
-			),
-			'install_link'                    => _n_noop(
-				'Begin installing plugin',
-				'Begin installing plugins',
-				'theme-slug'
-			),
-			'update_link' 					  => _n_noop(
-				'Begin updating plugin',
-				'Begin updating plugins',
-				'theme-slug'
-			),
-			'activate_link'                   => _n_noop(
-				'Begin activating plugin',
-				'Begin activating plugins',
-				'theme-slug'
-			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'theme-slug' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'theme-slug' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'theme-slug' ),
-			/* translators: 1: plugin name. * /
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'theme-slug' ),
-			/* translators: 1: plugin name. * /
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'theme-slug' ),
-			/* translators: 1: dashboard link. * /
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'theme-slug' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'theme-slug' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'theme-slug' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'theme-slug' ),
-
-			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
-		),
-		*/
+		
 	);
 
 	tgmpa( $plugins, $config );

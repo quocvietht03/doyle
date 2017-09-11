@@ -72,8 +72,8 @@ $options = array(
 				'type' => 'tab',
 				'options' => array(
 					'gallery_images' => array(
-						'label' => __( 'Add Images', 'doyle' ),
-						'desc'  => __( 'Upload gallery images.', 'doyle' ),
+						'label' => esc_html__( 'Add Images', 'doyle' ),
+						'desc'  => esc_html__( 'Upload gallery images.', 'doyle' ),
 						'type'  => 'multi-upload',
 					),
 				),
@@ -83,18 +83,18 @@ $options = array(
 				'type' => 'tab',
 				'options' => array(
 					'video_url' => array(
-						'label' => __( 'Video Url', 'doyle' ),
-						'desc'  => __( 'Please video url(vimeo/youtube/mp4). Ex: https://www.youtube.com/embed/YE7VzlLtp-4?rel=0', 'doyle' ),
+						'label' => esc_html__( 'Video Url', 'doyle' ),
+						'desc'  => esc_html__( 'Please video url(vimeo/youtube/mp4). Ex: https://www.youtube.com/embed/YE7VzlLtp-4?rel=0', 'doyle' ),
 						'type'  => 'text',
 					),
 					'video_poster' => array(
-						'label' => __( 'Add Image', 'doyle' ),
-						'desc'  => __( 'Upload video poster image.', 'doyle' ),
+						'label' => esc_html__( 'Add Image', 'doyle' ),
+						'desc'  => esc_html__( 'Upload video poster image.', 'doyle' ),
 						'type'  => 'upload',
 					),
 					'video_caption' => array(
-						'label' => __( 'Video Caption', 'doyle' ),
-						'desc'  => __( 'Please video caption.', 'doyle' ),
+						'label' => esc_html__( 'Video Caption', 'doyle' ),
+						'desc'  => esc_html__( 'Please video caption.', 'doyle' ),
 						'type'  => 'text',
 					),
 				),
@@ -157,8 +157,8 @@ $options = array(
 				'type' => 'tab',
 				'options' => array(
 					'quote_text' => array(
-						'label' => __( 'Quote Text', 'doyle' ),
-						'desc'  => __( 'Please enter quote.', 'doyle' ),
+						'label' => esc_html__( 'Quote Text', 'doyle' ),
+						'desc'  => esc_html__( 'Please enter quote.', 'doyle' ),
 						'type'  => 'textarea',
 					),
 				),
@@ -168,8 +168,8 @@ $options = array(
 				'type' => 'tab',
 				'options' => array(
 					'url' => array(
-						'label' => __( 'Url', 'doyle' ),
-						'desc'  => __( 'Please enter url.', 'doyle' ),
+						'label' => esc_html__( 'Url', 'doyle' ),
+						'desc'  => esc_html__( 'Please enter url.', 'doyle' ),
 						'type'  => 'text',
 					),
 				),

@@ -4,19 +4,19 @@ class doyle_Widget_Mini_Cart extends WC_Widget {
 	
 	function __construct() {
 		$this->widget_cssclass    = 'woocommerce doyle_widget_mini_cart';
-		$this->widget_description = __( "Display the user's Cart in the sidebar.", 'doyle' );
+		$this->widget_description = esc_html__( "Display the user's Cart in the sidebar.", 'doyle' );
 		$this->widget_id          = 'doyle_widget_mini_cart';
-		$this->widget_name        = __( 'Mini Cart', 'doyle' );
+		$this->widget_name        = esc_html__( 'Mini Cart', 'doyle' );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'std'   => __( 'Cart', 'doyle' ),
-				'label' => __( 'Title', 'doyle' )
+				'std'   => esc_html__( 'Cart', 'doyle' ),
+				'label' => esc_html__( 'Title', 'doyle' )
 			),
 			'hide_if_empty' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Hide if cart is empty', 'doyle' )
+				'label' => esc_html__( 'Hide if cart is empty', 'doyle' )
 			)
 		);
 

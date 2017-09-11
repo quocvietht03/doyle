@@ -189,7 +189,7 @@ vc_map(array(
 			'heading' => __('Element ID', 'doyle'),
 			'param_name' => 'el_id',
 			'value' => '',
-			'description' => __( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
+			'description' => esc_html__( 'Enter element ID (Note: make sure it is unique and valid).', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',
@@ -197,7 +197,7 @@ vc_map(array(
 			'heading' => __('Extra Class', 'doyle'),
 			'param_name' => 'el_class',
 			'value' => '',
-			'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
+			'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'doyle' )
 		),
         array(
             "type" => "checkbox",
@@ -339,9 +339,9 @@ vc_map(array(
 		
 		array(
 			'type' => 'css_editor',
-			'heading' => __( 'CSS box', 'doyle' ),
+			'heading' => esc_html__( 'CSS box', 'doyle' ),
 			'param_name' => 'css',
-			'group' => __( 'Design Options', 'doyle' ),
+			'group' => esc_html__( 'Design Options', 'doyle' ),
 		)
 	)
 ));
