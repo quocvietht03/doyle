@@ -50,7 +50,7 @@
 								<?php
 									foreach($gallery_images as $key => $gallery_image){
 										$cl_active = ($key == 0) ? 'active' : '';
-										echo '<img class="item bt-gallery '.$cl_active.'" src="'.esc_url($gallery_image['url']).'" alt="Thumbnail"/>';
+										echo '<img class="item bt-gallery '.$cl_active.'" src="'.esc_url($gallery_image['url']).'" alt="'.esc_html__('Thumbnail', 'doyle').'"/>';
 									}
 								?>
 							  </div>

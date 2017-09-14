@@ -7,7 +7,7 @@ Template Name: 404 Template
 	<div class="main-content">
 		<div class="bt-error404-wrap">
 			<div class="bt-thumb">
-				<img src="<?php echo get_template_directory_uri().'/assets/images/404.jpg'; ?>" alt="Error 404"/>
+				<img src="<?php echo get_template_directory_uri().'/assets/images/404.jpg'; ?>" alt="<?php esc_html_e('Error 404', 'doyle') ?>"/>
 			</div>
 			<div class="bt-content">
 				<h1><?php echo esc_html__('Woops, looks like','doyle').'<br class="hidden-xs">'.esc_html__('this page doesn\'t exist', 'doyle'); ?></h1>

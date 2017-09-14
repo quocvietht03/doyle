@@ -51,7 +51,7 @@
 							</div>
 						<?php
 						if(!empty($video_poster)){
-							echo '<img src="'.esc_url($video_poster['url']).'" alt="Poster Image"/>';
+							echo '<img src="'.esc_url($video_poster['url']).'" alt="'.esc_html__('Poster Image', 'doyle').'"/>';
 						}else{
 							if($post_image_size){
 								$thumb_size = (!empty($post_image_size))?$post_image_size:'full'; 

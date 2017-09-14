@@ -58,7 +58,7 @@ if(!empty($social)){
 									foreach($project_gallery as $attachment){
 										echo '<div class="'.esc_attr($gallery_column).'" style="'.esc_attr($gallery_space_style).'">
 												<div class="bt-item">
-													<img src="'.esc_url($attachment['url']).'" alt="Thumbnail"/>
+													<img src="'.esc_url($attachment['url']).'" alt="'.esc_html__('Thumbnail', 'doyle').'"/>
 												</div>
 											</div>';
 									}

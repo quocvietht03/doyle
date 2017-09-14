@@ -170,7 +170,7 @@ if (!function_exists('doyle_logo')) {
 		if(!$url){
 			$url = get_template_directory_uri().'/assets/images/logo-v1.png';
 		}
-		echo '<a href="'.home_url('/').'"><img class="logo" style="height: '.esc_attr($height).'px; width: auto;" src="'.esc_url($url).'" alt="Logo"/></a>';
+		echo '<a href="'.home_url('/').'"><img class="logo" style="height: '.esc_attr($height).'px; width: auto;" src="'.esc_url($url).'" alt="'.esc_html__('Logo', 'doyle').'"/></a>';
 	}
 }
 

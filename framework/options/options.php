@@ -22,12 +22,12 @@
      */
 
     $sampleHTML = '';
-    if ( file_exists( dirname( __FILE__ ) . '/info-html.html' ) ) {
+    if ( file_exists( get_template_directory() . 'framework/options/info-html.html' ) ) {
         Redux_Functions::initWpFilesystem();
 
         global $wp_filesystem;
 
-        $sampleHTML = $wp_filesystem->get_contents( dirname( __FILE__ ) . '/info-html.html' );
+        $sampleHTML = $wp_filesystem->get_contents( get_template_directory() . 'framework/options/info-html.html' );
     }
 
     // Background Patterns Reader
@@ -297,7 +297,7 @@
 	require_once get_template_directory().'/framework/options/customcssjs.php';
 	
 
-    if ( file_exists( dirname( __FILE__ ) . '/../README.md' ) ) {
+    if ( file_exists( get_template_directory() . 'framework/options/../README.md' ) ) {
         $section = array(
             'icon'   => 'el el-list-alt',
             'title'  => esc_html__( 'Documentation', 'doyle' ),
@@ -306,7 +306,7 @@
                     'id'       => '17',
                     'type'     => 'raw',
                     'markdown' => true,
-                    'content_path' => dirname( __FILE__ ) . '/../README.md', // FULL PATH, not relative please
+                    'content_path' => get_template_directory() . 'framework/options/../README.md', // FULL PATH, not relative please
                     //'content' => 'Raw content here',
                 ),
             ),

@@ -89,7 +89,7 @@ class WPBakeryShortCode_bt_fancy_box extends WPBakeryShortCode {
 		}else{
 			$icon_size_style = $icon_font_size?'width: '.$icon_font_size.'; height: auto;':'';
 			$attachment_image = wp_get_attachment_image_src($image_icon, 'full', false);
-			$icon = $attachment_image[0]?'<img src="'.esc_url($attachment_image[0]).'" style="'.esc_attr($icon_size_style).'" alt=""/>':'';
+			$icon = $attachment_image[0]?'<img src="'.esc_url($attachment_image[0]).'" style="'.esc_attr($icon_size_style).'" alt="'.esc_html__('Thumbnail', 'doyle').'"/>':'';
 		}
 		
 		/* Content */
