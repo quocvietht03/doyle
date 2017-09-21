@@ -1381,3 +1381,38 @@
 		}
 	}
 }
+
+.page-template-page-headervertical{
+	.bt-header-vertical{
+		position: fixed;
+		width: 320px;
+		float: left;
+		border-right: 1px solid fadeout(#000000, 95);
+		.bt-header-inner{
+			height: 100vh;
+			padding: 60px;
+		}
+	}
+	.bt-main-content, .bt-footer{
+		width: ~"calc(100% - 320px)";
+		float: right;
+		overflow: hidden;
+	}
+	
+	@media(max-width: 1490px){
+		.container {
+			width: 970px;
+		}
+	}
+	@media(max-width: 1290px){
+		.container {
+			width: 750px;
+		}
+	}
+	@media(max-width: 1070px){
+		.container {
+			width: 100%;
+		}
+	}
+}
+

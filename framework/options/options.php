@@ -295,7 +295,7 @@
 	require_once get_template_directory().'/framework/options/team.php';
 	require_once get_template_directory().'/framework/options/shop.php';
 	require_once get_template_directory().'/framework/options/customcssjs.php';
-	
+	require_once get_template_directory().'/framework/options/requirement.php';
 
     if ( file_exists( get_template_directory() . 'framework/options/../README.md' ) ) {
         $section = array(

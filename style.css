@@ -3,7 +3,7 @@ Theme Name: Doyle
 Theme URI: http://theme.bearsthemes.com/wordpress/doyle
 Author: bearsthemes
 Author URI: http://bearsthemes.com
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -7829,6 +7829,30 @@ img.alignright { margin:5px 0 5px 20px; }
   width:24px;
   height:24px;
   border-color:#0a6edd;
+}
+.page-template-page-headervertical .bt-header-vertical {
+  position:fixed;
+  width:320px;
+  float:left;
+  border-right:1px solid rgba(0,0,0,0.05);
+}
+.page-template-page-headervertical .bt-header-vertical .bt-header-inner {
+  height:100vh;
+  padding:60px;
+}
+.page-template-page-headervertical .bt-main-content, .page-template-page-headervertical .bt-footer {
+  width:calc(100% - 320px);
+  float:right;
+  overflow:hidden;
+}
+@media (max-width: 1490px) {
+  .page-template-page-headervertical .container { width:970px; }
+}
+@media (max-width: 1290px) {
+  .page-template-page-headervertical .container { width:750px; }
+}
+@media (max-width: 1070px) {
+  .page-template-page-headervertical .container { width:100%; }
 }
 .bt-titlebar {
   position:relative;
