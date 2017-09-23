@@ -61,7 +61,9 @@ $options = array(
 							'1' => __('Header 1', 'doyle'),
 							'2' => __('Header 2', 'doyle'),
 							'3' => __('Header 3', 'doyle'),
-							'onepage' => __('Header One Page', 'doyle')
+							'onepage' => __('Header One Page', 'doyle'),
+							'onepagescroll' => __('Header One Page Scroll', 'doyle'),
+							'vertical' => __('Header Vertical', 'doyle')
 						)
 					),
 					'header_fullwidth' => array(

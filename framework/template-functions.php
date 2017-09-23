@@ -88,8 +88,14 @@ if ( ! function_exists( 'doyle_wp_title' ) ) {
 if (!function_exists('doyle_body_classes')) {
 	function doyle_body_classes($classes) {
 		global $doyle_options;
+		$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
 		
 		$classes[] = (isset($doyle_options["site_layout"])&&$doyle_options["site_layout"])?$doyle_options["site_layout"]:'wide';
+		
+		$header_layout = (isset($doyle_options["header_layout"])&&$doyle_options["header_layout"])?$doyle_options["header_layout"]:'1';
+		$page_header_layout = (isset($page_options['header_layout'])&&$page_options['header_layout'])?$page_options['header_layout']:'default';
+		$classes[] = $page_header_layout=='default'?'header-'.$header_layout:'header-'.$page_header_layout;
+		
 		return $classes;
 	}
 	add_filter('body_class', 'doyle_body_classes');
@@ -103,7 +109,8 @@ function doyle_Header() {
     $header_layout =isset($doyle_options["header_layout"]) ? $doyle_options["header_layout"] : '1';
 	$page_header_layout = (isset($page_options['header_layout'])&&$page_options['header_layout'])?$page_options['header_layout']:'default';
 	$header_layout = $page_header_layout=='default'?$header_layout:$page_header_layout;
-    switch ($header_layout) {
+    
+	switch ($header_layout) {
 		case '1':
             get_template_part('framework/headers/header', 'v1');
             break;
@@ -115,6 +122,12 @@ function doyle_Header() {
             break;
 		case 'onepage':
             get_template_part('framework/headers/header', 'onepage');
+            break;
+		case 'onepagescroll':
+            get_template_part('framework/headers/header', 'onepagescroll');
+            break;
+		case 'vertical':
+            get_template_part('framework/headers/header', 'vertical');
             break;
 		default :
 			get_template_part('framework/headers/header', 'v1');

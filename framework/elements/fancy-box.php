@@ -115,6 +115,26 @@ class WPBakeryShortCode_bt_fancy_box extends WPBakeryShortCode {
 			$title_attributes[] = 'style="' . esc_attr( implode(' ', $style_title) ) . '"';
 		}
 		
+		$title_link = isset($atts['title_link'])?vc_build_link( $atts['title_link'] ):array();
+		$title_link_attributes = array();
+		if(!empty($title_link)){
+			if ( ! empty( $title_link['url'] ) ) {
+				$title_link_attributes[] = 'href="' . esc_attr( $title_link['url'] ) . '"';
+			}
+			
+			if ( ! empty( $title_link['target'] ) ) {
+				$title_link_attributes[] = 'target="' . esc_attr( $title_link['target'] ) . '"';
+			}
+			
+			if ( ! empty( $title_link['rel'] ) ) {
+				$title_link_attributes[] = 'rel="' . esc_attr( $title_link['rel'] ) . '"';
+			}
+			
+			if ( ! empty( $title_link['title'] ) ) {
+				$title_link_attributes[] = 'title ="'.esc_attr($title_link['title']).'"';
+			}
+		}
+		
 		/* Description */
 		$style_desc = array();
 		if($desc_font_size) $style_desc[] = 'font-size: '.$desc_font_size.';';
@@ -165,9 +185,15 @@ class WPBakeryShortCode_bt_fancy_box extends WPBakeryShortCode {
 			<?php if($icon) echo '<div class="bt-icon" '.implode(' ', $icon_attributes).'>'.$icon.'</div>'; ?>
 			<div class="bt-content" <?php echo implode(' ', $content_attributes); ?>>
 				<?php 
-					if($title) echo '<h3 class="bt-title" '.implode(' ', $title_attributes).'>'.$title.'</h3>'; 
+					if($title){
+						if(!empty($title_link_attributes)){
+							echo '<h3 class="bt-title"><a '.implode(' ', $title_attributes).' '.implode(' ', $title_link_attributes).'>'.$title.'</a></h3>';
+						}else{
+							echo '<h3 class="bt-title" '.implode(' ', $title_attributes).'>'.$title.'</h3>';
+						}
+					}
 					if($content) echo '<div class="bt-desc" '.implode(' ', $desc_attributes).'>'.$content.'</div>';
-					if($link_text) echo '<a class="bt-readmore" '.implode(' ', $link_attributes).'>'.$link_text.'</a>'
+					if($link_text) echo '<a class="bt-readmore" '.implode(' ', $link_attributes).'>'.$link_text.'</a>';
 					
 				?>
 			</div>
@@ -398,6 +424,13 @@ vc_map(array(
 			'group' => __('Title', 'doyle'),
 			'admin_label' => true,
 			'description' => __('Please, enter title in this element.', 'doyle')
+		),
+		array(
+			'type' => 'vc_link',
+			'heading' => esc_html__( 'URL (Link)', 'doyle' ),
+			'param_name' => 'title_link',
+			'group' => __('Title', 'doyle'),
+			'description' => esc_html__( 'Add custom link of the title in this element.', 'doyle' )
 		),
 		array(
 			'type' => 'textfield',

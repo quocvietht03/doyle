@@ -97,6 +97,21 @@ Redux::setSection( $opt_name, array(
 			'default'  => false,
 		),
 		array(
+			'id'       => 'nice_scroll_bar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Nice Scroll Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Use nice scroll bar.', 'doyle' ),
+			'default'  => false,
+		),
+		array(
+			'id'=>'nice_scroll_bar_element',
+			'type' => 'textarea',
+			'title' => __('Nice Scroll Bar Elements', 'doyle'), 
+			'subtitle' => __('Add the html tags, element ID or class as you need. Ex: body,a,.class-name,#tag-id,...', 'doyle'),
+			'default' => 'html',
+			'required' 		=> array('nice_scroll_bar' , '=', '1')
+		),
+		array(
 			'id'       => 'back_to_top',
 			'type'     => 'switch',
 			'title'    => esc_html__( 'Back To Top', 'doyle' ),

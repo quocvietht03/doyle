@@ -53,7 +53,12 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		/* Smoth Scroll */
 		if(isset($doyle_options['smooth_scroll'])&&$doyle_options['smooth_scroll']){
-			wp_enqueue_script( 'doyle-smoothScroll', get_template_directory_uri().'/assets/js/SmoothScroll.js', array('jquery'), '', true);
+			wp_enqueue_script( 'doyle-SmoothScroll', get_template_directory_uri().'/assets/js/SmoothScroll.js', array('jquery'), '', true);
+		}
+		
+		/* Nice Scroll Bar */
+		if(isset($doyle_options['nice_scroll_bar'])&&$doyle_options['nice_scroll_bar']){
+			wp_enqueue_script( 'doyle-NiceScrollBar', get_template_directory_uri().'/assets/js/NiceScrollBar.js', array('jquery'), '', true);
 		}
 		
 		/* Site Loading */
@@ -145,11 +150,19 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		// Load options to script
 		$mobile_width = (isset($doyle_options['mobile_width'])&&$doyle_options['mobile_width'])?$doyle_options['mobile_width']: 991;
+		$hvertical1_width = (isset($doyle_options['hvertical1_width'])&&$doyle_options['hvertical1_width'])?$doyle_options['hvertical1_width']: 320;
+		$hvertical1_menu_height = (isset($doyle_options['hvertical1_menu_height'])&&$doyle_options['hvertical1_menu_height'])?$doyle_options['hvertical1_menu_height']: 570;
+		$nice_scroll_bar = (isset($doyle_options['nice_scroll_bar'])&&$doyle_options['nice_scroll_bar'])?$doyle_options['nice_scroll_bar']: '';
+		$nice_scroll_bar_element = (isset($doyle_options['nice_scroll_bar_element'])&&$doyle_options['nice_scroll_bar_element'])?$doyle_options['nice_scroll_bar_element']: '';
 		
 		wp_register_script( 'doyle-custom-script', get_template_directory_uri().'/assets/js/custom-script.js' );
 		$js_options = array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'enable_mobile' => $mobile_width
+			'enable_mobile' => $mobile_width,
+			'hvertical1_width' => $hvertical1_width,
+			'hvertical1_menu_height' => $hvertical1_menu_height,
+			'nice_scroll_bar' => $nice_scroll_bar,
+			'nice_scroll_bar_element' => $nice_scroll_bar_element
 		);
 		wp_localize_script( 'doyle-custom-script', 'option_ob', $js_options );
 		wp_enqueue_script( 'doyle-custom-script' );

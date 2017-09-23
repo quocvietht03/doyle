@@ -57,6 +57,10 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 	$honepage_menu_mobile_first_level_color_active = (isset($doyle_options['honepage_menu_mobile_first_level_color']['active'])&&$doyle_options['honepage_menu_mobile_first_level_color']['active'])?$doyle_options['honepage_menu_mobile_first_level_color']['active']: '#0a6edd';
 	$honepage_menu_mobile_sub_level_color_active = (isset($doyle_options['honepage_menu_mobile_sub_level_color']['active'])&&$doyle_options['honepage_menu_mobile_sub_level_color']['active'])?$doyle_options['honepage_menu_mobile_sub_level_color']['active']: '#0a6edd';
 	
+	$hvertical1_menu_first_level_color = (isset($doyle_options['hvertical1_menu_first_level_color']['active'])&&$doyle_options['hvertical1_menu_first_level_color']['active'])?$doyle_options['hvertical1_menu_first_level_color']['active']: '#0a6edd';
+	$hvertical1_menu_sub_level_color = (isset($doyle_options['hvertical1_menu_sub_level_color']['active'])&&$doyle_options['hvertical1_menu_sub_level_color']['active'])?$doyle_options['hvertical1_menu_sub_level_color']['active']: '#0a6edd';
+	$hvertical1_mobile_toggle_button_default = (isset($doyle_options['hvertical1_mobile_toggle_button']['regular'])&&$doyle_options['hvertical1_mobile_toggle_button']['regular'])?$doyle_options['hvertical1_mobile_toggle_button']['regular']: '#171721';
+	$hvertical1_mobile_toggle_button_hover = (isset($doyle_options['hvertical1_mobile_toggle_button']['hover'])&&$doyle_options['hvertical1_mobile_toggle_button']['hover'])?$doyle_options['hvertical1_mobile_toggle_button']['hover']: '#0a6edd';
 	
     $variables = array(
 		"site-width" => $site_width,
@@ -104,6 +108,11 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 		
 		"honepage-menu-mobile-first-level-color-active" => $honepage_menu_mobile_first_level_color_active,
 		"honepage-menu-mobile-sub-level-color-active" => $honepage_menu_mobile_sub_level_color_active,
+		
+		"hvertical1-menu-first-level-color" => $hvertical1_menu_first_level_color,
+		"hvertical1-menu-sub-level-color" => $hvertical1_menu_sub_level_color,
+		"hvertical1-mobile-toggle-button-default" => $hvertical1_mobile_toggle_button_default,
+		"hvertical1-mobile-toggle-button-hover" => $hvertical1_mobile_toggle_button_hover,
 		
     );
 	

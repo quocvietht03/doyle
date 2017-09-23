@@ -23,9 +23,17 @@ Redux::setSection( $opt_name, array(
 					'alt' => 'Header layout 3',
 					'img' => get_template_directory_uri() . '/assets/images/headers/header-v3.jpg'
 				),
-				'4' => array(
+				'onepage' => array(
 					'alt' => 'Header layout onpage',
 					'img' => get_template_directory_uri() . '/assets/images/headers/header-onepage.jpg'
+				),
+				'onepagescroll' => array(
+					'alt' => 'Header layout onepagescroll',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-onepagescroll.jpg'
+				),
+				'vertical' => array(
+					'alt' => 'Header layout vertical',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
 				)
 			),
 			'default'  => '1'
@@ -2875,10 +2883,228 @@ Redux::setSection( $opt_name, array(
 			'default'  => '',
 		),
 		
-		
+	)
+) );
+
+Redux::setSection( $opt_name, array(
+	'title'            => esc_html__( 'Header Vertical', 'doyle' ),
+	'id'               => 'bt_header_vertical',
+	'subsection'       => true,
+	'fields'           => array(
+		array(
+			'id'       => 'header_layout_vertical',
+			'type'     => 'image_select',
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header one page style', 'doyle' ),
+			'options'  => array(
+				'1' => array(
+					'alt' => 'Header layout vertical',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
+				)
+			),
+			'default'  => '1'
+		),
+		array(
+			'id'            => 'hvertical1_width',
+			'type'          => 'slider',
+			'title'         => esc_html__( 'Header Width', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the width of the header.', 'doyle' ),
+			'default'       => 320,
+			'min'           => 240,
+			'step'          => 1,
+			'max'           => 450,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'hvertical1_bg',
+			'type'     => 'background',
+			'title'    => esc_html__( 'Header Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header.', 'doyle' ),
+			'background-repeat' => false,
+			'background-attachment' => false,
+			'background-position' => false,
+			'background-image' => false,
+			'background-size' => false,
+			'preview' => false,
+			'default'  => array(
+				'background-color' => '#FFFFFF',
+			),
+			'output'    => array('.header-vertical .bt-header-verticalv1'),
+		),
+		array(
+			'id'       => 'hvertical1_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'title'    => esc_html__( 'Header Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the padding of the header.', 'doyle' ),
+			'default'  => array(
+				'padding-top'    => '60px',
+				'padding-right'    => '50px',
+				'padding-bottom'    => '60px',
+				'padding-left' => '50px'
+			),
+			'output'    => array('.bt-header-verticalv1 .bt-header-inner')
+		),
+		array(
+			'id'       => 'hvertical1_logo',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
+			'default'  => array( 
+				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
+			),
+		),
+		array(
+			'id'            => 'hvertical1_logo_height',
+			'type'          => 'slider',
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
+			'min'           => 30,
+			'step'          => 1,
+			'max'           => 150,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'hvertical1_logo_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'margin',
+			'top'      => false,
+			'right'    => false,
+			'left'	   => false,
+			'title'    => esc_html__( 'Logo Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the margin-bottom of the logo.', 'doyle' ),
+			'default'  => array(
+				'margin-bottom' => '40px'
+			),
+			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-logo')
+		),
+		array(
+			'id'       => 'hvertical1_menu_assign',
+			'type'     => 'select',
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
+		),
+		array(
+			'id'            => 'hvertical1_menu_height',
+			'type'          => 'slider',
+			'title'         => esc_html__( 'Menu Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the menu on screen 1920x900.', 'doyle' ),
+			'default'       => 570,
+			'min'           => 120,
+			'step'          => 10,
+			'max'           => 1200,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'hvertical1_menu_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'margin',
+			'top'      => false,
+			'right'    => false,
+			'left'	   => false,
+			'title'    => esc_html__( 'Menu Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the margin-bottom of the menu.', 'doyle' ),
+			'default'  => array(
+				'margin-bottom' => '40px'
+			),
+			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap')
+		),
+		array(
+			'id'       => 'hvertical1_menu_first_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'text-transform'   => true,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '14px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '40px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a,
+								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list > ul.menu > li.menu-item-has-children > .menu-toggle, 
+								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list > ul.menu > li.page_item_has_children > .menu-toggle')
+		),
+		array(
+			'id'       => 'hvertical1_menu_first_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a')
+		),
+		array(
+			'id'       => 'hvertical1_menu_sub_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '13px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '36px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a, 
+								.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.menu-item-has-children > .menu-toggle, 
+								.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.page_item_has_children > .menu-toggle')
+		),
+		array(
+			'id'       => 'hvertical1_menu_sub_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a')
+		),
+		array(
+			'id'       => 'hvertical1_content_bottom_element',
+			'type'     => 'select',
+			'multi'    => true,
+			'title'    => __('Header Content Bottom Element', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in content bottom of header.', 'doyle'),
+			'options'  => doyle_get_sidebars(),
+			'default'  => '',
+		),
+		array(
+			'id'       => 'hvertical1_mobile_toggle_button',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'active'   => false,
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+			),
+		),
 		
 	)
 ) );
+
 Redux::setSection( $opt_name, array(
 	'title'            => esc_html__( 'Menu Canvas', 'doyle' ),
 	'id'               => 'bt_menu_canvas',
