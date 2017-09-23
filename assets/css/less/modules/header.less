@@ -1386,9 +1386,9 @@
 	.bt-menu-toggle{
 		.easing-animation;
 		display: none;
-		position: absolute;
+		position: fixed;
 		top: 30px;
-		right: -70px;
+		right: 30px;
 		width: 40px;
 		height: 40px;
 		font-size: 18px;
@@ -1398,6 +1398,7 @@
 		color: #ffffff;
 		background: @hvertical1-mobile-toggle-button-default;
 		cursor: pointer;
+		z-index: 9999;
 		-webkit-border-radius: 50%;
 		border-radius: 50%;
 		-webkit-box-shadow: 0 0 35px fadeout(#000000, 70);
@@ -1412,7 +1413,6 @@
 			background: @hvertical1-mobile-toggle-button-hover;
 		}
 		&.active{
-			right: 30px;
 			&:before{
 				content: "\f100";
 				margin-left: -2px;
@@ -1423,20 +1423,20 @@
 	.bt-header-vertical{
 		position: fixed;
 		width: 320px;
+		height: 100vh;
 		background: #ffffff;
 		float: left;
-		z-index: 9999;
+		overflow: hidden;
+		z-index: 999;
 		border-right: 1px solid fadeout(#000000, 95);
 		.bt-header-inner{
-			height: 100vh;
 			padding: 60px 50px;
 			.bt-logo{
 				margin-bottom: 40px;
 			}
 			.bt-vertical-menu-wrap{
-				height: 560px;
-				overflow-y: scroll;
 				margin-bottom: 40px;
+				overflow: hidden;
 				.bt-menu-list {
 					> ul.menu{
 						list-style: none;
@@ -1527,7 +1527,34 @@
 				}
 			}
 			.bt-sidebar{
-				font-size: 14px;
+				.widget{
+					margin-bottom: 15px;
+					&:last-child{
+						margin-bottom: 0;
+					}
+					&.widget_social_widget .social-wrap{
+						a{
+							display: inline-block;
+							width: 32px;
+							height: 32px;
+							font-size: 14px;
+							line-height: 32px;
+							text-align: center;
+							color: #171721;
+							background: #ececec;
+							margin-right: 7px;
+							-webkit-border-radius: 50%;
+							border-radius: 50%;
+							&:last-child{
+								margin-right: 0;
+							}
+							&:hover{
+								color: #ffffff;
+								background: @main-color;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1549,6 +1576,7 @@
 		}
 		.bt-header-vertical{
 			.easing-animation;
+			top: 0;
 			left: 0;
 			width: 320px !important;
 			-webkit-transform: translateX(-100%);

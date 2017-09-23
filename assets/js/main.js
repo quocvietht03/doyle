@@ -94,20 +94,22 @@
 			}
 			
 			/* height menu */
-			if(h_screen > 900){
-				h_menu = parseInt(option_ob.hvertical1_menu_height) + (h_screen - 900);
-				e_menu.css("height", h_menu);
-			}else{
-				h_menu = parseInt(option_ob.hvertical1_menu_height) - (900 - h_screen);
-				e_menu.css("height", h_menu);
+			if(option_ob.hvertical1_full_height){
+				if(h_screen > 900){
+					h_menu = parseInt(option_ob.hvertical1_menu_height) + (h_screen - 900);
+					e_menu.css("height", h_menu);
+				}else{
+					h_menu = parseInt(option_ob.hvertical1_menu_height) - (900 - h_screen);
+					e_menu.css("height", h_menu);
+				}
 			}
 		}
 		DoyleHeaderVertical();
 		
 		/* Toggle Header Vertical Mobile */
 		function DoyleToggleHeaderVerticalMobile() {
-			$('.bt-header-vertical .bt-menu-toggle').on('click', function() {
-				$('.bt-header-vertical').toggleClass('active');
+			$('.header-vertical .bt-menu-toggle').on('click', function() {
+				$('.header-vertical  .bt-header-vertical').toggleClass('active');
 				$(this).toggleClass('active');
 			});
 		}

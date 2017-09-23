@@ -2944,7 +2944,7 @@ Redux::setSection( $opt_name, array(
 				'padding-bottom'    => '60px',
 				'padding-left' => '50px'
 			),
-			'output'    => array('.bt-header-verticalv1 .bt-header-inner')
+			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner')
 		),
 		array(
 			'id'       => 'hvertical1_logo',
@@ -2991,15 +2991,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => 'auto'
 		),
 		array(
+			'id'       => 'hvertical1_full_height',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Full height(100%)', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% height according to the window size. Turn off to follow inner content.', 'doyle' ),
+			'default'  => false,
+		),
+		array(
 			'id'            => 'hvertical1_menu_height',
 			'type'          => 'slider',
 			'title'         => esc_html__( 'Menu Height', 'doyle' ),
 			'subtitle'      => esc_html__( 'Controls the height of the menu on screen 1920x900.', 'doyle' ),
-			'default'       => 570,
+			'default'       => 540,
 			'min'           => 120,
 			'step'          => 10,
-			'max'           => 1200,
-			'display_value' => 'text'
+			'max'           => 720,
+			'display_value' => 'text',
+			'required' 		=> array('hvertical1_full_height' , '=', '1')
 		),
 		array(
 			'id'       => 'hvertical1_menu_space',

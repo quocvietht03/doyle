@@ -2,8 +2,8 @@
 	global $doyle_options;
 	
 ?>
+<div class="bt-menu-toggle"></div>
 <header id="bt_header" class="bt-header-vertical bt-header-verticalv1">
-	<div class="bt-menu-toggle"></div>
 	
 	<div class="bt-header-inner">
 		<div class="bt-logo">
