@@ -6366,6 +6366,13 @@ img.alignright { margin:5px 0 5px 20px; }
   padding:0;
   list-style:none;
 }
+.bt-header ul li sup {
+  font-size:9px;
+  margin-left:3px;
+  padding:1px 8px;
+  -webkit-border-radius:20px;
+  border-radius:20px;
+}
 @media (max-width: 991px) {
   .bt-header .bt-header-desktop, .bt-header .bt-header-stick {
     opacity:0;
