@@ -1210,6 +1210,8 @@ ul.bt-square, ol.bt-square { list-style-type:square; }
 .bt-projects-section5 .esg-navigationbutton.esg-loadmore { margin-top:50px; }
 .bt-projects-section6 #esg-grid-6-1-wrap .esg-overflowtrick { height:906px; }
 .bt-projects-section6 .esg-navigationbutton.esg-loadmore { margin-top:50px; }
+.bt-projects-section7 #esg-grid-11-1 .esg-overflowtrick { height:720px; }
+.bt-projects-section7 .esg-navigationbutton.esg-loadmore { margin-top:50px; }
 .bt-promotion-section .bt-button-element > a {
   font-size:14px;
   font-weight:600;

@@ -85,41 +85,41 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		/* Load extra font */
 		$custom_style = '';
-		if(isset($bears_options['extra_font_1']['font-family']) && $bears_options['extra_font_1']['font-family'] && isset($bears_options['extra_element_1']) && $bears_options['extra_element_1']){
+		if(isset($doyle_options['extra_font_1']['font-family']) && $doyle_options['extra_font_1']['font-family'] && isset($doyle_options['extra_element_1']) && $doyle_options['extra_element_1']){
 			$style_arr = array();
-			if($bears_options['extra_font_1']['font-family']) $style_arr[] = 'font-family: '.$bears_options['extra_font_1']['font-family'].';';
-			if($bears_options['extra_font_1']['font-weight']) $style_arr[] = 'font-weight: '.$bears_options['extra_font_1']['font-weight'].';';
-			if($bears_options['extra_font_1']['font-style']) $style_arr[] = 'font-style: '.$bears_options['extra_font_1']['font-style'].';';
-			if($bears_options['extra_font_1']['font-size']) $style_arr[] = 'font-size: '.$bears_options['extra_font_1']['font-size'].';';
-			if($bears_options['extra_font_1']['line-height']) $style_arr[] = 'line-height: '.$bears_options['extra_font_1']['line-height'].';';
-			if($bears_options['extra_font_1']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$bears_options['extra_font_1']['letter-spacing'].';';
-			if($bears_options['extra_font_1']['color']) $style_arr[] = 'color: '.$bears_options['extra_font_1']['color'].';';
+			if($doyle_options['extra_font_1']['font-family']) $style_arr[] = 'font-family: '.$doyle_options['extra_font_1']['font-family'].';';
+			if($doyle_options['extra_font_1']['font-weight']) $style_arr[] = 'font-weight: '.$doyle_options['extra_font_1']['font-weight'].';';
+			if($doyle_options['extra_font_1']['font-style']) $style_arr[] = 'font-style: '.$doyle_options['extra_font_1']['font-style'].';';
+			if($doyle_options['extra_font_1']['font-size']) $style_arr[] = 'font-size: '.$doyle_options['extra_font_1']['font-size'].';';
+			if($doyle_options['extra_font_1']['line-height']) $style_arr[] = 'line-height: '.$doyle_options['extra_font_1']['line-height'].';';
+			if($doyle_options['extra_font_1']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$doyle_options['extra_font_1']['letter-spacing'].';';
+			if($doyle_options['extra_font_1']['color']) $style_arr[] = 'color: '.$doyle_options['extra_font_1']['color'].';';
 			
-			$custom_style .= $bears_options['extra_element_1'].'{'.implode(' ', $style_arr).'}';
+			$custom_style .= $doyle_options['extra_element_1'].'{'.implode(' ', $style_arr).'}';
 		}
-		if(isset($bears_options['extra_font_2']['font-family']) && $bears_options['extra_font_2']['font-family'] && isset($bears_options['extra_element_2']) && $bears_options['extra_element_2']){
+		if(isset($doyle_options['extra_font_2']['font-family']) && $doyle_options['extra_font_2']['font-family'] && isset($doyle_options['extra_element_2']) && $doyle_options['extra_element_2']){
 			$style_arr = array();
-			if($bears_options['extra_font_2']['font-family']) $style_arr[] = 'font-family: '.$bears_options['extra_font_2']['font-family'].';';
-			if($bears_options['extra_font_2']['font-weight']) $style_arr[] = 'font-weight: '.$bears_options['extra_font_2']['font-weight'].';';
-			if($bears_options['extra_font_2']['font-style']) $style_arr[] = 'font-style: '.$bears_options['extra_font_2']['font-style'].';';
-			if($bears_options['extra_font_2']['font-size']) $style_arr[] = 'font-size: '.$bears_options['extra_font_2']['font-size'].';';
-			if($bears_options['extra_font_2']['line-height']) $style_arr[] = 'line-height: '.$bears_options['extra_font_2']['line-height'].';';
-			if($bears_options['extra_font_2']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$bears_options['extra_font_2']['letter-spacing'].';';
-			if($bears_options['extra_font_2']['color']) $style_arr[] = 'color: '.$bears_options['extra_font_2']['color'].';';
+			if($doyle_options['extra_font_2']['font-family']) $style_arr[] = 'font-family: '.$doyle_options['extra_font_2']['font-family'].';';
+			if($doyle_options['extra_font_2']['font-weight']) $style_arr[] = 'font-weight: '.$doyle_options['extra_font_2']['font-weight'].';';
+			if($doyle_options['extra_font_2']['font-style']) $style_arr[] = 'font-style: '.$doyle_options['extra_font_2']['font-style'].';';
+			if($doyle_options['extra_font_2']['font-size']) $style_arr[] = 'font-size: '.$doyle_options['extra_font_2']['font-size'].';';
+			if($doyle_options['extra_font_2']['line-height']) $style_arr[] = 'line-height: '.$doyle_options['extra_font_2']['line-height'].';';
+			if($doyle_options['extra_font_2']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$doyle_options['extra_font_2']['letter-spacing'].';';
+			if($doyle_options['extra_font_2']['color']) $style_arr[] = 'color: '.$doyle_options['extra_font_2']['color'].';';
 			
-			$custom_style .= $bears_options['extra_element_2'].'{'.implode(' ', $style_arr).'}';
+			$custom_style .= $doyle_options['extra_element_2'].'{'.implode(' ', $style_arr).'}';
 		}
-		if(isset($bears_options['extra_font_3']['font-family']) && $bears_options['extra_font_3']['font-family'] && isset($bears_options['extra_element_3']) && $bears_options['extra_element_3']){
+		if(isset($doyle_options['extra_font_3']['font-family']) && $doyle_options['extra_font_3']['font-family'] && isset($doyle_options['extra_element_3']) && $doyle_options['extra_element_3']){
 			$style_arr = array();
-			if($bears_options['extra_font_3']['font-family']) $style_arr[] = 'font-family: '.$bears_options['extra_font_3']['font-family'].';';
-			if($bears_options['extra_font_3']['font-weight']) $style_arr[] = 'font-weight: '.$bears_options['extra_font_3']['font-weight'].';';
-			if($bears_options['extra_font_3']['font-style']) $style_arr[] = 'font-style: '.$bears_options['extra_font_3']['font-style'].';';
-			if($bears_options['extra_font_3']['font-size']) $style_arr[] = 'font-size: '.$bears_options['extra_font_3']['font-size'].';';
-			if($bears_options['extra_font_3']['line-height']) $style_arr[] = 'line-height: '.$bears_options['extra_font_3']['line-height'].';';
-			if($bears_options['extra_font_3']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$bears_options['extra_font_3']['letter-spacing'].';';
-			if($bears_options['extra_font_3']['color']) $style_arr[] = 'color: '.$bears_options['extra_font_3']['color'].';';
+			if($doyle_options['extra_font_3']['font-family']) $style_arr[] = 'font-family: '.$doyle_options['extra_font_3']['font-family'].';';
+			if($doyle_options['extra_font_3']['font-weight']) $style_arr[] = 'font-weight: '.$doyle_options['extra_font_3']['font-weight'].';';
+			if($doyle_options['extra_font_3']['font-style']) $style_arr[] = 'font-style: '.$doyle_options['extra_font_3']['font-style'].';';
+			if($doyle_options['extra_font_3']['font-size']) $style_arr[] = 'font-size: '.$doyle_options['extra_font_3']['font-size'].';';
+			if($doyle_options['extra_font_3']['line-height']) $style_arr[] = 'line-height: '.$doyle_options['extra_font_3']['line-height'].';';
+			if($doyle_options['extra_font_3']['letter-spacing']) $style_arr[] = 'letter-spacing: '.$doyle_options['extra_font_3']['letter-spacing'].';';
+			if($doyle_options['extra_font_3']['color']) $style_arr[] = 'color: '.$doyle_options['extra_font_3']['color'].';';
 			
-			$custom_style .= $bears_options['extra_element_2'].'{'.implode(' ', $style_arr).'}';
+			$custom_style .= $doyle_options['extra_element_2'].'{'.implode(' ', $style_arr).'}';
 		}
 		
 		/* Load style page option */
