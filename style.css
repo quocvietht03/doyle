@@ -8466,7 +8466,7 @@ img.alignright { margin:5px 0 5px 20px; }
   left:0;
   padding:0 50px 60px;
 }
-@media (max-height: 650px) {
+@media (max-height: 680px) {
   .header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-sidebar { display:none; }
 }
 .header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-sidebar .widget { margin-bottom:15px; }

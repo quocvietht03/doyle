@@ -37,7 +37,7 @@ Redux::setSection( $opt_name, array(
 				),
 				'minivertical' => array(
 					'alt' => 'Header layout mini vertical',
-					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-minivertical.jpg'
 				)
 			),
 			'default'  => '1'
@@ -3130,7 +3130,7 @@ Redux::setSection( $opt_name, array(
 			'options'  => array(
 				'1' => array(
 					'alt' => 'Header layout vertical',
-					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-minivertical.jpg'
 				)
 			),
 			'default'  => '1'
