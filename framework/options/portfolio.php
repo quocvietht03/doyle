@@ -395,7 +395,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.single-fw-portfolio .bt-titlebar'),
+			'output'    => array('.single-fw-portfolio .bt-titlebar .bt-titlebar-inner'),
 		),
 		array(
 			'id'       => 'single_portolio_space',
