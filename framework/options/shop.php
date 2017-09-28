@@ -92,7 +92,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.post-type-archive-product .bt-titlebar, .tax-product .bt-titlebar'),
+			'output'    => array('.post-type-archive-product .bt-titlebar-inner .bt-titlebar, .tax-product .bt-titlebar-inner .bt-titlebar'),
 		),
 		
 	)
@@ -144,7 +144,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.single-product .bt-titlebar'),
+			'output'    => array('.single-product .bt-titlebar-inner .bt-titlebar'),
 		),
 	)
 ) );

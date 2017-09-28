@@ -4,7 +4,7 @@ Template Name: 404 Template
 */
 ?>
 <?php get_header(); ?>
-	<div class="main-content">
+	<div class="bt-main-content">
 		<div class="bt-error404-wrap">
 			<div class="bt-thumb">
 				<img src="<?php echo get_template_directory_uri().'/assets/images/404.jpg'; ?>" alt="<?php esc_html_e('Error 404', 'doyle') ?>"/>

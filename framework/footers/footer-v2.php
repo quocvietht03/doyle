@@ -2,6 +2,14 @@
 	global $doyle_options;
 	$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
 	
+	$footer_class = 'bt-footer bt-footer-v2';
+	
+	$f2_fixed = (isset($doyle_options['f2_fixed'])&&$doyle_options['f2_fixed'])?$doyle_options['f2_fixed']:'';
+	if(isset($page_options['footer_fixed'])&&$page_options['footer_fixed']){$f2_fixed = '';}
+	if($f2_fixed){
+		$footer_class .= ' bt-stick';
+	}
+	
 	$container_class = (isset($doyle_options['f2_fullwidth'])&&$doyle_options['f2_fullwidth'])?'fullwidth':'container';
 	if(isset($page_options['footer_fullwidth'])&&$page_options['footer_fullwidth']){ $container_class = 'container'; }
 	
@@ -51,7 +59,7 @@
 	}
 	
 ?>
-<footer id="bt_footer" class="bt-footer bt-footer-v2">
+<footer id="bt_footer" class="<?php echo esc_attr($footer_class); ?>">
 	<!-- Start Footer Top -->
 	<?php if($f2_footer_top){ ?>
 		<div class="bt-footer-top">

@@ -47,7 +47,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.tax-fw-portfolio-category .bt-titlebar'),
+			'output'    => array('.tax-fw-portfolio-category .bt-titlebar .bt-titlebar-inner'),
 		),
 		array(
 			'id'    => 'portfolio_post_info',

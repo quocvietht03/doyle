@@ -17,7 +17,7 @@
 		
 		/* Toggle menu mobile */
 		function DoyleToggleMenuMobile() {
-			$('.bt-header .bt-menu-toggle').on('click', function() {
+			$('.bt-header .bt-header-mobile .bt-menu-toggle').on('click', function() {
 				$(this).toggleClass('active');
 				$('.bt-header .bt-menu-mobile').toggle('slow');
 			});
@@ -82,9 +82,9 @@
 			
 			/* width header */
 			if(w_screen > option_ob.enable_mobile){
-				if(w_screen > option_ob.hvertical1_width){
-					w_main = w_screen - parseInt(option_ob.hvertical1_width);
-					e_hvertical.css("width", option_ob.hvertical1_width);
+				if(w_screen > option_ob.hvertical_width){
+					w_main = w_screen - parseInt(option_ob.hvertical_width);
+					e_hvertical.css("width", option_ob.hvertical_width);
 					e_main.css("width", w_main);
 				}else{
 					w_main = w_screen - 320;
@@ -94,12 +94,12 @@
 			}
 			
 			/* height menu */
-			if(option_ob.hvertical1_full_height){
+			if(option_ob.hvertical_full_height){
 				if(h_screen > 900){
-					h_menu = parseInt(option_ob.hvertical1_menu_height) + (h_screen - 900);
+					h_menu = parseInt(option_ob.hvertical_menu_height) + (h_screen - 900);
 					e_menu.css("height", h_menu);
 				}else{
-					h_menu = parseInt(option_ob.hvertical1_menu_height) - (900 - h_screen);
+					h_menu = parseInt(option_ob.hvertical_menu_height) - (900 - h_screen);
 					e_menu.css("height", h_menu);
 				}
 			}
@@ -114,6 +114,16 @@
 			});
 		}
 		DoyleToggleHeaderVerticalMobile();
+		
+		/* Header Mini Vertical */
+		function DoyleHeaderMiniVertical() {
+			$('.header-minivertical .bt-header-minivertical .bt-header-desktop .bt-menu-toggle').on('click', function() {
+				$('.header-minivertical .bt-header-minivertical').toggleClass('active');
+				$(this).toggleClass('active');
+			});
+		}
+		DoyleHeaderMiniVertical();
+		
 		
 		/* Easy Scroll */
 		function DoyleEasingScroll() {
@@ -147,6 +157,19 @@
 			});
 		}
 		DoyleActiveMenuItemScroll();
+		
+		/* Footer Stick */
+		function DoyleFooterStick() {
+			if($( '.bt-footer' ).hasClass( 'bt-stick' )) {
+				var h_footer = $('.bt-footer').innerHeight();
+				$('#bt-main .bt-header').css({"position": "relative", "z-index": "999"});
+				$('#bt-main .bt-titlebar').css({"position": "relative", "z-index": "3"});
+				$('#bt-main .bt-main-content').css({"position": "relative", "background": "#ffffff", "z-index": "3", "margin-bottom": h_footer});
+			}
+			
+			
+		}
+		DoyleFooterStick();
 		
 		/* Nice Scroll Bar */
 		function DoyleNiceScrollBar() {

@@ -63,7 +63,8 @@ $options = array(
 							'3' => __('Header 3', 'doyle'),
 							'onepage' => __('Header One Page', 'doyle'),
 							'onepagescroll' => __('Header One Page Scroll', 'doyle'),
-							'vertical' => __('Header Vertical', 'doyle')
+							'vertical' => __('Header Vertical', 'doyle'),
+							'minivertical' => __('Header Mini Vertical', 'doyle')
 						)
 					),
 					'header_fullwidth' => array(
@@ -205,6 +206,20 @@ $options = array(
 							'1' => __('Footer 1', 'doyle'),
 							'2' => __('Footer 2', 'doyle')
 						)
+					),
+					'footer_fixed' => array(
+						'type' => 'switch',
+						'label' => __('Disable Fixed', 'doyle'),
+						'desc' => __('Turn on to disable footer fixed in current page.', 'doyle'),
+						'value' => '',
+						'left-choice' => array(
+							'value' => '',
+							'label' => __('Off', 'doyle'),
+						),
+						'right-choice' => array(
+							'value' => '1',
+							'label' => __('On', 'doyle'),
+						),
 					),
 					'footer_fullwidth' => array(
 						'type' => 'switch',

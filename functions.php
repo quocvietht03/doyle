@@ -150,9 +150,9 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		// Load options to script
 		$mobile_width = (isset($doyle_options['mobile_width'])&&$doyle_options['mobile_width'])?$doyle_options['mobile_width']: 991;
-		$hvertical1_width = (isset($doyle_options['hvertical1_width'])&&$doyle_options['hvertical1_width'])?$doyle_options['hvertical1_width']: 320;
-		$hvertical1_full_height = (isset($doyle_options['hvertical1_full_height'])&&$doyle_options['hvertical1_full_height'])?$doyle_options['hvertical1_full_height']: '';
-		$hvertical1_menu_height = (isset($doyle_options['hvertical1_menu_height'])&&$doyle_options['hvertical1_menu_height'])?$doyle_options['hvertical1_menu_height']: 570;
+		$hvertical_width = (isset($doyle_options['hvertical_width'])&&$doyle_options['hvertical_width'])?$doyle_options['hvertical_width']: 320;
+		$hvertical_full_height = (isset($doyle_options['hvertical_full_height'])&&$doyle_options['hvertical_full_height'])?$doyle_options['hvertical_full_height']: '';
+		$hvertical_menu_height = (isset($doyle_options['hvertical_menu_height'])&&$doyle_options['hvertical_menu_height'])?$doyle_options['hvertical_menu_height']: 570;
 		$nice_scroll_bar = (isset($doyle_options['nice_scroll_bar'])&&$doyle_options['nice_scroll_bar'])?$doyle_options['nice_scroll_bar']: '';
 		$nice_scroll_bar_element = (isset($doyle_options['nice_scroll_bar_element'])&&$doyle_options['nice_scroll_bar_element'])?$doyle_options['nice_scroll_bar_element']: '';
 		
@@ -160,9 +160,9 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		$js_options = array(
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			'enable_mobile' => $mobile_width,
-			'hvertical1_width' => $hvertical1_width,
-			'hvertical1_full_height' => $hvertical1_full_height,
-			'hvertical1_menu_height' => $hvertical1_menu_height,
+			'hvertical_width' => $hvertical_width,
+			'hvertical_full_height' => $hvertical_full_height,
+			'hvertical_menu_height' => $hvertical_menu_height,
 			'nice_scroll_bar' => $nice_scroll_bar,
 			'nice_scroll_bar_element' => $nice_scroll_bar_element
 		);

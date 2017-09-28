@@ -108,6 +108,9 @@ function doyle_Header() {
 	
     $header_layout =isset($doyle_options["header_layout"]) ? $doyle_options["header_layout"] : '1';
 	$page_header_layout = (isset($page_options['header_layout'])&&$page_options['header_layout'])?$page_options['header_layout']:'default';
+	if(is_search() || is_404()){
+		$page_header_layout = 'default';
+	}
 	$header_layout = $page_header_layout=='default'?$header_layout:$page_header_layout;
     
 	switch ($header_layout) {
@@ -128,6 +131,9 @@ function doyle_Header() {
             break;
 		case 'vertical':
             get_template_part('framework/headers/header', 'vertical');
+            break;
+		case 'minivertical':
+            get_template_part('framework/headers/header', 'minivertical');
             break;
 		default :
 			get_template_part('framework/headers/header', 'v1');

@@ -57,10 +57,24 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 	$honepage_menu_mobile_first_level_color_active = (isset($doyle_options['honepage_menu_mobile_first_level_color']['active'])&&$doyle_options['honepage_menu_mobile_first_level_color']['active'])?$doyle_options['honepage_menu_mobile_first_level_color']['active']: '#0a6edd';
 	$honepage_menu_mobile_sub_level_color_active = (isset($doyle_options['honepage_menu_mobile_sub_level_color']['active'])&&$doyle_options['honepage_menu_mobile_sub_level_color']['active'])?$doyle_options['honepage_menu_mobile_sub_level_color']['active']: '#0a6edd';
 	
-	$hvertical1_menu_first_level_color = (isset($doyle_options['hvertical1_menu_first_level_color']['active'])&&$doyle_options['hvertical1_menu_first_level_color']['active'])?$doyle_options['hvertical1_menu_first_level_color']['active']: '#0a6edd';
-	$hvertical1_menu_sub_level_color = (isset($doyle_options['hvertical1_menu_sub_level_color']['active'])&&$doyle_options['hvertical1_menu_sub_level_color']['active'])?$doyle_options['hvertical1_menu_sub_level_color']['active']: '#0a6edd';
-	$hvertical1_mobile_toggle_button_default = (isset($doyle_options['hvertical1_mobile_toggle_button']['regular'])&&$doyle_options['hvertical1_mobile_toggle_button']['regular'])?$doyle_options['hvertical1_mobile_toggle_button']['regular']: '#171721';
-	$hvertical1_mobile_toggle_button_hover = (isset($doyle_options['hvertical1_mobile_toggle_button']['hover'])&&$doyle_options['hvertical1_mobile_toggle_button']['hover'])?$doyle_options['hvertical1_mobile_toggle_button']['hover']: '#0a6edd';
+	$hvertical_menu_first_level_color = (isset($doyle_options['hvertical_menu_first_level_color']['active'])&&$doyle_options['hvertical_menu_first_level_color']['active'])?$doyle_options['hvertical_menu_first_level_color']['active']: '#0a6edd';
+	$hvertical_menu_sub_level_color = (isset($doyle_options['hvertical_menu_sub_level_color']['active'])&&$doyle_options['hvertical_menu_sub_level_color']['active'])?$doyle_options['hvertical_menu_sub_level_color']['active']: '#0a6edd';
+	
+	$hvertical_mobile_toggle_button_default = (isset($doyle_options['hvertical_mobile_toggle_button']['regular'])&&$doyle_options['hvertical_mobile_toggle_button']['regular'])?$doyle_options['hvertical_mobile_toggle_button']['regular']: '#171721';
+	$hvertical_mobile_toggle_button_hover = (isset($doyle_options['hvertical_mobile_toggle_button']['hover'])&&$doyle_options['hvertical_mobile_toggle_button']['hover'])?$doyle_options['hvertical_mobile_toggle_button']['hover']: '#0a6edd';
+	
+	$hminivertical_menu_first_level_color = (isset($doyle_options['hminivertical_menu_first_level_color']['active'])&&$doyle_options['hminivertical_menu_first_level_color']['active'])?$doyle_options['hminivertical_menu_first_level_color']['active']: '#0a6edd';
+	$hminivertical_menu_sub_level_color = (isset($doyle_options['hminivertical_menu_sub_level_color']['active'])&&$doyle_options['hminivertical_menu_sub_level_color']['active'])?$doyle_options['hminivertical_menu_sub_level_color']['active']: '#0a6edd';
+	
+	$hminivertical_toggle_button_default = (isset($doyle_options['hminivertical_toggle_button']['regular'])&&$doyle_options['hminivertical_toggle_button']['regular'])?$doyle_options['hminivertical_toggle_button']['regular']: '#171721';
+	$hminivertical_toggle_button_hover = (isset($doyle_options['hminivertical_toggle_button']['hover'])&&$doyle_options['hminivertical_toggle_button']['hover'])?$doyle_options['hminivertical_toggle_button']['hover']: '#0a6edd';
+	
+	$hminivertical_mobile_toggle_button_default = (isset($doyle_options['hminivertical_mobile_toggle_button']['regular'])&&$doyle_options['hminivertical_mobile_toggle_button']['regular'])?$doyle_options['hminivertical_mobile_toggle_button']['regular']: '#171721';
+	$hminivertical_mobile_toggle_button_hover = (isset($doyle_options['hminivertical_mobile_toggle_button']['hover'])&&$doyle_options['hminivertical_mobile_toggle_button']['hover'])?$doyle_options['hminivertical_mobile_toggle_button']['hover']: '#0a6edd';
+	
+	$hminivertical_menu_mobile_first_level_color_active = (isset($doyle_options['hminivertical_menu_mobile_first_level_color']['active'])&&$doyle_options['hminivertical_menu_mobile_first_level_color']['active'])?$doyle_options['hminivertical_menu_mobile_first_level_color']['active']: '#0a6edd';
+	$hminivertical_menu_mobile_sub_level_color_active = (isset($doyle_options['hminivertical_menu_mobile_sub_level_color']['active'])&&$doyle_options['hminivertical_menu_mobile_sub_level_color']['active'])?$doyle_options['hminivertical_menu_mobile_sub_level_color']['active']: '#0a6edd';
+	
 	
     $variables = array(
 		"site-width" => $site_width,
@@ -109,10 +123,23 @@ function doyle_autoCompileLess($inputFile, $outputFile) {
 		"honepage-menu-mobile-first-level-color-active" => $honepage_menu_mobile_first_level_color_active,
 		"honepage-menu-mobile-sub-level-color-active" => $honepage_menu_mobile_sub_level_color_active,
 		
-		"hvertical1-menu-first-level-color" => $hvertical1_menu_first_level_color,
-		"hvertical1-menu-sub-level-color" => $hvertical1_menu_sub_level_color,
-		"hvertical1-mobile-toggle-button-default" => $hvertical1_mobile_toggle_button_default,
-		"hvertical1-mobile-toggle-button-hover" => $hvertical1_mobile_toggle_button_hover,
+		"hvertical-menu-first-level-color" => $hvertical_menu_first_level_color,
+		"hvertical-menu-sub-level-color" => $hvertical_menu_sub_level_color,
+		
+		"hvertical-mobile-toggle-button-default" => $hvertical_mobile_toggle_button_default,
+		"hvertical-mobile-toggle-button-hover" => $hvertical_mobile_toggle_button_hover,
+		
+		"hminivertical-menu-first-level-color" => $hminivertical_menu_first_level_color,
+		"hminivertical-menu-sub-level-color" => $hminivertical_menu_sub_level_color,
+		
+		"hminivertical-toggle-button-default" => $hminivertical_toggle_button_default,
+		"hminivertical-toggle-button-hover" => $hminivertical_toggle_button_hover,
+		
+		"hminivertical-mobile-toggle-button-default" => $hminivertical_mobile_toggle_button_default,
+		"hminivertical-mobile-toggle-button-hover" => $hminivertical_mobile_toggle_button_hover,
+		
+		"hminivertical-menu-mobile-first-level-color-active" => $hminivertical_menu_mobile_first_level_color_active,
+		"hminivertical-menu-mobile-sub-level-color-active" => $hminivertical_menu_mobile_sub_level_color_active,
 		
     );
 	

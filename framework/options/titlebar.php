@@ -43,7 +43,7 @@ Redux::setSection( $opt_name, array(
 				'padding-right' => '15px'
 			),
 			'required' 		=> array('titlebar_fullwidth' , '=', '1'),
-			'output'    => array('.bt-titlebar .bt-subheader-inner')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-subheader-inner')
 		),
 		array(
 			'id'       => 'titlebar_align',
@@ -66,7 +66,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.bt-titlebar'),
+			'output'    => array('.bt-titlebar .bt-titlebar-inner'),
 		),
 		array(
 			'id'       => 'titlebar_overlay',
@@ -78,7 +78,7 @@ Redux::setSection( $opt_name, array(
 				'alpha' => '1'
 			),
 			'mode'     => 'background',
-			'output'   => array( '.bt-titlebar .bt-overlay' ),
+			'output'   => array( '.bt-titlebar .bt-titlebar-inner .bt-overlay' ),
 		),
 		array(
 			'id'       => 'titlebar_padding_space',
@@ -93,20 +93,20 @@ Redux::setSection( $opt_name, array(
 				'padding-top'    => '45px',
 				'padding-bottom' => '45px'
 			),
-			'output'    => array('.bt-titlebar')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner')
 		),
 		array(
 			'id'       => 'titlebar_margin_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
-			'mode'     => 'margin',
+			'mode'     => 'padding',
 			'top'	   => false,
 			'right'    => false,
 			'left'     => false,
 			'title'    => esc_html__( 'Title Bar Space', 'doyle' ),
 			'subtitle' => esc_html__( 'Control the bottom margin the title bar.', 'doyle' ),
 			'default'  => array(
-				'margin-bottom' => '90px'
+				'padding-bottom' => '90px'
 			),
 			'output'    => array('.bt-titlebar')
 		),
@@ -134,7 +134,7 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '30px',
 				'letter-spacing' => '0'
 			),
-			'output'    => array('.bt-titlebar .bt-page-title h2')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-page-title h2')
 		),
 		array(
 			'id'       => 'titlebar_page_title_margin_space',
@@ -149,7 +149,7 @@ Redux::setSection( $opt_name, array(
 				'padding-top'    => '5px',
 				'padding-bottom' => '5px'
 			),
-			'output'    => array('.bt-titlebar .bt-page-title')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-page-title')
 		),
 		array(
 			'id'       => 'titlebar_page_title_before',
@@ -191,7 +191,7 @@ Redux::setSection( $opt_name, array(
 				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_page_title_before' , '=', '1'),
-			'output'    => array('.bt-titlebar .bt-page-title .bt-before')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-page-title .bt-before')
 		),
 		array(
 			'id'       => 'titlebar_page_title_after',
@@ -233,7 +233,7 @@ Redux::setSection( $opt_name, array(
 				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_page_title_before' , '=', '1'),
-			'output'    => array('.bt-titlebar .bt-page-title .bt-after')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-page-title .bt-after')
 		),
 	)
 ) );
@@ -259,7 +259,7 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '24px',
 				'letter-spacing' => '0'
 			),
-			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-path')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb .bt-path')
 		),
 		array(
 			'id'       => 'titlebar_breadcrumb_link_color',
@@ -271,7 +271,7 @@ Redux::setSection( $opt_name, array(
 				'regular' => '#FFFFFF',
 				'hover'   => '#0a6edd',
 			),
-			'output'   => array('.bt-titlebar .bt-breadcrumb .bt-path a')
+			'output'   => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb .bt-path a')
 		),
 		array(
 			'id'       => 'titlebar_breadcrumb_home_text',
@@ -318,7 +318,7 @@ Redux::setSection( $opt_name, array(
 				'padding-top'    => '5px',
 				'padding-bottom' => '5px'
 			),
-			'output'    => array('.bt-titlebar .bt-breadcrumb')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb')
 		),
 		array(
 			'id'       => 'titlebar_breadcrumb_before',
@@ -360,7 +360,7 @@ Redux::setSection( $opt_name, array(
 				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_breadcrumb_before' , '=', '1'),
-			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-before')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb .bt-before')
 		),
 		array(
 			'id'       => 'titlebar_breadcrumb_after',
@@ -402,7 +402,7 @@ Redux::setSection( $opt_name, array(
 				'letter-spacing' => '0'
 			),
 			'required' 		=> array('titlebar_breadcrumb_before' , '=', '1'),
-			'output'    => array('.bt-titlebar .bt-breadcrumb .bt-after')
+			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb .bt-after')
 		),
 	)
 ) );

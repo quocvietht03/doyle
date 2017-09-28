@@ -56,7 +56,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.single-team .bt-titlebar'),
+			'output'    => array('.single-team .bt-titlebar .bt-titlebar-inner'),
 		),
 		
 	)

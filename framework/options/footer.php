@@ -45,6 +45,13 @@ Redux::setSection( $opt_name, array(
 			'default'  => '1'
 		),
 		array(
+			'id'       => 'f1_fixed',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Enable Footer Fixed', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer fixed.', 'doyle' ),
+			'default'  => false
+		),
+		array(
 			'id'       => 'f1_fullwidth',
 			'type'     => 'switch',
 			'title'    => esc_html__( 'Full Width (100%)', 'doyle' ),
@@ -429,6 +436,13 @@ Redux::setSection( $opt_name, array(
 				)
 			),
 			'default'  => '1'
+		),
+		array(
+			'id'       => 'f2_fixed',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Enable Footer Fixed', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to enable footer fixed.', 'doyle' ),
+			'default'  => false
 		),
 		array(
 			'id'       => 'f2_fullwidth',

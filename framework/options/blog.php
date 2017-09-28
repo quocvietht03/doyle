@@ -47,7 +47,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.category .bt-titlebar, .tag .bt-titlebar, .search .bt-titlebar'),
+			'output'    => array('.category .bt-titlebar .bt-titlebar-inner, .tag .bt-titlebar .bt-titlebar-inner, .search .bt-titlebar .bt-titlebar-inner'),
 		),
 		array(
 			'id'    => 'blog_post_info',
@@ -419,7 +419,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
-			'output'    => array('.single-post .bt-titlebar'),
+			'output'    => array('.single-post .bt-titlebar .bt-titlebar-inner'),
 		),
 		array(
 			'id'       => 'single_post_navigation',

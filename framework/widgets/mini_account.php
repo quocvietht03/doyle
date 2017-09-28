@@ -25,9 +25,9 @@ class doyle_Mini_Account_Widget extends WP_Widget {
         ob_start();
         echo balanceTags($before_widget, false);
 			if(is_user_logged_in()){
-				echo '<a href="'.wp_logout_url().'"><i class="fa fa-sign-out"></i> '.$logout_text.'</a>';
+				echo '<a href="'.wp_logout_url().'" title="'.esc_attr($logout_text).'"><i class="fa fa-sign-out"></i> '.$logout_text.'</a>';
 			}else{
-				echo '<a href="'.wp_login_url().'"><i class="fa fa-sign-in"></i> '.$login_text.'</a>';
+				echo '<a href="'.wp_login_url().'" title="'.esc_attr($login_text).'"><i class="fa fa-sign-in"></i> '.$login_text.'</a>';
 			}
         echo balanceTags($after_widget, false);
         echo ob_get_clean();

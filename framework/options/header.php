@@ -34,6 +34,10 @@ Redux::setSection( $opt_name, array(
 				'vertical' => array(
 					'alt' => 'Header layout vertical',
 					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
+				),
+				'minivertical' => array(
+					'alt' => 'Header layout mini vertical',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
 				)
 			),
 			'default'  => '1'
@@ -2905,7 +2909,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => '1'
 		),
 		array(
-			'id'            => 'hvertical1_width',
+			'id'            => 'hvertical_width',
 			'type'          => 'slider',
 			'title'         => esc_html__( 'Header Width', 'doyle' ),
 			'subtitle'      => esc_html__( 'Controls the width of the header.', 'doyle' ),
@@ -2916,7 +2920,7 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
-			'id'       => 'hvertical1_bg',
+			'id'       => 'hvertical_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Header Background', 'doyle' ),
 			'subtitle' => esc_html__( 'Control background color of header.', 'doyle' ),
@@ -2929,10 +2933,10 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#FFFFFF',
 			),
-			'output'    => array('.header-vertical .bt-header-verticalv1'),
+			'output'    => array('.header-vertical .bt-header-vertical'),
 		),
 		array(
-			'id'       => 'hvertical1_space',
+			'id'       => 'hvertical_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'padding',
@@ -2947,7 +2951,7 @@ Redux::setSection( $opt_name, array(
 			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner')
 		),
 		array(
-			'id'       => 'hvertical1_logo',
+			'id'       => 'hvertical_logo',
 			'type'     => 'media',
 			'url'      => true,
 			'title'    => esc_html__( 'Logo', 'doyle' ),
@@ -2957,7 +2961,7 @@ Redux::setSection( $opt_name, array(
 			),
 		),
 		array(
-			'id'            => 'hvertical1_logo_height',
+			'id'            => 'hvertical_logo_height',
 			'type'          => 'slider',
 			'title'         => esc_html__( 'Logo Height', 'doyle' ),
 			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
@@ -2968,7 +2972,7 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
-			'id'       => 'hvertical1_logo_space',
+			'id'       => 'hvertical_logo_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'margin',
@@ -2983,7 +2987,7 @@ Redux::setSection( $opt_name, array(
 			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-logo')
 		),
 		array(
-			'id'       => 'hvertical1_menu_assign',
+			'id'       => 'hvertical_menu_assign',
 			'type'     => 'select',
 			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
 			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
@@ -2991,14 +2995,14 @@ Redux::setSection( $opt_name, array(
 			'default'  => 'auto'
 		),
 		array(
-			'id'       => 'hvertical1_full_height',
+			'id'       => 'hvertical_full_height',
 			'type'     => 'switch',
 			'title'    => esc_html__( 'Full height(100%)', 'doyle' ),
 			'subtitle' => esc_html__( 'Turn on to have the header area display at 100% height according to the window size. Turn off to follow inner content.', 'doyle' ),
 			'default'  => false,
 		),
 		array(
-			'id'            => 'hvertical1_menu_height',
+			'id'            => 'hvertical_menu_height',
 			'type'          => 'slider',
 			'title'         => esc_html__( 'Menu Height', 'doyle' ),
 			'subtitle'      => esc_html__( 'Controls the height of the menu on screen 1920x900.', 'doyle' ),
@@ -3007,10 +3011,10 @@ Redux::setSection( $opt_name, array(
 			'step'          => 10,
 			'max'           => 720,
 			'display_value' => 'text',
-			'required' 		=> array('hvertical1_full_height' , '=', '1')
+			'required' 		=> array('hvertical_full_height' , '=', '1')
 		),
 		array(
-			'id'       => 'hvertical1_menu_space',
+			'id'       => 'hvertical_menu_space',
 			'type'     => 'spacing',
 			'units'    => array( 'em', 'px', '%' ),
 			'mode'     => 'margin',
@@ -3025,7 +3029,7 @@ Redux::setSection( $opt_name, array(
 			'output'    => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap')
 		),
 		array(
-			'id'       => 'hvertical1_menu_first_level_font',
+			'id'       => 'hvertical_menu_first_level_font',
 			'type'     => 'typography',
 			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
 			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
@@ -3041,12 +3045,12 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '40px',
 				'letter-spacing' => '0'
 			),
-			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a,
+			'output'   => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a,
 								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list > ul.menu > li.menu-item-has-children > .menu-toggle, 
 								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list > ul.menu > li.page_item_has_children > .menu-toggle')
 		),
 		array(
-			'id'       => 'hvertical1_menu_first_level_color',
+			'id'       => 'hvertical_menu_first_level_color',
 			'type'     => 'link_color',
 			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
 			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
@@ -3055,10 +3059,10 @@ Redux::setSection( $opt_name, array(
 				'hover'   => '#0a6edd',
 				'active'  => '#0a6edd',
 			),
-			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a')
+			'output'   => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a')
 		),
 		array(
-			'id'       => 'hvertical1_menu_sub_level_font',
+			'id'       => 'hvertical_menu_sub_level_font',
 			'type'     => 'typography',
 			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
 			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
@@ -3073,12 +3077,12 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '36px',
 				'letter-spacing' => '0'
 			),
-			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a, 
-								.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.menu-item-has-children > .menu-toggle, 
-								.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.page_item_has_children > .menu-toggle')
+			'output'   => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a, 
+								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.menu-item-has-children > .menu-toggle, 
+								.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li.page_item_has_children > .menu-toggle')
 		),
 		array(
-			'id'       => 'hvertical1_menu_sub_level_color',
+			'id'       => 'hvertical_menu_sub_level_color',
 			'type'     => 'link_color',
 			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
 			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
@@ -3087,10 +3091,10 @@ Redux::setSection( $opt_name, array(
 				'hover'   => '#0a6edd',
 				'active'  => '#0a6edd',
 			),
-			'output'   => array('.header-vertical .bt-header-verticalv1 .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a')
+			'output'   => array('.header-vertical .bt-header-vertical .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a')
 		),
 		array(
-			'id'       => 'hvertical1_content_bottom_element',
+			'id'       => 'hvertical_content_bottom_element',
 			'type'     => 'select',
 			'multi'    => true,
 			'title'    => __('Header Content Bottom Element', 'doyle'), 
@@ -3099,7 +3103,7 @@ Redux::setSection( $opt_name, array(
 			'default'  => '',
 		),
 		array(
-			'id'       => 'hvertical1_mobile_toggle_button',
+			'id'       => 'hvertical_mobile_toggle_button',
 			'type'     => 'link_color',
 			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
 			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
@@ -3108,6 +3112,310 @@ Redux::setSection( $opt_name, array(
 				'regular' => '#171721',
 				'hover'   => '#0a6edd',
 			),
+		),
+		
+	)
+) );
+
+Redux::setSection( $opt_name, array(
+	'title'            => esc_html__( 'Header Mini Vertical', 'doyle' ),
+	'id'               => 'bt_header_minivertical',
+	'subsection'       => true,
+	'fields'           => array(
+		array(
+			'id'       => 'header_layout_minivertical',
+			'type'     => 'image_select',
+			'title'    => esc_html__( 'Layout Selected', 'doyle' ),
+			'subtitle' => esc_html__( 'This is the options you can change for header one page style', 'doyle' ),
+			'options'  => array(
+				'1' => array(
+					'alt' => 'Header layout vertical',
+					'img' => get_template_directory_uri() . '/assets/images/headers/header-vertical.jpg'
+				)
+			),
+			'default'  => '1'
+		),
+		array(
+			'id'       => 'hminivertical_bg',
+			'type'     => 'background',
+			'title'    => esc_html__( 'Header Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header.', 'doyle' ),
+			'background-repeat' => false,
+			'background-attachment' => false,
+			'background-position' => false,
+			'background-image' => false,
+			'background-size' => false,
+			'preview' => false,
+			'default'  => array(
+				'background-color' => '#FFFFFF',
+			),
+			'output'    => array('.header-minivertical .bt-header-minivertical .bt-header-desktop'),
+		),
+		array(
+			'id'       => 'hminivertical_logo',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Logo', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header', 'doyle' ),
+			'default'  => array( 
+				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
+			),
+		),
+		array(
+			'id'            => 'hminivertical_logo_height',
+			'type'          => 'slider',
+			'title'         => esc_html__( 'Logo Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo.', 'doyle' ),
+			'default'       => 40,
+			'min'           => 30,
+			'step'          => 1,
+			'max'           => 150,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'hminivertical_menu_assign',
+			'type'     => 'select',
+			'title'    => esc_html__( 'Menu Assign', 'doyle' ),
+			'subtitle' => esc_html__( 'Select menu assing of header.', 'doyle' ),
+			'options'  => $menu_slug_opt,
+			'default'  => 'auto'
+		),
+		array(
+			'id'       => 'hminivertical_menu_first_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu first level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'text-transform'   => true,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '14px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '50px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_first_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu first level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_sub_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu sub level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '13px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '38px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_sub_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu sub level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.header-minivertical .bt-header-minivertical .bt-header-desktop .bt-header-inner .bt-vertical-menu-wrap .bt-menu-list ul.menu li ul.sub-menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_toggle_button',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'active'   => false,
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+			),
+		),
+		array(
+			'id'       => 'hminivertical_content_mini_element',
+			'type'     => 'select',
+			'multi'    => true,
+			'title'    => __('Header Content Mini Element', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in content mini bar of header.', 'doyle'),
+			'options'  => doyle_get_sidebars(),
+			'default'  => '',
+		),
+		array(
+			'id'       => 'hminivertical_content_bottom_element',
+			'type'     => 'select',
+			'multi'    => true,
+			'title'    => __('Header Content Bottom Element', 'doyle'), 
+			'subtitle' => __('Controls the content that displays in content bottom of header.', 'doyle'),
+			'options'  => doyle_get_sidebars(),
+			'default'  => '',
+		),
+		array(
+			'id'    => 'hminivertical_mobile_info',
+			'type'  => 'info',
+			'style' => 'info',
+			'title' => esc_html__( 'Header Mobile Settings', 'doyle' ),
+			'desc'  => esc_html__( 'This is the options you can change for header mobile.', 'doyle' )
+		),
+		array(
+			'id'       => 'hminivertical_mobile_bg',
+			'type'     => 'background',
+			'title'    => esc_html__( 'Header Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of header mobile.', 'doyle' ),
+			'background-repeat' => false,
+			'background-attachment' => false,
+			'background-position' => false,
+			'background-image' => false,
+			'background-size' => false,
+			'preview' => false,
+			'default'  => array(
+				'background-color' => '#FFFFFF',
+			),
+			'output'    => array('.bt-header-minivertical .bt-header-mobile'),
+		),
+		array(
+			'id'       => 'hminivertical_mobile_toggle_button',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Toggle Menu Button', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color toggle menu button of the header mobile.', 'doyle' ),
+			'active'   => false,
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+			),
+		),
+		array(
+			'id'       => 'hminivertical_logo_mobile',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Logo Mobile', 'doyle' ),
+			'subtitle' => esc_html__( 'Upload the logo of header mobile', 'doyle' ),
+			'default'  => array( 
+				'url' => get_template_directory_uri().'/assets/images/logo-v1.png' 
+			)
+		),
+		array(
+			'id'            => 'hminivertical_logo_mobile_height',
+			'type'          => 'slider',
+			'title'         => esc_html__( 'Logo Mobile Height', 'doyle' ),
+			'subtitle'      => esc_html__( 'Controls the height of the logo mobile.', 'doyle' ),
+			'default'       => 30,
+			'min'           => 20,
+			'step'          => 1,
+			'max'           => 150,
+			'display_value' => 'text'
+		),
+		array(
+			'id'       => 'hminivertical_logo_mobile_space',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'margin',
+			'right'    => false,
+			'left'     => false,
+			'title'    => esc_html__( 'Header Mobile Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom margin the logo mobile.', 'doyle' ),
+			'default'  => array(
+				'margin-top'    => '10px',
+				'margin-bottom' => '10px'
+			),
+			'output'    => array('.bt-header-minivertical .bt-header-mobile .bt-bottom .logo')
+		),
+		array(
+			'id'       => 'hminivertical_mobile_menu_bg',
+			'type'     => 'background',
+			'title'    => esc_html__( 'Menu Mobile Background', 'doyle' ),
+			'subtitle' => esc_html__( 'Control background color of menu mobile.', 'doyle' ),
+			'background-repeat' => false,
+			'background-attachment' => false,
+			'background-position' => false,
+			'background-image' => false,
+			'background-size' => false,
+			'preview' => false,
+			'default'  => array(
+				'background-color' => '#F8F8F8',
+			),
+			'output'    => array('.bt-header-minivertical .bt-header-mobile .bt-menu-mobile-wrap'),
+		),
+		array(
+			'id'       => 'hminivertical_menu_mobile_first_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu Mobile First Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile first level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'text-transform'   => true,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '14px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '40px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.bt-header-minivertical .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_mobile_first_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu Mobile First Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile first level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.bt-header-minivertical .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_mobile_sub_level_font',
+			'type'     => 'typography',
+			'title'    => esc_html__( 'Menu Mobile Sub Level Typography', 'doyle' ),
+			'subtitle' => esc_html__( 'These settings control the typography menu mobile sub level.', 'doyle' ),
+			'subsets'   => false,
+			'letter-spacing'   => true,
+			'text-align'   => false,
+			'color'   => false,
+			'default'  => array(
+				'font-size'   => '13px',
+				'font-family' => 'Lato',
+				'font-weight' => '400',
+				'line-height' => '36px',
+				'letter-spacing' => '0'
+			),
+			'output'   => array('.bt-header-minivertical .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
+		),
+		array(
+			'id'       => 'hminivertical_menu_mobile_sub_level_color',
+			'type'     => 'link_color',
+			'title'    => esc_html__( 'Menu Mobile Sub Level Color', 'doyle' ),
+			'subtitle' => esc_html__( 'Controls the color menu mobile sub level.', 'doyle' ),
+			'default'  => array(
+				'regular' => '#171721',
+				'hover'   => '#0a6edd',
+				'active'  => '#0a6edd',
+			),
+			'output'   => array('.bt-header-minivertical .bt-header-mobile .bt-menu-mobile-wrap .bt-menu-mobile ul.menu li ul.sub-menu > li > a')
 		),
 		
 	)
