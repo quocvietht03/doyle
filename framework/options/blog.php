@@ -40,6 +40,13 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'blog_titlebar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Title Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to display the title bar.', 'doyle' ),
+			'default'  => true
+		),
+		array(
 			'id'       => 'blog_titlebar_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
@@ -47,7 +54,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
+			'required' 	=> array('blog_titlebar' , '=', '1'),
 			'output'    => array('.category .bt-titlebar .bt-titlebar-inner, .tag .bt-titlebar .bt-titlebar-inner, .search .bt-titlebar .bt-titlebar-inner'),
+		),
+		array(
+			'id'       => 'blog_content_sapce',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'right'   => false,
+			'left'   => false,
+			'title'    => esc_html__( 'Main Content Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the content.', 'doyle' ),
+			'default'  => array(
+				'padding-top' => '0px',
+				'padding-bottom' => '0px'
+			),
+			'output'   => array('.category .bt-main-content, .tag .bt-main-content, .search .bt-main-content')
 		),
 		array(
 			'id'    => 'blog_post_info',
@@ -412,6 +435,13 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'post_titlebar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Title Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to display the title bar.', 'doyle' ),
+			'default'  => true
+		),
+		array(
 			'id'       => 'post_titlebar_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
@@ -419,7 +449,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
+			'required' 	=> array('post_titlebar' , '=', '1'),
 			'output'    => array('.single-post .bt-titlebar .bt-titlebar-inner'),
+		),
+		array(
+			'id'       => 'post_content_sapce',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'right'   => false,
+			'left'   => false,
+			'title'    => esc_html__( 'Main Content Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the content.', 'doyle' ),
+			'default'  => array(
+				'padding-top' => '0px',
+				'padding-bottom' => '0px'
+			),
+			'output'   => array('.single-post .bt-main-content')
 		),
 		array(
 			'id'       => 'single_post_navigation',

@@ -40,6 +40,13 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'portfolio_titlebar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Title Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to display the title bar.', 'doyle' ),
+			'default'  => true
+		),
+		array(
 			'id'       => 'portfolio_titlebar_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
@@ -47,7 +54,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
+			'required' 	=> array('portfolio_titlebar' , '=', '1'),
 			'output'    => array('.tax-fw-portfolio-category .bt-titlebar .bt-titlebar-inner'),
+		),
+		array(
+			'id'       => 'portfolio_content_sapce',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'right'   => false,
+			'left'   => false,
+			'title'    => esc_html__( 'Main Content Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the content.', 'doyle' ),
+			'default'  => array(
+				'padding-top' => '0px',
+				'padding-bottom' => '0px'
+			),
+			'output'   => array('.tax-fw-portfolio-category .bt-main-content')
 		),
 		array(
 			'id'    => 'portfolio_post_info',
@@ -388,6 +411,13 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'single_portfolio_titlebar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Title Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to display the title bar.', 'doyle' ),
+			'default'  => true
+		),
+		array(
 			'id'       => 'single_portolio_titlebar_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
@@ -395,7 +425,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
+			'required' 	=> array('single_portfolio_titlebar' , '=', '1'),
 			'output'    => array('.single-fw-portfolio .bt-titlebar .bt-titlebar-inner'),
+		),
+		array(
+			'id'       => 'single_portfolio_content_sapce',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'right'   => false,
+			'left'   => false,
+			'title'    => esc_html__( 'Main Content Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the content.', 'doyle' ),
+			'default'  => array(
+				'padding-top' => '0px',
+				'padding-bottom' => '0px'
+			),
+			'output'   => array('.single-fw-portfolio .bt-main-content')
 		),
 		array(
 			'id'       => 'single_portolio_space',

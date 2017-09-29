@@ -22,7 +22,8 @@ if($sidebar_position == 'left' || $sidebar_position == 'right'){
 	$content_class = 'col-md-12';
 }
 
-doyle_titlebar();
+$single_portfolio_titlebar = isset($doyle_options['single_portfolio_titlebar']) ? $doyle_options['single_portfolio_titlebar']: true;
+if($single_portfolio_titlebar) doyle_titlebar();
 ?>
 	<div class="bt-main-content">
 		<div class="<?php echo esc_attr($fullwidth); ?>">

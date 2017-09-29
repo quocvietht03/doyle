@@ -49,6 +49,13 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
+			'id'       => 'single_team_titlebar',
+			'type'     => 'switch',
+			'title'    => esc_html__( 'Title Bar', 'doyle' ),
+			'subtitle' => esc_html__( 'Turn on to display the title bar.', 'doyle' ),
+			'default'  => true
+		),
+		array(
 			'id'       => 'single_team_titlebar_bg',
 			'type'     => 'background',
 			'title'    => esc_html__( 'Title Bar Background', 'doyle' ),
@@ -56,8 +63,23 @@ Redux::setSection( $opt_name, array(
 			'default'  => array(
 				'background-color' => '#171721',
 			),
+			'required' 	=> array('single_team_titlebar' , '=', '1'),
 			'output'    => array('.single-team .bt-titlebar .bt-titlebar-inner'),
 		),
-		
+		array(
+			'id'       => 'single_team_content_sapce',
+			'type'     => 'spacing',
+			'units'    => array( 'em', 'px', '%' ),
+			'mode'     => 'padding',
+			'right'   => false,
+			'left'   => false,
+			'title'    => esc_html__( 'Main Content Space', 'doyle' ),
+			'subtitle' => esc_html__( 'Control the top/bottom padding the content.', 'doyle' ),
+			'default'  => array(
+				'padding-top' => '0px',
+				'padding-bottom' => '0px'
+			),
+			'output'   => array('.single-team .bt-main-content')
+		),
 	)
 ) );
