@@ -19,6 +19,11 @@ Text Domain: doyle
 5. Navigate to Appearance > Theme Options in your admin panel and customize to taste.
 
 == Changelog ==
+= 1.1.1 =
+* Released: 
+	- Add taxonomy for postype team.
+	- Add taxonomy for postype testimonial.
+	- And small issues ...
 
 = 1.1 =
 * Released: October 2, 2017

@@ -205,7 +205,7 @@ vc_map(array(
 			'heading' => esc_html__( 'Categories', 'doyle' ),
 			'param_name' => 'category',
 			'group' => __('Data Setting', 'doyle'),
-			'description' => esc_html__( 'Note: By default, all your projects will be displayed. If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
+			'description' => esc_html__( 'Note: By default, all your posts will be displayed. If you want to narrow output, select category(s) above. Only selected categories will be displayed.', 'doyle' )
 		),
 		array (
 			'type' => 'textfield',
