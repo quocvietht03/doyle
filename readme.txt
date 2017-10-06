@@ -3,7 +3,7 @@ Theme Name: Doyle
 Theme URI: http://theme.bearsthemes.com/wordpress/doyle
 Author: bearsthemes
 Author URI: http://bearsthemes.com
-Version: 1.1
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -23,6 +23,7 @@ Text Domain: doyle
 * Released: 
 	- Add taxonomy for postype team.
 	- Add taxonomy for postype testimonial.
+	- Fix widgets not found on child theme
 	- And small issues ...
 
 = 1.1 =
