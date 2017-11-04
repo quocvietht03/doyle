@@ -3,7 +3,7 @@ Theme Name: Doyle
 Theme URI: http://theme.bearsthemes.com/wordpress/doyle
 Author: bearsthemes
 Author URI: http://bearsthemes.com
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -19,12 +19,17 @@ Text Domain: doyle
 5. Navigate to Appearance > Theme Options in your admin panel and customize to taste.
 
 == Changelog ==
+= 1.1.2 =
+* Released: November 4, 2017
+	- Fix title bar v2.
+	- Fix post options hidden in unyson v2.7.9
+	- Fix small issues ...
+	
 = 1.1.1 =
-* Released: 
+* Released: October 6, 2017
 	- Add taxonomy for postype team.
 	- Add taxonomy for postype testimonial.
-	- Fix widgets not found on child theme
-	- And small issues ...
+	- Fix widgets not found on child theme.
 
 = 1.1 =
 * Released: October 2, 2017

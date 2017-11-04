@@ -64,9 +64,10 @@ function doyle_register_required_plugins() {
 			'required'  => true,
 		),
 		array(
-			'name'      => esc_html__('Unyson', 'doyle'),
-			'slug'      => 'unyson',
-			'required'  => true,
+			'name'         => esc_html__('Unyson', 'doyle'),
+			'slug'         => 'unyson',
+			'source'       => $root.'unyson.zip',
+			'required'     => true,
 		),
 		array(
 			'name'      => esc_html__('Custom Post Type UI', 'doyle'),

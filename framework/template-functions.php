@@ -145,9 +145,11 @@ function doyle_Header() {
 if ( ! function_exists( 'doyle_titlebar' ) ) {
 	function doyle_titlebar() {
 		global $doyle_options;
+		$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	
 		$titlebar_layout =isset($doyle_options["titlebar_layout"]) ? $doyle_options["titlebar_layout"] : '1';
-		$doyle_titlebar = get_post_meta(get_the_ID(), 'doyle_titlebar', true)?get_post_meta(get_the_ID(), 'doyle_titlebar', true):'global';
-		$titlebar_layout = ($doyle_titlebar=='global')?$titlebar_layout:$doyle_titlebar;
+		$page_titlebar_layout = isset($page_options['titlebar_layout'])?$page_options['titlebar_layout']:'default';
+		$titlebar_layout = ($page_titlebar_layout=='default')?$titlebar_layout:$page_titlebar_layout;
 		switch ($titlebar_layout) {
 			case '1':
 				get_template_part('framework/titlebars/titlebar', 'v1');
@@ -165,11 +167,11 @@ if ( ! function_exists( 'doyle_titlebar' ) ) {
 /* Footer */
 function doyle_Footer() {
     global $doyle_options;
-	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
 	
     $footer_layout =isset($doyle_options["footer_layout"]) ? $doyle_options["footer_layout"] : '1';
-	$doyle_footer = isset($post_options['footer_layout'])?$post_options['footer_layout']:'global';
-	$footer_layout = $doyle_footer=='global'?$footer_layout:$doyle_footer;
+	$page_footer_layout = isset($page_options['footer_layout'])?$page_options['footer_layout']:'default';
+	$footer_layout = $page_footer_layout=='default'?$footer_layout:$page_footer_layout;
     switch ($footer_layout) {
         case '1':
             get_template_part('framework/footers/footer', 'v1');

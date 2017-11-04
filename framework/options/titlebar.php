@@ -232,7 +232,7 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '24px',
 				'letter-spacing' => '0'
 			),
-			'required' 		=> array('titlebar_page_title_before' , '=', '1'),
+			'required' 		=> array('titlebar_page_title_after' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-page-title .bt-after')
 		),
 	)
@@ -401,7 +401,7 @@ Redux::setSection( $opt_name, array(
 				'line-height' => '24px',
 				'letter-spacing' => '0'
 			),
-			'required' 		=> array('titlebar_breadcrumb_before' , '=', '1'),
+			'required' 		=> array('titlebar_breadcrumb_after' , '=', '1'),
 			'output'    => array('.bt-titlebar .bt-titlebar-inner .bt-breadcrumb .bt-after')
 		),
 	)
