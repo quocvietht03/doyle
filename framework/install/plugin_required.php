@@ -66,7 +66,6 @@ function doyle_register_required_plugins() {
 		array(
 			'name'         => esc_html__('Unyson', 'doyle'),
 			'slug'         => 'unyson',
-			'source'       => $root.'unyson.zip',
 			'required'     => true,
 		),
 		array(
@@ -95,11 +94,6 @@ function doyle_register_required_plugins() {
 		array(
 			'name'      => esc_html__('Contact Form 7', 'doyle'),
 			'slug'      => 'contact-form-7',
-			'required'  => false,
-		),
-		array(
-			'name'      => esc_html__('Instagram Feed', 'doyle'),
-			'slug'      => 'instagram-feed',
 			'required'  => false,
 		),
 		array(

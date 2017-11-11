@@ -1,34 +1,38 @@
 <?php get_header(); ?>
 <?php
 global $doyle_options;
-$doyle_show_page_title = isset($doyle_options['doyle_post_show_page_title']) ? $doyle_options['doyle_post_show_page_title'] : 1;
-$doyle_show_page_breadcrumb = isset($doyle_options['doyle_post_show_page_breadcrumb']) ? $doyle_options['doyle_post_show_page_breadcrumb'] : 1;
-doyle_title_bar($doyle_show_page_title, $doyle_show_page_breadcrumb);
-$doyle_post_show_post_nav = (int) isset($doyle_options['doyle_post_show_post_nav']) ?  $doyle_options['doyle_post_show_post_nav']: 1;
-$doyle_post_show_post_author = (int) isset($doyle_options['doyle_post_show_post_author']) ? $doyle_options['doyle_post_show_post_author'] : 1;
-$doyle_post_show_post_comment = (int) isset($doyle_options['doyle_post_show_post_comment']) ?  $doyle_options['doyle_post_show_post_comment']: 1;
+$fullwidth = isset($doyle_options['blog_fullwidth'])&&$doyle_options['blog_fullwidth'] ? 'fullwidth': 'container';
+$sidebar_width = (int) isset($doyle_options['blog_sidebar_width']) ?  $doyle_options['blog_sidebar_width']: 3;
+
+$sidebar_position = function_exists( 'fw_ext_sidebars_get_current_position' ) ? fw_ext_sidebars_get_current_position() : 'right';
+
+$sidebar_class = 'col-md-'.$sidebar_width;
+if($sidebar_position == 'left' || $sidebar_position == 'right'){
+		$content_width = 12 - $sidebar_width;
+		$content_class = 'col-md-'.$content_width;
+	
+}elseif($sidebar_position == 'left_right'){
+	$content_width = 12 - 2*$sidebar_width;
+	$content_class = 'col-md-'.$content_width;
+}else{
+	$content_class = 'col-md-12';
+}
+
+$blog_titlebar = isset($doyle_options['blog_titlebar']) ? $doyle_options['blog_titlebar']: true;
+if($blog_titlebar) doyle_titlebar();
 ?>
-	<div class="main-content bt-blog-article">
-		<div class="row">
-			<div class="container">
-				<?php
-				$doyle_blog_layout = isset($doyle_options['doyle_post_layout']) ? $doyle_options['doyle_post_layout'] : '2cr';
-				$cl_sb_left = isset($doyle_options['doyle_post_left_sidebar_col']) ? $doyle_options['doyle_post_left_sidebar_col'] : 'col-xs-12 col-sm-3 col-md-3 col-lg-3';
-				$cl_content = isset($doyle_options['doyle_post_content_col']) ? $doyle_options['doyle_post_content_col'] : ( is_active_sidebar('doyle-main-sidebar') ? 'col-xs-12 col-sm-9 col-md-9 col-lg-9' : 'col-xs-12 col-sm-12 col-md-12 col-lg-12' );
-				if ( !is_active_sidebar('doyle-main-sidebar') && !is_active_sidebar('doyle-left-sidebar') && !is_active_sidebar('doyle-left-sidebar') ) {
-					$cl_content = 'col-xs-12 col-sm-12 col-md-12 col-lg-12';
-				}
-				$cl_sb_right = isset($doyle_options['doyle_post_right_siedebar_col']) ? $doyle_options['doyle_post_right_siedebar_col'] : 'col-xs-12 col-sm-3 col-md-3 col-lg-3';
-				?>
+	<div class="bt-main-content">
+		<div class="<?php echo esc_attr($fullwidth); ?>">
+			<div class="row">
 				<!-- Start Left Sidebar -->
-				<?php if ( $doyle_blog_layout == '2cl' ) { ?>
-					<div class="<?php echo esc_attr($cl_sb_left) ?> sidebar-left">
-						<?php if (is_active_sidebar('doyle-left-sidebar')) { dynamic_sidebar($sb_left); } else { dynamic_sidebar('doyle-main-sidebar'); } ?>
+				<?php if($sidebar_position == 'left' || $sidebar_position == 'left_right'){ ?>
+					<div class="bt-sidebar bt-left-sidebar <?php echo esc_attr($sidebar_class); ?>">
+						<?php echo get_sidebar('left'); ?>
 					</div>
 				<?php } ?>
 				<!-- End Left Sidebar -->
 				<!-- Start Content -->
-				<div class="<?php echo esc_attr($cl_content) ?> content bt-blog">
+				<div class="bt-content <?php echo esc_attr($content_class); ?>">
 					<?php
 					while ( have_posts() ) : the_post();
 						if ( wp_attachment_is_image( get_the_ID() ) ) {
@@ -40,9 +44,9 @@ $doyle_post_show_post_comment = (int) isset($doyle_options['doyle_post_show_post
 				</div>
 				<!-- End Content -->
 				<!-- Start Right Sidebar -->
-				<?php if ( $doyle_blog_layout == '2cr' ) { ?>
-					<div class="<?php echo esc_attr($cl_sb_right) ?> sidebar-right">
-						<?php if (is_active_sidebar('doyle-right-sidebar')) { dynamic_sidebar($sb_right); } else { dynamic_sidebar('doyle-main-sidebar'); } ?>
+				<?php if($sidebar_position == 'right' || $sidebar_position == 'left_right'){ ?>
+					<div class="bt-sidebar bt-right-sidebar <?php echo esc_attr($sidebar_class); ?>">
+						<?php echo get_sidebar('right'); ?>
 					</div>
 				<?php } ?>
 				<!-- End Right Sidebar -->
