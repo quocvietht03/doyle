@@ -69,11 +69,25 @@ class WPBakeryShortCode_bt_blog_carousel extends WPBakeryShortCode {
 		if ( ! empty( $nav ) ) $owl_attributes['navText'] = array('<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>');
 		$owl_attributes['dots']= ( ! empty( $dots ) ) ? true : false;
 		
-		$items_md = ( ! empty( $items_md ) ) ? $items_md : 3;
-		$items_sm = ( ! empty( $items_sm ) ) ? $items_sm : 2;
-		$items_xs = ( ! empty( $items_xs ) ) ? $items_xs : 1;
-		$nav_xs = ( ! empty( $nav_xs ) ) ? false : true;
-		$dots_xs = ( ! empty( $dots_xs ) ) ? false : true;
+		if($items != 1){
+			$items_md = ( ! empty( $items_md ) ) ? $items_md : 3;
+			$items_sm = ( ! empty( $items_sm ) ) ? $items_sm : 2;
+			$items_xs = ( ! empty( $items_xs ) ) ? $items_xs : 1;
+		}else{
+			$items_md = $items_sm = $items_xs = 1;
+		}
+		
+		if(! empty( $nav )){
+			$nav_xs = ( ! empty( $nav_xs ) ) ? false : true;
+		}else{
+			$nav_xs = false;
+		}
+		
+		if(! empty( $dots )){
+			$dots_xs = ( ! empty( $dots_xs ) ) ? false : true;
+		}else{
+			$dots_xs = false;
+		}
 		
 		$owl_attributes['responsive'] = array(
 			1200 => array(

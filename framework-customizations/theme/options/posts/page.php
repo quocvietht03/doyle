@@ -190,6 +190,28 @@ $options = array(
 							'2' => __('Title Bar 2', 'doyle')
 						)
 					),
+					'page_titlebar_space' => array(
+						'type' => 'switch',
+						'label' => __('Disable Title Bar Space', 'doyle'),
+						'desc' => __('Turn on to disable space between title bar and content in current page.', 'doyle'),
+						'value' => '',
+						'left-choice' => array(
+							'value' => '',
+							'label' => __('Off', 'doyle'),
+						),
+						'right-choice' => array(
+							'value' => '1',
+							'label' => __('On', 'doyle'),
+						),
+					),
+					'page_titlebar_background' => array(
+						'type'  => 'upload',
+						'value' => array(
+							'url' => ''
+						),
+						'label' => __('Title Bar Background', 'doyle'),
+						'desc'  => __('Select image to change the title bar background in current page.', 'doyle'),
+					),
 				),
 			) ,
 			'page_footer_setting' => array(

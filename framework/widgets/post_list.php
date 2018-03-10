@@ -54,13 +54,8 @@ class doyle_Post_List_Widget extends doyle_Widget {
 				'label' => esc_html__( 'Extra Class', 'doyle' )
 			)
 		);
-		add_action('admin_enqueue_scripts', array($this, 'widget_scripts'));
 	}
-        
-	function widget_scripts() {
-		wp_enqueue_script('widget_scripts', get_template_directory_uri() . '/framework/widgets/widgets.js');
-	}
-
+	
 	function widget( $args, $instance ) {
 
 		ob_start();
@@ -94,7 +89,7 @@ class doyle_Post_List_Widget extends doyle_Widget {
 			$query_args['tax_query'] = array(
 									array(
 										'taxonomy' => 'category',
-										'field' => 'id',
+										'field' => 'slug',
 										'terms' => $category
 									)
 							);

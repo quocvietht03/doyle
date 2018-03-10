@@ -155,21 +155,21 @@ abstract class doyle_Widget extends WP_Widget {
 							$attr_hidden = 'data-element="'. esc_attr($setting['hidden']['element']).'" data-value="'.esc_attr($setting['hidden']['value']).'"';
 						}
 					?>
-					<div class="doyle_taxonomy <?php echo esc_attr( $key ); ?>" <?php echo esc_attr( $attr_hidden ); ?>>
+					<div class="wpb_el_type_bt_taxonomy <?php echo esc_attr( $key ); ?>" <?php echo esc_attr( $attr_hidden ); ?>>
 						<label for="<?php echo esc_attr( $this->get_field_id( $key ) ); ?>"><?php echo esc_html( $setting['label'] ); ?></label>
-						<input class="widefat" id="<?php echo esc_attr($this->get_field_id($key)); ?>" name="<?php echo esc_attr($this->get_field_name($key)); ?>" type="hidden" value="<?php echo esc_attr($value); ?>" />
+						<input class="bt_taxonomy_field" id="<?php echo esc_attr($this->get_field_id($key)); ?>" name="<?php echo esc_attr($this->get_field_name($key)); ?>" type="hidden" value="<?php echo esc_attr($value); ?>" />
 					<p>
 						<?php
-							$terms = $product_cats = array();
+							$terms = $taxs = array();
 							$terms = get_terms( $key, 'orderby=count&hide_empty=0' );
-							$arr_product_cat = explode(',',$value);
+							$arr_tax = explode(',',$value);
 							if ($terms && !is_wp_error($terms)) {
 								foreach ($terms as $term) {
-									$product_cats[] = sprintf(
-										'<label><input onclick="changeCategory(this);" id="%s" class="ww-check-taxonomy %s" type="checkbox" name="%s" value="%s" %s/>%s</label>', 'product_cat' . '-' . $term->slug, 'product_cat', 'product_cat', $term->term_id, checked(in_array($term->term_id, $arr_product_cat), true, false), $term->name
+									$taxs[] = sprintf(
+										'<label><input onclick="changeCategory(this);" id="%s" class="ww-check-taxonomy %s" type="checkbox" name="%s" value="%s" %s/>%s</label>', 'tax' . '-' . $term->slug, 'tax', 'tax', $term->slug, checked(in_array($term->slug, $arr_tax), true, false), $term->name
 									);
 								}
-								echo implode($product_cats);
+								echo implode($taxs);
 							}else{
 								echo 'No Category';
 							}
@@ -177,7 +177,7 @@ abstract class doyle_Widget extends WP_Widget {
 					</p>     
 					</div>
 					<?php
-				break;                            
+				break;                             
 			}
 		}
 	}

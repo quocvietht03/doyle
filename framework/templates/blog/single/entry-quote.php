@@ -15,22 +15,34 @@
 	$post_meta_category = isset($doyle_options['single_post_meta_category']) ? $doyle_options['single_post_meta_category']: true;
 	$post_meta_category_label = isset($doyle_options['single_post_meta_category_label'])&&$doyle_options['single_post_meta_category_label'] ? $doyle_options['single_post_meta_category_label']: esc_html__('Category:', 'doyle');
 	$post_content = isset($doyle_options['single_post_content']) ? $doyle_options['single_post_content']: true;
-	$post_tag = isset($doyle_options['single_post_tag']) ? $doyle_options['single_post_tag']: true;
 	$post_share = isset($doyle_options['single_post_share']) ? $doyle_options['single_post_share']: true;
+	$post_share_label = isset($doyle_options['single_post_share_label'])&&$doyle_options['single_post_share_label'] ? $doyle_options['single_post_share_label']: esc_html__('Share:', 'doyle');
+	$social_item = array();
+	$share_facebook = isset($doyle_options['single_post_share_facebook']) ? $doyle_options['single_post_share_facebook']: true;
+	if($share_facebook){
+		$social_item[] = '<li><a target="_blank" title="'.esc_attr__('Facebook', 'doyle').'" href="https://www.facebook.com/sharer/sharer.php?u='.get_the_permalink().'"><i class="fa fa-facebook"></i></a></li>';
+	}
+	$share_twitter = isset($doyle_options['single_post_share_twitter']) ? $doyle_options['single_post_share_twitter']: true;
+	if($share_twitter){
+		$social_item[] = '<li><a target="_blank" title="'.esc_attr__('Twitter', 'doyle').'" href="https://twitter.com/share?url='.get_the_permalink().'"><i class="fa fa-twitter"></i></a></li>';
+	}
+	$share_google_plus = isset($doyle_options['single_post_share_google_plus']) ? $doyle_options['single_post_share_google_plus']: true;
+	if($share_google_plus){
+		$social_item[] = '<li><a target="_blank" title="'.esc_attr__('Google Plus', 'doyle').'" href="https://plus.google.com/share?url='.get_the_permalink().'"><i class="fa fa-google-plus"></i></a></li>';
+	}
+	$share_linkedin = isset($doyle_options['single_post_share_linkedin']) ? $doyle_options['single_post_share_linkedin']: true;
+	if($share_linkedin){
+		$social_item[] = '<li><a target="_blank" title="'.esc_attr__('Linkedin', 'doyle').'" href="https://www.linkedin.com/shareArticle?url='.get_the_permalink().'"><i class="fa fa-linkedin"></i></a></li>';
+	}
+	$share_pinterest = isset($doyle_options['single_post_share_pinterest']) ? $doyle_options['single_post_share_pinterest']: true;
+	if($share_pinterest){
+		$social_item[] = '<li><a target="_blank" title="'.esc_attr__('Pinterest', 'doyle').'" href="https://pinterest.com/pin/create/button/?url='.get_the_permalink().'"><i class="fa fa-pinterest"></i></a></li>';
+	}
 	
 	$format = get_post_format() ? get_post_format() : 'standard';
 	$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'post_options'):array();
 	$quote_text = isset($post_options['quote_text'])?$post_options['quote_text']:'';
 	
-	$social_title = isset($post_options['social-title'])?$post_options['social-title']:'';
-	$social = isset($post_options['social'])?$post_options['social']:array();
-
-	$social_item = array();
-	if(!empty($social)){
-		foreach($social as $item){
-			$social_item[] = '<li><a href="'.esc_url($item['link']).'"><i class="'.esc_attr($item['icon']).'"></i></a></li>';
-		}
-	}
 ?>
 <article <?php post_class(); ?>>
 	<div class="bt-post-item">
@@ -99,8 +111,9 @@
 				<?php if($post_share){ ?>
 					<div class="bt-share">
 						<?php
-							if($social_title) echo '<h4>'.$social_title.'</h4>';
-							if(!empty($social_item)) echo '<ul>'.implode(' ', $social_item).'</ul>'; 
+							if(!empty($social_item)){
+								echo '<h4>'.$post_share_label.'</h4><ul>'.implode(' ', $social_item).'</ul>';
+							}
 						?>
 					</div>
 				<?php } ?>

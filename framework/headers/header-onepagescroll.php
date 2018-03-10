@@ -1,6 +1,11 @@
 <?php 
 	global $doyle_options;
+	$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+	
 	$container_class = (isset($doyle_options['honepage1_fullwidth'])&&$doyle_options['honepage1_fullwidth'])?'fullwidth':'container';
+	$menu_assign = isset($doyle_options['honepage1_menu_assign'])&&($doyle_options['honepage1_menu_assign'] != 'auto')?$doyle_options['honepage1_menu_assign']:'';
+	if(isset($page_options['header_menu_assign'])&&$page_options['header_menu_assign'] != 'auto'){ $menu_assign = $page_options['header_menu_assign']; }
+	
 ?>
 <header id="bt_header" class="bt-header-onepage bt-header-onepagev1">
 		
@@ -38,7 +43,6 @@
 	
 	<div class="bt-scroll-menu-wrap">
 		<?php
-			$menu_assign = isset($doyle_options['honepage1_menu_assign'])&&($doyle_options['honepage1_menu_assign'] != 'auto')?$doyle_options['honepage1_menu_assign']:'';
 			doyle_nav_menu($menu_assign, 'main_navigation', 'bt-menu-list');
 		?>
 	</div>

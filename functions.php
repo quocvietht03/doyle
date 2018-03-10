@@ -124,8 +124,23 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		
 		/* Load style page option */
 		$page_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'page_options'):array();
+		
+		if(isset($page_options['page_titlebar_space'])&&$page_options['page_titlebar_space']){
+			$custom_style .= 'body .bt-titlebar{padding-bottom: 0;}';
+		}
+
+		if(isset($page_options['page_titlebar_background']['url'])&&$page_options['page_titlebar_background']['url']){
+			$custom_style .= 'body .bt-titlebar .bt-titlebar-inner{background-image: url('.$page_options['page_titlebar_background']['url'].');}';
+		}
+		
 		if(isset($page_options['page_footer_space'])&&$page_options['page_footer_space']){
 			$custom_style .= 'body .bt-footer{margin-top: 0;}';
+		}
+		
+		/* Load style post option */
+		$post_options = function_exists("fw_get_db_post_option")?fw_get_db_post_option(get_the_ID(), 'post_options'):array();
+		if(isset($post_options['titlebar_background']['url'])&&$post_options['titlebar_background']['url']){
+			$custom_style .= 'body .bt-titlebar .bt-titlebar-inner{background-image: url('.$post_options['titlebar_background']['url'].');}';
 		}
 		
 		/* Load custom style */

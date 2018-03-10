@@ -57,9 +57,11 @@ class WPBakeryShortCode_bt_team_grid extends WPBakeryShortCode {
 		/* Columns */
 		$column_class = array();
 		$column_class[] = (!empty($columns)) ? $columns: 'col-lg-3';
-		$column_class[] = (!empty($columns_md)) ? $columns_md : 'col-md-4';
-		$column_class[] = (!empty($columns_sm)) ? $columns_sm : 'col-sm-6';
-		$column_class[] = (!empty($columns_xs)) ? $columns_xs : 'col-xs-12';
+		if($columns != 'col-lg-12'){
+			$column_class[] = (!empty($columns_md)) ? $columns_md : 'col-md-4';
+			$column_class[] = (!empty($columns_sm)) ? $columns_sm : 'col-sm-6';
+			$column_class[] = (!empty($columns_xs)) ? $columns_xs : 'col-xs-12';
+		}
 		
 		if ( ! empty( $column_class ) ) {
 			$item_attributes[] = 'class="' . esc_attr( implode(' ', $column_class) ) . '"';

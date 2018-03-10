@@ -9,62 +9,11 @@ $options = array(
 				'title' => __('General', 'doyle'),
 				'type' => 'tab',
 				'options' => array(
-					'social-title' =>  array( 
-						'type' => 'text',
-						'value' => 'Share',
-						'label' => __('Social Title', 'doyle'),
-						'desc'  => __('Please, enter social title of post.', 'doyle'),
+					'titlebar_background' => array(
+						'label' => esc_html__( 'Title Bar Background', 'doyle' ),
+						'desc'  => esc_html__( 'Upload title bar background image.', 'doyle' ),
+						'type'  => 'upload',
 					),
-					'social' => array(
-						'type'  => 'addable-popup',
-						'value' => array(
-							array(
-								'title' => 'Facebook',
-								'icon' => 'fa fa-facebook',
-								'link' => '#'
-							),
-							array(
-								'title' => 'Twitter',
-								'icon' => 'fa fa-twitter',
-								'link' => '#'
-							),
-							array(
-								'title' => 'Google Plus',
-								'icon' => 'fa fa-google-plus',
-								'link' => '#'
-							),
-							array(
-								'title' => 'Instagram',
-								'icon' => 'fa fa-instagram',
-								'link' => '#'
-							)
-						),
-						'label' => __('Social', 'doyle'),
-						'desc'  => __('Please configs social of post', 'doyle'),
-						'popup-options' => array(
-							'title' => array( 
-								'type' => 'text',
-								'value' => '',
-								'label' => __('Title', 'doyle'),
-								'desc'  => __('Please, enter title of social item.', 'doyle'),
-							),
-							'icon' => array( 
-								'type' => 'text',
-								'value' => '',
-								'label' => __('Icon', 'doyle'),
-								'desc'  => __('Please, enter icon of social item.', 'doyle'),
-							),
-							'link' => array( 
-								'type' => 'text',
-								'value' => '',
-								'label' => __('Url(Link)', 'doyle'),
-								'desc'  => __('Please, enter link of social item.', 'doyle'),
-							)
-						),
-						'template' => '{{- title }}',
-						'add-button-text' => __('Add', 'doyle'),
-						'sortable' => true,
-					)
 				),
 			),
 			'post_gallery' => array(
