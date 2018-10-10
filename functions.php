@@ -80,6 +80,7 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		/* map 3 */
 		wp_register_script( 'doyle-mapv3', get_template_directory_uri().'/assets/vendors/mapv3.js', array('jquery'), '', true);
 		
+		wp_enqueue_style( 'doyle-main_style', get_template_directory_uri().'/assets/css/main_style.css',  array(), false );
 		wp_enqueue_style( 'doyle-style', get_template_directory_uri().'/style.css',  array(), false );
 		wp_enqueue_script( 'doyle-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '', true);
 		
@@ -196,6 +197,16 @@ if (!function_exists('doyle_enqueue_admin_scripts')) {
 	}
 	add_action( 'admin_enqueue_scripts', 'doyle_enqueue_admin_scripts');
 }
+
+/* Add Support Upload Image Type SVG */
+function excitor_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'excitor_mime_types');
+
+/* Visual Composer Post Grid Compatibility Issue With 3rd party Plugin */
+add_filter('vc_grid_get_grid_data_access','__return_true');
 
 /* Template functions */
 require_once get_template_directory().'/framework/template-functions.php';

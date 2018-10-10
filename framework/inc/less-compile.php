@@ -161,7 +161,7 @@ function doyle_addLessStyle() {
 	if(isset($doyle_options['less_design'])&&$doyle_options['less_design']){
 		try {
 			$inputFile = get_template_directory().'/assets/css/less/style.less';
-			$outputFile = get_template_directory().'/style.css';
+			$outputFile = get_template_directory().'/assets/css/main_style.css';
 			doyle_autoCompileLess($inputFile, $outputFile);
 		} catch (Exception $e) {
 			echo 'Caught exception: ', $e->getMessage(), "\n";

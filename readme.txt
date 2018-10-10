@@ -3,7 +3,7 @@ Theme Name: Doyle
 Theme URI: http://theme.bearsthemes.com/wordpress/doyle
 Author: bearsthemes
 Author URI: http://bearsthemes.com
-Version: 1.3
+Version: 1.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -19,6 +19,17 @@ Text Domain: doyle
 5. Navigate to Appearance > Theme Options in your admin panel and customize to taste.
 
 == Changelog ==
+= 1.5 =
+* Released: October 10, 2018
+	- Support Ultimate GDPR.
+	- Support Ultimate Addons for WPBakery Page Builder.
+	- Compatible Woocomerce 3.4.5.
+	- Fixed some small issue.
+
+= 1.4 =
+* Released: May 5, 2018
+	- Fixed some small issue.
+
 = 1.3 =
 * Released: March 10, 2018
 	- Fix Element Responsive Options.

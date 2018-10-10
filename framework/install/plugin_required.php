@@ -55,7 +55,7 @@ function doyle_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$root = 'http://theme.bearsthemes.com/plugin_install/';
+	$root = 'http://plugin.bearsthemespro.com/';
 	
 	$plugins = array(
 		array(
@@ -74,9 +74,15 @@ function doyle_register_required_plugins() {
 			'required'  => true,
 		),
 		array(
-			'name'         => esc_html__('Visual Composer', 'doyle'),
+			'name'         => esc_html__('WPBakery Page Builder', 'doyle'),
 			'slug'         => 'js_composer',
-			'source'       => $root.'visual-composer.zip',
+			'source'       => $root.'js_composer.zip',
+			'required'     => true,
+		),
+		array(
+			'name'         => esc_html__('Ultimate Addons for WPBakery Page Builder', 'doyle'),
+			'slug'         => 'Ultimate_VC_Addons',
+			'source'       => $root.'Ultimate_VC_Addons.zip',
 			'required'     => true,
 		),
 		array(
@@ -86,9 +92,15 @@ function doyle_register_required_plugins() {
 			'required'     => true,
 		),
 		array(
-			'name'         => esc_html__('Essential Grid', 'doyle'),
+			'name'         => esc_html__('Essential Grid Gallery', 'doyle'),
 			'slug'         => 'essential-grid',
 			'source'       => $root.'essential-grid.zip',
+			'required'     => false,
+		),
+		array(
+			'name'         => esc_html__('Ultimate GDPR', 'doyle'),
+			'slug'         => 'ct-ultimate-gdpr',
+			'source'       => $root.'ct-ultimate-gdpr.zip',
 			'required'     => false,
 		),
 		array(
