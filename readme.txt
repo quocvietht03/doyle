@@ -1,9 +1,8 @@
 === Doyle ===
 Theme Name: Doyle
-Theme URI: http://theme.bearsthemes.com/wordpress/doyle
+Theme URI: http://bearsthemespremium.com/theme/doyle/
 Author: bearsthemes
 Author URI: http://bearsthemes.com
-Version: 1.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns,left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -76,5 +75,4 @@ Text Domain: doyle
 
 = 1.0 =
 * Released: September 17, 2017
-
-Initial release
+	- Initial release
