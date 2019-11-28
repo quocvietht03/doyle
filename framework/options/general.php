@@ -90,13 +90,6 @@ Redux::setSection( $opt_name, array(
 			'display_value' => 'text'
 		),
 		array(
-			'id'       => 'smooth_scroll',
-			'type'     => 'switch',
-			'title'    => esc_html__( 'Smoth Scroll', 'doyle' ),
-			'subtitle' => esc_html__( 'Use smoth scroll.', 'doyle' ),
-			'default'  => false,
-		),
-		array(
 			'id'       => 'nice_scroll_bar',
 			'type'     => 'switch',
 			'title'    => esc_html__( 'Nice Scroll Bar', 'doyle' ),

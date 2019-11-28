@@ -3,13 +3,13 @@ function doyle_fw_ext_backups_demos($demos) {
     $demos_array = array(
 		'doyle' => array(
 			'title' => esc_html__('Doyle', 'doyle'),
-			'screenshot' => 'http://bearsthemespremium.com/install/demo/doyle/doyle/screenshot.jpg',
-			'preview_link' => 'http://bearsthemespremium.com/theme/doyle/',
+			'screenshot' => 'http://beplusthemes.com/install/demo/doyle/doyle/screenshot.jpg',
+			'preview_link' => 'http://doyle.beplusthemes.com/',
 		),
 
     );
 
-    $download_url = 'http://bearsthemespremium.com/install/demo/doyle/';
+    $download_url = 'http://beplusthemes.com/install/demo/doyle/';
 
     foreach ($demos_array as $id => $data) {
         $demo = new FW_Ext_Backups_Demo($id, 'piecemeal', array(

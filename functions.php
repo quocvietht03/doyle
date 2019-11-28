@@ -51,11 +51,6 @@ if (!function_exists('doyle_enqueue_scripts')) {
 			wp_enqueue_style('flaticon', get_template_directory_uri().'/assets/iconfonts/flaticon/font/flaticon.css', array(), false);
 		}
 		
-		/* Smoth Scroll */
-		if(isset($doyle_options['smooth_scroll'])&&$doyle_options['smooth_scroll']){
-			wp_enqueue_script( 'doyle-SmoothScroll', get_template_directory_uri().'/assets/js/SmoothScroll.js', array('jquery'), '', true);
-		}
-		
 		/* Nice Scroll Bar */
 		if(isset($doyle_options['nice_scroll_bar'])&&$doyle_options['nice_scroll_bar']){
 			wp_enqueue_script( 'doyle-NiceScrollBar', get_template_directory_uri().'/assets/js/NiceScrollBar.js', array('jquery'), '', true);

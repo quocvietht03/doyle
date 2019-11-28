@@ -55,7 +55,7 @@ function doyle_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$root = 'http://bearsthemespremium.com/install/plugin/';
+	$root = 'http://beplusthemes.com/install/plugin/';
 	
 	$plugins = array(
 		array(
@@ -95,12 +95,6 @@ function doyle_register_required_plugins() {
 			'name'         => esc_html__('Essential Grid Gallery', 'doyle'),
 			'slug'         => 'essential-grid',
 			'source'       => $root.'essential-grid.zip',
-			'required'     => false,
-		),
-		array(
-			'name'         => esc_html__('Ultimate GDPR', 'doyle'),
-			'slug'         => 'ct-ultimate-gdpr',
-			'source'       => $root.'ct-ultimate-gdpr.zip',
 			'required'     => false,
 		),
 		array(
