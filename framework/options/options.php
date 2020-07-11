@@ -275,6 +275,19 @@
 
 
      */
+	
+	$fonts = array (
+		'Lato, sans-serif'             => 'Lato',
+		'Montserrat, sans-serif'       => 'Montserrat',
+		'Montserrat Medium, sans-serif'       => 'Montserrat Medium',
+		'Montserrat SemiBold, sans-serif'       => 'Montserrat SemiBold',
+		'Noto Serif, serif'            => 'Noto Serif',
+		'Poppins, sans-serif'         => 'Poppins',
+		'Poppins Medium, sans-serif'          => 'Poppins Medium',
+		'Poppins SemiBold, sans-serif'        => 'Poppins SemiBold',
+		
+	);
+	 
 	$menu_slug_opt = array();
 	$menus_obj = get_terms( 'nav_menu', array( 'hide_empty' => true ) );
 	$menu_slug_opt['auto'] = 'Auto';
