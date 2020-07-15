@@ -30,6 +30,8 @@ if (!function_exists('doyle_enqueue_scripts')) {
 		global $doyle_options;
 		
 		wp_enqueue_style('doyle-fonts', doyle_fonts_url(), false );
+		wp_enqueue_style('doyle-external-fonts', get_template_directory_uri().'/framework/options/fonts.css', false );
+		
 		/* Bootstrap */
 		wp_enqueue_style('bootstrap-min', get_template_directory_uri().'/assets/vendors/bootstrap/css/bootstrap.min.css', array(), false);
 		wp_enqueue_script('bootstrap-min', get_template_directory_uri().'/assets/vendors/bootstrap/js/bootstrap.min.js', array('jquery'), '', true);
