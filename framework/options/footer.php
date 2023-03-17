@@ -252,8 +252,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#DCDCDC',
 				'font-size'   => '14px',
@@ -284,8 +282,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#FFFFFF',
 				'font-size'   => '18px',
@@ -399,8 +395,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#DCDCDC',
 				'font-size'   => '14px',
@@ -651,8 +645,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#686876',
 				'font-size'   => '14px',
@@ -683,8 +675,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#171721',
 				'font-size'   => '18px',
@@ -798,8 +788,6 @@ Redux::setSection( $opt_name, array(
 			'subsets'   => false,
 			'letter-spacing'   => true,
 			'text-align'   => false,
-			'ext-font-css' => get_template_directory_uri().'/framework/options/fonts.css',
-			'fonts'  => $fonts, 'google' => false,
 			'default'  => array(
 				'color'       => '#686876',
 				'font-size'   => '14px',

@@ -11975,8 +11975,8 @@ img.alignright { margin:5px 0 5px 20px; }
   text-overflow:ellipsis;
   white-space:nowrap;
 }
-.bt-left-sidebar .widget.widget_search .search-form, .bt-right-sidebar .widget.widget_search .search-form { position:relative; }
-.bt-left-sidebar .widget.widget_search .search-form:before, .bt-right-sidebar .widget.widget_search .search-form:before {
+.bt-left-sidebar .widget.widget_search .search-form, .bt-left-sidebar .widget.widget_search .wp-block-search, .bt-right-sidebar .widget.widget_search .search-form, .bt-right-sidebar .widget.widget_search .wp-block-search { position:relative; }
+.bt-left-sidebar .widget.widget_search .search-form:before, .bt-left-sidebar .widget.widget_search .wp-block-search:before, .bt-right-sidebar .widget.widget_search .search-form:before, .bt-right-sidebar .widget.widget_search .wp-block-search:before {
   content:"\f002";
   font-family:FontAwesome;
   font-size:14px;
@@ -11984,9 +11984,8 @@ img.alignright { margin:5px 0 5px 20px; }
   top:8px;
   right:15px;
 }
-.bt-left-sidebar .widget.widget_search .search-form label, .bt-right-sidebar .widget.widget_search .search-form label { display:block; }
-.bt-left-sidebar .widget.widget_search .search-form .screen-reader-text, .bt-right-sidebar .widget.widget_search .search-form .screen-reader-text { display:none; }
-.bt-left-sidebar .widget.widget_search .search-form .search-field, .bt-right-sidebar .widget.widget_search .search-form .search-field {
+.bt-left-sidebar .widget.widget_search .search-form label, .bt-left-sidebar .widget.widget_search .search-form .screen-reader-text, .bt-left-sidebar .widget.widget_search .wp-block-search label, .bt-left-sidebar .widget.widget_search .wp-block-search .screen-reader-text, .bt-right-sidebar .widget.widget_search .search-form label, .bt-right-sidebar .widget.widget_search .search-form .screen-reader-text, .bt-right-sidebar .widget.widget_search .wp-block-search label, .bt-right-sidebar .widget.widget_search .wp-block-search .screen-reader-text { display:none; }
+.bt-left-sidebar .widget.widget_search .search-form__input, .bt-left-sidebar .widget.widget_search .search-form .search-field, .bt-left-sidebar .widget.widget_search .wp-block-search__input, .bt-left-sidebar .widget.widget_search .wp-block-search .search-field, .bt-right-sidebar .widget.widget_search .search-form__input, .bt-right-sidebar .widget.widget_search .search-form .search-field, .bt-right-sidebar .widget.widget_search .wp-block-search__input, .bt-right-sidebar .widget.widget_search .wp-block-search .search-field {
   font-size:14px;
   font-weight:400;
   color:#686876;
@@ -11995,8 +11994,8 @@ img.alignright { margin:5px 0 5px 20px; }
   padding:8px 55px 8px 15px;
   border:1px solid #ececec;
 }
-.bt-left-sidebar .widget.widget_search .search-form .search-field:hover, .bt-left-sidebar .widget.widget_search .search-form .search-field:focus, .bt-right-sidebar .widget.widget_search .search-form .search-field:hover, .bt-right-sidebar .widget.widget_search .search-form .search-field:focus { border-color:#dedede; }
-.bt-left-sidebar .widget.widget_search .search-form .search-submit, .bt-right-sidebar .widget.widget_search .search-form .search-submit {
+.bt-left-sidebar .widget.widget_search .search-form__input:hover, .bt-left-sidebar .widget.widget_search .search-form__input:focus, .bt-left-sidebar .widget.widget_search .search-form .search-field:hover, .bt-left-sidebar .widget.widget_search .search-form .search-field:focus, .bt-left-sidebar .widget.widget_search .wp-block-search__input:hover, .bt-left-sidebar .widget.widget_search .wp-block-search__input:focus, .bt-left-sidebar .widget.widget_search .wp-block-search .search-field:hover, .bt-left-sidebar .widget.widget_search .wp-block-search .search-field:focus, .bt-right-sidebar .widget.widget_search .search-form__input:hover, .bt-right-sidebar .widget.widget_search .search-form__input:focus, .bt-right-sidebar .widget.widget_search .search-form .search-field:hover, .bt-right-sidebar .widget.widget_search .search-form .search-field:focus, .bt-right-sidebar .widget.widget_search .wp-block-search__input:hover, .bt-right-sidebar .widget.widget_search .wp-block-search__input:focus, .bt-right-sidebar .widget.widget_search .wp-block-search .search-field:hover, .bt-right-sidebar .widget.widget_search .wp-block-search .search-field:focus { border-color:#dedede; }
+.bt-left-sidebar .widget.widget_search .search-form__button, .bt-left-sidebar .widget.widget_search .search-form .search-submit, .bt-left-sidebar .widget.widget_search .wp-block-search__button, .bt-left-sidebar .widget.widget_search .wp-block-search .search-submit, .bt-right-sidebar .widget.widget_search .search-form__button, .bt-right-sidebar .widget.widget_search .search-form .search-submit, .bt-right-sidebar .widget.widget_search .wp-block-search__button, .bt-right-sidebar .widget.widget_search .wp-block-search .search-submit {
   position:absolute;
   top:1px;
   right:1px;
