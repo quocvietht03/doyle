@@ -287,5 +287,16 @@
 				$('input.qty', parent).trigger('change');
             }
         });
+
+		/* Copyright Current Year */
+		function BearsthemesCopyrightCurrentYear() {
+			var searchTerm = '{Year}',
+				replaceWith = new Date().getFullYear();
+			
+			$('.bt-copyright').each( function() {
+				this.innerHTML = this.innerHTML.replace(searchTerm, replaceWith);
+			});
+		}
+		BearsthemesCopyrightCurrentYear();
 	});
 })(jQuery);
